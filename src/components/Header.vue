@@ -56,6 +56,10 @@ export default defineComponent({
     background-color: inherit;
 }
 
+.header > .menu-button:hover {
+    background-color: var(--clr-surface-container-high);
+}
+
 .header > .spacer {
     flex-grow: 1;
 }
