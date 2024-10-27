@@ -16,5 +16,6 @@ export default defineComponent({
 <style lang="css" scoped>
 .banner {
     padding: 1rem;
+    background-color: var(--clr-surface-container-highest);
 }
 </style>
