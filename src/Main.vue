@@ -1,4 +1,5 @@
 <template>
+    <Banner/>
     <Header/>
     <RouterView/>
     <Footer/>
@@ -8,6 +9,7 @@
 import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+import Banner from './components/Banner.vue';
 </script>
 
 <style scoped>
