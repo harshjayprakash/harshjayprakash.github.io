@@ -1,2 +1,6 @@
 @import './base.css';
 @import './typography.css';
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
