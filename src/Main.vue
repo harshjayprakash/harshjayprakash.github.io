@@ -1,7 +1,9 @@
 <template>
-    <Banner/>
+    <!-- <Banner/> -->
     <Header/>
-    <RouterView/>
+    <main class="content-container">
+        <RouterView/>
+    </main>
     <Footer/>
 </template>
 
@@ -13,5 +15,7 @@ import Banner from './components/Banner.vue';
 </script>
 
 <style scoped>
-
+.content-container {
+    padding: 1rem;
+}
 </style>
