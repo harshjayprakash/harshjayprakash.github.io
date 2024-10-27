@@ -1,8 +1,8 @@
 <template>
-    <Banner/>
+    <!-- <Banner/> -->
     <Header/>
     <main class="content-container">
-    <RouterView/>
+        <RouterView/>
     </main>
     <Footer/>
 </template>
