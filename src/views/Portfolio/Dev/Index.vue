@@ -1,5 +1,5 @@
 <template>
-
+    <p>Developer Portfolio</p>
 </template>
 
 <script lang="ts">
