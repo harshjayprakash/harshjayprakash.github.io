@@ -4,4 +4,6 @@
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--clr-surface);
+    color: var(--clr-on-surface);
 }
