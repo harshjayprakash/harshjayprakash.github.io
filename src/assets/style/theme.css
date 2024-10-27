@@ -69,3 +69,15 @@
     --clr-on-primary-fixed: light-dark();
     --clr-on-primary-fixed-variant: light-dark();
 }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
