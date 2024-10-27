@@ -1,3 +1,4 @@
+import './main.fonts'
 import { createApp } from 'vue';
 import App from './App.vue';
 
