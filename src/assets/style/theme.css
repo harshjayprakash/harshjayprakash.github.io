@@ -42,26 +42,26 @@
     --clr-surface-bright: light-dark(var(--clr-100S), var(--clr-800S));
 
     --clr-surface-container-lowest: light-dark(var(--clr-000S), var(--clr-1000S));
-    --clr-surface-container-low: light-dark(var(--clr-050S), var(--clr-900S));
-    --clr-surface-container: light-dark(var(--clr-100S), var(--clr-800S));
-    --clr-surface-container-high: light-dark(var(--clr-200S), var(--clr-700S));
-    --clr-surface-container-highest: light-dark(var(--clr-300S), var(--clr-600S));
+    --clr-surface-container-low: light-dark(var(--clr-050S), var(--clr-800S));
+    --clr-surface-container: light-dark(var(--clr-100S), var(--clr-700S));
+    --clr-surface-container-high: light-dark(var(--clr-200S), var(--clr-600S));
+    --clr-surface-container-highest: light-dark(var(--clr-300S), var(--clr-500S));
 
     --clr-on-surface: light-dark(var(--clr-950S), var(--clr-050S));
     --clr-on-surface-variant: light-dark(var(--clr-700S), var(--clr-200S));
     --clr-outline: light-dark(var(--clr-500S), var(--clr-500S));
     --clr-outline-variant: light-dark(var(--clr-300S), var(--clr-700S));
 
-    --clr-inverse-surface: light-dark(var(--clr-900S), var(--clr-900S));
-    --clr-inverse-on-surface: light-dark(var(--clr-050S), var(--clr-050S));
-    --clr-inverse-accent: light-dark(var(--clr-200AL), var(--clr-050S));
+    --clr-inverse-surface: light-dark(var(--clr-900S), var(--clr-100S));
+    --clr-inverse-on-surface: light-dark(var(--clr-050S), var(--clr-950S));
+    --clr-inverse-accent: light-dark(var(--clr-200AL), var(--clr-200AD));
 
     --clr-scrim: light-dark(var(--clr-1000S), var(--clr-1000S));
     --clr-shadow: light-dark(var(--clr-1000S), var(--clr-1000S));
 
     --clr-accent: light-dark(var(--clr-400AL), var(--clr-500AD));
     --clr-on-accent: light-dark(var(--clr-050AL), var(--clr-050AL));
-    --clr-accent-container: light-dark(var(--clr-200AL), var(--clr-200AL));
+    --clr-accent-container: light-dark(var(--clr-100AL), var(--clr-200AL));
     --clr-on-accent-container: light-dark(var(--clr-950AL), var(--clr-950AL));
 
     --clr-accent-fixed: var(--clr-400AD);
