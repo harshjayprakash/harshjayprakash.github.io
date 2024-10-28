@@ -7,12 +7,13 @@ export default defineComponent({
     setup() {
         const desktopMode: Ref<boolean> = ref(window.innerWidth > 800);
         const showNavigation: Ref<boolean> = ref(desktopMode.value);
+        const showBetaTag: Boolean = true;
 
         window.addEventListener('resize', (): void => {
             desktopMode.value = (window.innerWidth > 800);
         });
 
-        return { desktopMode, showNavigation };
+        return { desktopMode, showNavigation, showBetaTag };
     },
     methods: {
         onMenuButtonClick(_event: MouseEvent) {
@@ -34,7 +35,8 @@ export default defineComponent({
         >
             &#x2630;
         </button>
-        <span class="title">Harsh.</span>
+        <span class="title" v-if="showBetaTag">Harsh.</span>
+        <span class="beta-tag">ALPHA</span>
         <span class="spacer"></span>
         <Navigation v-if="desktopMode" @linkClick="hideShowNavigation" />
     </header>
@@ -62,5 +64,11 @@ export default defineComponent({
 
 .header > .spacer {
     flex-grow: 1;
+}
+
+.header > .beta-tag {
+    padding: 0 0.5rem;
+    background-color: var(--clr-accent);
+    color: var(--clr-on-accent);
 }
 </style>
