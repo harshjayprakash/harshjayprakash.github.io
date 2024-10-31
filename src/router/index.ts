@@ -23,6 +23,10 @@ const router: Router = createRouter({
             component: () => import('./../views/Brand.vue'),
         },
         {
+            path: '/blog', name: 'Blog',
+            component: () => import('./../views/Blog/Index.vue'),
+        },
+        {
             path: '/portfolio/art', name: 'Art Portfolio',
             component: () => import('./../views/Portfolio/Art/Index.vue'),
         },
@@ -33,7 +37,7 @@ const router: Router = createRouter({
         {
             path: '/portfolio/photography', name: 'Photography Portfolio',
             component: () => import('./../views/Portfolio/Photography/Index.vue'),
-        },
+        }
     ]
 });
 
