@@ -2,12 +2,12 @@
     <div class="home-container">
         <section class="hero">
             <h1>Harsh Jayprakash.</h1>
-            <p>A digital craftsman.</p>
+            <p>part programmer, part artist.</p>
         </section>
         <section class="portfolio-links">
             <div class="topic-list">
                 <article>
-
+                    
                 </article>
             </div>
         </section>
