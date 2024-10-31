@@ -16,14 +16,14 @@
         >
             About
         </router-link>
-        <router-link 
+        <!-- <router-link 
             class="link-label" 
             active-class="link-label--active" 
             to="/blog" exact
             @click="onRouterLinkClick"
         >
             Blog
-        </router-link>
+        </router-link> -->
         <router-link 
             class="link-label" 
             active-class="link-label--active" 
@@ -32,14 +32,14 @@
         >
             Developer Portfolio
         </router-link>
-        <router-link 
+        <!-- <router-link 
             class="link-label" 
             active-class="link-label--active" 
             to="/portfolio/art" exact
             @click="onRouterLinkClick"
         >
             Artist Portfolio
-        </router-link>
+        </router-link> -->
     </nav>
 </template>
 
