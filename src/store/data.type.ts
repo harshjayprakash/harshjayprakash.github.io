@@ -1,8 +1,8 @@
 export interface DevProject {
     name: string;
+    ref: string;
     description: string;
     timeframe: string;
-    category: string;
     technology: string;
     graphic: string;
     url: string;
