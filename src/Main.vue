@@ -1,9 +1,8 @@
 <template>
-    <!-- <Banner/> -->
     <div class="margin-container">
         <Header/>
         <main class="content-container">
-            <RouterView/>
+            <RouterView />
         </main>
         <Footer/>
     </div>
@@ -13,7 +12,6 @@
 import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-import Banner from './components/Banner.vue';
 </script>
 
 <style scoped>
