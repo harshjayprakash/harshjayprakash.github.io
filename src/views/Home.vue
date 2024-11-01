@@ -198,4 +198,43 @@ export default defineComponent({
 .contact .social-card {
     padding: 1rem;
 }
+
+@media (min-width: 800px) {
+    .about .about__container {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .about .about__image-container {
+        display: flex;
+        place-items: center;
+        place-content: end;
+    }
+
+    .about .about__profile-picture {
+        margin: 0;
+    }
+
+    .about .about__greeting {
+        text-align: left;
+        place-items: start;
+        margin: 0;
+    } 
+
+    .dev-projects .dev-projects__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+    }
+
+    .dev-projects .dev-projects__container {
+        align-content: end;
+    }
+
+    .contact .contact-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
 </style>
