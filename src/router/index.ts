@@ -1,23 +1,44 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory, type Router } from "vue-router";
 
-const router = createRouter({
+const router: Router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: '/',
-            name: 'home',
-            component: HomeView
+            path: '/', redirect: '/home',
         },
         {
-            path: '/about',
-            name: 'about',
-            // route level code-splitting
-            // this generates a separate chunk (About.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () => import('../views/AboutView.vue')
+            path: '/home', name: 'Home',
+            component: () => import('./../views/Home.vue'),
+        },
+        {
+            path: '/about', name: 'About',
+            component: () => import('./../views/About.vue'),
+        },
+        {
+            path: '/contact', name: 'Contact',
+            component: () => import('./../views/Contact.vue'),
+        },
+        {
+            path: '/brand', name: 'Branding',
+            component: () => import('./../views/Brand.vue'),
+        },
+        {
+            path: '/blog', name: 'Blog',
+            component: () => import('./../views/Blog/Index.vue'),
+        },
+        {
+            path: '/portfolio/art', name: 'Art Portfolio',
+            component: () => import('./../views/Portfolio/Art/Index.vue'),
+        },
+        {
+            path: '/portfolio/dev', name: 'Developer Portfolio',
+            component: () => import('./../views/Portfolio/Dev/Index.vue'),
+        },
+        {
+            path: '/portfolio/photography', name: 'Photography Portfolio',
+            component: () => import('./../views/Portfolio/Photography/Index.vue'),
         }
     ]
-})
+});
 
-export default router
+export default router;
