@@ -1,47 +1,48 @@
+<template>
+    <header class="header">
+        <button 
+            class="header__menu-button" @click="onMenuButtonClick" 
+            v-if="!isDesktop"
+        >
+            &#x2630;
+        </button>
+        <span class="header__title">Harsh.</span>
+        <span class="header__version-tag" v-if="showVersionTag">{{ versionStatus }}</span>
+        <span class="header__spacer"></span>
+        <Navigation v-if="isDesktop" @linkClick="hideNavigation" />
+    </header>
+    <Navigation v-if="!isDesktop && displayNavigation" @linkClick="hideNavigation" />
+</template>
+
 <script lang="ts">
 import { defineComponent, ref, type Ref } from 'vue';
 import Navigation from './Navigation.vue';
 
 export default defineComponent({
     components: { Navigation },
-    setup() {
-        const desktopMode: Ref<boolean> = ref(window.innerWidth > 800);
-        const showNavigation: Ref<boolean> = ref(desktopMode.value);
-        const showBetaTag: Boolean = true;
-
+    data() {
+        const versionStatus: string = 'Pre';
+        return { versionStatus };
+    },
+    setup() { 
+        const showVersionTag: Boolean = true;
+        const isDesktop: Ref<boolean> = ref(window.innerWidth > 800);
+        const displayNavigation: Ref<boolean> = ref(isDesktop.value);
         window.addEventListener('resize', (): void => {
-            desktopMode.value = (window.innerWidth > 800);
+            isDesktop.value = (window.innerWidth > 800);
         });
-
-        return { desktopMode, showNavigation, showBetaTag };
+        return { showVersionTag, isDesktop, displayNavigation };
     },
     methods: {
-        onMenuButtonClick(_event: MouseEvent) {
-            this.showNavigation = !this.showNavigation;
+        onMenuButtonClick() {
+            this.displayNavigation = !this.displayNavigation;
         },
-        hideShowNavigation() {
-            this.showNavigation = false;
-        }
-    }
-    
+        hideNavigation() {
+            this.displayNavigation = false;
+        },
+    },
 });
 </script>
-
-<template>
-    <header class="header">
-        <button 
-            class="menu-button" @click="onMenuButtonClick" 
-            v-if="!desktopMode"
-        >
-            &#x2630;
-        </button>
-        <span class="title" v-if="showBetaTag">Harsh.</span>
-        <span class="beta-tag">ALPHA</span>
-        <span class="spacer"></span>
-        <Navigation v-if="desktopMode" @linkClick="hideShowNavigation" />
-    </header>
-    <Navigation v-if="!desktopMode && showNavigation" @linkClick="hideShowNavigation" />
-</template>
 
 <style lang="css" scoped>
 .header {
@@ -53,22 +54,22 @@ export default defineComponent({
     margin-right: 0.5rem;
 }
 
-.header > .menu-button {
+.header .header__menu-button {
     border: 0;
     background-color: inherit;
 }
 
-.header > .menu-button:hover {
+.header .header__menu-button:hover {
     background-color: var(--clr-surface-container-high);
 }
 
-.header > .spacer {
+.header .header__spacer {
     flex-grow: 1;
 }
 
-.header > .beta-tag {
+.header .header__version-tag {
     padding: 0 0.5rem;
-    background-color: var(--clr-accent);
-    color: var(--clr-on-accent);
+    border: 0.1rem solid var(--clr-on-surface);
+    text-transform: uppercase;
 }
 </style>
