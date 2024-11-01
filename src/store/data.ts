@@ -1,4 +1,4 @@
-import type { DevProject } from "./data.type";
+import type { DevProject, Social } from "./data.type";
 
 export const devProjects: DevProject[] = [
     {
@@ -45,7 +45,7 @@ export const devProjects: DevProject[] = [
         name: 'Experimental Blok',
         ref: 'HX 2050',
         description: 'A square that moves, with arrow keys, around a user generated maze',
-        timeframe: '2020 - ONGOING',
+        timeframe: 'H2 \'20 - ONGOING',
         technology: 'C w/ Windows API',
         graphic: '',
         url: '/portfolio/dev/experimental-blok',
@@ -123,3 +123,20 @@ export const devProjects: DevProject[] = [
     },
 ];
 
+export const socialList: Social[] = [
+    {
+        name: 'Email',
+        uri: 'mailto:harshjayprakash@outlook.com',
+        value: 'harshjayprakash@outlook.com',
+    },
+    {
+        name: 'GitHub',
+        uri: 'https://github.com/harshjayprakash',
+        value: 'harshjayprakash',
+    },
+    {
+        name: 'X (Formerly Twitter)',
+        uri: 'https://x.com/harshjay_',
+        value: '@harshjay_',
+    },
+];
