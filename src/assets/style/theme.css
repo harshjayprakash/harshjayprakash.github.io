@@ -60,6 +60,7 @@
     --clr-shadow: light-dark(var(--clr-1000S), var(--clr-1000S));
 
     --clr-accent: light-dark(var(--clr-400AL), var(--clr-500AD));
+    --clr-accent-variant: light-dark(var(--clr-400AD), var(--clr-500AL));
     --clr-on-accent: light-dark(var(--clr-050AL), var(--clr-050AL));
     --clr-accent-container: light-dark(var(--clr-100AL), var(--clr-200AL));
     --clr-on-accent-container: light-dark(var(--clr-950AL), var(--clr-950AL));
