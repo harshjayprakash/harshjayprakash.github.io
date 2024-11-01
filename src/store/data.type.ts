@@ -15,3 +15,8 @@ export interface ArtProject {
     url: string;
 };
 
+export interface Social {
+    name: string;
+    uri: string;
+    value: string;
+}
