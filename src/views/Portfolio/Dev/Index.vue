@@ -34,7 +34,8 @@ export default defineComponent({
 
 .dev-project {
     padding: 1rem;
-    background-color: var(--clr-surface-container-lowest)
+    background-color: var(--clr-surface-container-lowest);
+    border-top: 0.15rem solid var(--clr-accent);
 }
 
 .project-ref {
