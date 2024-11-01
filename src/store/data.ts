@@ -125,11 +125,6 @@ export const devProjects: DevProject[] = [
 
 export const socialList: Social[] = [
     {
-        name: 'Email',
-        uri: 'mailto:harshjayprakash@outlook.com',
-        value: 'harshjayprakash@outlook.com',
-    },
-    {
         name: 'GitHub',
         uri: 'https://github.com/harshjayprakash',
         value: 'harshjayprakash',
@@ -138,5 +133,10 @@ export const socialList: Social[] = [
         name: 'X (Formerly Twitter)',
         uri: 'https://x.com/harshjay_',
         value: '@harshjay_',
+    },
+    {
+        name: 'Email',
+        uri: 'mailto:harshjayprakash@outlook.com',
+        value: 'harshjayprakash@outlook.com',
     },
 ];
