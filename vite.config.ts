@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: 'https://harshjayprakash.github.io/personal-portfolio/',
+    base: '/personal-portfolio/',
     plugins: [
         vue(),
     ],
