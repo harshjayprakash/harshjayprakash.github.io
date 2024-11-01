@@ -1,0 +1,18 @@
+@import './base.css';
+@import './theme.css';
+@import './typography.css';
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--clr-surface);
+    color: var(--clr-on-surface);
+}
+
+*, *::before, *::after {
+    transition: all ease-in-out 150ms
+}
+
+::selection {
+    background-color: var(--clr-accent);
+    color: var(--clr-on-accent);
+}
