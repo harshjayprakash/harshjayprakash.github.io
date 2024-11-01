@@ -1,107 +1,84 @@
 <template>
-    <nav class="nav">
-        <router-link 
-            class="link-label" 
-            active-class="link-label--active" 
-            to="/home" exact
-            @click="onRouterLinkClick"
+    <nav class="navigation">
+        <RouterLink
+            v-for="link in linksToShow"
+            class="navigation__link"
+            active-class="navigation__link--active"
+            :to="link.path" exact
+            @click="onLinkClick"
         >
-            Home
-        </router-link>
-        <router-link 
-            class="link-label" 
-            active-class="link-label--active" 
-            to="/about" exact
-            @click="onRouterLinkClick"
-        >
-            About
-        </router-link>
-        <!-- <router-link 
-            class="link-label" 
-            active-class="link-label--active" 
-            to="/blog" exact
-            @click="onRouterLinkClick"
-        >
-            Blog
-        </router-link> -->
-        <router-link 
-            class="link-label" 
-            active-class="link-label--active" 
-            to="/portfolio/dev" exact
-            @click="onRouterLinkClick"
-        >
-            Developer Portfolio
-        </router-link>
-        <!-- <router-link 
-            class="link-label" 
-            active-class="link-label--active" 
-            to="/portfolio/art" exact
-            @click="onRouterLinkClick"
-        >
-            Artist Portfolio
-        </router-link> -->
+            {{ link.name }}
+        </RouterLink>
     </nav>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, type PropType, type Ref } from 'vue';
+import router from '@/router';
+import { defineComponent } from 'vue';
+import type { RouteRecordRaw } from 'vue-router';
 
 export default defineComponent({
+    data() {
+        const links: string[] = ['/home', '/about', '/portfolio/dev'];
+        const linksToShow: RouteRecordRaw[] = router.getRoutes()
+            .filter(route => links.includes(route.path))
+            .sort((a, b) => links.indexOf(a.path) - links.indexOf(b.path));
+        return { linksToShow };
+    },
     emits: ['linkClick'],
-    setup(props, { emit }) {
+    setup(_props, { emit }) {
         const hideNav = () => {
             emit('linkClick', false);
         };
-
         return { hideNav };
     },
     methods: {
-        onRouterLinkClick(_event: MouseEvent) {
+        onLinkClick() {
             this.hideNav();
-        }
-    }
+        },
+    },
 });
 </script>
 
 <style lang="css" scoped>
-.nav {
+.navigation {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-.nav > .link-label {
+.navigation .navigation__link {
     text-decoration: none;
     color: inherit;
 }
 
-.nav > .link-label--active {
+.navigation .navigation__link--active {
     font-weight: 500;
 }
 
 @media (max-width: 799px) {
-    .nav {
+    .navigation {
         flex-direction: column;
         padding: 1rem 2rem;
     }
 
-    .nav > .link-label {
-        padding: 0rem 1rem;
-        border-left: 2px solid var(--clr-surface);
+    .navigation .navigation__link {
+        padding: 0 1rem;
+        border-left: 0.15rem solid var(--clr-surface);
     }
 
-    .nav > .link-label--active {
-        border-left: 2px solid var(--clr-on-surface);
+    .navigation .navigation__link--active {
+        border-left-color: var(--clr-on-surface);
     }
 }
 
 @media (min-width: 800px) {
-    .nav > .link-label {
-        border-bottom: 2px solid var(--clr-surface);
+    .navigation .navigation__link {
+        border-bottom: 0.15rem solid var(--clr-surface);
     }
 
-    .nav > .link-label--active {
-        border-bottom: 2px solid var(--clr-on-surface);
+    .navigation .navigation__link--active {
+        border-bottom-color: var(--clr-on-surface);
     }
 }
 </style>
