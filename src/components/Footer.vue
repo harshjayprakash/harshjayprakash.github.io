@@ -1,8 +1,19 @@
 <template>
     <footer class="footer">
-        <p>Copyright &copy; {{ copyrightYear }}. Harsh Jayprakash</p>
-        <p>Handcrafted with Vue</p>
-        <a href="https://github.com/harshjayprakash/personal-portfolio">View Source Code &UpperRightArrow;</a>
+        <hr class="footer__seperator" />
+        <p class="footer__copyright">
+            Copyright &copy; {{ yearAsRomanNumeral }}. Harsh Jayprakash.
+        </p>
+        <p class="footer__technology">
+            Handcrafted with Vue.
+        </p>
+        <div class="footer__divider footer__links">
+            <a class="footer__link" 
+                href="https://github.com/harshjayprakash/personal-portfolio"
+            >
+                View Source Code &UpperRightArrow;
+            </a>
+        </div>
     </footer>
 </template>
 
@@ -10,16 +21,27 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    setup() {
-        const copyrightYear: string = 'MMXXIV';
-
-        return { copyrightYear };
+    data() {
+        const yearAsRomanNumeral: string = 'MMXXIV'
+        return { yearAsRomanNumeral };
     },
+    setup() { },
 });
 </script>
 
 <style lang="css" scoped>
 .footer {
     padding: 1rem;
+    
+}
+
+.footer .footer__seperator {
+    border: 0;
+    border-top: 0.1rem solid var(--clr-surface-container-high);
+    padding-bottom: 1rem;
+}
+
+.footer > * {
+    font-size: 0.85rem;
 }
 </style>
