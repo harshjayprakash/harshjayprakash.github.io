@@ -7,3 +7,8 @@ body {
     background-color: var(--clr-surface);
     color: var(--clr-on-surface);
 }
+
+*, *::before, *::after {
+    transition: all ease-in-out 150ms
+}
+
