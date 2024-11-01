@@ -12,3 +12,7 @@ body {
     transition: all ease-in-out 150ms
 }
 
+::selection {
+    background-color: var(--clr-accent);
+    color: var(--clr-on-accent);
+}
