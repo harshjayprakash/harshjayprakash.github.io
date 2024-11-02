@@ -1,42 +1,36 @@
-import { createRouter, createWebHistory, type Router } from "vue-router";
+import About from "@/views/About.vue";
+import Home from "@/views/Home.vue";
+import { createRouter, createWebHistory, type Router, type RouteRecordRaw } from "vue-router";
+import Blog from "@/views/Blog/Blog.vue";
+import DeveloperPortfolio from "@/views/Portfolio/Dev/DeveloperPortfolio.vue";
+import { devProjects } from "@/store/data";
+import type { DevProject } from "@/store/data.type";
+import DeveloperProjectPage from "@/views/Portfolio/Dev/DeveloperProjectPage.vue";
+
+const createRoutesForDevProjects = () => {
+    const projectRoutes: RouteRecordRaw[] = []
+    devProjects.forEach(project => {
+        projectRoutes.push({
+            path: project.url,
+            component: () => import('./../views/Portfolio/Dev/' + project.comp + '.vue'),
+        });
+    });
+    return projectRoutes;
+}
 
 const router: Router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
+        { path: '/', redirect: '/home', },
+        { path: '/home', name: 'Home', component: Home, },
+        { path: '/about', name: 'About', component: About, },
+        { path: '/blog', name: 'Blog', component: () => Blog, },
+        { path: '/portfolio/dev', name: 'Developer Portfolio', component: DeveloperPortfolio, },
         {
-            path: '/', redirect: '/home',
-        },
-        {
-            path: '/home', name: 'Home',
-            component: () => import('./../views/Home.vue'),
-        },
-        {
-            path: '/about', name: 'About',
-            component: () => import('./../views/About.vue'),
-        },
-        {
-            path: '/contact', name: 'Contact',
-            component: () => import('./../views/Contact.vue'),
-        },
-        {
-            path: '/brand', name: 'Branding',
-            component: () => import('./../views/Brand.vue'),
-        },
-        {
-            path: '/blog', name: 'Blog',
-            component: () => import('./../views/Blog/Index.vue'),
-        },
-        {
-            path: '/portfolio/art', name: 'Art Portfolio',
-            component: () => import('./../views/Portfolio/Art/Index.vue'),
-        },
-        {
-            path: '/portfolio/dev', name: 'Developer Portfolio',
-            component: () => import('./../views/Portfolio/Dev/Index.vue'),
-        },
-        {
-            path: '/portfolio/photography', name: 'Photography Portfolio',
-            component: () => import('./../views/Portfolio/Photography/Index.vue'),
+            path: '/portfolio/dev/project/',
+            name: 'Developer Project',
+            component: DeveloperProjectPage,
+            children: [...createRoutesForDevProjects()]
         }
     ]
 });
