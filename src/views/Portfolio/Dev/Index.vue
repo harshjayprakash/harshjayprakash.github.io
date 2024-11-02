@@ -29,6 +29,12 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
+.dev-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .dev-project-list {
     display: grid;
     gap: 1rem;
@@ -36,8 +42,7 @@ export default defineComponent({
 
 .dev-project {
     padding: 1rem;
-    background-color: var(--clr-surface-container-lowest);
-    border-top: 0.15rem solid var(--clr-accent);
+    background-color: var(--clr-surface-container-low);
 }
 
 .project-ref {
