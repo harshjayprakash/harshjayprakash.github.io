@@ -10,10 +10,10 @@ import DeveloperProjectPage from "@/views/Portfolio/Dev/DeveloperProjectPage.vue
 const createRoutesForDevProjects = () => {
     const projectRoutes: RouteRecordRaw[] = []
     devProjects.forEach(project => {
-        const path: string = `./../views/Portfolio/Dev/${project.comp}.vue`;
         projectRoutes.push({
             path: project.url,
-            component: () => import(path),
+            name: project.name,
+            component: project.comp,
         });
     });
     return projectRoutes;
