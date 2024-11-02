@@ -21,7 +21,7 @@ import Navigation from './Navigation.vue';
 export default defineComponent({
     components: { Navigation },
     data() {
-        const versionStatus: string = 'Pre';
+        const versionStatus: string = 'Preview';
         return { versionStatus };
     },
     setup() { 
