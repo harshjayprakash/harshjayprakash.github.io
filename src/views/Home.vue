@@ -69,7 +69,6 @@
 </template>
 
 <script lang="ts">
-import router from '@/router';
 import { devProjects, socialList } from '@/store/data';
 import type { DevProject, Social } from '@/store/data.type';
 import { defineComponent } from 'vue';
