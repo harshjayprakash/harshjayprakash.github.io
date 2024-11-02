@@ -8,8 +8,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H2 \'19 - ONGOING',
         technology: 'Pascal',
         graphic: '',
-        url: '/portfolio/dev/adventure-game',
+        url: 'adventure-game',
         gitLink: 'https://github.com/harshjayprakash/adventure-game',
+        comp: 'ProjectAdventureGame',
     },
     {
         name: 'Algorithmic Art Playground',
@@ -18,8 +19,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H2 \'24 - ONGOING',
         technology: 'Java',
         graphic: '',
-        url: '/portfolio/dev/algorithmic-art-playground',
-        gitLink: 'https://github.com/harshjayprakash/algorithmic-art-playground'
+        url: 'algorithmic-art-playground',
+        gitLink: 'https://github.com/harshjayprakash/algorithmic-art-playground',
+        comp: 'ProjectAlgorithmicArtPlayground',
     },
     {
         name: 'Crane Container Simulation',
@@ -28,8 +30,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H1 \'23',
         technology: 'Pascal',
         graphic: '',
-        url: '/portfolio/dev/crane-container-simulation',
+        url: 'crane-container-simulation',
         gitLink: 'https://github.com/harshjayprakash/crane-container-simulation',
+        comp: 'ProjectCraneContainerSimulation',
     },
     {
         name: 'Dog Walkers Finder',
@@ -38,8 +41,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H2 \'24',
         technology: 'Angular w/ AWS',
         graphic: '',
-        url: '/portfolio/dev/dog-walkers-finder',
+        url: 'dog-walkers-finder',
         gitLink: 'https://github.com/harshjayprakash/dog-walkers-finder',
+        comp: 'ProjectDogWalkersFinder',
     },
     {
         name: 'Experimental Blok',
@@ -48,8 +52,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H2 \'20 - ONGOING',
         technology: 'C w/ Windows API',
         graphic: '',
-        url: '/portfolio/dev/experimental-blok',
+        url: 'experimental-blok',
         gitLink: 'https://github.com/harshjayprakash/experimental-blok',
+        comp: 'ProjectExperimentalBlok',
     },
     {
         name: 'Library Loans System',
@@ -58,8 +63,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H1 \'23',
         technology: 'Java w/ MySQL',
         graphic: '',
-        url: '/portfolio/dev/library-loans-system',
+        url: 'library-loans-system',
         gitLink: 'https://github.com/harshjayprakash/library-loans-system',
+        comp: 'ProjectLibraryLoansSystem',
     },
     {
         name: 'Noughts and Crosses',
@@ -68,8 +74,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H1 \'22 - ONGOING',
         technology: 'Pascal',
         graphic: '',
-        url: '/portfolio/dev/noughts-and-crosses',
+        url: 'noughts-and-crosses',
         gitLink: 'https://github.com/harshjayprakash/noughts-and-crosses',
+        comp: 'ProjectNoughtsAndCrosses',
     },
     {
         name: 'Personal Portfolio',
@@ -78,8 +85,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H2 \'21 - ONGOING',
         technology: 'Vue.js w/ TypeScript',
         graphic: '',
-        url: '/portfolio/dev/personal-portfolio',
+        url: 'personal-portfolio',
         gitLink: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
+        comp: 'ProjectPersonalPortfolio',
     },
     {
         name: 'Project Navigator',
@@ -88,8 +96,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H1 \'24 - ONGOING',
         technology: 'PowerShell',
         graphic: '',
-        url: '/portfolio/dev/project-navigator',
+        url: 'project-navigator',
         gitLink: 'https://github.com/harshjayprakash/project-navigator',
+        comp: 'ProjectNavigator',
     },
     {
         name: 'Table Software Prototype',
@@ -98,8 +107,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H1 \'23',
         technology: 'Vanilla JavaScript',
         graphic: '',
-        url: '/portfolio/dev/table-software-prototype',
+        url: 'table-software-prototype',
         gitLink: 'https://github.com/harshjayprakash/table-software-prototype',
+        comp: 'ProjectTableSoftwarePrototype',
     },
     {
         name: 'Trigonometric Helper',
@@ -108,8 +118,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H1 \'21 - ONGOING',
         technology: 'Visual Basic .NET',
         graphic: '',
-        url: '/portfolio/dev/trigonometric-helper',
+        url: 'trigonometric-helper',
         gitLink: 'https://github.com/harshjayprakash/trigonometric-helper',
+        comp: 'ProjectTrigonometricHelper',
     },
     {
         name: 'Wrapping Paper Quotes Calculator',
@@ -118,8 +129,9 @@ export const devProjects: DevProject[] = [
         timeframe: 'H1 \'20',
         technology: 'Python',
         graphic: '',
-        url: '/portfolio/dev/wrapping-paper-quotes-calculator',
+        url: 'wrapping-paper-quotes-calculator',
         gitLink: 'https://github.com/harshjayprakash/wrapping-paper-quotes-calculator',
+        comp: 'ProjectWrappingPaperQuotesCalculator',
     },
 ];
 
