@@ -9,7 +9,7 @@
         </p>
         <div class="footer__divider footer__links">
             <a class="footer__link" 
-                href="https://github.com/harshjayprakash/personal-portfolio"
+                href="https://github.com/harshjayprakash/harshjayprakash.github.io"
             >
                 View Source Code &UpperRightArrow;
             </a>

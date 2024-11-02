@@ -79,7 +79,7 @@ export const devProjects: DevProject[] = [
         technology: 'Vue.js w/ TypeScript',
         graphic: '',
         url: '/portfolio/dev/personal-portfolio',
-        gitLink: 'https://github.com/harshjayprakash/personal-portfolio',
+        gitLink: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
     },
     {
         name: 'Project Navigator',
