@@ -43,7 +43,7 @@
                 <small class="dev-project__description">
                     {{ project.ref }} ~ {{ project.technology }} &mdash; {{ project.description }}
                 </small>
-                <RouterLink class="dev-project__link link-label" :to="project.url">
+                <RouterLink class="dev-project__link link-label" :to="'/portfolio/dev/project/' + project.url">
                     Views Details &RightArrow;
                 </RouterLink>
             </article>
