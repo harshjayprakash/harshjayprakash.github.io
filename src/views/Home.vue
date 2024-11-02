@@ -103,7 +103,6 @@ export default defineComponent({
         var(--clr-surface) 75%,
         var(--clr-surface) 100%);
     color: var(--clr-on-surface);
-    border-radius: 0.4rem;
 }
 
 .hero > * {
@@ -138,14 +137,13 @@ export default defineComponent({
     flex-direction: column;
     gap: 2rem;
     background-color: var(--clr-surface-container-low);
-    border-radius: 0.4rem;
     padding: 4rem;
 }
 
 .about .about__profile-picture {
     display: block;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 50%;
     border: 0.3rem solid var(--clr-surface-container-high);
 }
 
@@ -175,7 +173,7 @@ export default defineComponent({
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .dev-projects .dev-projects__context {
@@ -190,7 +188,6 @@ export default defineComponent({
 
 .dev-projects .dev-project__card {
     background-color: var(--clr-surface-container-low);
-    border-radius: 0.4rem;
     padding: 1rem;
 }
 
@@ -205,7 +202,6 @@ export default defineComponent({
 
 .contact .social-card {
     background-color: var(--clr-surface-container-low);
-    border-radius: 0.4rem;
     padding: 1rem;
 }
 

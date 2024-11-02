@@ -60,6 +60,7 @@ export default defineComponent({
     .navigation {
         flex-direction: column;
         padding: 1rem 2rem;
+        background-color: var(--clr-surface-container-lowest);
     }
 
     .navigation .navigation__link {
