@@ -4,7 +4,6 @@ import { createRouter, createWebHistory, type Router, type RouteRecordRaw } from
 import Blog from "@/views/Blog/Blog.vue";
 import DeveloperPortfolio from "@/views/Portfolio/Dev/DeveloperPortfolio.vue";
 import { devProjects } from "@/store/data";
-import type { DevProject } from "@/store/data.type";
 import DeveloperProjectPage from "@/views/Portfolio/Dev/DeveloperProjectPage.vue";
 
 const createRoutesForDevProjects = () => {
