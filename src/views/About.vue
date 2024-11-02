@@ -114,14 +114,22 @@ export default defineComponent({
     padding: 2rem 0;
 }
 
+.skills .skills__title,
+.quals .qual__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 .skills .skills__tab-button {
+    padding: 0.5rem 1rem;
     background-color: inherit;
     border: 0px;
-    border-bottom: 0.15rem solid var(--clr-surface);
+    border-top: 0.15rem solid var(--clr-surface);
 }
 
 .skills .skills__tab-button--active {
-    border-bottom-color: var(--clr-accent);
+    border-top-color: var(--clr-accent);
     background-color: var(--clr-surface-container-low);
     font-weight: 500;
 }
