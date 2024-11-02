@@ -8,7 +8,7 @@
             Handcrafted with Vue.
         </p>
         <div class="footer__divider footer__links">
-            <a class="footer__link" 
+            <a class="footer__link link-label" 
                 href="https://github.com/harshjayprakash/harshjayprakash.github.io"
             >
                 View Source Code &UpperRightArrow;
@@ -43,5 +43,15 @@ export default defineComponent({
 
 .footer > * {
     font-size: 0.85rem;
+}
+
+.link-label {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 0.15rem solid var(--clr-accent-container);
+}
+
+.link-label:hover {
+    border-bottom-color: var(--clr-accent-variant);
 }
 </style>
