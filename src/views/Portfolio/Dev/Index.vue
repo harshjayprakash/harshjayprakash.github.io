@@ -16,15 +16,15 @@
 
 <script lang="ts">
 import { devProjects } from '@/store/data';
+import type { DevProject } from '@/store/data.type';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    setup() { },
     data() {
-        return { 
-            projectList: devProjects
-        }
-    }
+        const projectList: DevProject[] = devProjects;
+        return { projectList };
+    },
+    setup() { },
 });
 </script>
 
