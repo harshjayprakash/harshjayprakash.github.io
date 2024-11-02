@@ -96,6 +96,14 @@ export default defineComponent({
     place-items: center;
     place-content: center;
     gap: 2rem;
+    background: linear-gradient(
+        3rad, 
+        var(--clr-accent) 0%, 
+        var(--clr-surface) 25%, 
+        var(--clr-surface) 75%,
+        var(--clr-surface) 100%);
+    color: var(--clr-on-surface);
+    border-radius: 0.4rem;
 }
 
 .hero > * {
@@ -108,8 +116,8 @@ export default defineComponent({
 .about .about__title,
 .dev-projects .dev-projects__title,
 .contact .contact__title {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
 }
@@ -119,7 +127,7 @@ export default defineComponent({
 }
 
 .about {
-    padding: 5rem 1rem;
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -129,6 +137,9 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: var(--clr-surface-container-low);
+    border-radius: 0.4rem;
+    padding: 4rem;
 }
 
 .about .about__profile-picture {
@@ -178,6 +189,8 @@ export default defineComponent({
 }
 
 .dev-projects .dev-project__card {
+    background-color: var(--clr-surface-container-low);
+    border-radius: 0.4rem;
     padding: 1rem;
 }
 
@@ -187,15 +200,18 @@ export default defineComponent({
 
 .contact .contact-options {
     display: grid;
+    gap: 1rem;
 }
 
 .contact .social-card {
+    background-color: var(--clr-surface-container-low);
+    border-radius: 0.4rem;
     padding: 1rem;
 }
 
 @media (min-width: 800px) {
     .about .about__container {
-        padding: 1rem;
+        padding: 3rem;
         display: grid;
         grid-template-columns: 1fr 2fr;
     }
