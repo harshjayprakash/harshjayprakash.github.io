@@ -37,7 +37,7 @@
             </div>
             <article class="skills-list__container">
                 <div class="skills-list__divider" v-if="isSkillTypeShown('technical')">
-                    <ul>
+                    <ul class="skills__tech-list">
                         <li>Angular</li>
                         <li>C Programming Language</li>
                         <li>HTML + CSS</li>
@@ -53,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="skills-list__divider" v-if="isSkillTypeShown('traditional')">
-                    <ul>
+                    <ul class="skills__traditional-list">
                         <li>Attention-to-detail</li>
                         <li>Time Management</li>
                         <li>Problem Solving</li>
@@ -137,6 +137,13 @@ export default defineComponent({
 .skills .skills-list__container {
     background-color: var(--clr-surface-container-low);
     padding: 1rem 0.2rem;
+}
+
+.skills .skills__tech-list,
+.skills .skills__traditional-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
 }
 
 @media (min-width: 800px) {
