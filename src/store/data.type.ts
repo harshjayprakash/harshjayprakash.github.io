@@ -1,3 +1,5 @@
+import type { Component } from "vue";
+
 export interface DevProject {
     name: string;
     ref: string;
@@ -7,7 +9,7 @@ export interface DevProject {
     graphic: string;
     url: string;
     gitLink: string;
-    comp: string;
+    comp: Component;
 };
 
 export interface ArtProject {
