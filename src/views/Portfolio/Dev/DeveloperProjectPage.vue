@@ -9,6 +9,11 @@
         <small>{{ currentProject?.timeframe }}</small>
         <br />
         <br />
+        <a class="link-label" :href="currentProject?.gitLink">
+            View Source Code on GitHub (&nearrow;)
+        </a>
+        <br />
+        <br />
     </section>
     <RouterView />
 </template>
