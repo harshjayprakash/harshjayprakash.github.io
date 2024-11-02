@@ -10,9 +10,10 @@ import DeveloperProjectPage from "@/views/Portfolio/Dev/DeveloperProjectPage.vue
 const createRoutesForDevProjects = () => {
     const projectRoutes: RouteRecordRaw[] = []
     devProjects.forEach(project => {
+        const path: string = `./../views/Portfolio/Dev/${project.comp}.vue`;
         projectRoutes.push({
             path: project.url,
-            component: () => import('./../views/Portfolio/Dev/' + project.comp + '.vue'),
+            component: () => import(path),
         });
     });
     return projectRoutes;
@@ -27,10 +28,10 @@ const router: Router = createRouter({
         { path: '/blog', name: 'Blog', component: () => Blog, },
         { path: '/portfolio/dev', name: 'Developer Portfolio', component: DeveloperPortfolio, },
         {
-            path: '/portfolio/dev/project/',
+            path: '/portfolio/dev/project',
             name: 'Developer Project',
             component: DeveloperProjectPage,
-            children: [...createRoutesForDevProjects()]
+            children: createRoutesForDevProjects()
         }
     ]
 });
