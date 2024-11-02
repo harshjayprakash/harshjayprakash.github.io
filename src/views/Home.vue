@@ -86,11 +86,6 @@ export default defineComponent({
         return { profilePictureUri, devProjectsToShow, socials };
     },
     setup() {},
-    methods: {
-        onReadMoreClick() {
-            router.push('/about');
-        },
-    }
 });
 </script>
 

@@ -20,3 +20,5 @@ export interface Social {
     uri: string;
     value: string;
 }
+
+export type SkillType = 'technical' | 'traditional'
