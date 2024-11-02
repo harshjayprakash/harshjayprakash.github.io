@@ -1,14 +1,16 @@
 <template>
-    <h1>Developer Portfolio</h1>
-    <p>A list of undertaken projects.</p>
-    <section class="dev-project-list">
-        <article class="dev-project" v-for="project in projectList">
-            <small class="project-ref">{{ project.ref }} &emsp; {{ project.technology }}</small>
-            <br />
-            <span class="project-title">{{ project.name }}</span>
-            <p>{{ project.description }}</p>
-            <a>View More&emsp;&RightArrow;</a>
-        </article>
+    <section class="dev-projects">
+        <h1>Developer Portfolio</h1>
+        <p>A list of undertaken projects.</p>
+        <section class="dev-project-list">
+            <article class="dev-project" v-for="project in projectList">
+                <small class="project-ref">{{ project.ref }} &emsp; {{ project.technology }}</small>
+                <br />
+                <span class="project-title">{{ project.name }}</span>
+                <p>{{ project.description }}</p>
+                <a>View More&emsp;&RightArrow;</a>
+            </article>
+        </section>
     </section>
 </template>
 
