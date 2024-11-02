@@ -4,7 +4,6 @@ import { createRouter, createWebHistory, type Router, type RouteRecordRaw } from
 import Blog from "@/views/Blog/Blog.vue";
 import DeveloperPortfolio from "@/views/Portfolio/Dev/DeveloperPortfolio.vue";
 import { devProjects } from "@/store/data";
-import type { DevProject } from "@/store/data.type";
 import DeveloperProjectPage from "@/views/Portfolio/Dev/DeveloperProjectPage.vue";
 
 const createRoutesForDevProjects = () => {
@@ -12,7 +11,8 @@ const createRoutesForDevProjects = () => {
     devProjects.forEach(project => {
         projectRoutes.push({
             path: project.url,
-            component: () => import('./../views/Portfolio/Dev/' + project.comp + '.vue'),
+            name: project.name,
+            component: project.comp,
         });
     });
     return projectRoutes;
@@ -27,10 +27,10 @@ const router: Router = createRouter({
         { path: '/blog', name: 'Blog', component: () => Blog, },
         { path: '/portfolio/dev', name: 'Developer Portfolio', component: DeveloperPortfolio, },
         {
-            path: '/portfolio/dev/project/',
+            path: '/portfolio/dev/project',
             name: 'Developer Project',
             component: DeveloperProjectPage,
-            children: [...createRoutesForDevProjects()]
+            children: createRoutesForDevProjects()
         }
     ]
 });
