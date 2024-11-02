@@ -7,6 +7,7 @@ export interface DevProject {
     graphic: string;
     url: string;
     gitLink: string;
+    comp: string;
 };
 
 export interface ArtProject {

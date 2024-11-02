@@ -43,7 +43,7 @@
                 <small class="dev-project__description">
                     {{ project.ref }} ~ {{ project.technology }} &mdash; {{ project.description }}
                 </small>
-                <RouterLink class="dev-project__link link-label" :to="project.url">
+                <RouterLink class="dev-project__link link-label" :to="'/portfolio/dev/project/' + project.url">
                     Views Details &RightArrow;
                 </RouterLink>
             </article>
@@ -69,7 +69,6 @@
 </template>
 
 <script lang="ts">
-import router from '@/router';
 import { devProjects, socialList } from '@/store/data';
 import type { DevProject, Social } from '@/store/data.type';
 import { defineComponent } from 'vue';
@@ -97,6 +96,13 @@ export default defineComponent({
     place-items: center;
     place-content: center;
     gap: 2rem;
+    background: linear-gradient(
+        3rad, 
+        var(--clr-accent) 0%, 
+        var(--clr-surface) 25%, 
+        var(--clr-surface) 75%,
+        var(--clr-surface) 100%);
+    color: var(--clr-on-surface);
 }
 
 .hero > * {
@@ -109,8 +115,8 @@ export default defineComponent({
 .about .about__title,
 .dev-projects .dev-projects__title,
 .contact .contact__title {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
 }
@@ -120,7 +126,7 @@ export default defineComponent({
 }
 
 .about {
-    padding: 5rem 1rem;
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -130,12 +136,14 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: var(--clr-surface-container-low);
+    padding: 4rem;
 }
 
 .about .about__profile-picture {
     display: block;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 50%;
     border: 0.3rem solid var(--clr-surface-container-high);
 }
 
@@ -165,7 +173,7 @@ export default defineComponent({
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .dev-projects .dev-projects__context {
@@ -179,6 +187,7 @@ export default defineComponent({
 }
 
 .dev-projects .dev-project__card {
+    background-color: var(--clr-surface-container-low);
     padding: 1rem;
 }
 
@@ -188,15 +197,17 @@ export default defineComponent({
 
 .contact .contact-options {
     display: grid;
+    gap: 1rem;
 }
 
 .contact .social-card {
+    background-color: var(--clr-surface-container-low);
     padding: 1rem;
 }
 
 @media (min-width: 800px) {
     .about .about__container {
-        padding: 1rem;
+        padding: 3rem;
         display: grid;
         grid-template-columns: 1fr 2fr;
     }
