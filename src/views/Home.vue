@@ -43,7 +43,7 @@
                 <small class="dev-project__description">
                     {{ project.ref }} ~ {{ project.technology }} &mdash; {{ project.description }}
                 </small>
-                <RouterLink class="dev-project__link link-label" :to="'/portfolio/dev/project/' + project.url">
+                <RouterLink class="dev-project__link link-label" :to="'/portfolio/dev/project/' + project.uri">
                     Views Details &RightArrow;
                 </RouterLink>
             </article>
@@ -61,7 +61,7 @@
                 <span class="social-card__service">{{ social.name }}</span>
                 &emsp; &mdash; &emsp;
                 <a :href="social.uri" class="social-card__handle link-label">
-                    {{ social.value }} (&nearrow;)
+                    {{ social.handle }} (&nearrow;)
                 </a>
             </article>
         </div>
@@ -69,8 +69,10 @@
 </template>
 
 <script lang="ts">
-import { devProjects, socialList } from '@/store/data';
-import type { DevProject, Social } from '@/store/data.type';
+import { socialList } from '@/store/data/socialList';
+import { devProjectsList } from '@/store/data/devProjectsList';
+import type { Social } from '@/store/interfaces/Social';
+import type { DevProject } from '@/store/interfaces/DevProject';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -78,7 +80,7 @@ export default defineComponent({
         const profilePictureUri: string = 
             'https://avatars.githubusercontent.com/u/58461297?s=96&v=4';
         const devProjectRefs: string[] = ['UOW 2450', 'HX 2150', 'HX 2050',];
-        const devProjectsToShow: DevProject[] = devProjects
+        const devProjectsToShow: DevProject[] = devProjectsList
             .filter(project => devProjectRefs.includes(project.ref))
             .sort((a, b) => devProjectRefs.indexOf(a.ref) - devProjectRefs.indexOf(b.ref));
         const socials: Social[] = socialList;

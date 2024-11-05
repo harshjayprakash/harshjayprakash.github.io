@@ -71,7 +71,7 @@
 </template>
 
 <script lang="ts">
-import type { SkillType } from '@/store/data.type';
+import type { SkillType } from '@/store/interfaces/SkillType';
 import { defineComponent, ref, type Ref } from 'vue';
 
 export default defineComponent({

@@ -9,7 +9,7 @@
         <small>{{ currentProject?.timeframe }}</small>
         <br />
         <br />
-        <a class="link-label" :href="currentProject?.gitLink">
+        <a class="link-label" :href="currentProject?.gituri">
             View Source Code on GitHub (&nearrow;)
         </a>
         <br />
@@ -20,8 +20,8 @@
 
 <script lang="ts">
 import router from '@/router';
-import { devProjects } from '@/store/data';
-import type { DevProject } from '@/store/data.type';
+import { devProjectsList } from '@/store/data/devProjectsList';
+import type { DevProject } from '@/store/interfaces/DevProject';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -29,8 +29,8 @@ export default defineComponent({
         const currentProjectRoute: string = router.currentRoute.value.fullPath.toString()
             .slice(23, router.currentRoute.value.fullPath.length);
         let currentProject: DevProject | undefined;
-        devProjects.forEach(project => {
-            if (project.url === currentProjectRoute) {
+        devProjectsList.forEach(project => {
+            if (project.uri === currentProjectRoute) {
                 currentProject = project;
             }
         });
