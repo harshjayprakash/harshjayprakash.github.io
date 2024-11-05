@@ -8,20 +8,21 @@
                 <br />
                 <span class="project-title">{{ project.name }}</span>
                 <p>{{ project.description }}</p>
-                <RouterLink class="link-label" :to="'/portfolio/dev/project/' + project.url" exact>View More&emsp;&RightArrow;</RouterLink>
+                <RouterLink class="link-label" :to="'/portfolio/dev/project/' + project.uri" exact>View More&emsp;&RightArrow;</RouterLink>
             </article>
         </section>
     </section>
 </template>
 
 <script lang="ts">
-import { devProjects } from '@/store/data';
-import type { DevProject } from '@/store/data.type';
+
+import { devProjectsList } from '@/store/data/devProjectsList';
+import type { DevProject } from '@/store/interfaces/DevProject';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     data() {
-        const projectList: DevProject[] = devProjects;
+        const projectList: DevProject[] = devProjectsList;
         return { projectList };
     },
     setup() { },
