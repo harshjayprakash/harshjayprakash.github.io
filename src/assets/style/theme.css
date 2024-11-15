@@ -36,6 +36,39 @@
     --clr-800AL: hsl(180deg 100% 8%);
     --clr-900AL: hsl(180deg 100% 6%);
     --clr-950AL: hsl(180deg 100% 4%);
+
+    --clr-surface-dim: light-dark();
+    --clr-surface: light-dark();
+    --clr-surface-bight: light-dark();
+
+    --clr-surface-container-lowest: light-dark();
+    --clr-surface-container-low: light-dark();
+    --clr-surface-container: light-dark();
+    --clr-surface-container-high: light-dark();
+    --clr-surface-container-highest: light-dark();
+    
+    --clr-on-surface: light-dark();
+    --clr-on-surface-variant: light-dark();
+    --clr-outline: light-dark();
+    --clr-outline-variant: light-dark();
+
+    --clr-inverse-surface: light-dark();
+    --clr-inverse-on-surface: light-dark();
+    --clr-inverse-accent: light-dark();
+
+    --clr-scrim: light-dark();
+    --clr-shadow: light-dark();
+
+    --clr-accent: light-dark();
+    --clr-accent-variant: light-dark();
+    --clr-on-accent: light-dark();
+    --clr-accent-container: light-dark();
+    --clr-on-accent-container: light-dark();
+
+    --clr-accent-fixed: var();
+    --clr-accent-fixed-dim: var();
+    --clr-on-primary-fixed: var();
+    --clr-on-primary-fixed-variant: var();
 }
 
 @media (prefers-color-scheme: light) {
