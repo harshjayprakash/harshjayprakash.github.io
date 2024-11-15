@@ -1,7 +1,11 @@
 <template>
-    <Header />
-    <RouterView />
-    <Footer />
+    <div class="margin-container">
+        <Header />
+        <main class="content-container">
+            <RouterView />
+        </main>
+        <Footer />
+    </div>
 </template>
 
 <script lang="ts">
@@ -18,5 +22,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.margin-container {
+    max-width: 91.875rem;
+    margin: auto;
+}
 
+.content-container {
+    padding: 1rem;
+}
 </style>
