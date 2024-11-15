@@ -1,0 +1,47 @@
+:root {
+    color-scheme: light dark;
+
+    --clr-000S: hsl(0deg 100% 100%);
+    --clr-050S: hsl(0deg 0% 98%);
+    --clr-100S: hsl(240deg 5% 96%);
+    --clr-200S: hsl(240deg 6% 90%);
+    --clr-300S: hsl(240deg 5% 84%);
+    --clr-400S: hsl(240deg 5% 65%);
+    --clr-500S: hsl(240deg 4% 46%);
+    --clr-600S: hsl(240deg 5% 34%);
+    --clr-700S: hsl(240deg 5% 26%);
+    --clr-800S: hsl(240deg 4% 16%);
+    --clr-900S: hsl(240deg 6% 10%);
+    --clr-950S: hsl(240deg 10% 4%);
+    --clr-1000S: hsl(0deg 100% 0%);
+    --clr-050AD: hsl(180deg 63% 97%);
+    --clr-100AD: hsl(180deg 63% 82%);
+    --clr-200AD: hsl(180deg 63% 66%);
+    --clr-300AD: hsl(180deg 63% 51%);
+    --clr-400AD: hsl(180deg 100% 37%);
+    --clr-500AD: hsl(180deg 100% 32%);
+    --clr-600AD: hsl(180deg 100% 27%);
+    --clr-700AD: hsl(180deg 100% 23%);
+    --clr-800AD: hsl(180deg 100% 18%);
+    --clr-900AD: hsl(180deg 100% 14%);
+    --clr-950AD: hsl(180deg 100% 9%);
+    --clr-050AL: hsl(180deg 24% 96%);
+    --clr-100AL: hsl(180deg 20% 75%);
+    --clr-200AL: hsl(180deg 20% 54%);
+    --clr-300AL: hsl(180deg 40% 33%);
+    --clr-400AL: hsl(180deg 100% 16%);
+    --clr-500AL: hsl(180deg 100% 14%);
+    --clr-600AL: hsl(180deg 100% 12%);
+    --clr-700AL: hsl(180deg 100% 10%);
+    --clr-800AL: hsl(180deg 100% 8%);
+    --clr-900AL: hsl(180deg 100% 6%);
+    --clr-950AL: hsl(180deg 100% 4%);
+}
+
+@media (prefers-color-scheme: light) {
+    :root { color-scheme: light; }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; }
+}
