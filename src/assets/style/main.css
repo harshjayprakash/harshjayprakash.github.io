@@ -1,6 +1,10 @@
 @import './reset.css';
 @import './theme.css';
 
+*, *::before, *::after {
+    transition: all ease-in-out 150ms;
+}
+
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     background-color: var(--clr-surface);
