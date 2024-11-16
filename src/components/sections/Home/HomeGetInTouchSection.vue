@@ -5,21 +5,23 @@
             <article class="social-card" v-for="social in socials">
                 <span class="social-card__service">{{ social.name }}</span>
                 &emsp; &mdash; &emsp;
-                <a :href="social.uri.toString()" class="social-card__handle link-label">
+                <LinkComponent link-type="external" :to="social.uri.toString()">
                     {{ social.handle }} (&nearrow;)
-                </a>
+                </LinkComponent>
             </article>
         </div>
     </section>
 </template>
 
 <script lang="ts">
+import LinkComponent from '@/components/ui/LinkComponent.vue';
 import { socialList } from '@/store/data/socialList';
 import type { Social } from '@/store/interfaces/Social';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'HomeGetInTouchSection',
+    components: { LinkComponent },
     data() {
         const socials: Social[] = socialList;
         return { socials };

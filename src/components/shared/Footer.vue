@@ -39,10 +39,10 @@ export default defineComponent({
 
 <style lang="css" scoped>
 .footer {
-    padding: 0.625rem 0;
     display: flex;
     flex-direction: column;
     font-size: 0.8rem;
+    padding: 1rem;
 }
 
 .footer .footer__technology {

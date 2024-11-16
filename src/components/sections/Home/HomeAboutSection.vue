@@ -11,19 +11,21 @@
                 passionate about pushing the boundaries of creativity and technical 
                 precision.
                 <br />
-                <RouterLink class="about__more link-label" to="/about">
+                <LinkComponent link-type="internal" to="/about">
                     Read More &RightArrow;
-                </RouterLink>
+                </LinkComponent>
             </p>
         </div>
     </section>
 </template>
 
 <script lang="ts">
+import LinkComponent from '@/components/ui/LinkComponent.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'HomeAboutSection',
+    components: { LinkComponent },
     data() {
         const profilePortfolioUri: String = 'https://avatars.githubusercontent.com/u/58461297?v=4';
         return { profilePortfolioUri };
@@ -69,6 +71,15 @@ export default defineComponent({
     flex-direction: column;
     place-items: center;
     gap: 1rem;
+}
+
+.about .about__more {
+    text-decoration: underline solid 2px var(--clr-accent);
+    color: inherit;
+}
+
+.about .about__more:hover {
+    text-decoration: underline solid 2px var(--clr-accent-variant);
 }
 
 @media (min-width: 769px) {
