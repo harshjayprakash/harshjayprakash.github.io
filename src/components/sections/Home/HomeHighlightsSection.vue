@@ -10,26 +10,28 @@
                 <small class="dev-project__description">
                     {{ project.ref }} ~ {{ project.technology }} &mdash; {{ project.description }}
                 </small>
-                <RouterLink class="dev-project__link link-label" :to="'/portfolio/dev/project/' + project.uri">
-                    Views Details &RightArrow;
-                </RouterLink>
+                <LinkComponent link-type="internal" :to="'/portfolio/dev/project/' + project.uri.toString()">
+                    View More &RightArrow;
+                </LinkComponent>
             </article>
             <article class="dev-project__card view-more-card">
-                <RouterLink class="card-link link-label" to="/portfolio/dev">
+                <LinkComponent link-type="internal" to="/portfolio/dev">
                     View More &RightArrow;
-                </RouterLink>
+                </LinkComponent>
             </article>
         </div>
     </section>
 </template>
 
 <script lang="ts">
+import LinkComponent from '@/components/ui/LinkComponent.vue';
 import { devProjectsList } from '@/store/data/developerProjectList';
 import type { DeveloperProject } from '@/store/interfaces/DeveloperProject';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'HomeHighlightSection',
+    components: { LinkComponent },
     data() {
         const devProjectRefs: String[] = ['UOW 2450', 'HX 2150', 'HX 2050',];
         const devProjectsToShow: DeveloperProject[] = devProjectsList
