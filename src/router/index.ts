@@ -1,4 +1,5 @@
 import AboutPage from "@/views/AboutPage.vue";
+import BlogPage from "@/views/Blog/BlogPage.vue";
 import HomePage from "@/views/HomePage.vue";
 import DeveloperPortfolioPage from "@/views/Portfolio/DeveloperPortfolioPage.vue";
 import { createRouter, createWebHistory, type Router, type RouteRecordRaw } from "vue-router";
@@ -9,7 +10,8 @@ const router: Router = createRouter({
         { path: '/', redirect: '/home' },
         { path: '/home', name: 'Home', component: HomePage },
         { path: '/about', name: 'About', component: AboutPage },
-        { path: '/portfolio/dev', name: 'Developer Portfolio', component: DeveloperPortfolioPage }
+        { path: '/blog', name: 'Blog', component: BlogPage },
+        { path: '/portfolio/dev', name: 'Developer Portfolio', component: DeveloperPortfolioPage },
     ],
 });
 
