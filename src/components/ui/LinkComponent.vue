@@ -45,6 +45,6 @@ export default defineComponent({
 }
 
 .hx-link:hover {
-    text-decoration-color: var(--clr-accent-variant);
+    text-decoration: underline solid 2px var(--clr-accent-variant);
 }
 </style>
