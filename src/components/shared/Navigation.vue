@@ -20,7 +20,7 @@ import type { RouteRecordRaw } from 'vue-router';
 export default defineComponent({
     name: 'Navigation',
     data() {
-        const links: String[] = ['/home', '/about', '/blog', '/portfolio/dev'];
+        const links: String[] = ['/home', '/about', '/portfolio/dev'];
         const linksToShow: RouteRecordRaw[] = router.getRoutes()
             .filter(route => links.includes(route.path))
             .sort((a, b) => links.indexOf(a.path) - links.indexOf(b.path));
