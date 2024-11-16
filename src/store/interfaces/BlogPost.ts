@@ -4,5 +4,5 @@ export interface BlogPost {
     name: String;
     description: String;
     uri: String;
-    content: Component;
+    content: Component | null;
 }
