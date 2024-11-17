@@ -1,5 +1,6 @@
 import CardComponent from "@/components/ui/CardComponent.vue";
 import { blogPostList } from "@/store/data/blogPostList";
+import { devProjectsList } from "@/store/data/developerProjectList";
 import AboutPage from "@/views/AboutPage.vue";
 import BlogPage from "@/views/Blog/BlogPage.vue";
 import HomePage from "@/views/HomePage.vue";
@@ -19,6 +20,18 @@ function createBlogRoutes(): RouteRecordRaw[] {
     return routes;
 }
 
+function createDeveloperProjectRoutes(): RouteRecordRaw[] {
+    let routes: RouteRecordRaw[] = [];
+    devProjectsList.forEach(project => {
+        routes.push({
+            path: project.uri.toString(),
+            name: project.name.toString(),
+            component: project.content,
+        })
+    });
+    return routes;
+}
+
 const router: Router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -27,6 +40,12 @@ const router: Router = createRouter({
         { path: '/about', name: 'About', component: AboutPage },
         { path: '/blog', name: 'Blog', component: BlogPage },
         { path: '/portfolio/dev', name: 'Developer Portfolio', component: DeveloperPortfolioPage },
+        {
+            path: '/portfolio/dev/project',
+            name: 'Developer Project',
+            component: null,
+            children: createDeveloperProjectRoutes(),
+        },
         {
             path: '/blog/post',
             name: '',
