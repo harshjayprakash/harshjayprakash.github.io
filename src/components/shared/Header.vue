@@ -34,7 +34,7 @@ export default defineComponent({
     setup() { 
         const showVersionBadge: Boolean = true;
         const isDesktop: Ref<Boolean> = ref(window.innerWidth > 768);
-        const displayNavigation: Ref<Boolean> = ref(isDesktop.value);
+        const displayNavigation: Ref<Boolean> = ref(false);
         window.addEventListener('resize', (): void => {
             isDesktop.value = (window.innerWidth > 768);
         });
