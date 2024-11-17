@@ -1,4 +1,16 @@
+import AdventureGamePage from "@/views/Portfolio/Project/AdventureGamePage.vue";
 import type { DeveloperProject } from "../interfaces/DeveloperProject";
+import AlgorithmicArtPlaygroundPage from "@/views/Portfolio/Project/AlgorithmicArtPlaygroundPage.vue";
+import CraneContainerSimulationPage from "@/views/Portfolio/Project/CraneContainerSimulationPage.vue";
+import DogWalkersFinderPage from "@/views/Portfolio/Project/DogWalkersFinderPage.vue";
+import ExperimentalBlokPage from "@/views/Portfolio/Project/ExperimentalBlokPage.vue";
+import LibraryLoansSystemPage from "@/views/Portfolio/Project/LibraryLoansSystemPage.vue";
+import NoughtsAndCrossesPage from "@/views/Portfolio/Project/NoughtsAndCrossesPage.vue";
+import PersonalPortfolioPage from "@/views/Portfolio/Project/PersonalPortfolioPage.vue";
+import ProjectNavigatorPage from "@/views/Portfolio/Project/ProjectNavigatorPage.vue";
+import TableSoftwarePrototypePage from "@/views/Portfolio/Project/TableSoftwarePrototypePage.vue";
+import TrigonometricHelperPage from "@/views/Portfolio/Project/TrigonometricHelperPage.vue";
+import WrappingPaperQuotesCalculatorPage from "@/views/Portfolio/Project/WrappingPaperQuotesCalculatorPage.vue";
 
 export const devProjectsList: DeveloperProject[] = [
     {
@@ -10,7 +22,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'adventure-game',
         gitUri: 'https://github.com/harshjayprakash/adventure-game',
-        content: null,
+        content: AdventureGamePage,
     },
     {
         name: 'Algorithmic Art Playground',
@@ -21,7 +33,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'algorithmic-art-playground',
         gitUri: 'https://github.com/harshjayprakash/algorithmic-art-playground',
-        content: null,
+        content: AlgorithmicArtPlaygroundPage,
     },
     {
         name: 'Crane Container Simulation',
@@ -32,7 +44,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'crane-container-simulation',
         gitUri: 'https://github.com/harshjayprakash/crane-container-simulation',
-        content: null,
+        content: CraneContainerSimulationPage,
     },
     {
         name: 'Dog Walkers Finder',
@@ -43,7 +55,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'dog-walkers-finder',
         gitUri: 'https://github.com/harshjayprakash/dog-walkers-finder',
-        content: null,
+        content: DogWalkersFinderPage,
     },
     {
         name: 'Experimental Blok',
@@ -54,7 +66,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'experimental-blok',
         gitUri: 'https://github.com/harshjayprakash/experimental-blok',
-        content: null,
+        content: ExperimentalBlokPage,
     },
     {
         name: 'Library Loans System',
@@ -65,7 +77,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'library-loans-system',
         gitUri: 'https://github.com/harshjayprakash/library-loans-system',
-        content: null,
+        content: LibraryLoansSystemPage,
     },
     {
         name: 'Noughts and Crosses',
@@ -76,7 +88,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'noughts-and-crosses',
         gitUri: 'https://github.com/harshjayprakash/noughts-and-crosses',
-        content: null,
+        content: NoughtsAndCrossesPage,
     },
     {
         name: 'Personal Portfolio',
@@ -87,7 +99,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'personal-portfolio',
         gitUri: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
-        content: null,
+        content: PersonalPortfolioPage,
     },
     {
         name: 'Project Navigator',
@@ -98,7 +110,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'project-navigator',
         gitUri: 'https://github.com/harshjayprakash/project-navigator',
-        content: null,
+        content: ProjectNavigatorPage,
     },
     {
         name: 'Table Software Prototype',
@@ -109,7 +121,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'table-software-prototype',
         gitUri: 'https://github.com/harshjayprakash/table-software-prototype',
-        content: null,
+        content: TableSoftwarePrototypePage,
     },
     {
         name: 'Trigonometric Helper',
@@ -120,7 +132,7 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'trigonometric-helper',
         gitUri: 'https://github.com/harshjayprakash/trigonometric-helper',
-        content: null,
+        content: TrigonometricHelperPage,
     },
     {
         name: 'Wrapping Paper Quotes Calculator',
@@ -131,6 +143,6 @@ export const devProjectsList: DeveloperProject[] = [
         graphic: '',
         uri: 'wrapping-paper-quotes-calculator',
         gitUri: 'https://github.com/harshjayprakash/wrapping-paper-quotes-calculator',
-        content: null,
+        content: WrappingPaperQuotesCalculatorPage,
     },
 ];
