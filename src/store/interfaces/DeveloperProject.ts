@@ -1,3 +1,5 @@
+import type { Component } from "vue";
+
 export interface DeveloperProject {
     name: String;
     ref: String;
@@ -7,5 +9,5 @@ export interface DeveloperProject {
     graphic: String;
     uri: String;
     gitUri: String;
-    content: String | null;
+    content: Component;
 }
