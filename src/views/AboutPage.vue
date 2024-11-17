@@ -1,6 +1,7 @@
 <template>
     <section class="about">
         <AboutQualificationsSection />
+        <AboutSkillsSection />
     </section>
 </template>
 
