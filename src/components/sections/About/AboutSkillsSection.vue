@@ -1,23 +1,4 @@
 <template>
-    <h1 class="title">About</h1>
-    <section class="quals">
-        <h2 class="qual__title">Qualifications.</h2>
-        <div class="qual-list">
-            <article class="qual-card">
-                <span class="qual-card__level">Bachelor's in Computer Science</span><br/>
-                <span class="qual-card__school">The University of Winchester, 2021-24</span>
-            </article>
-            <article class="qual-card">
-                <span class="qual-card__level">GCE A-Levels</span><br/>
-                <span class="qual-card__courses">Computer Science, Maths, Fine Art</span><br/>
-                <span class="qual-card__school">Barton Peveril Sixth Form, 2019-21</span>
-            </article>
-            <article class="qual-card">
-                <span class="qual-card__level">GCSEs</span><br/>
-                <span class="qual-card__courses">English, Maths, Science, Geography, Spanish, Computer Science, Fine Art</span>
-            </article>
-        </div>
-    </section>
     <section class="skills">
         <h2 class="skills__title">Skills.</h2>
         <div class="skills-container">
@@ -38,48 +19,30 @@
             <article class="skills-list__container">
                 <div class="skills-list__divider" v-if="isSkillTypeShown('technical')">
                     <ul class="skills__tech-list">
-                        <li>Angular</li>
-                        <li>C Programming Language</li>
-                        <li>HTML + CSS</li>
-                        <li>GNU + Linux</li>
-                        <li>Java</li>
-                        <li>Microsoft Office</li>
-                        <li>Microsoft Windows</li>
-                        <li>Pascal</li>
-                        <li>Python</li>
-                        <li>Visual Basic .NET</li>
-                        <li>VMware Workstation</li>
-                        <li>Vue.js</li>
+                        <li v-for="skill in technicalSkills">{{ skill }}</li>
                     </ul>
                 </div>
                 <div class="skills-list__divider" v-if="isSkillTypeShown('traditional')">
                     <ul class="skills__traditional-list">
-                        <li>Attention-to-detail</li>
-                        <li>Time Management</li>
-                        <li>Problem Solving</li>
-                        <li>Work Ethic</li>
-                        <li>Adaptable</li>
-                        <li>Resilience</li>
+                        <li v-for="skill in traditionalSkills">{{ skill }}</li>
                     </ul>
                 </div>
             </article>
         </div>
     </section>
-    <section class="story">
-        <h2 class="story__title">My Story.</h2>
-    </section>
 </template>
 
 <script lang="ts">
+import { technicalSkills, traditionalSkills } from '@/store/data/skillList';
 import type { SkillType } from '@/store/interfaces/SkillType';
 import { defineComponent, ref, type Ref } from 'vue';
 
 export default defineComponent({
+    name: 'AboutSkillsSection',
     data() {
         const displayedSkills: Ref<SkillType> = ref('technical');
-        return { displayedSkills };
+        return { displayedSkills, technicalSkills, traditionalSkills };
     },
-    setup() { },
     methods: {
         onSkillButtonClick(value: SkillType) {
             this.displayedSkills = value;
@@ -130,12 +93,12 @@ export default defineComponent({
 
 .skills .skills__tab-button--active {
     border-top-color: var(--clr-accent);
-    background-color: var(--clr-surface-container-low);
+    background-color: var(--clr-surface-container);
     font-weight: 500;
 }
 
 .skills .skills-list__container {
-    background-color: var(--clr-surface-container-low);
+    background-color: var(--clr-surface-container);
     padding: 1rem 0.2rem;
 }
 

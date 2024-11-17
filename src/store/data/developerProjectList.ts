@@ -1,19 +1,6 @@
-import type { DevProject } from "../interfaces/DevProject";
+import type { DeveloperProject } from "../interfaces/DeveloperProject";
 
-import ProjectAdventureGame from "@/views/Portfolio/Dev/ProjectAdventureGame.vue";
-import ProjectAlgorithmicArtPlayground from "@/views/Portfolio/Dev/ProjectAlgorithmicArtPlayground.vue";
-import ProjectCraneContainerSimulation from "@/views/Portfolio/Dev/ProjectCraneContainerSimulation.vue";
-import ProjectDogWalkersFinder from "@/views/Portfolio/Dev/ProjectDogWalkersFinder.vue";
-import ProjectExperimentalBlok from "@/views/Portfolio/Dev/ProjectExperimentalBlok.vue";
-import ProjectLibraryLoansSystem from "@/views/Portfolio/Dev/ProjectLibraryLoansSystem.vue";
-import ProjectNoughtsAndCrosses from "@/views/Portfolio/Dev/ProjectNoughtsAndCrosses.vue";
-import ProjectPersonalPortfolio from "@/views/Portfolio/Dev/ProjectPersonalPortfolio.vue";
-import ProjectNavigator from "@/views/Portfolio/Dev/ProjectNavigator.vue";
-import ProjectTableSoftwarePrototype from "@/views/Portfolio/Dev/ProjectTableSoftwarePrototype.vue";
-import ProjectTrigonometricHelper from "@/views/Portfolio/Dev/ProjectTrigonometricHelper.vue";
-import ProjectWrappingPaperQuotesCalculator from "@/views/Portfolio/Dev/ProjectWrappingPaperQuotesCalculator.vue";
-
-export const devProjectsList: DevProject[] = [
+export const devProjectsList: DeveloperProject[] = [
     {
         name: 'Adventure Game',
         ref: 'BPC 1950',
@@ -22,8 +9,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Pascal',
         graphic: '',
         uri: 'adventure-game',
-        gituri: 'https://github.com/harshjayprakash/adventure-game',
-        content: ProjectAdventureGame,
+        gitUri: 'https://github.com/harshjayprakash/adventure-game',
+        content: null,
     },
     {
         name: 'Algorithmic Art Playground',
@@ -33,8 +20,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Java',
         graphic: '',
         uri: 'algorithmic-art-playground',
-        gituri: 'https://github.com/harshjayprakash/algorithmic-art-playground',
-        content: ProjectAlgorithmicArtPlayground,
+        gitUri: 'https://github.com/harshjayprakash/algorithmic-art-playground',
+        content: null,
     },
     {
         name: 'Crane Container Simulation',
@@ -44,8 +31,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Pascal',
         graphic: '',
         uri: 'crane-container-simulation',
-        gituri: 'https://github.com/harshjayprakash/crane-container-simulation',
-        content: ProjectCraneContainerSimulation,
+        gitUri: 'https://github.com/harshjayprakash/crane-container-simulation',
+        content: null,
     },
     {
         name: 'Dog Walkers Finder',
@@ -55,8 +42,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Angular w/ AWS',
         graphic: '',
         uri: 'dog-walkers-finder',
-        gituri: 'https://github.com/harshjayprakash/dog-walkers-finder',
-        content: ProjectDogWalkersFinder,
+        gitUri: 'https://github.com/harshjayprakash/dog-walkers-finder',
+        content: null,
     },
     {
         name: 'Experimental Blok',
@@ -66,8 +53,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'C w/ Windows API',
         graphic: '',
         uri: 'experimental-blok',
-        gituri: 'https://github.com/harshjayprakash/experimental-blok',
-        content: ProjectExperimentalBlok,
+        gitUri: 'https://github.com/harshjayprakash/experimental-blok',
+        content: null,
     },
     {
         name: 'Library Loans System',
@@ -77,8 +64,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Java w/ MySQL',
         graphic: '',
         uri: 'library-loans-system',
-        gituri: 'https://github.com/harshjayprakash/library-loans-system',
-        content: ProjectLibraryLoansSystem,
+        gitUri: 'https://github.com/harshjayprakash/library-loans-system',
+        content: null,
     },
     {
         name: 'Noughts and Crosses',
@@ -88,8 +75,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Pascal',
         graphic: '',
         uri: 'noughts-and-crosses',
-        gituri: 'https://github.com/harshjayprakash/noughts-and-crosses',
-        content: ProjectNoughtsAndCrosses,
+        gitUri: 'https://github.com/harshjayprakash/noughts-and-crosses',
+        content: null,
     },
     {
         name: 'Personal Portfolio',
@@ -99,8 +86,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Vue.js w/ TypeScript',
         graphic: '',
         uri: 'personal-portfolio',
-        gituri: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
-        content: ProjectPersonalPortfolio,
+        gitUri: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
+        content: null,
     },
     {
         name: 'Project Navigator',
@@ -110,8 +97,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'PowerShell',
         graphic: '',
         uri: 'project-navigator',
-        gituri: 'https://github.com/harshjayprakash/project-navigator',
-        content: ProjectNavigator,
+        gitUri: 'https://github.com/harshjayprakash/project-navigator',
+        content: null,
     },
     {
         name: 'Table Software Prototype',
@@ -121,8 +108,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Vanilla JavaScript',
         graphic: '',
         uri: 'table-software-prototype',
-        gituri: 'https://github.com/harshjayprakash/table-software-prototype',
-        content: ProjectTableSoftwarePrototype,
+        gitUri: 'https://github.com/harshjayprakash/table-software-prototype',
+        content: null,
     },
     {
         name: 'Trigonometric Helper',
@@ -132,8 +119,8 @@ export const devProjectsList: DevProject[] = [
         technology: 'Visual Basic .NET',
         graphic: '',
         uri: 'trigonometric-helper',
-        gituri: 'https://github.com/harshjayprakash/trigonometric-helper',
-        content: ProjectTrigonometricHelper,
+        gitUri: 'https://github.com/harshjayprakash/trigonometric-helper',
+        content: null,
     },
     {
         name: 'Wrapping Paper Quotes Calculator',
@@ -143,7 +130,7 @@ export const devProjectsList: DevProject[] = [
         technology: 'Python',
         graphic: '',
         uri: 'wrapping-paper-quotes-calculator',
-        gituri: 'https://github.com/harshjayprakash/wrapping-paper-quotes-calculator',
-        content: ProjectWrappingPaperQuotesCalculator,
+        gitUri: 'https://github.com/harshjayprakash/wrapping-paper-quotes-calculator',
+        content: null,
     },
 ];

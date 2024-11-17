@@ -18,68 +18,70 @@ import { defineComponent } from 'vue';
 import type { RouteRecordRaw } from 'vue-router';
 
 export default defineComponent({
+    name: 'Navigation',
     data() {
-        const links: string[] = ['/home', '/about', '/portfolio/dev'];
+        const links: String[] = ['/home', '/about', '/portfolio/dev'];
         const linksToShow: RouteRecordRaw[] = router.getRoutes()
             .filter(route => links.includes(route.path))
             .sort((a, b) => links.indexOf(a.path) - links.indexOf(b.path));
         return { linksToShow };
     },
     emits: ['linkClick'],
-    setup(_props, { emit }) {
-        const hideNav = () => {
+    setup(_props, { emit }) { 
+        const hideNavigation = () => {
             emit('linkClick', false);
         };
-        return { hideNav };
+        return { hideNavigation };
     },
     methods: {
         onLinkClick() {
-            this.hideNav();
-        },
-    },
+            this.hideNavigation();
+        }
+    }
 });
 </script>
 
 <style lang="css" scoped>
 .navigation {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
 }
 
 .navigation .navigation__link {
     text-decoration: none;
-    color: inherit;
+    color: var(--clr-on-surface-variant);
 }
 
-.navigation .navigation__link--active {
-    font-weight: 500;
+.navigation .navigation__link:hover {
+    background-color: var(--clr-surface-dim);
 }
 
-@media (max-width: 799px) {
+
+@media (min-width: 769px) {
+    .navigation .navigation__link {
+        padding: 0 0.5rem;
+    }
+
+    .navigation .navigation__link--active {
+        color: var(--clr-on-surface);
+        border-bottom: 0.125rem solid var(--clr-outline);
+    }
+}
+
+@media (max-width: 768px) {
     .navigation {
+        background-color: var(--clr-surface-container-highest);
         flex-direction: column;
-        padding: 1rem 2rem;
-        background-color: var(--clr-surface-container-lowest);
+        padding: 0.45rem 0.625rem;
     }
 
     .navigation .navigation__link {
-        padding: 0 1rem;
-        border-left: 0.15rem solid var(--clr-surface);
+        padding: 0.5rem 0.75rem ;
     }
 
     .navigation .navigation__link--active {
-        border-left-color: var(--clr-on-surface);
-    }
-}
-
-@media (min-width: 800px) {
-    .navigation .navigation__link {
-        border-bottom: 0.15rem solid var(--clr-surface);
-    }
-
-    .navigation .navigation__link--active {
-        border-bottom-color: var(--clr-on-surface);
+        color: var(--clr-on-surface);
+        border-left: 0.125rem solid var(--clr-outline);
     }
 }
 </style>

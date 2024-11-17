@@ -1,14 +1,12 @@
 <template>
-
+    Blogs Here
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    setup() {
-        
-    }
+    name: 'BlogPage',
 });
 </script>
 
