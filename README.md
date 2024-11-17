@@ -1,8 +1,12 @@
-![Banner](banner.png)
-
 # Personal Portfolio
 
+![Banner (Decorative)](./doc/ppw-banner.png)
+
 Work is still in progress.
+
+## Overview
+
+![Landing Page](./doc/ppw-home.PNG)
 
 ## References
 
