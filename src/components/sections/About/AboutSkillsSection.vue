@@ -55,33 +55,11 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
-.quals .qual-list {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.quals .qual-card {
-    padding: 1rem;
-    background-color: var(--clr-surface-container-low);
-}
-
-.quals .qual-card__level {
-    font-weight: 500;
-}
-
-.skills,
-.quals {
+.skills {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 2rem 0;
-}
-
-.skills .skills__title,
-.quals .qual__title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
 }
 
 .skills .skills__tab-button {
