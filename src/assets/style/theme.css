@@ -48,7 +48,7 @@
     --clr-surface-container-highest: light-dark(var(--clr-000S), var(--clr-1000S));
     
     --clr-on-surface: light-dark(var(--clr-950S), var(--clr-050S));
-    --clr-on-surface-variant: light-dark(var(--clr-600S), var(--clr-400S));
+    --clr-on-surface-variant: light-dark(var(--clr-500S), var(--clr-400S));
     --clr-outline: light-dark(var(--clr-950S), var(--clr-050S));
     --clr-outline-variant: light-dark(var(--clr-200S), var(--clr-800S));
 
