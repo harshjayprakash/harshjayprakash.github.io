@@ -1,3 +1,4 @@
+import PortfolioHeader from "@/components/sections/Portfolio/PortfolioHeader.vue";
 import CardComponent from "@/components/ui/CardComponent.vue";
 import { blogPostList } from "@/store/data/blogPostList";
 import { devProjectsList } from "@/store/data/developerProjectList";
@@ -43,7 +44,7 @@ const router: Router = createRouter({
         {
             path: '/portfolio/dev/project',
             name: 'Developer Project',
-            component: null,
+            component: PortfolioHeader,
             children: createDeveloperProjectRoutes(),
         },
         {
