@@ -4,6 +4,8 @@ export interface DeveloperProject {
     name: String;
     ref: String;
     description: String;
+    role: String;
+    context: String;
     timeframe: String;
     technology: String;
     graphic: String;
