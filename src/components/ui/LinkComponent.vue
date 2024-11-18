@@ -40,11 +40,11 @@ export default defineComponent({
 
 <style lang="css" scoped>
 .hx-link {
-    text-decoration: underline solid 2px var(--clr-accent);
+    text-decoration: underline solid 2px var(--clr-accent-variant);
     color: inherit;
 }
 
 .hx-link:hover {
-    text-decoration: underline solid 2px var(--clr-accent-variant);
+    text-decoration: underline solid 2px var(--clr-accent);
 }
 </style>
