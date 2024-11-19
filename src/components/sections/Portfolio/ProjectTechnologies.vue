@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import type { defineComponent } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'ProjectTechnologiesSection',
