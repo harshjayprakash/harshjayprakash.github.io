@@ -23,7 +23,7 @@ export default defineComponent({
 
 <style scoped>
 .margin-container {
-    max-width: 91.875rem;
+    max-width: 70rem;
     margin: auto;
 }
 
