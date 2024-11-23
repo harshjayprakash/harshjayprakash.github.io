@@ -7,7 +7,6 @@
                 <small>
                     {{ project.ref }} &ensp; &ensp; &ensp; {{ project.technology }}
                 </small>
-                <br/>
                 <span class="dev-project__title">{{ project.name }}</span>
                 <p>{{ project.description }}</p>
                 <LinkComponent link-type="internal" :to="`/portfolio/dev/project/${project.uri.toString()}`">
