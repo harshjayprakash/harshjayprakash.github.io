@@ -20,7 +20,7 @@ export const devProjectsList: DeveloperProject[] = [
         role: 'Solo',
         context: 'College Assignment',
         timeframe: 'H2 \'19 - ONGOING',
-        technology: 'Pascal',
+        technology: 'Visual Basic .NET',
         graphic: '',
         uri: 'adventure-game',
         gitUri: 'https://github.com/harshjayprakash/adventure-game',
