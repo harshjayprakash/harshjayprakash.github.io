@@ -67,7 +67,7 @@ export const devProjectsList: DeveloperProject[] = [
     },
     {
         name: 'Experimental Blok',
-        ref: 'HX 2050',
+        ref: 'HX 2101',
         description: 'A square that moves, with arrow keys, around a user generated maze',
         role: 'Solo',
         context: 'Personal Project',
@@ -119,7 +119,7 @@ export const devProjectsList: DeveloperProject[] = [
     },
     {
         name: 'Project Navigator',
-        ref: 'HX 2401',
+        ref: 'HX 2402',
         description: 'A tool to navigate and list projects available in the command line.',
         role: 'Solo',
         context: 'Personal Project',
