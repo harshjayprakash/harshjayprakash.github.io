@@ -9,6 +9,11 @@
     transition: all ease-in-out 150ms;
 }
 
+::selection {
+    background-color: var(--clr-accent-container);
+    color: var(--clr-on-accent-container);
+}
+
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     background-color: var(--clr-surface);
