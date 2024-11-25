@@ -12,30 +12,34 @@
         <h1 class="dev-project-header__title">
             {{ currentProject?.name }}
         </h1>
-        <div class="dev-project-header__information">
-            <span class="project-reference">
-                <span class="faded">Ref</span>
-                {{ currentProject?.ref }}
-            </span>
-            <span class="project-role">
-                <span class="faded">Role</span>
-                {{ currentProject?.role }}
-            </span>
-            <span class="project-context">
-                <span class="faded">Context</span>
-                {{ currentProject?.context }}
-            </span>
-            <span class="project-period">
-                <span class="faded">Period</span>
-                {{ currentProject?.timeframe }}
-            </span>
-        </div>
-
+            <div class="dev-project-header__information">
+                <span class="project-reference">
+                    <span class="faded">Ref</span>
+                    {{ currentProject?.ref }}
+                </span>
+                <span class="project-role">
+                    <span class="faded">Role</span>
+                    {{ currentProject?.role }}
+                </span>
+                <span class="project-context">
+                    <span class="faded">Context</span>
+                    {{ currentProject?.context }}
+                </span>
+                <span class="project-period">
+                    <span class="faded">Period</span>
+                    {{ currentProject?.timeframe }}
+                </span>
+                <span class="dev-project-header__technology">
+                    <span class="faded">Technology</span>
+                    {{ currentProject?.technology }}
+                </span>
+            </div>
     </section>
     <RouterView />
 </template>
 
 <script lang="ts">
+import CardComponent from '@/components/ui/CardComponent.vue';
 import LinkComponent from '@/components/ui/LinkComponent.vue';
 import router from '@/router';
 import { devProjectsList } from '@/store/data/developerProjectList';
@@ -44,7 +48,7 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'PortfolioHeader',
-    components: { LinkComponent },
+    components: { LinkComponent, CardComponent },
     data() {
         const currentUri: String = router.currentRoute.value.fullPath.toString();
         const projectUri: String = currentUri.slice(23, currentUri.length);
@@ -84,7 +88,18 @@ export default defineComponent({
 }
 
 .dev-project-header__title {
-    text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .dev-project-header__information {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-project-header .links {
+        flex-direction: column;
+    }
+
 }
 </style>

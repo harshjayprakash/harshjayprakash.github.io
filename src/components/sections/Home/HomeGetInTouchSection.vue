@@ -4,7 +4,7 @@
         <div class="contact-options">
             <article class="social-card" v-for="social in socials">
                 <span class="social-card__service">{{ social.name }}</span>
-                &emsp; &mdash; &emsp;
+                <span class="social-card__dash">&emsp;</span>
                 <LinkComponent link-type="external" :to="social.uri.toString()">
                     {{ social.handle }} (&nearrow;)
                 </LinkComponent>
@@ -49,5 +49,12 @@ export default defineComponent({
 .contact .social-card {
     background-color: var(--clr-surface-container);
     padding: 1rem;
+    display: flex;
+    
+}
+
+.contact .social-card__dash {
+    flex-grow: 1;
+    text-align: center;
 }
 </style>

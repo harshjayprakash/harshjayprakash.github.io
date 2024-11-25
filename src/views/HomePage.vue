@@ -1,5 +1,5 @@
 <template>
-    <section class="home__container">
+    <section class="home">
         <HomeHeroSection />
         <HomeAboutSection />
         <HomeHighlightsSection />
@@ -27,7 +27,7 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
-.home__container {
+.home {
     display: flex;
     flex-direction: column;
     gap: 5rem;

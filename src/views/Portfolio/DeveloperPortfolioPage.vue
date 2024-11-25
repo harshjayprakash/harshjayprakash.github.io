@@ -4,13 +4,11 @@
         <p>A list of undertaken projects</p>
         <div class="dev-projects-list">
             <CardComponent class="dev-project" v-for="project in devProjects">
-                <small>
-                    {{ project.ref }} &ensp; &ensp; &ensp; {{ project.technology }}
-                </small>
-                <br/>
-                <span class="dev-project__title">{{ project.name }}</span>
-                <p>{{ project.description }}</p>
-                <LinkComponent link-type="internal" :to="`/portfolio/dev/project/${project.uri.toString()}`">
+                <span class="project__title">{{ project.name }}</span>
+                <p class="project__description">{{ project.description }}</p>
+                <LinkComponent link-type="internal" 
+                    :to="`/portfolio/dev/project/${project.uri.toString()}`"
+                >
                     View Details &RightArrow;
                 </LinkComponent>
             </CardComponent>
@@ -54,9 +52,8 @@ export default defineComponent({
     gap: 1rem;
 }
 
-.dev-project__title {
-    font-weight: 500;
-    text-transform: uppercase;
+.project__title {
+    font-weight: 600;
 }
 
 @media (min-width: 769px) {

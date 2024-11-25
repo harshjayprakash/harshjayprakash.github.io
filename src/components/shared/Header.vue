@@ -1,21 +1,23 @@
 <template>
-    <header class="header">
-        <button 
-            class="header__menu-button"
-            v-if="!isDesktop"
-            @click="onMenuButtonClick"
-        >
-            &#x2630;
-        </button>
-        <OctogonComponent />
-        <span class="header__title">Harsh.</span>
-        <BadgeComponent v-if="showVersionBadge">
-            {{ versionStatus }}
-        </BadgeComponent>
-        <div class="header__spacer"></div>
-        <Navigation v-if="isDesktop" />
-    </header>
-    <Navigation v-if="!isDesktop && displayNavigation" @link-click="hideNavigation" />
+    <div class="header-container">
+        <header class="header">
+            <button 
+                class="header__menu-button"
+                v-if="!isDesktop"
+                @click="onMenuButtonClick"
+            >
+                &#x2630;
+            </button>
+            <OctogonComponent />
+            <span class="header__title">Harsh.</span>
+            <BadgeComponent v-if="showVersionBadge">
+                {{ versionStatus }}
+            </BadgeComponent>
+            <div class="header__spacer"></div>
+            <Navigation v-if="isDesktop" />
+        </header>
+        <Navigation v-if="!isDesktop && displayNavigation" @link-click="hideNavigation" />
+    </div>
 </template>
 
 <script lang="ts">
@@ -52,13 +54,20 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
+.header-container {
+    background-color: var(--clr-surface-bright);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
 .header {
+    max-width: var(--m-width);
+    margin: auto;
     display: flex;
     place-items: center;
 }
 
 .header > * {
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 0.9rem;
 }
 
 .header .header__menu-button {
