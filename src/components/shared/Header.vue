@@ -1,22 +1,22 @@
 <template>
     <div class="header-container">
-    <header class="header">
-        <button 
-            class="header__menu-button"
-            v-if="!isDesktop"
-            @click="onMenuButtonClick"
-        >
-            &#x2630;
-        </button>
-        <OctogonComponent />
-        <span class="header__title">Harsh.</span>
-        <BadgeComponent v-if="showVersionBadge">
-            {{ versionStatus }}
-        </BadgeComponent>
-        <div class="header__spacer"></div>
-        <Navigation v-if="isDesktop" />
-    </header>
-    <Navigation v-if="!isDesktop && displayNavigation" @link-click="hideNavigation" />
+        <header class="header">
+            <button 
+                class="header__menu-button"
+                v-if="!isDesktop"
+                @click="onMenuButtonClick"
+            >
+                &#x2630;
+            </button>
+            <OctogonComponent />
+            <span class="header__title">Harsh.</span>
+            <BadgeComponent v-if="showVersionBadge">
+                {{ versionStatus }}
+            </BadgeComponent>
+            <div class="header__spacer"></div>
+            <Navigation v-if="isDesktop" />
+        </header>
+        <Navigation v-if="!isDesktop && displayNavigation" @link-click="hideNavigation" />
     </div>
 </template>
 
