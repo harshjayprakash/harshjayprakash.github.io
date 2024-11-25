@@ -1,4 +1,5 @@
 <template>
+    <div class="header-container">
     <header class="header">
         <button 
             class="header__menu-button"
@@ -16,6 +17,7 @@
         <Navigation v-if="isDesktop" />
     </header>
     <Navigation v-if="!isDesktop && displayNavigation" @link-click="hideNavigation" />
+    </div>
 </template>
 
 <script lang="ts">
