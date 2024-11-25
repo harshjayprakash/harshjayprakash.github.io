@@ -23,7 +23,8 @@ export default defineComponent({
 }
 
 .hx-badge .hx-badge__text {
-    border: 0.0625rem solid var(--clr-on-surface);
+    background-color: var(--clr-accent-container);
+    color: var(--clr-on-accent-container);
     font-size: 0.825rem;
     padding: 0.125rem 0.625rem;
     height: min-content;
