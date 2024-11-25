@@ -88,8 +88,7 @@ export default defineComponent({
 }
 
 .dev-project-header__title {
-    text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
