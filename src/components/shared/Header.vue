@@ -60,6 +60,8 @@ export default defineComponent({
 }
 
 .header {
+    max-width: var(--m-width);
+    margin: auto;
     display: flex;
     place-items: center;
 }
