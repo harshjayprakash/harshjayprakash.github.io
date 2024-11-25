@@ -65,7 +65,7 @@ export default defineComponent({
 }
 
 .header > * {
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 0.9rem;
 }
 
 .header .header__menu-button {
