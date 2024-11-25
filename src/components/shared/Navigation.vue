@@ -56,15 +56,15 @@ export default defineComponent({
     background-color: var(--clr-surface-dim);
 }
 
+.navigation .navigation__link--active {
+    color: var(--clr-on-surface);
+    font-weight: 600;
+}
+
 
 @media (min-width: 769px) {
     .navigation .navigation__link {
         padding: 0 0.5rem;
-    }
-
-    .navigation .navigation__link--active {
-        color: var(--clr-on-surface);
-        border-bottom: 0.125rem solid var(--clr-outline);
     }
 }
 
@@ -73,15 +73,11 @@ export default defineComponent({
         background-color: var(--clr-surface-container-highest);
         flex-direction: column;
         padding: 0.45rem 0.625rem;
+        gap: 0rem;
     }
 
     .navigation .navigation__link {
         padding: 0.5rem 0.75rem ;
-    }
-
-    .navigation .navigation__link--active {
-        color: var(--clr-on-surface);
-        border-left: 0.125rem solid var(--clr-outline);
     }
 }
 </style>
