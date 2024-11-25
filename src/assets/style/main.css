@@ -1,6 +1,10 @@
 @import './reset.css';
 @import './theme.css';
 
+:root {
+    --m-width: 70rem; 
+}
+
 *, *::before, *::after {
     transition: all ease-in-out 150ms;
 }
