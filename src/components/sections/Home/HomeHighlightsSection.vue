@@ -33,7 +33,7 @@ export default defineComponent({
     name: 'HomeHighlightSection',
     components: { LinkComponent },
     data() {
-        const devProjectRefs: String[] = ['UOW 2450', 'HX 2150', 'HX 2050',];
+        const devProjectRefs: String[] = ['UOW 2450', 'HX 2150', 'HX 2101',];
         const devProjectsToShow: DeveloperProject[] = devProjectsList
             .filter((project: DeveloperProject) => devProjectRefs.includes(project.ref))
             .sort((a: DeveloperProject, b: DeveloperProject) => 
