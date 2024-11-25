@@ -1,20 +1,20 @@
 <template>
     <div class="footer-container">
-    <footer class="footer">
-        <span class="footer__copyright">
-            Copyright &copy; {{ yearShown }}. Harsh Jayprakash.
-        </span>
-        <br />
-        <span class="footer__technology">
+        <footer class="footer">
+            <span class="footer__copyright">
+                Copyright &copy; {{ yearShown }}. Harsh Jayprakash.
+            </span>
+            <br />
+            <span class="footer__technology">
                 Handcrafted with Vue. (Build {{ buildDate }}).
-        </span>
-        <SeparatorComponent/>
-        <section class="footer__links">
-            <a class="footer__link" v-for="link in links" :href="link.uri.toString()">
-                {{ link.name }}
-            </a>
-        </section>
-    </footer>
+            </span>
+            <SeparatorComponent/>
+            <section class="footer__links">
+                <a class="footer__link" v-for="link in links" :href="link.uri.toString()">
+                    {{ link.name }}
+                </a>
+            </section>
+        </footer>
     </div>
 </template>
 
@@ -61,6 +61,8 @@ export default defineComponent({
 
 .footer .footer__links {
     margin-top: 0.5rem;
+    display: flex;
+    gap: 0.75rem;
 }
 
 .footer .footer__link {
