@@ -30,6 +30,10 @@ export default defineComponent({
                 name: 'Source Code',
                 uri: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
             },
+            {
+                name: 'MIT License',
+                uri: 'https://raw.githubusercontent.com/harshjayprakash/harshjayprakash.github.io/refs/heads/main/LICENSE'
+            }
         ];
         return { yearShown, links };
     },
