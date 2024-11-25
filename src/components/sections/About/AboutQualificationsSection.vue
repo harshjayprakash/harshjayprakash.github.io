@@ -13,7 +13,10 @@
             </CardComponent>
             <CardComponent>
                 <span class="card__title">GCSEs</span>
-                <span>English, Maths, Science, Geography, Spanish, Computer Science, Fine Art</span>
+                <span>
+                    English, Maths, Science, Geography, Spanish, 
+                    Computer Science, Fine Art
+                </span>
             </CardComponent>
         </div>
     </section>
