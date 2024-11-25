@@ -56,6 +56,7 @@ export default defineComponent({
 <style lang="css" scoped>
 .header-container {
     background-color: var(--clr-surface-bright);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 .header {
