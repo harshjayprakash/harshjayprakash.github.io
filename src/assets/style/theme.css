@@ -49,12 +49,12 @@
     --clr-950AL: hsl(180deg 100% 4%);
 
     --clr-surface-dim: light-dark(var(--clr-200S), var(--clr-800S));
-    --clr-surface: light-dark(var(--clr-050S), var(--clr-950S));
-    --clr-surface-bight: light-dark(var(--clr-000S), var(--clr-1000S));
+    --clr-surface: light-dark(var(--clr-100S), var(--clr-900S));
+    --clr-surface-bright: light-dark(var(--clr-000S), var(--clr-1000S));
 
-    --clr-surface-container-lowest: light-dark(var(--clr-300S), var(--clr-700S));
-    --clr-surface-container-low: light-dark(var(--clr-200S), var(--clr-800S));
-    --clr-surface-container: light-dark(var(--clr-100S), var(--clr-900S));
+    --clr-surface-container-lowest: light-dark(var(--clr-200S), var(--clr-700S));
+    --clr-surface-container-low: light-dark(var(--clr-100S), var(--clr-800S));
+    --clr-surface-container: light-dark(var(--clr-000S), var(--clr-1000S));
     --clr-surface-container-high: light-dark(var(--clr-050S), var(--clr-950S));
     --clr-surface-container-highest: light-dark(var(--clr-000S), var(--clr-1000S));
     
@@ -70,11 +70,11 @@
     --clr-scrim: light-dark();
     --clr-shadow: light-dark();
 
-    --clr-accent: light-dark(var(--clr-500AL), var(--clr-300AD));
-    --clr-accent-variant: light-dark(var(--clr-300AL), var(--clr-600AD));
+    --clr-accent: light-dark(var(--clr-700A), var(--clr-400A));
+    --clr-accent-variant: light-dark(var(--clr-500A), var(--clr-600A));
     --clr-on-accent: light-dark();
-    --clr-accent-container: light-dark();
-    --clr-on-accent-container: light-dark();
+    --clr-accent-container: light-dark(var(--clr-400A), var(--clr-500A));
+    --clr-on-accent-container: light-dark(var(--clr-950S), var(--clr-050S));
 
     --clr-accent-fixed: var();
     --clr-accent-fixed-dim: var();
