@@ -1,4 +1,5 @@
 <template>
+    <div class="footer-container">
     <footer class="footer">
         <span class="footer__copyright">
             Copyright &copy; {{ yearShown }}. Harsh Jayprakash.
@@ -14,6 +15,7 @@
             </a>
         </section>
     </footer>
+    </div>
 </template>
 
 <script lang="ts">
