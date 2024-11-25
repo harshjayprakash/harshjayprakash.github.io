@@ -54,6 +54,10 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
+.header-container {
+    background-color: var(--clr-surface-bright);
+}
+
 .header {
     display: flex;
     place-items: center;
