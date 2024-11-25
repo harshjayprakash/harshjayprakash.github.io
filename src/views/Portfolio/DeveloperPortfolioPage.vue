@@ -55,9 +55,8 @@ export default defineComponent({
     gap: 1rem;
 }
 
-.dev-project__title {
-    font-weight: 500;
-    text-transform: uppercase;
+.project__title {
+    font-weight: 600;
 }
 
 @media (min-width: 769px) {
