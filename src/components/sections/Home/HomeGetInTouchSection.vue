@@ -49,5 +49,12 @@ export default defineComponent({
 .contact .social-card {
     background-color: var(--clr-surface-container);
     padding: 1rem;
+    display: flex;
+    
+}
+
+.contact .social-card__dash {
+    flex-grow: 1;
+    text-align: center;
 }
 </style>
