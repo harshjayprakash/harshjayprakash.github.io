@@ -4,7 +4,7 @@
         <div class="contact-options">
             <article class="social-card" v-for="social in socials">
                 <span class="social-card__service">{{ social.name }}</span>
-                &emsp; &mdash; &emsp;
+                <span class="social-card__dash">&emsp;</span>
                 <LinkComponent link-type="external" :to="social.uri.toString()">
                     {{ social.handle }} (&nearrow;)
                 </LinkComponent>
