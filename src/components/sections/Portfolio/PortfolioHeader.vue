@@ -96,5 +96,10 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
     }
+
+    .portfolio-project-header .links {
+        flex-direction: column;
+    }
+
 }
 </style>
