@@ -45,6 +45,8 @@ export default defineComponent({
 
 <style lang="css" scoped>
 .footer {
+    max-width: var(--m-width);
+    margin: auto;
     display: flex;
     flex-direction: column;
     font-size: 0.8rem;
