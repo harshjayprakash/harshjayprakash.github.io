@@ -6,7 +6,7 @@
         </span>
         <br />
         <span class="footer__technology">
-            Handcrafted with Vue.
+                Handcrafted with Vue. (Build {{ buildDate }}).
         </span>
         <SeparatorComponent/>
         <section class="footer__links">
@@ -27,6 +27,7 @@ export default defineComponent({
     components: { SeparatorComponent },
     data() { 
         const yearShown: String = 'MMXXIV';
+        const buildDate: String = '25.11.2024'
         const links: { name: String, uri: String }[] = [
             { 
                 name: 'Source Code',
@@ -37,7 +38,7 @@ export default defineComponent({
                 uri: 'https://raw.githubusercontent.com/harshjayprakash/harshjayprakash.github.io/refs/heads/main/LICENSE'
             }
         ];
-        return { yearShown, links };
+        return { yearShown, links, buildDate };
     },
     setup() { },
 });
