@@ -14,7 +14,7 @@ projects in one central place and also learn web development.
 
 ## References
 
-* IBM Plex®: <https://www.ibm.com/plex/>
-* FontSource CDN: <https://fontsource.org/>
+* Inter Font Family: <https://rsms.me/inter/>
+* FontSource: <https://fontsource.org/>
 * CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
-* Tailwind CSS Zinc Surface Colour: <https://tailwindcss.com/docs/customizing-colors>
+* Tailwind CSS Zinc and Teal Surface Colour: <https://tailwindcss.com/docs/customizing-colors>
