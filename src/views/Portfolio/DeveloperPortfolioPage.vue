@@ -4,9 +4,6 @@
         <p>A list of undertaken projects</p>
         <div class="dev-projects-list">
             <CardComponent class="dev-project" v-for="project in devProjects">
-                <small class="dev-project__code-tech">
-                    {{ project.ref }} &ensp; &ensp; &ensp; {{ project.technology }}
-                </small>
                 <span class="project__title">{{ project.name }}</span>
                 <p class="project__description">{{ project.description }}</p>
                 <LinkComponent link-type="internal" 
