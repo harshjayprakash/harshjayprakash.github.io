@@ -1,9 +1,13 @@
 <template>
-    <section class="project-content">
+    <ArticleComponent>
+        <br/>
+        <img class="project-image" src="/dev/adv-game-header.jpg" alt="header">
+        <br/>
         <h2>Overview</h2>
         <p>
             A project originally started as a college homework assignment for a single
-            week, which involved making an adventure game. Original requirements involved:
+            week, which involved making a text-based adventure game. Original requirements
+            involved:
         </p>
         <ul>
             <li>The user must make at least three choices.</li>
@@ -13,23 +17,23 @@
         </ul>
         <h2>Purpose</h2>
         <p>
-            This project was to help continue to develop my programming knowledg. At the
+            This project was to help continue to develop my programming knowledge. At the
             time, my knowledge was very limited to subroutines in Visual Basic .NET in
-            single module files.
+            single files.
         </p>
-    </section>
+    </ArticleComponent>
 </template>
 
 <script lang="ts">
+import ArticleComponent from '@/components/ui/ArticleComponent.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'AdventureGamePage'
+    name: 'AdventureGamePage',
+    components: { ArticleComponent },
 });
 </script>
 
 <style lang="css" scoped>
-.project-content {
-    padding: 1rem 0;
-}
+
 </style>
