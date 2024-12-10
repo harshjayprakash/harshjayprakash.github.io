@@ -1,62 +1,30 @@
 :root {
     color-scheme: light dark;
 
-    --clr-000S: hsl(0deg 100% 100%);
-    --clr-050S: #f8fafc;
-    --clr-100S: #f1f5f9;
-    --clr-200S: #e2e8f0;
-    --clr-300S: #cbd5e1;
-    --clr-400S: #94a3b8;
-    --clr-500S: #64748b;
-    --clr-600S: #475569;
-    --clr-700S: #334155;
-    --clr-800S: #1e293b;
-    --clr-900S: #0f172a;
-    --clr-950S: #020617;
-    --clr-050A: #f0fdfa;
-    --clr-100A: #ccfbf1;
-    --clr-200A: #99f6e4;
-    --clr-300A: #5eead4;
-    --clr-400A: #2dd4bf;
-    --clr-500A: #14b8a6;
-    --clr-600A: #0d9488;
-    --clr-700A: #0f766e;
-    --clr-800A: #115e59;
-    --clr-900A: #134e4a;
-    --clr-950A: #042f2e;
+    --clr-S000: #ffffff;
+    --clr-S050: #f8fafc;
+    --clr-S100: #f1f5f9;
+    --clr-S200: #e2e8f0;
+    --clr-S300: #cbd5e1;
+    --clr-S400: #94a3b8;
+    --clr-S500: #64748b;
+    --clr-S600: #475569;
+    --clr-S700: #334155;
+    --clr-S800: #1e293b;
+    --clr-S900: #0f172a;
+    --clr-S950: #020617;
+    --clr-A050: #f0fdfa;
+    --clr-A100: #ccfbf1;
+    --clr-A200: #99f6e4;
+    --clr-A300: #5eead4;
+    --clr-A400: #2dd4bf;
+    --clr-A500: #14b8a6;
+    --clr-A600: #0d9488;
+    --clr-A700: #0f766e;
+    --clr-A800: #115e59;
+    --clr-A900: #134e4a;
+    --clr-A950: #042f2e;
 
-    --clr-surface-dim: light-dark(var(--clr-200S), var(--clr-800S));
-    --clr-surface: light-dark(var(--clr-100S), var(--clr-900S));
-    --clr-surface-bright: light-dark(var(--clr-000S), var(--clr-1000S));
-
-    --clr-surface-container-lowest: light-dark(var(--clr-200S), var(--clr-700S));
-    --clr-surface-container-low: light-dark(var(--clr-100S), var(--clr-800S));
-    --clr-surface-container: light-dark(var(--clr-000S), var(--clr-1000S));
-    --clr-surface-container-high: light-dark(var(--clr-050S), var(--clr-950S));
-    --clr-surface-container-highest: light-dark(var(--clr-000S), var(--clr-1000S));
-    
-    --clr-on-surface: light-dark(var(--clr-950S), var(--clr-050S));
-    --clr-on-surface-variant: light-dark(var(--clr-500S), var(--clr-400S));
-    --clr-outline: light-dark(var(--clr-950S), var(--clr-050S));
-    --clr-outline-variant: light-dark(var(--clr-200S), var(--clr-800S));
-
-    --clr-inverse-surface: light-dark(var(--clr-950S), var(--clr-050S));
-    --clr-inverse-on-surface: light-dark(var(--clr-050S), var(--clr-950S));
-    --clr-inverse-accent: light-dark();
-
-    --clr-scrim: light-dark();
-    --clr-shadow: light-dark();
-
-    --clr-accent: light-dark(var(--clr-700A), var(--clr-400A));
-    --clr-accent-variant: light-dark(var(--clr-500A), var(--clr-600A));
-    --clr-on-accent: light-dark();
-    --clr-accent-container: light-dark(var(--clr-400A), var(--clr-500A));
-    --clr-on-accent-container: light-dark(var(--clr-950S), var(--clr-050S));
-
-    --clr-accent-fixed: var();
-    --clr-accent-fixed-dim: var();
-    --clr-on-primary-fixed: var();
-    --clr-on-primary-fixed-variant: var();
 }
 
 @media (prefers-color-scheme: light) {
