@@ -25,6 +25,15 @@
     --clr-A900: #134e4a;
     --clr-A950: #042f2e;
 
+    --clr-surface: light-dark(
+        var(--clr-S050),
+        var(--clr-S950)
+    );
+    --clr-on-surface: light-dark(
+        var(--clr-S950),
+        var(--clr-S050)
+    );
+
 }
 
 @media (prefers-color-scheme: light) {
