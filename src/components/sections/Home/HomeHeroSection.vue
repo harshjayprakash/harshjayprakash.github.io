@@ -1,8 +1,7 @@
 <template>
     <section class="hero">
-        <OctogonComponent :width="50" :height="50" />
         <h1 class="hero__title">
-            About Me.
+            Harsh Jayprakash.
         </h1>
         <p class="hero__about">
             I am a 
@@ -26,7 +25,6 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'HomeHeroSection',
     components: { OctogonComponent },
-    setup() { },
 });
 </script>
 
@@ -35,24 +33,23 @@ export default defineComponent({
     height: 90vh;
     display: flex;
     flex-direction: column;
-    place-items: center;
     place-content: center;
-    text-align: center;
     gap: 2rem;
 }
 
 .hero .highlight {
-    font-style: italic;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .hero .hero__title {
-    text-transform: uppercase;
+    font-family: 'Overpass Variable', sans-serif;
+    font-size: 2.5rem;
 }
 
 .hero .hero__about,
 .hero .hero__aim {
-    max-width: 30ch;
+    max-width: 50ch;
+    font-weight: 300;
 }
 
 </style>
