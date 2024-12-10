@@ -1,21 +1,19 @@
 <template>
-    <div class="footer-container">
-        <footer class="footer">
-            <span class="footer__copyright">
-                Copyright &copy; {{ yearShown }}. Harsh Jayprakash.
-            </span>
-            <br />
-            <span class="footer__technology">
-                Handcrafted with Vue. (Build {{ buildDate }}).
-            </span>
-            <SeparatorComponent/>
-            <section class="footer__links">
-                <a class="footer__link" v-for="link in links" :href="link.uri.toString()">
-                    {{ link.name }}
-                </a>
-            </section>
-        </footer>
-    </div>
+    <footer class="footer">
+        <span class="footer__copyright">
+            Copyright &copy; {{ yearShown }}. Harsh Jayprakash.
+        </span>
+        <br />
+        <span class="footer__technology">
+            Handcrafted with Vue. (Build {{ buildDate }}).
+        </span>
+        <SeparatorComponent/>
+        <section class="footer__links">
+            <a class="footer__link" v-for="link in links" :href="link.uri.toString()">
+                {{ link.name }}
+            </a>
+        </section>
+    </footer>
 </template>
 
 <script lang="ts">

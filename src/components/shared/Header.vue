@@ -1,23 +1,21 @@
 <template>
-    <div class="header-container">
-        <header class="header">
-            <button 
-                class="header__menu-button"
-                v-if="!isDesktop"
-                @click="onMenuButtonClick"
-            >
-                &#x2630;
-            </button>
-            <OctogonComponent />
-            <span class="header__title">Harsh.</span>
-            <BadgeComponent v-if="showVersionBadge">
-                {{ versionStatus }}
-            </BadgeComponent>
-            <div class="header__spacer"></div>
-            <Navigation v-if="isDesktop" />
-        </header>
-        <Navigation v-if="!isDesktop && displayNavigation" @link-click="hideNavigation" />
-    </div>
+    <header class="header">
+        <button 
+            class="header__menu-button"
+            v-if="!isDesktop"
+            @click="onMenuButtonClick"
+        >
+            &#x2630;
+        </button>
+        <OctogonComponent />
+        <span class="header__title">Harsh.</span>
+        <BadgeComponent v-if="showVersionBadge">
+            {{ versionStatus }}
+        </BadgeComponent>
+        <div class="header__spacer"></div>
+        <Navigation v-if="isDesktop" />
+    </header>
+    <Navigation v-if="!isDesktop && displayNavigation" @link-click="hideNavigation" />
 </template>
 
 <script lang="ts">
@@ -54,10 +52,6 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
-.header-container {
-    background-color: var(--clr-surface-bright);
-}
-
 .header {
     max-width: var(--m-width);
     margin: auto;
