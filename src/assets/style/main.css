@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Inter Variable', sans-serif;
+    font-family: 'Noto Sans Variable', sans-serif;
     background-color: var(--clr-surface);
     color: var(--clr-on-surface);
 }
