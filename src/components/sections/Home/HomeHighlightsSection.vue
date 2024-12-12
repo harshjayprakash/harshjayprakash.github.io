@@ -5,20 +5,17 @@
             Below show some of my recent projects.
         </p>
         <div class="dev-projects__container">
-            <article class="dev-project__card" v-for="project in devProjectsToShow">
-                <span class="dev-project__title">{{ project.name }}</span>
-                <small class="dev-project__description">
-                    {{ project.ref }} ~ {{ project.technology }} &mdash; {{ project.description }}
-                </small>
-                <LinkComponent link-type="internal" :to="'/portfolio/dev/project/' + project.uri.toString()">
-                    View More &RightArrow;
-                </LinkComponent>
-            </article>
-            <article class="dev-project__card view-more-card">
-                <LinkComponent link-type="internal" to="/portfolio/dev">
-                    View More &RightArrow;
-                </LinkComponent>
-            </article>
+            <RouterLink 
+                class="dev-project"
+                v-for="project in devProjectsToShow"
+                :to="'/portfolio/dev/project/' + project.uri.toString()"
+            >
+                <div class="dev-project__title">
+                    <p>{{ project.name }}</p>
+                    <small>{{ project.technology }}</small>
+                </div>
+                <p class="dev-project__time">&RightArrow;</p>
+            </RouterLink>
         </div>
     </section>
 </template>
@@ -50,15 +47,6 @@ export default defineComponent({
     gap: 0.5rem;
 }
 
-.dev-projects .dev-projects__title {
-    text-transform: uppercase;
-}
-
-.dev-projects .dev-projects__title,
-.dev-projects .dev-projects__context {
-    text-align: center;
-}
-
 .dev-projects .dev-projects__container {
     display: grid;
     gap: 1rem;
@@ -82,10 +70,26 @@ export default defineComponent({
     text-decoration: underline;
 }
 
-@media (min-width: 769px) {
-    .dev-projects .dev-projects__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.dev-project {
+    filter: grayscale(1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-decoration: none;
+    color: inherit;
+    place-items: center left;
 }
 
+.dev-project:hover {
+    filter: grayscale(0);
+}
+
+.dev-project__image {
+    width: 5rem;
+    height: 5rem;
+}
+
+.dev-project__time {
+    font-family: 'Inter Variable';
+    place-self: center right;
+}
 </style>
