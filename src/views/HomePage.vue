@@ -1,9 +1,7 @@
 <template>
     <section class="home">
         <HomeHeroSection />
-        <HomeAboutSection />
         <HomeHighlightsSection />
-        <HomeGetInTouchSection />
     </section>
 </template>
 
