@@ -41,35 +41,24 @@ export default defineComponent({
     gap: 2rem;
 }
 
-.about .about__title {
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .about .about__container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     background-color: var(--clr-surface-container);
-    padding: 4rem;
 }
 
 .about .about__profile-picture {
     display: block;
     width: 104px;
     height: 104px;
-    margin: auto;
-    border-radius: 50%;
-    border: 0.3rem solid var(--clr-surface-container);
+    border-radius: 0.25rem;
 }
 
 .about .about__greeting {
-    text-align: center;
-    max-width: 40ch;
-    margin: auto;
+    max-width: 50ch;
     display: flex;
     flex-direction: column;
-    place-items: center;
     gap: 1rem;
 }
 
@@ -84,25 +73,8 @@ export default defineComponent({
 
 @media (min-width: 769px) {
     .about .about__container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        padding: 3rem;
-    }
-
-    .about .about__image-container {
-        display: flex;
-        place-items: center;
-        place-content: end;
-    }
-
-    .about .about__profile-picture {
-        margin: 0;
-    }
-
-    .about .about__greeting {
-        text-align: left;
-        place-items: start;
-        margin: 0;
+        flex-direction: row;
+        margin: auto;
     }
 }
 
