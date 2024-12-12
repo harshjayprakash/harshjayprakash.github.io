@@ -21,7 +21,7 @@ export default defineComponent({
 
 <style scoped>
 .content-container {
-    padding: 1rem;
+    padding: 1.5rem;
     max-width: var(--m-width);
     margin: auto;
 }
