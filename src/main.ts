@@ -1,4 +1,4 @@
-import '@fontsource-variable/noto-sans';
+import '@fontsource-variable/inter';
 import '@fontsource-variable/overpass';
 import './assets/style/main.css';
 import { createApp, type App } from 'vue';
