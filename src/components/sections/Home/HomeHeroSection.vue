@@ -14,17 +14,36 @@
             My aim is to blend creativity with precision, crafting projects that are both
             beautifully simple and of the higest quality.
         </p>
+        <p class="hero__socials">
+            <span v-for="social in socialList">
+                <LinkComponent 
+                    class="hero__social" 
+                    link-type="external"
+                    :to="social.uri"
+                    
+                >
+                    {{ social.name }}
+                </LinkComponent>
+                <span>&ensp; // &ensp;</span>
+            </span>
+        </p>
         <p class="hero__arrow">&DownArrow;</p>
     </section>
 </template>
 
 <script lang="ts">
+import LinkComponent from '@/components/ui/LinkComponent.vue';
 import OctogonComponent from '@/components/ui/OctogonComponent.vue';
+import { socialList } from '@/store/data/socialList';
+import type { Social } from '@/store/interfaces/Social';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'HomeHeroSection',
-    components: { OctogonComponent },
+    components: { OctogonComponent, LinkComponent },
+    data() {
+        return { socialList }
+    }
 });
 </script>
 
@@ -48,8 +67,18 @@ export default defineComponent({
 
 .hero .hero__about,
 .hero .hero__aim {
-    max-width: 50ch;
+    max-width: 45ch;
     font-weight: 300;
+}
+
+.hero .hero__socials {
+    font-weight: 300;
+}
+
+.hero .hero__social {
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
 }
 
 </style>
