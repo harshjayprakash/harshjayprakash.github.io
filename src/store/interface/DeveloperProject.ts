@@ -3,6 +3,7 @@ export interface DeveloperProject {
     description: String;
     graphic: String;
     reference: String;
+    timeframe: String;
     abbreviation: String;
     slug: String;
     gitUri: String;
