@@ -1,6 +1,17 @@
 @import './reset.css';
 @import './colours.css';
 
+:root {
+    color-scheme: light dark;
+
+    --clr-surface: light-dark(var(--clr-100S), var(--clr-950S));
+    --clr-on-surface: light-dark(var(--clr-950S), var(--clr-100S));
+}
+
 body {
     font-family: 'Inter Variable', sans-serif;
+    background-color: var(--clr-surface);
+    color: var(--clr-on-surface);
+}
+
 }
