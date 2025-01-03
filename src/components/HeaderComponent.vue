@@ -1,5 +1,7 @@
 <template>
-    Header
+    <header>
+        Header
+    </header>
 </template>
 
 <script lang="ts">
