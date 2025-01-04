@@ -195,12 +195,5 @@ export default defineComponent({
     .skills .skill-list-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .skills .skills-list {
-        padding: 0 0 0 1rem;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 0 2.5rem;
-    }
 }
 </style>
