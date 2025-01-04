@@ -1,16 +1,17 @@
 :root {
 
-    --clr-050S: #f6f9f9;
-    --clr-100S: #edf0f1;
-    --clr-200S: #cad7d8;
-    --clr-300S: #b2c6c7;
-    --clr-400S: #89a6a7;
-    --clr-500S: #6a8c8d;
-    --clr-600S: #557274;
-    --clr-700S: #455d5f;
-    --clr-800S: #3c4e50;
-    --clr-900S: #354345;
-    --clr-950S: #232d2e;
+    /* Tailwind CSS Neutral */
+    --clr-050S: #fafafa;
+    --clr-100S: #f5f5f5;
+    --clr-200S: #e5e5e5;
+    --clr-300S: #d4d4d4;
+    --clr-400S: #a3a3a3;
+    --clr-500S: #737373;
+    --clr-600S: #525252;
+    --clr-700S: #404040;
+    --clr-800S: #262626;
+    --clr-900S: #171717;
+    --clr-950S: #0a0a0a;
 
     --clr-050DV: #f0fafb;
     --clr-100DV: #ddf4f5;
