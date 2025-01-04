@@ -1,6 +1,7 @@
 <template>
     <header class="header">
         <span class="title">H.</span>
+        <small class="status">Under Construction</small>
         <div class="separator"></div>
         <NavigationComponent />
     </header>
@@ -20,6 +21,14 @@ export default defineComponent({
 <style lang="css" scoped>
 .header {
     display: flex;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.header .status {
+    border: 0.1rem solid var(--clr-on-surface);
+    padding: 0 0.25rem;
+    place-self: center;
 }
 
 .header .separator {
