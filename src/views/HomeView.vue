@@ -23,7 +23,29 @@
                 </a>
             </div>
         </section>
-        <section class="skills">
+        <section class="recent-projects">
+            <h2 class="title">Projects.</h2>
+            <div class="projects-list">
+                <RouterLink
+                    class="project-card-container"
+                    v-for="project in projectsToShow"
+                    :key="project.reference.toString()"
+                    :to="`/work/dev/${project.slug}`"
+                >
+                    <article class="project-card">
+                        <img
+                            class="image"
+                            :src="`/img/dev/${project.abbreviation}-screenshot.PNG`"
+                            :alt="`${project.name} screenshot`" />
+                        <small class="time">{{ project.timeframe }}</small>
+                        <span class="title">{{ project.name }}</span>
+                        <p class="description">{{ project.description }}</p>
+                    </article>
+                </RouterLink>
+            </div>
+        </section>
+    </section>
+    <section class="skills">
             <h2>Skills.</h2>
             <div class="skill-list-container">
                 <div class="technical-skills">
@@ -50,28 +72,6 @@
                 </div>
             </div>
         </section>
-        <section class="recent-projects">
-            <h2 class="title">Projects.</h2>
-            <div class="projects-list">
-                <RouterLink
-                    class="project-card-container"
-                    v-for="project in projectsToShow"
-                    :key="project.reference.toString()"
-                    :to="`/work/dev/${project.slug}`"
-                >
-                    <article class="project-card">
-                        <img
-                            class="image"
-                            :src="`/img/dev/${project.abbreviation}-screenshot.PNG`"
-                            :alt="`${project.name} screenshot`" />
-                        <small class="time">{{ project.timeframe }}</small>
-                        <span class="title">{{ project.name }}</span>
-                        <p class="description">{{ project.description }}</p>
-                    </article>
-                </RouterLink>
-            </div>
-        </section>
-    </section>
 </template>
 
 <script lang="ts">
