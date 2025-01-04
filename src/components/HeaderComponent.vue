@@ -1,6 +1,7 @@
 <template>
-    <header>
-        Header
+    <header class="header">
+        <span class="title">H.</span>
+        <div class="separator"></div>
         <NavigationComponent />
     </header>
 </template>
@@ -17,5 +18,11 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
+.header {
+    display: flex;
+}
 
+.header .separator {
+    flex-grow: 1;
+}
 </style>
