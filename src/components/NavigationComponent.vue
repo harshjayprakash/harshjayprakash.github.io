@@ -2,6 +2,7 @@
     <nav class="navigation">
         <RouterLink
             class="nav-link"
+            active-class="nav-link--active"
             v-for="link in linksToShow"
             :key="link.path"
             :to="link.path"
