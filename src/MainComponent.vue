@@ -20,5 +20,9 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
-
+.container {
+    max-width: 64rem;
+    margin: auto;
+    padding: 0 2rem;
+}
 </style>
