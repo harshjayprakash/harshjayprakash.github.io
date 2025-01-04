@@ -4,8 +4,8 @@
 :root {
     color-scheme: light dark;
 
-    --clr-surface: light-dark(var(--clr-100S), var(--clr-950S));
-    --clr-on-surface: light-dark(var(--clr-950S), var(--clr-100S));
+    --clr-surface: light-dark(var(--clr-200S), var(--clr-800S));
+    --clr-on-surface: light-dark(var(--clr-800S), var(--clr-200S));
 }
 
 body {
