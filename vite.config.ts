@@ -3,9 +3,11 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { resolve } from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
+    base: '/',
     plugins: [
         vue(),
         vueDevTools(),
@@ -15,4 +17,10 @@ export default defineConfig({
             '@': fileURLToPath(new URL('./src', import.meta.url))
         },
     },
+    build: {
+        outDir: 'dist',
+        rollupOptions: {
+            input: resolve(__dirname, 'index.html')
+        }
+    }
 })
