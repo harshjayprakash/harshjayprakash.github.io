@@ -6,6 +6,14 @@
 
     --clr-surface: light-dark(var(--clr-200S), var(--clr-800S));
     --clr-on-surface: light-dark(var(--clr-800S), var(--clr-200S));
+
+    --clr-selection-surface: light-dark(var(--clr-100LV), var(--clr-900DV));
+    --clr-on-selection-surface: light-dark(var(--clr-700LV), var(--clr-400DV));
+}
+
+::selection {
+    background-color: var(--clr-selection-surface);
+    color: var(--clr-on-selection-surface);
 }
 
 body {
