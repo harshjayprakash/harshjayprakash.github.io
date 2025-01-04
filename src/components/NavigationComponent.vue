@@ -33,5 +33,12 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
+.navigation .nav-link {
+    text-decoration: none;
+    color: inherit;
+}
 
+.navigation .nav-link--active {
+    border-bottom: 0.15rem solid black;
+}
 </style>
