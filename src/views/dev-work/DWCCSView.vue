@@ -5,9 +5,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 import { getProjectFromRoute } from '@/service/projectRetriever';
 import type { DeveloperProject } from '@/store/interface/DeveloperProject';
-import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'DWCCSView',
