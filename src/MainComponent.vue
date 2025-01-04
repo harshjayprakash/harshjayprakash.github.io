@@ -1,7 +1,9 @@
 <template>
-    <HeaderComponent />
-    <RouterView />
-    <FooterComponent />
+    <div class="container">
+        <HeaderComponent />
+        <RouterView />
+        <FooterComponent />
+    </div>
 </template>
 
 <script lang="ts">
