@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { getProjectFromRoute } from '@/service/ProjectRetriever';
+import { getProjectFromRoute } from '@/service/projectRetriever';
 import type { DeveloperProject } from '@/store/interface/DeveloperProject';
 import { defineComponent } from 'vue';
 
