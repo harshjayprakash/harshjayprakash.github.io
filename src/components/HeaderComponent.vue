@@ -26,7 +26,7 @@ export default defineComponent({
 }
 
 .header .status {
-    border: 0.1rem solid var(--clr-on-surface);
+    border: 0.05rem solid var(--clr-on-surface);
     padding: 0 0.25rem;
     place-self: center;
 }
