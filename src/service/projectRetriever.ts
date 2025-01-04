@@ -7,12 +7,8 @@ export function getProjectFromRoute(): DeveloperProject | undefined {
         10, router.currentRoute.value.fullPath.length
     );
 
-    developerProjects.forEach((project: DeveloperProject) => {
-        if (project.slug === projectSlug) {
-            return project;
-        }
-    });
-
-    return undefined;
+    return developerProjects.find((project: DeveloperProject) =>
+        project.slug === projectSlug
+    );
 }
 
