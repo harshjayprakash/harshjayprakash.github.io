@@ -4,6 +4,7 @@ export interface DeveloperProject {
     reference: String;
     timeframe: String;
     status: String;
+    available: Boolean;
     technology: String;
     abbreviation: String;
     slug: String;
