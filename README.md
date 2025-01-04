@@ -4,6 +4,8 @@
 
 ## Overview
 
+![Screenshot](./doc/ppw-screenshot.png)
+
 ## References
 
 * CSS Reset by Josh W Comeau: <https://www.joshwcomeau.com/css/custom-css-reset/>
