@@ -11,7 +11,8 @@ function createDeveloperProjectRoutes(): RouteRecordRaw[] {
                 path: `/work/dev/${project.slug}`,
                 name: project.name.toString(),
                 component: () => import(
-                    `./../views/dev-work/DW${project.abbreviation.toUpperCase()}View.vue`),
+                    `./../views/dev-work/DW${project.abbreviation.toUpperCase()}View.vue`
+                ),
             }
         )
     })
