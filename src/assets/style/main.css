@@ -15,6 +15,10 @@
     --clr-outline: light-dark(var(--clr-300S), var(--clr-700S));
 }
 
+*, *::before, *::after {
+    transition: all ease-in-out 100ms;
+}
+
 ::selection {
     background-color: var(--clr-selection-surface);
     color: var(--clr-on-selection-surface);
