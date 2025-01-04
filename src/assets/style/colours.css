@@ -1,0 +1,41 @@
+:root {
+
+    /* Tailwind CSS Neutral */
+    --clr-050S: #fafafa;
+    --clr-100S: #f5f5f5;
+    --clr-200S: #e5e5e5;
+    --clr-300S: #d4d4d4;
+    --clr-400S: #a3a3a3;
+    --clr-500S: #737373;
+    --clr-600S: #525252;
+    --clr-700S: #404040;
+    --clr-800S: #262626;
+    --clr-900S: #171717;
+    --clr-950S: #0a0a0a;
+
+    --clr-050DV: #f0fafb;
+    --clr-100DV: #ddf4f5;
+    --clr-200DV: #b8e6e9;
+    --clr-300DV: #86d4da;
+    --clr-400DV: #4eb8c2;
+    --clr-500DV: #329ca8;
+    --clr-600DV: #2d7f8d;
+    --clr-700DV: #2a6774;
+    --clr-800DV: #2a5560;
+    --clr-900DV: #274852;
+    --clr-950DV: #152e37;
+
+    --clr-050LV: #eefffd;
+    --clr-100LV: #c5fffc;
+    --clr-200LV: #8bfffa;
+    --clr-300LV: #4afef7;
+    --clr-400LV: #15ecea;
+    --clr-500LV: #00cfd0;
+    --clr-600LV: #00a4a8;
+    --clr-700LV: #00797e;
+    --clr-800LV: #066369;
+    --clr-900LV: #0a5457;
+    --clr-950LV: #003035;
+
+}
+

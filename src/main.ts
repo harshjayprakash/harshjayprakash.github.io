@@ -1,11 +1,11 @@
-import '@fontsource-variable/inter';
-import './assets/style/main.css';
-import { createApp, type App } from 'vue';
-import Main from './Main.vue';
+import { type App, createApp } from 'vue';
+
+import '@fontsource-variable/inter/opsz.css';
+import './assets/style/main.css'
+
+import MainComponent from './MainComponent.vue';
 import router from './router';
 
-const app: App<Element> = createApp(Main);
-
-app.use(router)
-
+const app: App<Element> = createApp(MainComponent);
+app.use(router);
 app.mount('#app');
