@@ -1,14 +1,24 @@
 <template>
-    Navigation
+    <nav class="navigation">
+        <RouterLink
+            class="nav-link"
+            v-for="link in linksToShow"
+            :key="link.path"
+            :to="link.path"
+        >
+            {{ link.name }}
+        </RouterLink>
+    </nav>
 </template>
 
 <script lang="ts">
 import router from '@/router';
 import { defineComponent } from 'vue';
-import type { RouteRecordNormalized, RouteRecordRaw } from 'vue-router';
+import { RouterLink, type RouteRecordNormalized, type RouteRecordRaw } from 'vue-router';
 
 export default defineComponent({
     name: 'NavigationComponent',
+    components: { RouterLink },
     data() {
         const linkFilter: String[] = ['/home'];
         const linksToShow: RouteRecordRaw[] = router.getRoutes()
