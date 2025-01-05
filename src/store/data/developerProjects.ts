@@ -138,7 +138,7 @@ export const developerProjects: DeveloperProject[] = [
         description: 'A calculator for a department, who provides gift wrapping services based on present shape.',
         reference: 'UOW2200',
         technology: 'Python',
-        timeframe: 'H1 \'20',
+        timeframe: 'H1 \'22',
         status: 'Maintenance',
         available: true,
         abbreviation: 'wpq',
