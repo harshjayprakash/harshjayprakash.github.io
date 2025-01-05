@@ -8,6 +8,10 @@
             <span>{{ project?.name }}</span>
         </div>
         <h1>{{ project?.name }}</h1>
+        <img class="image"
+            :src="`/img/dev/${project?.abbreviation}-icon.png`"
+            :alt="`${project?.name} icon`"
+        />
     </section>
 </template>
 
@@ -39,5 +43,10 @@ export default defineComponent({
 
 .breadcrumb-bar .link:hover {
     background-color: var(--clr-card-container-hover);
+}
+
+.image {
+    height: 5rem;
+    width: 5rem;
 }
 </style>
