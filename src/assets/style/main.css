@@ -1,5 +1,6 @@
 @import './reset.css';
 @import './colours.css';
+@import './controls.css';
 
 *, *::before, *::after {
     transition: all ease-in-out 100ms;
