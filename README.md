@@ -23,6 +23,11 @@ npm install
 npm run dev
 ```
 
+## Known Issues and Limitations
+
+* Project information is not yet available.
+* Project page dynamic header may fail (shows undefined).
+* Not all projects are shown.
 
 ## References
 
