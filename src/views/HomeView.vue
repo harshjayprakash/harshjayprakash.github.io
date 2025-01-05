@@ -72,6 +72,17 @@
             </div>
         </div>
     </section>
+    <section class="qualifications">
+        <h2>Qualifications.</h2>
+        <ul class="quals-list">
+            <li class="qual">Bachelor's in Computer Science</li>
+            <li class="qual">A-Levels in Computer Science, Maths and Fine Art</li>
+            <li class="qual">
+                GCSEs in English, Maths, Science, Geography, Spanish, Computer Science and
+                Fine Art
+            </li>
+        </ul>
+    </section>
 </template>
 
 <script lang="ts">
@@ -180,15 +191,21 @@ export default defineComponent({
 }
 
 .skills .skills-list {
-    padding: 0 0 0 1rem;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    display: grid;
     gap: 0 2.5rem;
+    padding: 0 0 0 1rem;
 }
 
-.skills .skill {
+.qualifications .quals-list {
+    padding: 1rem 1rem;
+}
+
+.skills .skill,
+.qualifications .qual {
     list-style: circle;
 }
+
 
 @media (min-width: 768px) {
     .recent-projects .projects-list,
