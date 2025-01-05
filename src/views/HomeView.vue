@@ -147,7 +147,7 @@ export default defineComponent({
 .recent-projects .projects-list {
     padding: 2rem 0;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .recent-projects .project-card-container {
