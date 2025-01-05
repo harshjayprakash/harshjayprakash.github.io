@@ -46,32 +46,32 @@
         </section>
     </section>
     <section class="skills">
-            <h2>Skills.</h2>
-            <div class="skill-list-container">
-                <div class="technical-skills">
-                    <h3 class="title">Technical</h3>
-                    <ul class="skills-list">
-                        <li
-                            class="skill"
-                            v-for="(skill, index) in technicalSkills"
-                            :key="index">
-                            {{ skill }}
-                        </li>
-                    </ul>
-                </div>
-                <div class="traditional-skills">
-                    <h3 class="title">Traditional</h3>
-                    <ul class="skills-list">
-                        <li
-                            class="skill"
-                            v-for="(skill, index) in traditionalSkills"
-                            :key="index">
-                            {{ skill }}
-                        </li>
-                    </ul>
-                </div>
+        <h2>Skills.</h2>
+        <div class="skill-list-container">
+            <div class="technical-skills">
+                <h3 class="title">Technical</h3>
+                <ul class="skills-list">
+                    <li
+                        class="skill"
+                        v-for="(skill, index) in technicalSkills"
+                        :key="index">
+                        {{ skill }}
+                    </li>
+                </ul>
             </div>
-        </section>
+            <div class="traditional-skills">
+                <h3 class="title">Traditional</h3>
+                <ul class="skills-list">
+                    <li
+                        class="skill"
+                        v-for="(skill, index) in traditionalSkills"
+                        :key="index">
+                        {{ skill }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script lang="ts">
