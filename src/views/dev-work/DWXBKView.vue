@@ -1,5 +1,13 @@
 <template>
     <ProjectArticleComponent />
+    <section class="article-content">
+        <h2>Overview</h2>
+        <p>
+            This is a small game
+        </p>
+        <h2>The Why.</h2>
+        <h2>The How.</h2>
+    </section>
 </template>
 
 <script lang="ts">
