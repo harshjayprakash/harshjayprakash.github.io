@@ -11,6 +11,19 @@ central place and also learn web development. **This website is still under**
 
 ![Screenshot](./doc/ppw-screenshot.png)
 
+## Running Locally
+
+Running the website locally is as simple as a few commands after cloning the git
+repository. There are no external measures to be setup.
+
+```sh
+# Install dependancies.
+npm install
+# Run local server.
+npm run dev
+```
+
+
 ## References
 
 * CSS Reset by Josh W Comeau: <https://www.joshwcomeau.com/css/custom-css-reset/>
