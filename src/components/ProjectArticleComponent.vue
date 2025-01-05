@@ -7,11 +7,13 @@
             <span>></span>
             <span>{{ project?.name }}</span>
         </div>
-        <h1>{{ project?.name }}</h1>
-        <img class="image"
-            :src="`/img/dev/${project?.abbreviation}-icon.png`"
-            :alt="`${project?.name} icon`"
-        />
+        <div class="header">
+            <h1>{{ project?.name }}</h1>
+            <img class="image"
+                :src="`/img/dev/${project?.abbreviation}-icon.png`"
+                :alt="`${project?.name} icon`"
+            />
+        </div>
     </section>
 </template>
 
@@ -46,7 +48,14 @@ export default defineComponent({
 }
 
 .image {
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 </style>
