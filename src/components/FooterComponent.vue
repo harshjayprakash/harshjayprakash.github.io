@@ -4,7 +4,7 @@
             &copy; {{ year.toString() }} Harsh Jayprakash.
         </p>
         <p class="handcrafted">
-            Handcrafted with Vue.
+            Handcrafted with Vue. ({{ buildDate }}).
         </p>
     </footer>
 </template>
@@ -16,7 +16,8 @@ export default defineComponent({
     name: 'FooterComponent',
     data() {
         const year: String = 'MMXXV';
-        return { year };
+        const buildDate: String = '05.01.2025';
+        return { year,buildDate };
     }
 });
 </script>

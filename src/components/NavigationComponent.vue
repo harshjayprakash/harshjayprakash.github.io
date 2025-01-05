@@ -39,6 +39,6 @@ export default defineComponent({
 }
 
 .navigation .nav-link--active {
-    border-bottom: 0.15rem solid black;
+    border-bottom: 0.15rem solid var(--clr-on-surface);
 }
 </style>

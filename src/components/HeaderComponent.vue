@@ -20,9 +20,12 @@ export default defineComponent({
 
 <style lang="css" scoped>
 .header {
+    background-color: var(--clr-surface);
     display: flex;
     padding: 1rem 0;
     gap: 1rem;
+    position: sticky;
+    top: 0;
 }
 
 .header .status {

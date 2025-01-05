@@ -1,21 +1,15 @@
 <template>
-    <section class="project-article">
-        <h1>{{ project?.name }}</h1>
-    </section>
+    <ProjectArticleComponent />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import { getProjectFromRoute } from '@/service/projectRetriever';
-import type { DeveloperProject } from '@/store/interface/DeveloperProject';
+import ProjectArticleComponent from '@/components/ProjectArticleComponent.vue';
 
 export default defineComponent({
     name: 'DWPPWView',
-    data() {
-        const project: DeveloperProject | undefined = getProjectFromRoute();
-        return { project };
-    }
+    components: { ProjectArticleComponent }
 });
 </script>
 

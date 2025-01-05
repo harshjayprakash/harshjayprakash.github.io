@@ -1,21 +1,6 @@
 @import './reset.css';
 @import './colours.css';
-
-:root {
-    color-scheme: light dark;
-
-    --clr-surface: light-dark(var(--clr-100S), var(--clr-900S));
-    --clr-on-surface: light-dark(var(--clr-900S), var(--clr-100S));
-    --clr-on-surface-faded: light-dark(var(--clr-700S), var(--clr-300S));
-
-    --clr-selection-surface: light-dark(var(--clr-100LV), var(--clr-900DV));
-    --clr-on-selection-surface: light-dark(var(--clr-700LV), var(--clr-400DV));
-
-    --clr-card-container: light-dark(var(--clr-050S), var(--clr-950S));
-    --clr-card-container-hover: light-dark(var(--clr-200S), var(--clr-800S));
-    --clr-on-card-container: var(--clr-on-surface);
-    --clr-outline: light-dark(var(--clr-300S), var(--clr-700S));
-}
+@import './controls.css';
 
 *, *::before, *::after {
     transition: all ease-in-out 100ms;
