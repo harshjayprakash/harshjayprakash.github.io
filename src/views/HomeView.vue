@@ -160,7 +160,7 @@ export default defineComponent({
 }
 
 .recent-projects .project-card-container:hover {
-    background: var(--clr-card-container-hover);
+    background-color: var(--clr-card-container-hover);
 }
 
 .recent-projects .project-card {
