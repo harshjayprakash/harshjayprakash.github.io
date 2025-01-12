@@ -144,13 +144,16 @@ export default defineComponent({
 
 <style lang="css" scoped>
 
-@keyframes flyIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-.hero {
-    padding: 2.5rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 60ch;
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fly-in {
@@ -163,6 +166,14 @@ export default defineComponent({
     opacity: 1;
     transform: translateY(0);
     animation: flyIn 0.6s ease-in-out forwards;
+}
+
+.hero {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 60ch;
 }
 
 .hero .profile-picture {
