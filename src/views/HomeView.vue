@@ -162,9 +162,7 @@ export default defineComponent({
 }
 
 .recent-projects .project-card-container:hover {
-    /* background-color: var(--clr-card-container-hover); */
     border-color: var(--clr-outline-hover);
-    /* transform: scale(1.025); */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
