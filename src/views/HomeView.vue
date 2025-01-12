@@ -28,8 +28,8 @@
             <div class="projects-list">
                 <RouterLink
                     class="project-card-container"
-                    v-for="project in projectsToShow"
-                    :key="project.reference.toString()"
+                    v-for="(project, index) in projectsToShow"
+                    :key="index"
                     :to="`/work/dev/${project.slug}`"
                 >
                     <article class="project-card">
