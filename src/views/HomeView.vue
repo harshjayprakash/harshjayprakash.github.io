@@ -37,9 +37,11 @@
                             class="image"
                             :src="`/img/dev/${project.abbreviation}-screenshot.PNG`"
                             :alt="`${project.name} screenshot`" />
-                        <small class="time">{{ project.timeframe }}</small>
-                        <span class="title">{{ project.name }}</span>
-                        <p class="description">{{ project.description }}</p>
+                        <div class="card-content">
+                            <small class="time">{{ project.timeframe }}</small>
+                            <span class="title">{{ project.name }}</span>
+                            <p class="description">{{ project.description }}</p>
+                        </div>
                     </article>
                 </RouterLink>
             </div>
@@ -155,15 +157,18 @@ export default defineComponent({
     color: inherit;
     background-color: var(--clr-card-container);
     color: var(--clr-on-card-container);
-    border: 0.1rem solid var(--clr-outline);
+    border: 0.1rem solid var(--clr-surface);
     padding: 1rem;
 }
 
 .recent-projects .project-card-container:hover {
-    background-color: var(--clr-card-container-hover);
+    /* background-color: var(--clr-card-container-hover); */
+    border-color: var(--clr-outline-hover);
+    /* transform: scale(1.025); */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.recent-projects .project-card {
+.recent-projects .project-card .card-content {
     display: flex;
     flex-direction: column;
 }
