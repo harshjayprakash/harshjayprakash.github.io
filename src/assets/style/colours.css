@@ -43,6 +43,8 @@
     --clr-on-surface: light-dark(var(--clr-900S), var(--clr-100S));
     --clr-on-surface-faded: light-dark(var(--clr-700S), var(--clr-300S));
 
+    --clr-nav-surface: light-dark(#f5f5f590, #17171790);
+
     --clr-selection-surface: light-dark(var(--clr-100LV), var(--clr-900DV));
     --clr-on-selection-surface: light-dark(var(--clr-700LV), var(--clr-400DV));
 
