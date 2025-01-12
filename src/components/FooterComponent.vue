@@ -17,7 +17,7 @@ export default defineComponent({
     data() {
         const year: String = 'MMXXV';
         const buildDate: String = '12.01.2025';
-        return { year,buildDate };
+        return { year, buildDate };
     }
 });
 </script>
