@@ -50,5 +50,6 @@
     --clr-card-container-hover: light-dark(var(--clr-200S), var(--clr-800S));
     --clr-on-card-container: var(--clr-on-surface);
     --clr-outline: light-dark(var(--clr-300S), var(--clr-700S));
+    --clr-outline-hover: light-dark(var(--clr-700LV), var(--clr-300DV));
 }
 
