@@ -1,6 +1,6 @@
 <template>
     <section class="home">
-        <section class="hero">
+        <section class="hero fly-in">
             <img
                 class="profile-picture"
                 :src="profilePictureUri.toString()"
@@ -23,7 +23,7 @@
                 </a>
             </div>
         </section>
-        <section class="recent-projects">
+        <section class="recent-projects fly-in">
             <h2 class="title">Projects.</h2>
             <div class="projects-list">
                 <RouterLink
@@ -47,7 +47,7 @@
             </div>
         </section>
     </section>
-    <section class="skills">
+    <section class="skills fly-in">
         <h2>Skills.</h2>
         <div class="skill-list-container">
             <div class="technical-skills">
@@ -74,7 +74,7 @@
             </div>
         </div>
     </section>
-    <section class="qualifications">
+    <section class="qualifications fly-in">
         <h2>Qualifications.</h2>
         <ul class="quals-list">
             <li class="qual">Bachelor's in Computer Science</li>
@@ -115,17 +115,54 @@ export default defineComponent({
             projectsToShow, socials, profilePictureUri,
             technicalSkills, traditionalSkills
         };
+    },
+    mounted() {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer: IntersectionObserver = new IntersectionObserver(
+            (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+                entries.forEach((entry: IntersectionObserverEntry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                })
+            }, options
+        );
+
+        const elements: NodeListOf<Element> = document.querySelectorAll(
+            '.fly-in'
+        );
+        elements.forEach((element) => observer.observe(element));
     }
 });
 </script>
 
 <style lang="css" scoped>
+
+@keyframes flyIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
 .hero {
     padding: 2.5rem 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     max-width: 60ch;
+}
+
+.fly-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.fly-in.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    animation: flyIn 0.6s ease-in-out forwards;
 }
 
 .hero .profile-picture {
