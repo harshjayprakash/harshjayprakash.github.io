@@ -1,6 +1,6 @@
 <template>
     <section class="home">
-        <section class="hero fly-in">
+        <section class="hero">
             <img
                 class="profile-picture"
                 :src="profilePictureUri.toString()"
@@ -23,7 +23,7 @@
                 </a>
             </div>
         </section>
-        <section class="recent-projects fly-in">
+        <section class="recent-projects">
             <h2 class="title">Projects.</h2>
             <div class="projects-list">
                 <RouterLink
@@ -74,7 +74,7 @@
             </div>
         </div>
     </section>
-    <section class="qualifications fly-in">
+    <section class="qualifications">
         <h2>Qualifications.</h2>
         <ul class="quals-list">
             <li class="qual">Bachelor's in Computer Science</li>
@@ -115,59 +115,11 @@ export default defineComponent({
             projectsToShow, socials, profilePictureUri,
             technicalSkills, traditionalSkills
         };
-    },
-    mounted() {
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer: IntersectionObserver = new IntersectionObserver(
-            (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-                entries.forEach((entry: IntersectionObserverEntry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                        observer.unobserve(entry.target);
-                    }
-                })
-            }, options
-        );
-
-        const elements: NodeListOf<Element> = document.querySelectorAll(
-            '.fly-in'
-        );
-        elements.forEach((element) => observer.observe(element));
     }
 });
 </script>
 
 <style lang="css" scoped>
-
-@keyframes flyIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fly-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-.fly-in.in-view {
-    opacity: 1;
-    transform: translateY(0);
-    animation: flyIn 0.6s ease-in-out forwards;
-}
-
 .hero {
     padding: 2.5rem 0;
     display: flex;
