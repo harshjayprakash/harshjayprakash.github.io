@@ -23,6 +23,13 @@ npm install
 npm run dev
 ```
 
+## Changelog (2025.H1.1)
+
+* Re-written.
+* Simplify number of pages.
+* Add images to project cards.
+* Add fly-in animation.
+
 ## Known Issues and Limitations
 
 * Project information is not yet available.
