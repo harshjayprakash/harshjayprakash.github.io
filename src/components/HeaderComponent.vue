@@ -26,7 +26,8 @@ export default defineComponent({
     gap: 1rem;
     position: sticky;
     top: 0;
-    backdrop-filter:blur(1px);
+    backdrop-filter: blur(1px);
+    z-index: 99;
 }
 
 .header .status {
