@@ -34,6 +34,7 @@ export default defineComponent({
     border: 0.05rem solid var(--clr-on-surface);
     padding: 0 0.25rem;
     place-self: center;
+    border-radius: var(--rc-rounded);
 }
 
 .header .separator {
