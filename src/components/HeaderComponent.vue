@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <span class="title">H.</span>
+        <span class="title">H. / Portfolio</span>
         <small class="status">Under Construction</small>
         <div class="separator"></div>
         <NavigationComponent />
