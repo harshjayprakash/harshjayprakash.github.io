@@ -39,7 +39,6 @@ export default defineComponent({
 }
 
 .breadcrumb-bar .link {
-    text-decoration: none;
     color: inherit;
 }
 
