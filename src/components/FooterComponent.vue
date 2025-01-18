@@ -1,11 +1,22 @@
 <template>
     <footer class="footer">
-        <p class="copyright">
-            &copy; {{ year.toString() }} Harsh Jayprakash.
-        </p>
-        <p class="handcrafted">
+        <small class="links">
+            <a class="link" href="https://github.com/harshjayprakash">GitHub</a>
+            <a class="link" href="https://www.linkedin.com/in/harshjayprakash7/">LinkedIn</a>
+        </small>
+        <small class="build">
             Handcrafted with Vue. ({{ buildDate }}).
-        </p>
+            <a
+                class="link"
+                href="https://github.com/harshjayprakash/harshjayprakash.github.io"
+            >
+                View Source Code
+            </a>
+        </small>
+        <br />
+        <small class="copyright">
+            &copy; {{ year.toString() }} Harsh Jayprakash.
+        </small>
     </footer>
 </template>
 
