@@ -37,4 +37,18 @@ export default defineComponent({
 .footer {
     padding: 2rem 0;
 }
+
+.footer .links {
+    display: flex;
+    gap: 0 1rem;
+}
+
+.footer .link {
+    color: inherit;
+    text-decoration-color: var(--clr-surface);
+}
+
+.footer .link:hover {
+    text-decoration-color: var(--clr-on-surface);
+}
 </style>
