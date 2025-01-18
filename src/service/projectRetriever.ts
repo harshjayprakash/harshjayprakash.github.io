@@ -4,7 +4,7 @@ import type { DeveloperProject } from "@/store/interface/DeveloperProject";
 
 export function getProjectFromRoute(): DeveloperProject | undefined {
     const projectSlug = router.currentRoute.value.fullPath.slice(
-        10, router.currentRoute.value.fullPath.length
+        6, router.currentRoute.value.fullPath.length
     );
 
     return developerProjects.find((project: DeveloperProject) =>
