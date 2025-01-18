@@ -26,13 +26,3 @@ h5 {
 h6 {
     font-size: 0.67rem;
 }
-
-.article-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.article-content img {
-    padding-inline: 5rem;
-}
