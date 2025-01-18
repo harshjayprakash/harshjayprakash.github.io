@@ -1,89 +1,90 @@
 <template>
-    <section class="home">
-        <section class="hero">
+    <section class="home-container">
+        <section class="hero-section">
             <img
                 class="profile-picture"
                 :src="profilePictureUri.toString()"
                 alt="profile picture"
             />
             <h1 class="greeting">
-                Hello. I'm Harsh Jayprakash &mdash; a programmer and artist based in
-                Southampton, UK.
+                Hello, I'm Harsh Jayprakash
+                <br />
+                &mdash; a programmer and artist based in Southampton, UK.
             </h1>
-            <div class="socials-list">
-                <a class="social-link"
-                    v-for="(social, index) in socials"
-                    :key="social.name.toString()"
-                    :href="social.uri.toString()"
-                >
-                    {{ social.name }}
-                    <span v-if="index != socials.length - 1">
-                        &#x2218;
-                    </span>
-                </a>
-            </div>
         </section>
-        <section class="recent-projects">
+        <section class="projects-section">
             <h2 class="title">Projects.</h2>
-            <div class="projects-list">
+            <p class="descr">Things I've worked on.</p>
+            <div class="card-list">
                 <RouterLink
-                    class="project-card-container"
-                    v-for="(project, index) in projectsToShow"
-                    :key="index"
-                    :to="`/work/dev/${project.slug}`"
+                    class="card-container"
+                    v-for="(project, projectIdx) in projectsToShow"
+                    :key="projectIdx"
+                    :to="`/work/${project.slug}`"
                 >
-                    <article class="project-card">
+                    <article class="card">
                         <img
                             class="image"
                             :src="`/img/dev/${project.abbreviation}-screenshot.PNG`"
-                            :alt="`${project.name} screenshot`" />
-                        <div class="card-content">
-                            <small class="time">{{ project.timeframe }}</small>
-                            <span class="title">{{ project.name }}</span>
-                            <p class="description">{{ project.description }}</p>
-                        </div>
+                            :alt="`${project.name} screenshot`"
+                        />
+                        <small class="timeframe">
+                            {{ project.timeframe }}
+                        </small>
+                        <h3 class="title">{{ project.name }}</h3>
+                        <p class="descr">{{ project.description }}</p>
                     </article>
                 </RouterLink>
             </div>
         </section>
-    </section>
-    <section class="skills fly-in">
-        <h2>Skills.</h2>
-        <div class="skill-list-container">
-            <div class="technical-skills">
-                <h3 class="title">Technical</h3>
-                <ul class="skills-list">
-                    <li
-                        class="skill"
-                        v-for="(skill, index) in technicalSkills"
-                        :key="index">
-                        {{ skill }}
+        <section class="skills-quals-section">
+            <section class="skills-section">
+                <h2 class="title">Skills.</h2>
+                <p class="descr">Things I can do.</p>
+                <div class="dual-list">
+                    <div class="list-container">
+                        <h3 class="subtitle">Technical.</h3>
+                        <ul class="list">
+                            <li
+                                class="list-item"
+                                v-for="(skill, skillIdx) in technicalSkills"
+                                :key="skillIdx"
+                            >
+                                {{ skill }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-container">
+                        <h3 class="subtitle">Traditional</h3>
+                        <ul class="list">
+                            <li
+                                class="list-item"
+                                v-for="(skill, skillIdx) in traditionalSkills"
+                                :key="skillIdx"
+                            >
+                                {{ skill }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="qualifications-section">
+                <h2 class="title">Qualifications.</h2>
+                <p class="descr">My education.</p>
+                <ul class="list">
+                    <li class="list-item">
+                        Bachelor's in Computer Science
+                    </li>
+                    <li class="list-item">
+                        A-Levels in Computer Science, Maths, Fine Art.
+                    </li>
+                    <li class="list-item">
+                        GCSEs in English, Maths, Science, Geography, Spanish, Computer
+                        Science and Fine Art.
                     </li>
                 </ul>
-            </div>
-            <div class="traditional-skills">
-                <h3 class="title">Traditional</h3>
-                <ul class="skills-list">
-                    <li
-                        class="skill"
-                        v-for="(skill, index) in traditionalSkills"
-                        :key="index">
-                        {{ skill }}
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="qualifications">
-        <h2>Qualifications.</h2>
-        <ul class="quals-list">
-            <li class="qual">Bachelor's in Computer Science</li>
-            <li class="qual">A-Levels in Computer Science, Maths and Fine Art</li>
-            <li class="qual">
-                GCSEs in English, Maths, Science, Geography, Spanish, Computer Science and
-                Fine Art
-            </li>
-        </ul>
+            </section>
+        </section>
     </section>
 </template>
 
@@ -120,100 +121,74 @@ export default defineComponent({
 </script>
 
 <style lang="css" scoped>
-.hero {
-    padding: 2.5rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 60ch;
+.descr {
+    opacity: 0.70;
 }
 
-.hero .profile-picture {
+.hero-section {
+    padding-block: 3rem;
+}
+
+.hero-section .profile-picture {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+    margin-block: 1rem;
 }
 
-.hero .socials-list {
-    display: flex;
-    gap: 0.5rem;
+.hero-section .greeting {
+    max-width: 30ch;
 }
 
-.hero .socials-list .social-link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    gap: 0.5rem;
-}
-
-.recent-projects .projects-list {
-    padding: 2rem 0;
+.projects-section .card-list,
+.skills-quals-section,
+.skills-section .dual-list {
     display: grid;
+    padding-block: 2rem;
     gap: 2rem;
 }
 
-.recent-projects .project-card-container {
+.projects-section .card-container {
     text-decoration: none;
     color: inherit;
-    background-color: var(--clr-card-container);
-    color: var(--clr-on-card-container);
     border: 0.1rem solid var(--clr-surface);
+    background-color: var(--clr-card-container);
+    border-radius: var(--rc-rounded);
     padding: 1rem;
 }
 
-.recent-projects .project-card-container:hover {
+.projects-section .card .image {
+    border-radius: var(--rc-rounded);
+    margin-bottom: 1rem;
+}
+
+.projects-section .card-container:hover {
     border-color: var(--clr-outline-hover);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.recent-projects .project-card .card-content {
-    display: flex;
-    flex-direction: column;
+.skills-quals-section .list {
+    padding-inline: 1rem;
+    list-style-type: circle;
 }
 
-.recent-projects .project-card .image {
-    margin: 0 0 1rem 0;
+.qualifications-section .list {
+    padding: 1rem;
+    list-style-type: circle;
 }
 
-.recent-projects .project-card .title {
-    font-weight: 400;
-}
-
-.recent-projects .project-card .description {
-    color: var(--clr-on-surface-faded);
-}
-
-.skills {
-    padding: 2rem 0;
-}
-
-.skills .skill-list-container {
-    display: grid;
-    gap: 2rem;
-    padding: 1rem 0;
-}
-
-.skills .skills-list {
-    grid-template-columns: repeat(2, 1fr);
-    display: grid;
-    gap: 0 2.5rem;
-    padding: 0 0 0 1rem;
-}
-
-.qualifications .quals-list {
-    padding: 1rem 1rem;
-}
-
-.skills .skill,
-.qualifications .qual {
-    list-style: circle;
-}
-
-
-@media (min-width: 768px) {
-    .recent-projects .projects-list,
-    .skills .skill-list-container {
+@media (min-width: 800px) {
+    .projects-section .card-list,
+    .skills-quals-section .dual-list {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-quals-section {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .qualifications-section {
+        padding-inline: 1rem;
     }
 }
 </style>
