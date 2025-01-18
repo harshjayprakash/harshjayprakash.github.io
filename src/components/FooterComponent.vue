@@ -16,7 +16,7 @@ export default defineComponent({
     name: 'FooterComponent',
     data() {
         const year: String = 'MMXXV';
-        const buildDate: String = '12.01.2025';
+        const buildDate: String = '2025.H1.4';
         return { year, buildDate };
     }
 });
