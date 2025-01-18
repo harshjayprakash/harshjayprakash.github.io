@@ -18,7 +18,6 @@
 body {
     font-family: 'Inter Variable', sans-serif;
     font-size: 1rem;
-    font-weight: 300;
     background-color: var(--clr-surface);
     color: var(--clr-on-surface);
 }
