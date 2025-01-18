@@ -8,7 +8,7 @@ function createDeveloperProjectRoutes(): RouteRecordRaw[] {
     developerProjects.forEach((project: DeveloperProject) => {
         routes.push(
             {
-                path: `/work/dev/${project.slug}`,
+                path: `/work/${project.slug}`,
                 name: project.name.toString(),
                 component: () => import(
                     `./../views/dev-work/DW${project.abbreviation.toUpperCase()}View.vue`
