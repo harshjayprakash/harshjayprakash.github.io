@@ -4,6 +4,7 @@
 
 *, *::before, *::after {
     transition: all ease-in-out 100ms;
+    text-rendering: optimizeLegibility;
 }
 
 ::selection {
