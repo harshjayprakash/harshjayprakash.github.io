@@ -1,1 +1,5 @@
 @import './reset.css';
+
+*, *::before, *::after {
+    font-family: 'Inter Variable', sans-serif;
+}
