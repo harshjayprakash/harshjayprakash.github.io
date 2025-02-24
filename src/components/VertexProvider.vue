@@ -26,4 +26,16 @@ export default defineComponent({
 .vertex-provider :slotted(h6) {
     font-weight: 400;
 }
+
+@media (max-width: 768px) {
+    .vertex-provider :slotted(.content) {
+        padding-inline: 2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .vertex-provider {
+        padding-inline: 2rem;
+    }
+}
 </style>
