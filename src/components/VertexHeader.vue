@@ -31,10 +31,11 @@ export default defineComponent({
 .vertex-header {
     display: flex;
     place-items: center;
+    position: sticky;
+    top: 0;
 }
 
-.vertex-header .menu-button,
-.vertex-header .title {
+.vertex-header .menu-button {
     padding: 0.8rem 1rem;
 }
 
