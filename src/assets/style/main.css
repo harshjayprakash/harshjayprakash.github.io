@@ -1,5 +1,11 @@
 @import './reset.css';
+@import './colours.css';
 
 *, *::before, *::after {
     font-family: 'Inter Variable', sans-serif;
+}
+
+body {
+    background-color: var(--clr-surface);
+    color: var(--clr-on-surface);
 }
