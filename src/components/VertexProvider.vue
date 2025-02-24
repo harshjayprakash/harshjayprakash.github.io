@@ -16,7 +16,6 @@ export default defineComponent({
 .vertex-provider {
     max-width: 87.5rem;
     margin-inline: auto;
-    padding-inline: 2rem;
 }
 
 .vertex-provider :slotted(h1),
