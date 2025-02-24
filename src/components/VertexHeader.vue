@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent, ref, type Ref } from 'vue';
-import { isDesktop } from '@/store/data/state';
 
 export default defineComponent({
     name: 'VertexHeader',
