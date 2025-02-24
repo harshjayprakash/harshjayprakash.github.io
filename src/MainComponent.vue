@@ -14,8 +14,7 @@ export default defineComponent({
 <template>
     <VertexProvider>
         <VertexHeader />
-
-        <RouterView />
+        <RouterView class="content" />
     </VertexProvider>
 </template>
 
