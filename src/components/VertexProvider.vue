@@ -13,5 +13,9 @@ export default defineComponent({
 </template>
 
 <style lang="css" scoped>
-
+.vertex-provider {
+    max-width: 87.5rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
 </style>
