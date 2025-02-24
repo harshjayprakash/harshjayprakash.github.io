@@ -18,4 +18,13 @@ export default defineComponent({
     margin-inline: auto;
     padding-inline: 2rem;
 }
+
+.vertex-provider :slotted(h1),
+.vertex-provider :slotted(h2),
+.vertex-provider :slotted(h3),
+.vertex-provider :slotted(h4),
+.vertex-provider :slotted(h5),
+.vertex-provider :slotted(h6) {
+    font-weight: 400;
+}
 </style>
