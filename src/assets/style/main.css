@@ -3,6 +3,7 @@
 
 *, *::before, *::after {
     font-family: 'Inter Variable', sans-serif;
+    transition: all 100ms ease-in-out;
 }
 
 body {

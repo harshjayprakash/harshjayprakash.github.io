@@ -27,5 +27,8 @@
 
     --clr-surface: light-dark(var(--clr-050S), var(--clr-950S));
     --clr-on-surface: light-dark(var(--clr-950S), var(--clr-050S));
-
+    --clr-surface-v: light-dark(var(--clr-200S), var(--clr-800S));
+    --clr-on-surface-v: light-dark(var(--clr-200S), var(--clr-800S));
+    
+    --clr-accent: light-dark(var(--clr-800A), var(--clr-500A));
 }

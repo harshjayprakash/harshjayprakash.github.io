@@ -2,20 +2,14 @@
 import { defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
 
-import VertexProvider from './components/VertexProvider.vue';
-import VertexHeader from './components/VertexHeader.vue';
-
 export default defineComponent({
     name: 'MainComponent',
-    components: { RouterView, VertexProvider, VertexHeader, },
+    components: { RouterView },
 });
 </script>
 
 <template>
-    <VertexProvider>
-        <VertexHeader />
-        <RouterView class="content" />
-    </VertexProvider>
+    <RouterView />
 </template>
 
 <style lang="css" scoped>

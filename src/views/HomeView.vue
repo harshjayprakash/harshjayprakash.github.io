@@ -7,7 +7,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <p>Home View</p>
+    <p>Test</p>
 </template>
 
 <style lang="css" scoped>
