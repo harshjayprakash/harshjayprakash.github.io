@@ -1,14 +1,28 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, type Ref } from 'vue';
+import { isDesktop } from '@/store/data/state';
 
 export default defineComponent({
     name: 'VertexHeader',
+    setup() {
+        const showVersionTag: Boolean = true;
+        return { showVersionTag };
+    },
+    data() {
+        const isDesktop: Ref<Boolean> = ref(window.innerWidth > 800);
+
+        window.addEventListener('resize', (): void => {
+            isDesktop.value = (window.innerWidth > 800);
+        });
+
+        return { isDesktop };
+    }
 });
 </script>
 
 <template>
     <header class="vertex-header">
-        <button class="menu-button">&#x2630;</button>
+        <button v-if="!isDesktop" class="menu-button">&#x2630;</button>
         <span class="title">Harsh.</span>
     </header>
 </template>
