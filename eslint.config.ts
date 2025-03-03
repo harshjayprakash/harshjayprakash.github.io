@@ -8,17 +8,17 @@ import oxlint from 'eslint-plugin-oxlint'
 // More info at https://github.com/vuejs/eslint-config-typescript/#advanced-setup
 
 export default defineConfigWithVueTs(
-  {
-    name: 'app/files-to-lint',
-    files: ['**/*.{ts,mts,tsx,vue}'],
-  },
+    {
+        name: 'app/files-to-lint',
+        files: ['**/*.{ts,mts,tsx,vue}'],
+    },
 
-  {
-    name: 'app/files-to-ignore',
-    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
-  },
+    {
+        name: 'app/files-to-ignore',
+        ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
+    },
 
-  pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommended,
-  oxlint.configs['flat/recommended'],
+    pluginVue.configs['flat/essential'],
+    vueTsConfigs.recommended,
+    oxlint.configs['flat/recommended'],
 )
