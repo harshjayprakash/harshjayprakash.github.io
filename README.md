@@ -21,3 +21,4 @@ npm run dev
 
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
+* CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
