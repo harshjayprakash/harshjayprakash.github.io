@@ -3,18 +3,21 @@ import { defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
 
 import HeaderComponent from './components/HeaderComponent.vue';
+import WrapperComponent from './components/WrapperComponent.vue';
 
 const MainComponent = defineComponent({
     name: 'MainComponent',
-    components: { RouterView, HeaderComponent },
+    components: { RouterView, HeaderComponent, WrapperComponent },
 });
 
 export default MainComponent;
 </script>
 
 <template>
-    <HeaderComponent />
-    <RouterView />
+    <WrapperComponent>
+        <HeaderComponent />
+        <RouterView />
+    </WrapperComponent>
 </template>
 
 <style lang="css" scoped>
