@@ -2,16 +2,18 @@
 import { defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
 
+import HeaderComponent from './components/HeaderComponent.vue';
+
 const MainComponent = defineComponent({
     name: 'MainComponent',
-    components: { RouterView },
+    components: { RouterView, HeaderComponent },
 });
 
 export default MainComponent;
 </script>
 
 <template>
-    <p>MainComponent</p>
+    <HeaderComponent />
     <RouterView />
 </template>
 
