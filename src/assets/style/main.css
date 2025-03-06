@@ -12,4 +12,6 @@
 
 body {
     font-family: 'Inter Variable', sans-serif;
+    background-color: var(--clr-surface-neutral);
+    color: var(--clr-on-surface-neutral);
 }
