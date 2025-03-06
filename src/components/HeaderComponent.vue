@@ -20,7 +20,7 @@ export default HeaderComponent;
 
 <style lang="css" scoped>
 .header {
-    background-color: var(--clr-surface-object);
+    background-color: inherit;
     position: sticky;
     top: 0;
     padding-block: 1rem;
