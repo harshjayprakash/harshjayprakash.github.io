@@ -9,10 +9,15 @@ export default WrapperComponent;
 </script>
 
 <template>
-    <div>
-
+    <div class="wrapper">
+        <slot></slot>
     </div>
 </template>
 
 <style lang="css" scoped>
+.wrapper {
+    margin-inline: auto;
+    max-width: 60rem;
+    padding-inline: 1rem;
+}
 </style>
