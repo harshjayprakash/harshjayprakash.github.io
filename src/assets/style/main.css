@@ -1,6 +1,15 @@
 @import './reset.css';
 @import './colours.css';
 
+:root {
+    --clr-surface-neutral: light-dark(var(--clr-100S), var(--clr-900S));
+    --clr-on-surface-neutral: light-dark(var(--clr-950S), var(--clr-050S));
+    --clr-surface-object: light-dark(var(--clr-050S), var(--clr-950S));
+    --clr-on-surface-object: var(--clr-on-surface-neutral);
+    --clr-on-surface-hover: light-dark(var(--clr-500S), var(--clr-500S));
+    --clr-accent: light-dark(var(--clr-800A), var(--clr-400A));
+}
+
 body {
     font-family: 'Inter Variable', sans-serif;
 }
