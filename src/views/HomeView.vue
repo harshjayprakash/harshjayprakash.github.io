@@ -31,7 +31,7 @@ export default HomeView;
     <section class="hero">
         <article class="status">
             <img class="status__image" :src="personaPicture.toString()" alt="profile picture" />
-            <small class="status__text">currently looking for work</small>
+            <small class="status__text">looking for work</small>
         </article>
         <h1 class="greeting">
             Hi. I'm Harsh Jayprakash
