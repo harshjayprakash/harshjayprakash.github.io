@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import { IDeveloperProject } from '@/store/interfaces/DeveloperProject';
+import type { IDeveloperProject } from '@/store/interfaces/DeveloperProject';
 import developerProjects from '@/store/data/developerProjects';
 
 const HomeView = defineComponent({
@@ -69,11 +69,11 @@ export default HomeView;
                         class="project-card__image"
                         :src="`/img/${project.abbreviation}-screenshot.PNG`"
                         :alt="`${project.name} screenshot`"
-                    />
-                    <small class="project-card__timetech">
-                        {{ project.timeframe }} &bullet; {{ project.technology }}
-                    </small>
+                        />
                     <span class="project-card__title">{{ project.name }}</span>
+                    <small class="project-card__timetech">
+                        {{ project.technology }}
+                    </small>
                     <p class="project-card__description">{{ project.description }}</p>
                 </article>
             </a>
@@ -146,9 +146,15 @@ export default HomeView;
     text-decoration: none;
     color: inherit;
     background-color: var(--clr-surface-object);
-    padding: 1rem;
     height: fit-content;
-    border-radius: 0.15rem;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.project-card-wrapper:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    scale: 101%;
 }
 
 .project-card {
@@ -159,11 +165,12 @@ export default HomeView;
 
 .project-card .project-card__image {
     margin-block-end: 1rem;
-    border-radius: 0.15rem;
+    border-radius: 0.2rem;
 }
 
 .project-card .project-card__timetech {
     opacity: 0.7;
+    font-size: 0.8rem;
 }
 
 .project-card .project-card__description {
