@@ -135,7 +135,6 @@ export default HomeView;
 .status .status__text {
     padding-inline: 1rem;
     place-self: center center;
-    opacity: 0.6;
 }
 
 .divider {
