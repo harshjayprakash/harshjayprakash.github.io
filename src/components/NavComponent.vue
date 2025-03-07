@@ -44,7 +44,7 @@ export default NavComponent;
 
 .nav .nav-link {
     color: inherit;
-    text-decoration: solid underline 0.2rem var(--clr-surface-neutral);
+    text-decoration: solid underline 0.2rem var(--clr-surface-object);
     text-underline-offset: 0.25rem;
 }
 
