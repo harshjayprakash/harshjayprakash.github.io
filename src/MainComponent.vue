@@ -4,10 +4,11 @@ import { RouterView } from 'vue-router';
 
 import HeaderComponent from './components/HeaderComponent.vue';
 import WrapperComponent from './components/WrapperComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 
 const MainComponent = defineComponent({
     name: 'MainComponent',
-    components: { RouterView, HeaderComponent, WrapperComponent },
+    components: { RouterView, HeaderComponent, WrapperComponent, FooterComponent },
 });
 
 export default MainComponent;
@@ -17,6 +18,7 @@ export default MainComponent;
     <WrapperComponent>
         <HeaderComponent />
         <RouterView />
+        <FooterComponent />
     </WrapperComponent>
 </template>
 
