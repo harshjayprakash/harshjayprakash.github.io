@@ -51,6 +51,15 @@ export default HomeView;
         </article>
     </section>
     <hr class="divider" />
+    <section class="services">
+        <h2>What I can do.</h2>
+        <div class="svc-list">
+            <article>Front-end Web Development</article>
+            <article>Traditional Application Development</article>
+            <article>Some UI/UX</article>
+        </div>
+    </section>
+    <hr class="divider" />
     <section class="projects">
         <h2>Projects.</h2>
         <p>
