@@ -21,13 +21,7 @@ export default FooterComponent;
         <small>Handcrafted with Vue. Under construction.</small>
         <hr class="divider" />
         <div class="links">
-            <a>Source Code</a>
-            <hr class="vbar" />
-            <a>Uses</a>
-            <hr class="vbar" />
-            <a>License</a>
-            <hr class="vbar" />
-            <a>Privacy</a>
+            <a>Source</a>
         </div>
     </footer>
 </template>
