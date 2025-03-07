@@ -21,7 +21,9 @@ export default FooterComponent;
         <small>Handcrafted with Vue. Under construction.</small>
         <hr class="divider" />
         <div class="links">
-            <a>Source</a>
+            <a href="https://github.com/harshjayprakash/harshjayprakash.github.io">
+                Source
+            </a>
         </div>
     </footer>
 </template>
