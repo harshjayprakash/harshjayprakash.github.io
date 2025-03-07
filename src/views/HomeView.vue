@@ -94,6 +94,13 @@ export default HomeView;
             </a>
         </div>
     </section>
+    <section class="cta">
+        <h2>Say Hello.</h2>
+        <div>
+            <article>Email</article>
+            <article>LinkedIn</article>
+        </div>
+    </section>
 </template>
 
 <style lang="css" scoped>
