@@ -8,7 +8,7 @@ const HomeView = defineComponent({
     name: 'HomeView',
     setup() {
         const _profilePicture = 'https://avatars.githubusercontent.com/u/58461297?v=4';
-        const _devFilter = ['aap', 'xbk', 'wpq', 'dwf', 'lls', 'ccs'];
+        const _devFilter = ['aap', 'xbk', 'wpq', 'lls', 'dwf', 'ccs'];
         const _devProjects = developerProjects
             .filter(project => project.available && project.abbreviation !== 'ppw')
             .sort((projectA, projectB) =>
