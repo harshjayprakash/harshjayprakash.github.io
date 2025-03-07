@@ -10,6 +10,10 @@
     --clr-accent: light-dark(var(--clr-800A), var(--clr-400A));
 }
 
+*, *::before, *::after {
+    transition: all 150ms ease-in-out;
+}
+
 body {
     font-family: 'Inter Variable', sans-serif;
     font-size: 14;
