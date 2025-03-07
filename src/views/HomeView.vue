@@ -73,7 +73,7 @@ export default HomeView;
                     <small class="project-card__timetech">
                         {{ project.timeframe }} &bullet; {{ project.technology }}
                     </small>
-                    <h3 class="project-card__title">{{ project.name }}</h3>
+                    <span class="project-card__title">{{ project.name }}</span>
                     <p class="project-card__description">{{ project.description }}</p>
                 </article>
             </a>
@@ -147,14 +147,27 @@ export default HomeView;
     color: inherit;
     background-color: var(--clr-surface-object);
     padding: 1rem;
+    height: fit-content;
+    border-radius: 0.15rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .project-card .project-card__image {
     margin-block-end: 1rem;
+    border-radius: 0.15rem;
 }
 
 .project-card .project-card__timetech {
     opacity: 0.7;
+}
+
+.project-card .project-card__description {
+    opacity: 0.8
 }
 
 @media screen and (max-width: 768px) {
