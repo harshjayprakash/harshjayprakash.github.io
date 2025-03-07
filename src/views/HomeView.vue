@@ -34,7 +34,7 @@ export default HomeView;
             <small class="status__text">looking for work</small>
         </article>
         <h1 class="greeting">
-            Hi. I'm Harsh Jayprakash
+            Hi, I'm Harsh
             <br />
             &mdash; a programmer and artist
             <br />
