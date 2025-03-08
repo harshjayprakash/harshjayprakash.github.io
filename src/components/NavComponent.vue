@@ -7,7 +7,7 @@ const NavComponent = defineComponent({
     name: 'NavComponent',
     components: { RouterLink },
     setup() {
-        const linkFilter = ['/home', '/about'];
+        const linkFilter = ['/home', '/about', '/alpha'];
         const links = router.getRoutes()
             .filter(link => linkFilter.includes(link.path))
             .sort((linkA, linkB) =>
