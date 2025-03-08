@@ -2,6 +2,7 @@ interface IDeveloperProject {
     name: String;
     description: String;
     reference: String;
+    category: String;
     timeframe: String;
     status: String;
     available: Boolean;
