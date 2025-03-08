@@ -1,6 +1,6 @@
 {
     "name": "personal-portfolio-website",
-    "version": "25H1.1",
+    "version": "25H1.4",
     "private": true,
     "type": "module",
     "scripts": {
