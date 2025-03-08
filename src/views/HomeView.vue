@@ -29,10 +29,6 @@ export default HomeView;
 
 <template>
     <section class="hero">
-        <article class="status">
-            <img class="status__image" :src="personaPicture.toString()" alt="profile picture" />
-            <small class="status__text">looking for work</small>
-        </article>
         <h1 class="greeting">
             Hi, I'm Harsh
             <br />
