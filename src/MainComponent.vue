@@ -18,7 +18,6 @@ export default MainComponent;
 <template>
     <WrapperComponent>
         <HeaderComponent />
-        <SeparatorComponent />
         <RouterView />
         <FooterComponent />
     </WrapperComponent>
