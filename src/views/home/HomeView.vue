@@ -4,6 +4,7 @@ import HomeHeroSection from './HomeHeroSection.vue';
 import HomeServicesSection from './HomeServicesSection.vue';
 import HomeProjectsSection from './HomeProjectsSection.vue';
 import HomeContactSection from './HomeContactSection.vue';
+import DividerComponent from '@/components/DividerComponent.vue';
 
 const HomeView = defineComponent({
     name: 'HomeView',
@@ -11,7 +12,8 @@ const HomeView = defineComponent({
         HomeHeroSection,
         HomeServicesSection,
         HomeProjectsSection,
-        HomeContactSection
+        HomeContactSection,
+        DividerComponent,
     },
 });
 
@@ -20,8 +22,11 @@ export default HomeView;
 
 <template>
     <HomeHeroSection />
+    <DividerComponent />
     <HomeServicesSection />
+    <DividerComponent />
     <HomeProjectsSection />
+    <DividerComponent />
     <HomeContactSection />
 </template>
 
