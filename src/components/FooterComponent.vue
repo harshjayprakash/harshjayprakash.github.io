@@ -1,8 +1,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+import LinkComponent from './LinkComponent.vue';
 
 const FooterComponent = defineComponent({
     name: 'FooterComponent',
+    components: { LinkComponent },
     setup() {
         const _year = 'MMXXV';
 
@@ -34,6 +36,7 @@ export default FooterComponent;
 <style lang="css" scoped>
 .footer {
     padding-block: 1rem;
+    font-size: 0.889rem;
 }
 
 .footer .links {
@@ -45,7 +48,7 @@ export default FooterComponent;
     border: 0;
     border-block-end: 0.1rem solid var(--clr-on-surface-neutral);
     opacity: 0.2;
-    margin-block: 1rem;
+    margin-block: 0.5rem;
 }
 
 .vbar {
