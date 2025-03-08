@@ -63,11 +63,10 @@ export default HomeView;
             development to traditional application development. Currently these cards link to their respective GitHub repositories. In future,
             each project will have seperate pages.
         </p>
-        <div>
-            <span>Filter: </span>
-            <button>All</button>
-            <button>Web Development</button>
-            <button>Traditional Development</button>
+        <div class="tag-group">
+            <button class="tag tag--all">All</button>
+            <button class="tag tag--web">Web Development</button>
+            <button class="tag tag--tdev">Traditional Development</button>
         </div>
         <div class="project-grid">
             <a
