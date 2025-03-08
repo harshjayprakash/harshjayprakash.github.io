@@ -66,6 +66,7 @@ export default NavComponent;
     box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     border-radius: 0.25rem;
     z-index: 10;
+    margin-block-end: 1.5rem;
 }
 
 .nav .nav__link {
