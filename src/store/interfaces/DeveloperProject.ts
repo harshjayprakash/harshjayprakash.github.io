@@ -1,10 +1,10 @@
-type Category = 'CLI Application' | 'Desktop Application' | 'Web Application';
+type ProjectCategory = 'CLI Application' | 'Desktop Application' | 'Web Application';
 
 interface IDeveloperProject {
     name: String;
     description: String;
     reference: String;
-    category: Category;
+    category: ProjectCategory;
     timeframe: String;
     status: String;
     available: Boolean;
@@ -14,4 +14,4 @@ interface IDeveloperProject {
     gitUri: String;
 };
 
-export type { IDeveloperProject, Category };
+export type { IDeveloperProject, ProjectCategory };
