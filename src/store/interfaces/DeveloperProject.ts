@@ -1,4 +1,7 @@
-type ProjectCategory = 'CLI Application' | 'Desktop Application' | 'Web Application';
+type ProjectCategory = 'All'
+    | 'CLI Application'
+    | 'Desktop Application'
+    | 'Web Application';
 
 interface IDeveloperProject {
     name: String;
