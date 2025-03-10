@@ -60,7 +60,7 @@ export default NavComponent;
 }
 
 .nav--mobile {
-    background-color: var(--clr-surface-object);
+    background-color: var(--clr-surface-container-lowest);
     padding: 1rem;
     flex-direction: column;
     box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -76,22 +76,22 @@ export default NavComponent;
 }
 
 .nav--desktop .nav__link {
-    text-decoration: solid underline 0.2rem var(--clr-surface-object);
+    text-decoration: solid underline 0.2rem var(--clr-surface-container-lowest);
     text-underline-offset: 0.25rem;
 }
 
 .nav--mobile .nav__link {
     text-decoration: none;
-    border-inline-start: 0.2rem solid var(--clr-surface-object);
+    border-inline-start: 0.2rem solid var(--clr-surface-container-lowest);
     padding-inline: 1rem;
 }
 
 .nav--mobile .nav__link:hover {
-    border-inline-start-color: var(--clr-on-surface-hover);
+    border-inline-start-color: var(--clr-surface-container-highest);
 }
 
 .nav--desktop .nav__link:hover {
-    text-decoration-color: var(--clr-on-surface-hover);
+    text-decoration-color: var(--clr-surface-container-highest);
 }
 
 .nav .nav__link--active {
