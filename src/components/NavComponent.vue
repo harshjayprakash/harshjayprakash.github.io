@@ -67,6 +67,8 @@ export default NavComponent;
     border-radius: 0.25rem;
     z-index: 10;
     margin-block-end: 1.5rem;
+    position: sticky;
+    top: 5.2rem;
 }
 
 .nav .nav__link {
