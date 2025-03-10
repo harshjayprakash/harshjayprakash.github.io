@@ -1,0 +1,49 @@
+:root {
+
+    --clr-accent: light-dark(var(--clr-700A), var(--clr-500A));
+    --clr-on-accent: light-dark(var(--clr-050A), var(--clr-050A));
+    --clr-accent-container-lowest: light-dark(var(--clr-050A), var(--clr-950A));
+    --clr-accent-container-low: light-dark(var(--clr-100A), var(--clr-900A));
+    --clr-accent-container: light-dark(var(--clr-400A), var(--clr-700A));
+    --clr-accent-container-high: light-dark(var(--clr-300A), var(--clr-700A));
+    --clr-accent-container-highest: light-dark(var(--clr-700A), var(--clr-600A));
+    --clr-on-accent-container: light-dark(var(--clr-950A), var(--clr-050A));
+    
+    --clr-surface-dim: light-dark(var(--clr-400S), var(--clr-600S));
+    --clr-surface: light-dark(var(--clr-200S), var(--clr-800S));
+    --clr-surface-bright: light-dark(var(--clr-050S), var(--clr-950S));
+    --clr-surface-container-lowest: light-dark(var(--clr-050S), var(--clr-950S));
+    --clr-surface-container-low: light-dark(var(--clr-100S), var(--clr-900S));
+    --clr-surface-container: light-dark(var(--clr-200S), var(--clr-800S));
+    --clr-surface-container-high: light-dark(var(--clr-300S), var(--clr-700S));
+    --clr-surface-container-highest: light-dark(var(--clr-400S), var(--clr-600S));
+    --clr-on-surface: light-dark(var(--clr-950S), var(--clr-050S));
+    --clr-on-surface-variant: light-dark(var(--clr-800S), var(--clr-200S));
+    --clr-outline: light-dark(var(--clr-300S), var(--clr-700S));
+    --clr-outline-varient: light-dark(var(--clr-400S), var(--clr-600S));
+    --clr-scrim: ;
+    --clr-shadow: ;
+
+}
+
+*, *::before, *::after {
+    transition: all 150ms ease-in-out;
+}
+
+body {
+    font-family: 'Inter Variable', sans-serif;
+    background-color: var(--clr-surface-container);
+    color: var(--clr-surface-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h1 { font-size: 1.476rem; }
+h2 { font-size: 1.383rem; }
+h3 { font-size: 1.296rem; }
+h4 { font-size: 1.215rem; }
+h5 { font-size: 1.138rem; }
+h6 { font-size: 1.067rem; }
+small { font-size: 0.937rem; }
