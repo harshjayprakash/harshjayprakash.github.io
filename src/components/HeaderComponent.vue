@@ -61,7 +61,7 @@ export default HeaderComponent;
 <style lang="css" scoped>
 
 .header {
-    background-color: var(--clr-surface-object);
+    background-color: var(--clr-surface-container-lowest);
     position: sticky;
     top: 1rem;
     display: flex;
