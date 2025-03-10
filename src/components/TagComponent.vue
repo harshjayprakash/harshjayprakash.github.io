@@ -21,7 +21,11 @@ export default TagComponent;
 </script>
 
 <template>
-    <span>Tag Component</span>
+    <button v-on="$attrs" v-bind="$attrs" class="tag"
+        :class="{ 'tag--active': highlighted }"
+    >
+        <slot></slot>
+    </button>
 </template>
 
 <style lang="css" scoped>
