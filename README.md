@@ -27,6 +27,8 @@ npm run dev
 
 ## Known Issues and Limitations
 
+* The `/alpha` is not for public use (for development testing purposes).
+
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
