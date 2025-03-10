@@ -57,10 +57,17 @@ export default CardComponent;
     background-color: var(--clr-surface-container-lowest);
     padding: 1rem;
     border-radius: 0.2rem;
+    outline: 1px solid var(--clr-surface-container-lowest);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .card--linkable:hover {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow:
+        0 10px 15px -3px light-dark(rgb(0 0 0 / 0.1), rgb(255 255 255 / 0.05)),
+        0 4px 6px -4px light-dark(rgb(0 0 0 / 0.1), rgb(255 255 255 / 0.05));
+    background-color: var(--clr-surface-container-high);
 }
 
 .card-link-wrapper {
