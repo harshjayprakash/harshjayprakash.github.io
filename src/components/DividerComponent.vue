@@ -15,6 +15,10 @@ const DividerComponent = defineComponent({
         thickness: {
             type: String as PropType<String>,
             default: '0.1rem',
+        },
+        spacing: {
+            type: String as PropType<String>,
+            default: '1rem',
         }
     },
     setup(props) {
@@ -23,6 +27,7 @@ const DividerComponent = defineComponent({
             direction: props.variant as String,
             vHeight: props.vheight as String,
             wThickness: props.thickness as String,
+            marginSpace: props.spacing as String,
         }
     }
 });
@@ -44,13 +49,13 @@ export default DividerComponent;
 }
 
 .h-divider {
-    border-block-end: v-bind(wThickness) solid grey;
-    margin-block: 1rem;
+    border-block-end: v-bind(wThickness) solid var(--clr-outline);
+    margin-block: v-bind(marginSpace);
 }
 
 .v-divider {
     block-size: v-bind(vHeight);
-    border-inline-end: v-bind(wThickness) solid black;
-    margin-inline: 1rem;
+    border-inline-end: v-bind(wThickness) solid var(--clr-outline);
+    margin-inline: v-bind(marginSpace);
 }
 </style>
