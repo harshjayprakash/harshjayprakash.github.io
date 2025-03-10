@@ -30,7 +30,7 @@ export default CardComponent;
 <template>
     <RouterLink
         v-if="cardType === 'internal-link'"
-        :to="link.toStirng()" exact class="card-link-wrapper"
+        :to="link.toString()" exact class="card-link-wrapper"
     >
         <article class="card card--linkable">
             <slot></slot>
