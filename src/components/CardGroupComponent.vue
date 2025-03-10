@@ -26,4 +26,15 @@ export default CardGroupComponent;
 </template>
 
 <style lang="css" scoped>
+.card-group {
+    display: grid;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .card-group {
+        --cols: v-bind(cols);
+        grid-template-columns: repeat(var(--cols), 1fr);
+    }
+}
 </style>
