@@ -15,6 +15,16 @@ npm install
 npm run dev
 ```
 
+## Changelog (25H1.4)
+
+* Uses Custom Component System.
+* Implemented Project Filter System.
+* Project Cards Link to GitHub Repositories.
+* Redesigned Header and Navigation.
+* Updated Card Hover Effects.
+* Improved Accessibility.
+* Updated for Rounded Corners Trend. (_Slightly_).
+
 ## Known Issues and Limitations
 
 ## References
