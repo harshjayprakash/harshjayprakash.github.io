@@ -1,10 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import LinkComponent from './LinkComponent.vue';
+import DividerComponent from './DividerComponent.vue';
 
 const FooterComponent = defineComponent({
     name: 'FooterComponent',
-    components: { LinkComponent },
+    components: { LinkComponent, DividerComponent },
     setup() {
         const _year = 'MMXXV';
 
@@ -21,7 +22,7 @@ export default FooterComponent;
     <footer class="footer">
         <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. </small>
         <small>Handcrafted with Vue. Under construction.</small>
-        <hr class="divider" />
+        <DividerComponent />
         <div class="links">
             <LinkComponent
                 variant="external"
@@ -42,19 +43,5 @@ export default FooterComponent;
 .footer .links {
     display: flex;
     margin-block-start: 0.5rem;
-}
-
-.divider {
-    border: 0;
-    border-block-end: 0.1rem solid var(--clr-on-surface-neutral);
-    opacity: 0.2;
-    margin-block: 0.5rem;
-}
-
-.vbar {
-    border: 0;
-    border-inline-end: 0.1rem solid var(--clr-on-surface-neutral);
-    margin-inline: 1rem;
-    opacity: 0.2;
 }
 </style>
