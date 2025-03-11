@@ -20,7 +20,7 @@ export default TagGroupComponent;
     flex-direction: column;
     gap: 1rem;
     background-color: var(--clr-tab-group-bk);
-    border-radius: 0.2rem;
+    border-radius: var(--bdr-default);
     padding: 0.5rem;
 }
 

@@ -34,7 +34,7 @@ export default ButtonComponent;
 <style lang="css" scoped>
 .button {
     border: 1px solid black;
-    border-radius: 0.3rem;
+    border-radius: var(--bdr-default);
     padding-inline: 0.75rem;
 }
 

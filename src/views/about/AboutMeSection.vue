@@ -9,7 +9,9 @@ export default AboutMeSection;
 </script>
 
 <template>
-    <p>About Me Section</p>
+    <section class="about-me">
+        <h1>About Me.</h1>
+    </section>
 </template>
 
 <style lang="css" scoped>

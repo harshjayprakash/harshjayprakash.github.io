@@ -4,10 +4,11 @@ import { defineComponent, onMounted, onUnmounted, ref, type Ref } from 'vue';
 import NavComponent from '@/components/NavComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
+import BadgeComponent from '@/components/BadgeComponent.vue';
 
 const HeaderComponent = defineComponent({
     name: 'HeaderComponent',
-    components: { NavComponent, SpacerComponent, DividerComponent },
+    components: { NavComponent, SpacerComponent, DividerComponent, BadgeComponent },
     setup() {
         const showNavigation = ref(false);
         const desktopMode = ref(window.innerWidth > 768);
@@ -49,6 +50,9 @@ export default HeaderComponent;
             &#x2630;
         </button>
         <span class="title">Harsh.</span>
+        <BadgeComponent>
+            PREVIEW
+        </BadgeComponent>
         <DividerComponent variant="vertical" v-if="isDesktopMode" />
         <NavComponent v-if="isDesktopMode" />
     </header>
@@ -72,8 +76,12 @@ export default HeaderComponent;
     box-shadow:
         0 0.25rem 0.375rem -0.0625rem var(--clr-header-shadow),
         0 0.125rem 0.25rem -0.125rem var(--clr-header-shadow);
-    border-radius: 0.15rem;
+    border-radius: var(--bdr-default);
     z-index: 10;
+}
+
+.header .title {
+    place-self: center;
 }
 
 .header .header__menu-button {

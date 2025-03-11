@@ -56,7 +56,7 @@ export default CardComponent;
 .card {
     background-color: var(--clr-card-bk);
     padding: 1rem;
-    border-radius: 0.2rem;
+    border-radius: var(--bdr-default);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;

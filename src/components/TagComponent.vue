@@ -32,7 +32,7 @@ export default TagComponent;
 .tag {
     border: 0;
     padding-inline: 0.5rem;
-    border-radius: 0.2rem;
+    border-radius: var(--bdr-default);
     background-color: var(--clr-tab-bk);
 }
 

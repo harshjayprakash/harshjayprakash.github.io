@@ -3,10 +3,11 @@ import { defineComponent } from 'vue';
 
 import ButtonComponent from '@/components/ButtonComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
+import BadgeComponent from '@/components/BadgeComponent.vue';
 
 const AlphaView = defineComponent({
     name: 'AlphaView',
-    components: { DividerComponent, ButtonComponent },
+    components: { DividerComponent, ButtonComponent, BadgeComponent },
     methods: {
         hi() {
             alert('hi');
@@ -32,6 +33,11 @@ export default AlphaView;
         <ButtonComponent variant="accent">
             Accent Button
         </ButtonComponent>
+        <br/>
+        <br/>
+        <BadgeComponent>
+            Under Construction
+        </BadgeComponent>
     </div>
 </template>
 

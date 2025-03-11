@@ -66,7 +66,7 @@ export default NavComponent;
     box-shadow:
         0 0.25rem 0.375rem -0.0625rem var(--clr-nav-shadow),
         0 0.125rem 0.25rem -0.125rem var(--clr-nav-shadow);
-    border-radius: 0.25rem;
+    border-radius: var(--bdr-default);
     z-index: 10;
     margin-block-end: 1.5rem;
     position: sticky;

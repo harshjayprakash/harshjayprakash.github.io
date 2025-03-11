@@ -1,6 +1,6 @@
 :root {
     /* Border Radius */
-    --bdr-default: 0.3rem;
+    --bdr-default: 0.1rem;
 
     /* Semantic Colours */
     --clr-surface-primary: light-dark(var(--clr-200S), var(--clr-800S));
