@@ -1,29 +1,64 @@
 :root {
+    /* Border Radius */
+    --bdr-default: 0.3rem;
 
-    --clr-accent: light-dark(var(--clr-700A), var(--clr-500A));
-    --clr-on-accent: light-dark(var(--clr-050A), var(--clr-050A));
-    --clr-accent-container-lowest: light-dark(var(--clr-050A), var(--clr-950A));
-    --clr-accent-container-low: light-dark(var(--clr-100A), var(--clr-900A));
-    --clr-accent-container: light-dark(var(--clr-400A), var(--clr-700A));
-    --clr-accent-container-high: light-dark(var(--clr-300A), var(--clr-700A));
-    --clr-accent-container-highest: light-dark(var(--clr-700A), var(--clr-600A));
-    --clr-on-accent-container: light-dark(var(--clr-950A), var(--clr-050A));
-    
-    --clr-surface-dim: light-dark(var(--clr-400S), var(--clr-600S));
-    --clr-surface: light-dark(var(--clr-200S), var(--clr-800S));
-    --clr-surface-bright: light-dark(var(--clr-050S), var(--clr-950S));
-    --clr-surface-container-lowest: light-dark(var(--clr-050S), var(--clr-950S));
-    --clr-surface-container-low: light-dark(var(--clr-100S), var(--clr-900S));
-    --clr-surface-container: light-dark(var(--clr-200S), var(--clr-800S));
-    --clr-surface-container-high: light-dark(var(--clr-300S), var(--clr-700S));
-    --clr-surface-container-highest: light-dark(var(--clr-400S), var(--clr-600S));
-    --clr-on-surface: light-dark(var(--clr-950S), var(--clr-050S));
-    --clr-on-surface-variant: light-dark(var(--clr-800S), var(--clr-200S));
-    --clr-outline: light-dark(var(--clr-300S), var(--clr-700S));
-    --clr-outline-varient: light-dark(var(--clr-400S), var(--clr-600S));
-    --clr-scrim: ;
-    --clr-shadow: ;
+    /* Semantic Colours */
+    --clr-surface-primary: light-dark(var(--clr-200S), var(--clr-800S));
+    --clr-surface-secondary: light-dark(var(--clr-050S), var(--clr-950S));
+    --clr-surface-secondary-hover: light-dark(var(--clr-300S), var(--clr-700S));
+    --clr-surface-tertiary: light-dark(var(--clr-700A), var(--clr-400A));
+    --clr-surface-tertiary-hover: light-dark(var(--clr-500A), var(--clr-600A));
+    --clr-text-primary: light-dark(var(--clr-950S), var(--clr-050S));
+    --clr-text-secondary-hover: light-dark(var(--clr-300S), var(--clr-700S));
+    --clr-text-inverted: light-dark(var(--clr-050S), var(--clr-950S));
+    --clr-shadow: light-dark(rgb(0 0 0 / 0.1), rgb(255 255 255 / 0.1));
 
+    --clr-outline-primary: light-dark(var(--clr-950S), var(--clr-050S));
+    --clr-outline-secondary-hidden: light-dark(var(--clr-050S), var(--clr-950S));
+    --clr-outline-hover: light-dark(var(--clr-300S), var(--clr-700S));
+    --clr-outline-active: light-dark(var(--clr-700A), var(--clr-400A));
+    --clr-outline-faded: light-dark(var(--clr-300S), var(--clr-700S));
+
+    /* Component-Specific Colours */
+    --clr-button-standard-bk: var(--clr-surface-secondary);
+    --clr-button-standard-bk-hover: var(--clr-surface-secondary-hover);
+    --clr-button-standard-border: var(--clr-outline-faded);
+    --clr-button-standard-border-hover: var(--clr-outline-active);
+    --clr-button-standard-text: var(--clr-text-primary);
+    --clr-button-standard-text-hover: var(--clr-text-primary);
+
+    --clr-button-accent-bk: var(--clr-surface-tertiary);
+    --clr-button-accent-bk-hover: var(--clr-surface-tertiary-hover);
+    --clr-button-accent-border: var(--clr-outline-faded);
+    --clr-button-accent-border-hover: var(--clr-text-primary);
+    --clr-button-accent-text: var(--clr-text-inverted);
+    --clr-button-accent-text-hover: var(--clr-text-inverted);
+
+    --clr-card-bk: var(--clr-surface-secondary);
+    --clr-card-bk-hover: var(--clr-surface-secondary-hover);
+    --clr-card-shadow: var(--clr-shadow);
+
+    --clr-divider: var(--clr-outline-faded);
+
+    --clr-header-bk:  var(--clr-surface-secondary);
+    --clr-header-bk-hover: var(--clr-surface-secondary-hover);
+    --clr-header-shadow: var(--clr-shadow);
+    --clr-header-text: var(--clr-text-primary);
+
+    --clr-anchor-text: var(--clr-text-primary);
+    --clr-anchor-underline-hover: var(--clr-outline-primary);
+
+    --clr-nav-bk: var(--clr-surface-secondary);
+    --clr-nav-shadow: var(--clr-shadow);
+    --clr-nav-border: var(--clr-outline-secondary-hidden);
+    --clr-nav-border-hover: var(--clr-outline-hover);
+    --clr-nav-border-active: var(--clr-outline-active);
+
+    --clr-tab-bk: var(--clr-surface-primary);
+    --clr-tab-bk-hover: var(--clr-surface-secondary-hover);
+    --clr-tab-bk-active: var(--clr-surface-tertiary);
+    --clr-tab-text-active: var(--clr-text-inverted);
+    --clr-tab-group-bk: var(--clr-surface-secondary);
 }
 
 *, *::before, *::after {
@@ -32,8 +67,8 @@
 
 body {
     font-family: 'Inter Variable', sans-serif;
-    background-color: var(--clr-surface-container);
-    color: var(--clr-surface-text);
+    background-color: var(--clr-surface-primary);
+    color: var(--clr-text-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {

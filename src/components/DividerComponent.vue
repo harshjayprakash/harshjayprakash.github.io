@@ -49,13 +49,13 @@ export default DividerComponent;
 }
 
 .h-divider {
-    border-block-end: v-bind(wThickness) solid var(--clr-outline);
+    border-block-end: v-bind(wThickness) solid var(--clr-divider);
     margin-block: v-bind(marginSpace);
 }
 
 .v-divider {
     block-size: v-bind(vHeight);
-    border-inline-end: v-bind(wThickness) solid var(--clr-outline);
+    border-inline-end: v-bind(wThickness) solid var(--clr-divider);
     margin-inline: v-bind(marginSpace);
 }
 </style>

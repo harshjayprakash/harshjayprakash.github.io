@@ -33,13 +33,16 @@ export default TagComponent;
     border: 0;
     padding-inline: 0.5rem;
     border-radius: 0.2rem;
+    background-color: var(--clr-tab-bk);
 }
 
 .tag:hover {
-    background-color: var(--clr-surface-container-highest);
+    background-color: var(--clr-tab-bk-hover);
+    color: inherit;
 }
 
 .tag--active {
-    background-color: var(--clr-accent-container);
+    background-color: var(--clr-tab-bk-active);
+    color: var(--clr-tab-text-active);
 }
 </style>

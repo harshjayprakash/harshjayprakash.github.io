@@ -54,17 +54,18 @@ export default NavComponent;
 </template>
 
 <style lang="css" scoped>
-
 .nav {
     display: flex;
     gap: 1rem;
 }
 
 .nav--mobile {
-    background-color: var(--clr-surface-container-lowest);
+    background-color: var(--clr-nav-bk);
     padding: 1rem;
     flex-direction: column;
-    box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow:
+        0 0.25rem 0.375rem -0.0625rem var(--clr-nav-shadow),
+        0 0.125rem 0.25rem -0.125rem var(--clr-nav-shadow);
     border-radius: 0.25rem;
     z-index: 10;
     margin-block-end: 1.5rem;
@@ -77,34 +78,30 @@ export default NavComponent;
 }
 
 .nav--desktop .nav__link {
-    text-decoration: solid underline 0.2rem var(--clr-surface-container-lowest);
-    text-underline-offset: 0.25rem;
+    text-decoration: solid underline 0.2rem var(--clr-nav-border);
 }
+
+.nav--desktop .nav__link:hover {
+    text-decoration-color: var(--clr-nav-border-hover);
+}
+
+.nav--desktop .nav__link--active {
+    text-decoration-color: var(--clr-nav-border-active);
+}
+
 
 .nav--mobile .nav__link {
     text-decoration: none;
-    border-inline-start: 0.2rem solid var(--clr-surface-container-lowest);
+    border-inline-start: 0.2rem solid var(--clr-nav-border);
     padding-inline: 1rem;
 }
 
 .nav--mobile .nav__link:hover {
-    border-inline-start-color: var(--clr-surface-container-highest);
-}
-
-.nav--desktop .nav__link:hover {
-    text-decoration-color: var(--clr-surface-container-highest);
-}
-
-.nav .nav__link--active {
-    font-weight: 500;
-}
-
-.nav--desktop .nav__link--active {
-    text-decoration-color: var(--clr-accent);
+    border-inline-start-color: var(--clr-nav-border-hover);
 }
 
 .nav--mobile .nav__link--active {
-    border-inline-start-color: var(--clr-accent);
+    border-inline-start-color: var(--clr-nav-border-active);
 }
 
 </style>

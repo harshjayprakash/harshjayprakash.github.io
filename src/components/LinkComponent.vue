@@ -40,6 +40,6 @@ export default LinkComponent;
 }
 
 .link:hover {
-    text-decoration: solid underline 0.1rem black;
+    text-decoration: solid underline 0.1rem var(--clr-anchor-underline-hover);
 }
 </style>

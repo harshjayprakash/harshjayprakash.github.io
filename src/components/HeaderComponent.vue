@@ -3,10 +3,11 @@ import { defineComponent, onMounted, onUnmounted, ref, type Ref } from 'vue';
 
 import NavComponent from '@/components/NavComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
+import DividerComponent from '@/components/DividerComponent.vue';
 
 const HeaderComponent = defineComponent({
     name: 'HeaderComponent',
-    components: { NavComponent, SpacerComponent },
+    components: { NavComponent, SpacerComponent, DividerComponent },
     setup() {
         const showNavigation = ref(false);
         const desktopMode = ref(window.innerWidth > 768);
@@ -48,7 +49,7 @@ export default HeaderComponent;
             &#x2630;
         </button>
         <span class="title">Harsh.</span>
-        <hr class="vbar" v-if="isDesktopMode" />
+        <DividerComponent variant="vertical" v-if="isDesktopMode" />
         <NavComponent v-if="isDesktopMode" />
     </header>
     <SpacerComponent space="1rem" />
@@ -60,16 +61,17 @@ export default HeaderComponent;
 </template>
 
 <style lang="css" scoped>
-
 .header {
-    background-color: var(--clr-surface-container-lowest);
+    background-color: var(--clr-header-bk);
     position: sticky;
     top: 1rem;
     display: flex;
     width: fit-content;
     padding-block: 0.75rem;
     padding-inline: 1rem;
-    box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow:
+        0 0.25rem 0.375rem -0.0625rem var(--clr-header-shadow),
+        0 0.125rem 0.25rem -0.125rem var(--clr-header-shadow);
     border-radius: 0.15rem;
     z-index: 10;
 }
@@ -82,13 +84,6 @@ export default HeaderComponent;
 }
 
 .header .header__menu-button:hover {
-    background-color: grey;
-}
-
-.header .vbar {
-    border: 0;
-    border-inline-end: 0.1rem solid var(--clr-on-surface-neutral);
-    margin-inline: 1rem;
-    opacity: 0.4;
+    background-color: var(--clr-header-bk-hover);
 }
 </style>

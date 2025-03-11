@@ -39,22 +39,24 @@ export default ButtonComponent;
 }
 
 .button--standard {
-    color: var(--clr-on-surface);
-    background-color: var(--clr-surface-container-low);
-    border-color: var(--clr-outline);
+    color: var(--clr-button-standard-text);
+    background-color: var(--clr-button-standard-bk);
+    border-color: var(--clr-button-standard-border);
 }
 
 .button--standard:hover {
-    background-color: var(--clr-surface-container);
+    background-color: var(--clr-button-standard-bk-hover);
+    border-color: var(--clr-button-standard-border-hover);
 }
 
 .button--accent {
-    background-color: var(--clr-accent-container-highest);
-    color: var(--clr-on-accent);
-    border-color: var(--clr-accent-container);
+    background-color: var(--clr-button-accent-bk);
+    color: var(--clr-button-accent-text);
+    border-color: var(--clr-button-accent-border);
 }
 
 .button--accent:hover {
-    background-color: var(--clr-accent-container);
+    background-color: var(--clr-button-accent-bk-hover);
+    border-color: var(--clr-button-accent-border-hover);
 }
 </style>

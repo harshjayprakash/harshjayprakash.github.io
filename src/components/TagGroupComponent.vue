@@ -19,7 +19,7 @@ export default TagGroupComponent;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--clr-surface-container-lowest);
+    background-color: var(--clr-tab-group-bk);
     border-radius: 0.2rem;
     padding: 0.5rem;
 }

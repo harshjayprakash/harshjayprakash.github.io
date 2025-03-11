@@ -54,10 +54,9 @@ export default CardComponent;
 
 <style lang="css" scoped>
 .card {
-    background-color: var(--clr-surface-container-lowest);
+    background-color: var(--clr-card-bk);
     padding: 1rem;
     border-radius: 0.2rem;
-    outline: 1px solid var(--clr-surface-container-lowest);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -65,9 +64,9 @@ export default CardComponent;
 
 .card--linkable:hover {
     box-shadow:
-        0 10px 15px -3px light-dark(rgb(0 0 0 / 0.1), rgb(255 255 255 / 0.05)),
-        0 4px 6px -4px light-dark(rgb(0 0 0 / 0.1), rgb(255 255 255 / 0.05));
-    background-color: var(--clr-surface-container-high);
+        0 10px 15px -3px var(--clr-card-shadow),
+        0 4px 6px -4px var(--clr-card-shadow);
+    background-color: var(--clr-card-bk-hover);
 }
 
 .card-link-wrapper {
