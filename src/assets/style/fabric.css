@@ -20,6 +20,8 @@
     --clr-outline-faded: light-dark(var(--clr-300S), var(--clr-700S));
 
     /* Component-Specific Colours */
+    --clr-badge-outline: var(--clr-outline-primary);
+
     --clr-button-standard-bk: var(--clr-surface-secondary);
     --clr-button-standard-bk-hover: var(--clr-surface-secondary-hover);
     --clr-button-standard-border: var(--clr-outline-faded);

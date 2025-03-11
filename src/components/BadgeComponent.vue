@@ -9,10 +9,17 @@ export default BadgeComponent;
 </script>
 
 <template>
-    <span class="badge">
+    <small class="badge">
         <slot></slot>
-    </span>
+    </small>
 </template>
 
 <style lang="css" scoped>
+.badge {
+    border-radius: var(--bdr-default);
+    padding-inline: 0.3rem;
+    border: 1px solid var(--clr-badge-outline);
+    margin-inline: 0.5rem;
+    vertical-align: super;
+}
 </style>
