@@ -1,8 +1,20 @@
 <script lang="ts">
+import DividerComponent from '@/components/DividerComponent.vue';
+import LinkComponent from '@/components/LinkComponent.vue';
+import socials from '@/store/data/socials';
+import type { ISocial } from '@/store/interfaces/Social';
 import { defineComponent } from 'vue';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',
+    components: { LinkComponent, DividerComponent },
+    setup() {
+        const _socialList = socials;
+
+        return {
+            socials: _socialList as ISocial[],
+        }
+    }
 });
 
 export default HomeContactSection;
@@ -12,20 +24,19 @@ export default HomeContactSection;
     <section class="home-contact">
         <h2>Say Hello.</h2>
         <div class="social-list">
-            <table class="social-table">
-                <tr>
-                    <td>Linkedin</td>
-                    <td>harshjayprakash7</td>
-                </tr>
-                <tr>
-                    <td>GitHub</td>
-                    <td>harshjayprakash</td>
-                </tr>
-                <tr>
-                    <td>CV</td>
-                    <td>Download PDF</td>
-                </tr>
-            </table>
+            <article class="social-row" v-for="(social, idx) in socials" :key="idx">
+                <LinkComponent
+                    variant="external"
+                    :path="social.uri.toString()">
+                    <span class="social__name">
+                        {{ social.name }}
+                    </span>
+                    <span class="social__tag">
+                        {{ social.tag }}
+                    </span>
+                </LinkComponent>
+                <DividerComponent />
+            </article>
         </div>
     </section>
 </template>
@@ -33,16 +44,21 @@ export default HomeContactSection;
 <style lang="css" scoped>
 .social-list {
     display: flex;
+    flex-direction: column;
     margin-inline: auto;
+    place-items: center;
 }
 
-.social-table {
-    width: fit-content;
-    height: fit-content;
-}
-
-.social-table tr {
+.social-row {
     display: flex;
-    gap: 1rem;
 }
+
+.social-list .social__name {
+
+}
+
+.social-list .social__tag {
+    place-self: end;
+}
+
 </style>
