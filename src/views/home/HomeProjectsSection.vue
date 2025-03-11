@@ -96,20 +96,25 @@ export default HomeProjectsSection;
                 v-for="(project, idx) in devProjects" :key="idx"
                 variant="external-link" :path="project.gitUri.toString()"
             >
-                <img
+                <img class="card-preview"
                     :src="`/img/${project.abbreviation}-screenshot.PNG`"
                     :alt="`${project.name} screenshot`"
                 >
-                <span>
-                    {{ project.name }}
-                </span>
-                <br />
-                <small>
-                    {{ project.technology }}
-                </small>
-                <p>
+                <div class="card-header">
+                    <span>
+                        {{ project.name }}
+                    </span>
+                    <br />
+                    <small>
+                        {{ project.technology }}
+                    </small>
+                </div>
+                <p class="card-description">
                     {{ project.description }}
                 </p>
+                <div class="card-footer">
+
+                </div>
             </CardComponent>
         </CardGroupComponent>
     </section>
