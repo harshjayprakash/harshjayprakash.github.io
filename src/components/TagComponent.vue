@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent, ref, type ComputedRef } from 'vue';
+import { computed, defineComponent, type ComputedRef } from 'vue';
 
 const TagComponent = defineComponent({
     name: 'TagComponent',

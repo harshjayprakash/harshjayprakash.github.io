@@ -1,8 +1,8 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 import ButtonComponent from '@/components/ButtonComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
-import LinkComponent from '@/components/LinkComponent.vue';
-import { defineComponent } from 'vue';
 
 const AlphaView = defineComponent({
     name: 'AlphaView',

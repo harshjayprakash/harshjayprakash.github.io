@@ -1,7 +1,8 @@
 <script lang="ts">
 import { defineComponent, onMounted, onUnmounted, ref, type Ref } from 'vue';
-import NavComponent from './NavComponent.vue';
-import SpacerComponent from './SpacerComponent.vue';
+
+import NavComponent from '@/components/NavComponent.vue';
+import SpacerComponent from '@/components/SpacerComponent.vue';
 
 const HeaderComponent = defineComponent({
     name: 'HeaderComponent',

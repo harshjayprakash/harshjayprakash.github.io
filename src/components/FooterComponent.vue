@@ -1,7 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import LinkComponent from './LinkComponent.vue';
-import DividerComponent from './DividerComponent.vue';
+
+import LinkComponent from '@/components/LinkComponent.vue';
+import DividerComponent from '@/components/DividerComponent.vue';
 
 const FooterComponent = defineComponent({
     name: 'FooterComponent',

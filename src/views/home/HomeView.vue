@@ -1,10 +1,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HomeHeroSection from './HomeHeroSection.vue';
-import HomeServicesSection from './HomeServicesSection.vue';
-import HomeProjectsSection from './HomeProjectsSection.vue';
-import HomeContactSection from './HomeContactSection.vue';
+
 import DividerComponent from '@/components/DividerComponent.vue';
+
+import HomeHeroSection from '@/views/home/HomeHeroSection.vue';
+import HomeServicesSection from '@/views/home/HomeServicesSection.vue';
+import HomeProjectsSection from '@/views/home/HomeProjectsSection.vue';
+import HomeContactSection from '@/views/home/HomeContactSection.vue';
 
 const HomeView = defineComponent({
     name: 'HomeView',

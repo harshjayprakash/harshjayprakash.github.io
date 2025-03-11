@@ -1,7 +1,8 @@
 <script lang="ts">
-import router from '@/router';
 import { defineComponent, type PropType } from 'vue';
 import { RouterLink, type RouteRecordRaw } from 'vue-router';
+
+import router from '@/router';
 
 const NavComponent = defineComponent({
     name: 'NavComponent',

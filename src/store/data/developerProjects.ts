@@ -1,4 +1,4 @@
-import type { IDeveloperProject } from "../interfaces/DeveloperProject";
+import type { IDeveloperProject } from '@/store/interfaces/DeveloperProject';
 
 const developerProjects: IDeveloperProject[] = [
     {

@@ -1,4 +1,4 @@
-import type { ISocial } from "../interfaces/Social";
+import type { ISocial } from "@/store/interfaces/Social";
 
 const socials: ISocial[] = [
     {

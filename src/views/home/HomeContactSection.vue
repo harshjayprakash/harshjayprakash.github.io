@@ -1,9 +1,11 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 import DividerComponent from '@/components/DividerComponent.vue';
 import LinkComponent from '@/components/LinkComponent.vue';
+
 import socials from '@/store/data/socials';
 import type { ISocial } from '@/store/interfaces/Social';
-import { defineComponent } from 'vue';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',

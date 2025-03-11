@@ -5,11 +5,10 @@ import { RouterView } from 'vue-router';
 import HeaderComponent from './components/HeaderComponent.vue';
 import WrapperComponent from './components/WrapperComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
-import SeparatorComponent from './components/SeparatorComponent.vue';
 
 const MainComponent = defineComponent({
     name: 'MainComponent',
-    components: { RouterView, HeaderComponent, WrapperComponent, FooterComponent, SeparatorComponent },
+    components: { RouterView, HeaderComponent, WrapperComponent, FooterComponent },
 });
 
 export default MainComponent;
