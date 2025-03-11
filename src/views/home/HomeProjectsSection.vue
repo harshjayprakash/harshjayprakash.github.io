@@ -65,7 +65,6 @@ export default HomeProjectsSection;
             have their own pages.
         </p>
         <TagGroupComponent>
-            <span>Filter: </span>
             <TagComponent
                 @click="updateProjectsList('All')"
                 :isActive="isActiveOption('All')"
