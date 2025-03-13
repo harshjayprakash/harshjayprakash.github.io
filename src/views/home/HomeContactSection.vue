@@ -24,18 +24,13 @@ export default HomeContactSection;
 
 <template>
     <section class="home-contact">
-        <h2>Say Hello.</h2>
+        <h2>Looking to collaborate? or Just Say Hello?</h2>
         <div class="social-list">
             <article class="social-row" v-for="(social, idx) in socials" v-bind:key="idx">
                 <LinkComponent
                     variant="external"
                     v-bind:path="social.uri.toString()">
-                    <span class="social__name">
-                        {{ social.name }}
-                    </span>
-                    <span class="social__tag">
-                        {{ social.tag }}
-                    </span>
+                        {{ social.name }} &nearrow;
                 </LinkComponent>
                 <DividerComponent />
             </article>
@@ -44,18 +39,16 @@ export default HomeContactSection;
 </template>
 
 <style lang="css" scoped>
-.social-list {
+.home-contact {
     display: flex;
     flex-direction: column;
-    margin-inline: auto;
-    place-items: center;
+    gap: 2rem;
 }
 
-.social-row {
-    display: flex;
-}
-
-.social-list .social__tag {
-    place-self: end;
+@media (min-width: 768px) {
+    .home-contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 </style>
