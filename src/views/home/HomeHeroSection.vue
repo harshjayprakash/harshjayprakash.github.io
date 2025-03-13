@@ -10,6 +10,7 @@ export default HomeHeroSection;
 
 <template>
     <section class="home-hero">
+        <span class="glow" aria-hidden="true"></span>
         <h1 class="greeting">
             Hi, I'm Harsh
             <br />
@@ -29,5 +30,15 @@ export default HomeHeroSection;
     gap: 10rem;
     place-items: center;
     place-content: center;
+}
+
+.glow {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--clr-surface-glow);
+    filter: blur(100px);
+    top: 37vh;
+    z-index: -1;
 }
 </style>
