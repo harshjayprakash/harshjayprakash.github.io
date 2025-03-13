@@ -23,6 +23,12 @@ export default HomeServicesSection;
                     Crafting responsive websites using modern front-end
                     technologies to create seamless user experiences.
                 </p>
+                <small class="faded">
+                    <span>Angular</span> &bullet;
+                    <span>Vue</span> &bullet;
+                    <span>HTML</span> &bullet;
+                    <span>CSS</span>
+                </small>
             </CardComponent>
             <CardComponent>
                 <span>Traditional Development</span>
@@ -30,12 +36,24 @@ export default HomeServicesSection;
                     Building robust, scalable applications tailored to the your business
                     needs.
                 </p>
+                <small class="faded">
+                    <span>C</span> &bullet;
+                    <span>Python</span> &bullet;
+                    <span>Java</span> &bullet;
+                    <span>Visual Basic .NET</span> &bullet;
+                    <span>Pascal</span>
+                </small>
             </CardComponent>
             <CardComponent>
                 <span>UI/UX</span>
                 <p>
                     Designing interfaces that balance aesthetics with functionality
                 </p>
+                <small class="faded">
+                <span>Figma</span> &bullet;
+                <span>Pen+Paper</span> &bullet;
+                <span>MS Paint</span>
+            </small>
             </CardComponent>
         </CardGroupComponent>
     </section>
