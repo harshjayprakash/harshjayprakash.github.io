@@ -14,7 +14,8 @@ export default HomeServicesSection;
 
 <template>
     <section class="home-services">
-        <h2>Services.</h2>
+        <h2>What I can do.</h2>
+        <p></p>
         <CardGroupComponent v-bind:desktopCols="3">
             <CardComponent>
                 <span>Front-End Web Development</span>
