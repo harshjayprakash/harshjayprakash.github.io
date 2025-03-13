@@ -20,7 +20,7 @@ export default HomeServicesSection;
             <CardComponent>
                 <span>Front-End Web Development</span>
                 <p>
-                    Crafting pixel-perfect, responsive websites using modern front-end
+                    Crafting responsive websites using modern front-end
                     technologies to create seamless user experiences.
                 </p>
             </CardComponent>
