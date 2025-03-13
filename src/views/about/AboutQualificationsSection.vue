@@ -17,9 +17,18 @@ export default AboutQualificationsSection;
 <template>
     <section class="about-quals">
         <h2>Qualifications.</h2>
-        <CardGroupComponent :desktopCols="4">
+        <CardGroupComponent :desktopCols="3">
             <CardComponent>
-                <span>hello</span>
+                <span>Bachelor's Degree</span>
+                <span>Computer Science</span>
+            </CardComponent>
+            <CardComponent>
+                <span>A-Levels</span>
+                <span>Computer Science, Maths and Fine Art</span>
+            </CardComponent>
+            <CardComponent>
+                <span>GCSEs</span>
+                <span>English, Maths, Science, Geography, Spanish, Fine Art and Computer Science</span>
             </CardComponent>
         </CardGroupComponent>
     </section>
