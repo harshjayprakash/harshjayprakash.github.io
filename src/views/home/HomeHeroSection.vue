@@ -18,7 +18,7 @@ export default HomeHeroSection;
             <br />
             based in Southampton, UK.
         </h1>
-        <span>&downarrow; scroll</span>
+        <span>&downarrow; scroll to explore</span>
     </section>
 </template>
 
