@@ -24,7 +24,7 @@ export default HomeContactSection;
 
 <template>
     <section class="home-contact">
-        <h2>Looking to collaborate? or Just Say Hello?</h2>
+        <h2>Looking to collaborate? or Say Hello?</h2>
         <div class="social-list">
             <article class="social-row" v-for="(social, idx) in socials" v-bind:key="idx">
                 <LinkComponent
