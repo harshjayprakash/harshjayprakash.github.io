@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, ref, type Ref } from 'vue';
+import { computed, defineComponent, onMounted, onUnmounted, ref, type ComputedRef, type Ref } from 'vue';
 
 import NavComponent from '@/components/NavComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
@@ -17,6 +17,11 @@ const HeaderComponent = defineComponent({
             desktopMode.value = (window.innerWidth > 768);
         }
 
+        const menuButtonText = computed(() =>
+            (showNavigation.value) ?
+                String.fromCodePoint(10005) : String.fromCodePoint(9776)
+        );
+
         onMounted(() => {
             window.addEventListener('resize', updateDeviceMode);
         });
@@ -28,6 +33,7 @@ const HeaderComponent = defineComponent({
         return {
             isNavShown: showNavigation as Ref<Boolean>,
             isDesktopMode: desktopMode as Ref<Boolean>,
+            menuText: menuButtonText as ComputedRef<String>,
         }
     },
     methods: {
@@ -47,7 +53,7 @@ export default HeaderComponent;
             @click="toggleNavigationVisibility"
             v-if="!isDesktopMode"
         >
-            &#x2630;
+            {{ menuText }}
         </button>
         <span class="title">Harsh.</span>
         <BadgeComponent>
