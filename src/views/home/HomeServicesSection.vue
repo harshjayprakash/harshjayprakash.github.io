@@ -24,9 +24,9 @@ export default HomeServicesSection;
                     technologies to create seamless user experiences.
                 </p>
                 <small class="faded">
-                    <span>Angular</span> &bullet;
-                    <span>Vue</span> &bullet;
-                    <span>HTML</span> &bullet;
+                    <span>Angular</span> &SmallCircle;
+                    <span>Vue</span> &SmallCircle;
+                    <span>HTML</span> &SmallCircle;
                     <span>CSS</span>
                 </small>
             </CardComponent>
@@ -37,10 +37,10 @@ export default HomeServicesSection;
                     needs.
                 </p>
                 <small class="faded">
-                    <span>C</span> &bullet;
-                    <span>Python</span> &bullet;
-                    <span>Java</span> &bullet;
-                    <span>Visual Basic .NET</span> &bullet;
+                    <span>C</span> &SmallCircle;
+                    <span>Python</span> &SmallCircle;
+                    <span>Java</span> &SmallCircle;
+                    <span>Visual Basic .NET</span> &SmallCircle;
                     <span>Pascal</span>
                 </small>
             </CardComponent>
@@ -50,8 +50,8 @@ export default HomeServicesSection;
                     Designing interfaces that balance aesthetics with functionality
                 </p>
                 <small class="faded">
-                <span>Figma</span> &bullet;
-                <span>Pen+Paper</span> &bullet;
+                <span>Figma</span> &SmallCircle;
+                <span>Pen+Paper</span> &SmallCircle;
                 <span>MS Paint</span>
             </small>
             </CardComponent>
@@ -60,11 +60,11 @@ export default HomeServicesSection;
             <span>Tools</span>
             <p></p>
             <small class="faded">
-                <span>Windows</span> &bullet;
-                <span>GNU+Linux</span> &bullet;
-                <span>VSCode</span> &bullet;
-                <span>Visual Studio</span> &bullet;
-                <span>JetBrains</span> &bullet;
+                <span>Windows</span> &SmallCircle;
+                <span>GNU+Linux</span> &SmallCircle;
+                <span>VSCode</span> &SmallCircle;
+                <span>Visual Studio</span> &SmallCircle;
+                <span>JetBrains</span> &SmallCircle;
                 <span>Git</span>
             </small>
         </CardComponent>
