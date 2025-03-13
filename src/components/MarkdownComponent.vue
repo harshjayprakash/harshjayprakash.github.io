@@ -1,8 +1,42 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, type PropType } from 'vue';
 
 const MarkdownComponent = defineComponent({
     name: 'MarkdownComponent',
+    props: {
+        tags: {
+            type: Array<String>,
+            default: [],
+        },
+        title: {
+            type: String as PropType<String>,
+            default: 'Untitled Article',
+        },
+        description: {
+            type: String as PropType<String>,
+            default: 'description'
+        },
+        author: {
+            type: String as PropType<String>,
+            default: 'author',
+        },
+        date: {
+            type: String as PropType<String>,
+            default: '01-01-1600',
+        },
+        estReadingTimeMinutes: {
+            type: Number,
+            default: 0,
+        },
+        image: {
+            type: String as PropType<String>,
+            default: 'none',
+        },
+        header: {
+            type: Boolean as PropType<Boolean>,
+            default: false,
+        }
+    },
 });
 
 export default MarkdownComponent;
