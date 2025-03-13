@@ -57,7 +57,7 @@ export default HeaderComponent;
         </button>
         <span class="title">Harsh.</span>
         <BadgeComponent>
-            PREVIEW
+            UNDER CONSTRUCTION
         </BadgeComponent>
         <DividerComponent variant="vertical" v-if="isDesktopMode" />
         <NavComponent v-if="isDesktopMode" />
