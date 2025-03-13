@@ -1,11 +1,17 @@
 <script lang="ts">
+import { computed, defineComponent, ref } from 'vue';
+import type { ComputedRef, Ref } from 'vue';
+
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
 import TagComponent from '@/components/TagComponent.vue';
 import TagGroupComponent from '@/components/TagGroupComponent.vue';
+
 import developerProjects from '@/store/data/developerProjects';
-import type { IDeveloperProject, ProjectCategory } from '@/store/interfaces/DeveloperProject';
-import { computed, defineComponent, ref, type ComputedRef, type Ref } from 'vue';
+import type {
+    IDeveloperProject,
+    ProjectCategory
+} from '@/store/interfaces/DeveloperProject';
 
 const HomeProjectsSection = defineComponent({
     name: 'HomeProjectsSection',
@@ -43,11 +49,11 @@ const HomeProjectsSection = defineComponent({
         }
     },
     methods: {
-        updateProjectsList(c: ProjectCategory) {
-            this.devProjectFilter = c;
+        updateProjectsList(category: ProjectCategory) {
+            this.devProjectFilter = category;
         },
-        isActiveOption(c: ProjectCategory) {
-            return (this.devProjectFilter === c);
+        isActiveOption(category: ProjectCategory) {
+            return (this.devProjectFilter === category);
         }
     }
 });

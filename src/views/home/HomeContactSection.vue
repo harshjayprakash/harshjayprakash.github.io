@@ -55,12 +55,7 @@ export default HomeContactSection;
     display: flex;
 }
 
-.social-list .social__name {
-
-}
-
 .social-list .social__tag {
     place-self: end;
 }
-
 </style>

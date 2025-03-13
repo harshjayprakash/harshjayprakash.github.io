@@ -1,7 +1,8 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
-import { defineComponent } from 'vue';
 
 const AboutQualificationsSection = defineComponent({
     name: 'AboutQualificationsSection',
@@ -28,7 +29,10 @@ export default AboutQualificationsSection;
             </CardComponent>
             <CardComponent>
                 <span>GCSEs</span>
-                <span>English, Maths, Science, Geography, Spanish, Fine Art and Computer Science</span>
+                <span>
+                    English, Maths, Science, Geography, Spanish, Fine Art and Computer
+                    Science
+                </span>
             </CardComponent>
         </CardGroupComponent>
     </section>
