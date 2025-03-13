@@ -30,7 +30,7 @@ export default HomeContactSection;
                 <LinkComponent
                     variant="external"
                     v-bind:path="social.uri.toString()">
-                        {{ social.name }} &nearrow;
+                        {{ social.name }}
                 </LinkComponent>
                 <DividerComponent />
             </article>
