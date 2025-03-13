@@ -17,9 +17,8 @@ export default BadgeComponent;
 <style lang="css" scoped>
 .badge {
     border-radius: var(--bdr-default);
-    padding-inline: 0.3rem;
     border: 1px solid var(--clr-badge-outline);
+    padding-inline: 0.3rem;
     margin-inline: 0.5rem;
-    vertical-align: super;
 }
 </style>
