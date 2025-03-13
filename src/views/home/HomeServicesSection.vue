@@ -18,26 +18,19 @@ export default HomeServicesSection;
         <CardGroupComponent :desktopCols="3">
             <CardComponent>
                 <span>Front-End Web Development</span>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Vue</li>
-                    <li>Angular</li>
-                </ul>
+                <p>Crafting pixel-perfect, responsive websites using modern front-end technologies to create seamless user experiences.</p>
             </CardComponent>
             <CardComponent>
                 <span>Traditional Development</span>
-                <ul>
-                    <li>Java</li>
-                    <li>C</li>
-                    <li>Python</li>
-                    <li>Visual Basic .NET</li>
-                    <li>C#</li>
-                    <li>Pascal</li>
-                </ul>
+                <p>
+                    Building robust, scalable applications tailored to the your business needs.
+                </p>
             </CardComponent>
             <CardComponent>
                 <span>UI/UX</span>
+                <p>
+                    Designing interfaces that balance aesthetics with functionality
+                </p>
             </CardComponent>
         </CardGroupComponent>
     </section>
