@@ -15,15 +15,19 @@ export default HomeServicesSection;
 <template>
     <section class="home-services">
         <h2>Services.</h2>
-        <CardGroupComponent :desktopCols="3">
+        <CardGroupComponent v-bind:desktopCols="3">
             <CardComponent>
                 <span>Front-End Web Development</span>
-                <p>Crafting pixel-perfect, responsive websites using modern front-end technologies to create seamless user experiences.</p>
+                <p>
+                    Crafting pixel-perfect, responsive websites using modern front-end
+                    technologies to create seamless user experiences.
+                </p>
             </CardComponent>
             <CardComponent>
                 <span>Traditional Development</span>
                 <p>
-                    Building robust, scalable applications tailored to the your business needs.
+                    Building robust, scalable applications tailored to the your business
+                    needs.
                 </p>
             </CardComponent>
             <CardComponent>

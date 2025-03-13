@@ -18,7 +18,7 @@ export default AboutQualificationsSection;
 <template>
     <section class="about-quals">
         <h2>Qualifications.</h2>
-        <CardGroupComponent :desktopCols="3">
+        <CardGroupComponent v-bind:desktopCols="3">
             <CardComponent>
                 <span>Bachelor's Degree</span>
                 <span>Computer Science</span>

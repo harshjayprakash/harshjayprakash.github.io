@@ -26,10 +26,10 @@ export default HomeContactSection;
     <section class="home-contact">
         <h2>Say Hello.</h2>
         <div class="social-list">
-            <article class="social-row" v-for="(social, idx) in socials" :key="idx">
+            <article class="social-row" v-for="(social, idx) in socials" v-bind:key="idx">
                 <LinkComponent
                     variant="external"
-                    :path="social.uri.toString()">
+                    v-bind:path="social.uri.toString()">
                     <span class="social__name">
                         {{ social.name }}
                     </span>

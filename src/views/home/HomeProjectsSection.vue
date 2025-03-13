@@ -73,37 +73,37 @@ export default HomeProjectsSection;
         <TagGroupComponent>
             <TagComponent
                 @click="updateProjectsList('All')"
-                :isActive="isActiveOption('All')"
+                v-bind:isActive="isActiveOption('All')"
             >
                 All
             </TagComponent>
             <TagComponent
                 @click="updateProjectsList('CLI Application')"
-                :isActive="isActiveOption('CLI Application')"
+                v-bind:isActive="isActiveOption('CLI Application')"
             >
                 CLI
             </TagComponent>
             <TagComponent
                 @click="updateProjectsList('Desktop Application')"
-                :isActive="isActiveOption('Desktop Application')"
+                v-bind:isActive="isActiveOption('Desktop Application')"
             >
                 Desktop
             </TagComponent>
             <TagComponent
                 @click="updateProjectsList('Web Application')"
-                :isActive="isActiveOption('Web Application')"
+                v-bind:isActive="isActiveOption('Web Application')"
             >
                 Web
             </TagComponent>
         </TagGroupComponent>
         <CardGroupComponent :desktopCols="2">
             <CardComponent
-                v-for="(project, idx) in devProjects" :key="idx"
-                variant="external-link" :path="project.gitUri.toString()"
+                v-for="(project, idx) in devProjects" v-bind:key="idx"
+                variant="external-link" v-bind:path="project.gitUri.toString()"
             >
                 <img class="card-preview"
-                    :src="`/img/${project.abbreviation}-screenshot.PNG`"
-                    :alt="`${project.name} screenshot`"
+                    v-bind:src="`/img/${project.abbreviation}-screenshot.PNG`"
+                    v-bind:alt="`${project.name} screenshot`"
                 >
                 <div class="card-header">
                     <span>
