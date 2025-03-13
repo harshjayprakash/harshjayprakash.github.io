@@ -56,6 +56,18 @@ export default HomeServicesSection;
             </small>
             </CardComponent>
         </CardGroupComponent>
+        <CardComponent>
+            <span>Tools</span>
+            <p></p>
+            <small class="faded">
+                <span>Windows</span> &bullet;
+                <span>GNU+Linux</span> &bullet;
+                <span>VSCode</span> &bullet;
+                <span>Visual Studio</span> &bullet;
+                <span>JetBrains</span> &bullet;
+                <span>Git</span>
+            </small>
+        </CardComponent>
     </section>
 </template>
 
