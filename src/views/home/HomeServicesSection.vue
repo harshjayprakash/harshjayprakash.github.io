@@ -77,4 +77,8 @@ export default HomeServicesSection;
     flex-direction: column;
     gap: 1rem;
 }
+
+.faded {
+    color: var(--clr-text-faded);
+}
 </style>
