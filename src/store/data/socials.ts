@@ -10,6 +10,11 @@ const socials: ISocial[] = [
         name: 'GitHub',
         tag: 'harshjayprakash',
         uri: 'https://github.com/harshjayprakash'
+    },
+    {
+        name: 'Email',
+        tag: 'harshjayprakash [at] outlook (dot) com',
+        uri: 'mailto:harshjayprakash@outlook.com'
     }
 ];
 
