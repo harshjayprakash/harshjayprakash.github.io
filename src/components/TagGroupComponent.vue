@@ -17,7 +17,9 @@ export default TagGroupComponent;
 <style lang="css" scoped>
 .tag-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: fit-content;
+    flex-wrap: wrap;
     gap: 1rem;
     background-color: var(--clr-tab-group-bk);
     border-radius: var(--bdr-default);
