@@ -15,7 +15,7 @@ const NavComponent = defineComponent({
     },
     emits: ['onLinkClick'],
     setup(props, { emit }) {
-        const linkFilter = ['/home', '/about', '/alpha'];
+        const linkFilter = ['/home'];
         const links = router.getRoutes()
             .filter(link => linkFilter.includes(link.path))
             .sort((linkA, linkB) =>
