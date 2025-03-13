@@ -3,6 +3,8 @@
 This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
 showcase my projects in one central place. **This website is still under construction**.
 
+![Screenshot of Website](./docs/ppw-screenshot.PNG)
+
 ## Running Locally
 
 Running the website locally is simple as a few commands after cloning the git repository.
