@@ -1,0 +1,20 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+const SurfaceComponent = defineComponent({
+    name: 'SurfaceComponent'
+});
+
+export default SurfaceComponent;
+</script>
+
+<template>
+    <div class="surface">
+        <slot name="header">No header provided.</slot>
+        <slot>No content provided.</slot>
+        <slot name="footer">No footer provided.</slot>
+    </div>
+</template>
+
+<style lang="css" scoped>
+</style>
