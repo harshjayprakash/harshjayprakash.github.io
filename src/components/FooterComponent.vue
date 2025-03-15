@@ -17,11 +17,19 @@ const FooterComponent = defineComponent({
         LinkComponent,
     },
     setup() {
-        const _year = 'MMXXV';
+        const copyrightYear = 2025;
+        const versionNumber = '25H1.4';
+        const buildDate = '15.03.2025';
+        const footerLinks: IFooterLinks[] = [
+            {
+                variant: 'external', name: 'Source',
+                path: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
+            },
+            { variant: 'internal', path: '/uses', name: 'Uses' },
+            { variant: 'internal', path: '/privacy', name: 'Privacy' },
+        ];
 
-        return {
-            copyrightYear: _year as String
-        };
+        return { copyrightYear, versionNumber, buildDate, footerLinks };
     }
 });
 
