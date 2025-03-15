@@ -22,9 +22,9 @@ const HomeProjectsSection = defineComponent({
         TagComponent,
     },
     setup() {
-        const _devFilter = ['aap', 'xbk', 'wpq', 'lls', 'dwf', 'ccs'];
+        const _devFilter = ['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs'];
         const _devProjects = developerProjects
-            .filter(project => project.available && project.abbreviation !== 'ppw')
+            .filter(project => project.available)
             .sort((projectA, projectB) =>
                 _devFilter.indexOf(
                     projectA.abbreviation.toString()) - _devFilter.indexOf(
