@@ -41,7 +41,7 @@ export default FooterComponent;
         <br />
         <small>Ver. {{ versionNumber }}, {{ buildDate }}. Under Construction.</small>
         <br />
-        <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash.</small>
+        <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. </small>
         <small>Handcrafted with Vue.</small>
         <DividerComponent />
         <div class="links">
