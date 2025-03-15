@@ -6,6 +6,7 @@ import ButtonComponent from '@/components/ButtonComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
 import MarkdownComponent from '@/components/MarkdownComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
+import PersonaComponent from '@/components/PersonaComponent.vue';
 
 const AlphaView = defineComponent({
     name: 'AlphaView',
@@ -15,6 +16,7 @@ const AlphaView = defineComponent({
         DividerComponent,
         MarkdownComponent,
         SpacerComponent,
+        PersonaComponent
     },
     methods: {
         hi() {
@@ -29,6 +31,14 @@ export default AlphaView;
 <template>
     <p>Alpha View: Please note this page is testing components.</p>
     <SpacerComponent space="10rem" />
+    <PersonaComponent
+        name="Harsh Jayprakash"
+        status="Available for work"
+        imageUri="https://avatars.githubusercontent.com/u/58461297?v=4"
+        indicator="available"
+    >
+        Available for work.
+    </PersonaComponent>
     <SpacerComponent space="10rem" />
     <MarkdownComponent>
         <h1>This is a test.</h1>
