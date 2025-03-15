@@ -60,7 +60,6 @@ export default FooterComponent;
 <style lang="css" scoped>
 .footer {
     padding-block: 1rem;
-    font-size: 0.889rem;
 }
 
 .footer .links {
