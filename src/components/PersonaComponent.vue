@@ -43,4 +43,34 @@ export default PersonaComponent;
 </template>
 
 <style lang="css" scoped>
+.persona {
+    display: flex;
+    place-items: center;
+}
+
+.persona .image {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.persona .indicator {
+    position: relative;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: lime;
+    border-radius: 50%;
+    border: 0.1rem solid var(--clr-surface-primary);
+    top: 0.9rem;
+    right: 0.6rem;
+}
+
+.persona .information {
+    display: flex;
+    flex-direction: column;
+}
+
+.persona .status {
+    opacity: 0.7;
+}
 </style>
