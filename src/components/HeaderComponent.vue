@@ -62,9 +62,6 @@ export default HeaderComponent;
             {{ menuText }}
         </button>
         <span class="title">Harsh.</span>
-        <BadgeComponent>
-            Under Construction
-        </BadgeComponent>
         <DividerComponent variant="vertical" v-if="isDesktopMode" />
         <NavComponent v-if="isDesktopMode" />
     </header>
