@@ -68,6 +68,7 @@ export default CardComponent;
         0 10px 15px -3px var(--clr-card-shadow),
         0 4px 6px -4px var(--clr-card-shadow);
     background-color: var(--clr-card-bk-hover);
+    scale: 101%;
 }
 
 .card-link-wrapper {
