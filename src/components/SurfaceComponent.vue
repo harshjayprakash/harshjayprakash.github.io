@@ -17,4 +17,9 @@ export default SurfaceComponent;
 </template>
 
 <style lang="css" scoped>
+.surface {
+    max-width: 60rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+}
 </style>
