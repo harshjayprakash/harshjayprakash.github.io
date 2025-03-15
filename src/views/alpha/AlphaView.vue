@@ -1,18 +1,18 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+import BadgeComponent from '@/components/BadgeComponent.vue';
 import ButtonComponent from '@/components/ButtonComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
-import BadgeComponent from '@/components/BadgeComponent.vue';
 import MarkdownComponent from '@/components/MarkdownComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
 
 const AlphaView = defineComponent({
     name: 'AlphaView',
     components: {
-        DividerComponent,
-        ButtonComponent,
         BadgeComponent,
+        ButtonComponent,
+        DividerComponent,
         MarkdownComponent,
         SpacerComponent,
     },

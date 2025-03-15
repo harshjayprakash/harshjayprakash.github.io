@@ -1,12 +1,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import LinkComponent from '@/components/LinkComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
+import LinkComponent from '@/components/LinkComponent.vue';
 
 const FooterComponent = defineComponent({
     name: 'FooterComponent',
-    components: { LinkComponent, DividerComponent },
+    components: {
+        DividerComponent,
+        LinkComponent,
+    },
     setup() {
         const _year = 'MMXXV';
 

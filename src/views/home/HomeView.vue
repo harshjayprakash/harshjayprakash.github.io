@@ -2,22 +2,22 @@
 import { defineComponent } from 'vue';
 
 import DividerComponent from '@/components/DividerComponent.vue';
+import SpacerComponent from '@/components/SpacerComponent.vue';
 
 import HomeHeroSection from '@/views/home/HomeHeroSection.vue';
-import HomeServicesSection from '@/views/home/HomeServicesSection.vue';
-import HomeProjectsSection from '@/views/home/HomeProjectsSection.vue';
 import HomeContactSection from '@/views/home/HomeContactSection.vue';
-import SpacerComponent from '@/components/SpacerComponent.vue';
+import HomeProjectsSection from '@/views/home/HomeProjectsSection.vue';
+import HomeServicesSection from '@/views/home/HomeServicesSection.vue';
 
 const HomeView = defineComponent({
     name: 'HomeView',
     components: {
-        HomeHeroSection,
-        HomeServicesSection,
-        HomeProjectsSection,
-        HomeContactSection,
         DividerComponent,
         SpacerComponent,
+        HomeHeroSection,
+        HomeContactSection,
+        HomeProjectsSection,
+        HomeServicesSection,
     },
 });
 

@@ -1,14 +1,20 @@
 <script lang="ts">
-import { computed, defineComponent, onMounted, onUnmounted, ref, type ComputedRef, type Ref } from 'vue';
+import { computed, defineComponent, onMounted, onUnmounted, ref } from 'vue';
+import type { ComputedRef, Ref } from 'vue';
 
+import BadgeComponent from '@/components/BadgeComponent.vue';
+import DividerComponent from '@/components/DividerComponent.vue';
 import NavComponent from '@/components/NavComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
-import DividerComponent from '@/components/DividerComponent.vue';
-import BadgeComponent from '@/components/BadgeComponent.vue';
 
 const HeaderComponent = defineComponent({
     name: 'HeaderComponent',
-    components: { NavComponent, SpacerComponent, DividerComponent, BadgeComponent },
+    components: {
+        NavComponent,
+        SpacerComponent,
+        DividerComponent,
+        BadgeComponent
+    },
     setup() {
         const showNavigation = ref(false);
         const desktopMode = ref(window.innerWidth > 768);

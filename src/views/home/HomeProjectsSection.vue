@@ -16,10 +16,10 @@ import type {
 const HomeProjectsSection = defineComponent({
     name: 'HomeProjectsSection',
     components: {
-        TagGroupComponent,
-        TagComponent,
         CardGroupComponent,
         CardComponent,
+        TagGroupComponent,
+        TagComponent,
     },
     setup() {
         const _devFilter = ['aap', 'xbk', 'wpq', 'lls', 'dwf', 'ccs'];

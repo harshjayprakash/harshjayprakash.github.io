@@ -7,8 +7,8 @@ import CardGroupComponent from '@/components/CardGroupComponent.vue';
 const AboutQualificationsSection = defineComponent({
     name: 'AboutQualificationsSection',
     components: {
-        CardGroupComponent,
         CardComponent,
+        CardGroupComponent,
     }
 });
 

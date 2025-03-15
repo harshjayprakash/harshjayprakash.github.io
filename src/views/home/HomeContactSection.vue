@@ -9,7 +9,10 @@ import type { ISocial } from '@/store/interfaces/Social';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',
-    components: { LinkComponent, DividerComponent },
+    components: {
+        DividerComponent,
+        LinkComponent,
+    },
     setup() {
         const _socialList = socials;
 

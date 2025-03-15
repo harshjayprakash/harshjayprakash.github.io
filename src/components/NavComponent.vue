@@ -1,6 +1,8 @@
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue';
-import { RouterLink, type RouteRecordRaw } from 'vue-router';
+import { defineComponent } from 'vue';
+import type { PropType } from 'vue';
+import { RouterLink } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 
 import router from '@/router';
 
