@@ -6,12 +6,14 @@ import LinkComponent from '@/components/LinkComponent.vue';
 
 import socials from '@/store/data/socials';
 import type { ISocial } from '@/store/interfaces/Social';
+import PersonaComponent from '@/components/PersonaComponent.vue';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',
     components: {
         DividerComponent,
         LinkComponent,
+        PersonaComponent
     },
     setup() {
         const _socialList = socials;
@@ -27,7 +29,24 @@ export default HomeContactSection;
 
 <template>
     <section class="home-contact">
-        <h2>Looking to collaborate? or Say Hello?</h2>
+        <div>
+            <h2>
+                Looking to collaborate?
+                <br/>
+                or say hello? Get in touch.
+            </h2>
+            <br/>
+            <br/>
+            <PersonaComponent
+                name="Harsh Jayprakash"
+                status="Available for work"
+                imageUri="https://avatars.githubusercontent.com/u/58461297?v=4"
+                indicator="available"
+            >
+                Looking for work.
+            </PersonaComponent>
+            <br/>
+        </div>
         <div class="social-list">
             <article class="social-row" v-for="(social, idx) in socials" v-bind:key="idx">
                 <LinkComponent
@@ -36,6 +55,14 @@ export default HomeContactSection;
                         {{ social.name }}
                 </LinkComponent>
                 <DividerComponent />
+            </article>
+            <article>
+                <LinkComponent
+                    variant="external"
+                    path="/assets/harsh_cv_25h1_1.PDF"
+                >
+                    View CV
+                </LinkComponent>
             </article>
         </div>
     </section>
