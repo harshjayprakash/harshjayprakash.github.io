@@ -93,7 +93,7 @@ const developerProjects: IDeveloperProject[] = [
         gitUri: 'https://github.com/harshjayprakash/noughts-and-crosses',
     },
     {
-        name: 'Personal Portfolio',
+        name: 'Personal Portfolio Website',
         description: 'A digital place to showcase skills and undertaken projects.',
         reference: 'HX2150',
         category: 'Web Application',
