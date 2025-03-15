@@ -15,6 +15,13 @@ const PersonaComponent = defineComponent({
         imageUri: {
             type: String,
             required: true,
+        },
+        indicator: {
+            type: String,
+            required: true,
+            validator: (value: String) => {
+                return ['available', 'away', 'busy'].indexOf(value.toString()) !== -1
+            }
         }
     },
 });
