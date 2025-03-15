@@ -6,15 +6,15 @@ import useMobileDetector from '@/composables/useMobileDetector';
 
 import FooterComponent from '@/components/FooterComponent.vue';
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import WrapperComponent from '@/components/WrapperComponent.vue';
+import SurfaceComponent from './components/SurfaceComponent.vue';
 
 const MainComponent = defineComponent({
     name: 'MainComponent',
     components: {
         RouterView,
         HeaderComponent,
-        WrapperComponent,
-        FooterComponent
+        FooterComponent,
+        SurfaceComponent
     },
     setup() {
         const { isMobile, windowWidth } = useMobileDetector();
@@ -28,11 +28,15 @@ export default MainComponent;
 </script>
 
 <template>
-    <WrapperComponent>
-        <HeaderComponent />
+    <SurfaceComponent paddingInline="2rem" maxWidth="60rem">
+        <template v-slot:header>
+            <HeaderComponent />
+        </template>
         <RouterView />
-        <FooterComponent />
-    </WrapperComponent>
+        <template v-slot:footer>
+            <FooterComponent />
+        </template>
+    </SurfaceComponent>
 </template>
 
 <style lang="css" scoped>
