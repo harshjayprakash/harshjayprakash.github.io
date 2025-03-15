@@ -6,7 +6,7 @@ import useMobileDetector from '@/composables/useMobileDetector';
 
 import FooterComponent from '@/components/FooterComponent.vue';
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import SurfaceComponent from './components/SurfaceComponent.vue';
+import SurfaceComponent from '@/components/SurfaceComponent.vue';
 
 const MainComponent = defineComponent({
     name: 'MainComponent',
