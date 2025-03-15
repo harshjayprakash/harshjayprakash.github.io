@@ -1,8 +1,6 @@
 <script lang="ts">
-import { computed, defineComponent, onMounted, onUnmounted, ref } from 'vue';
-import type { ComputedRef, Ref } from 'vue';
+import { computed, defineComponent, inject, ref } from 'vue';
 
-import BadgeComponent from '@/components/BadgeComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
 import NavComponent from '@/components/NavComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
@@ -12,40 +10,21 @@ const HeaderComponent = defineComponent({
     components: {
         NavComponent,
         SpacerComponent,
-        DividerComponent,
-        BadgeComponent
+        DividerComponent
     },
     setup() {
-        const showNavigation = ref(false);
-        const desktopMode = ref(window.innerWidth > 768);
-
-        function updateDeviceMode() {
-            desktopMode.value = (window.innerWidth > 768);
-        }
-
+        const isMobile = inject('isMobile');
+        const isNavShown = ref(false);
         const menuButtonText = computed(() =>
-            (showNavigation.value) ?
+            (isNavShown.value) ?
                 String.fromCodePoint(10005) : String.fromCodePoint(9776)
         );
 
-        onMounted(() => {
-            window.addEventListener('resize', updateDeviceMode);
-        });
-
-        onUnmounted(() => {
-            window.addEventListener('resize', updateDeviceMode);
-        });
-
-        return {
-            isNavShown: showNavigation as Ref<Boolean>,
-            isDesktopMode: desktopMode as Ref<Boolean>,
-            menuText: menuButtonText as ComputedRef<String>,
+        const toggleNavigationVisibility = () => {
+            isNavShown.value = !isNavShown.value;
         }
-    },
-    methods: {
-        toggleNavigationVisibility() {
-            this.isNavShown = (this.isNavShown) ? false : true;
-        }
+
+        return { isNavShown, isMobile, menuButtonText, toggleNavigationVisibility };
     }
 });
 
@@ -57,13 +36,13 @@ export default HeaderComponent;
         <button
             class="header__menu-button"
             @click="toggleNavigationVisibility"
-            v-if="!isDesktopMode"
+            v-if="isMobile"
         >
-            {{ menuText }}
+            {{ menuButtonText }}
         </button>
         <span class="title">Harsh.</span>
-        <DividerComponent variant="vertical" v-if="isDesktopMode" />
-        <NavComponent v-if="isDesktopMode" />
+        <DividerComponent variant="vertical" v-if="!isMobile" />
+        <NavComponent v-if="!isMobile" />
     </header>
     <SpacerComponent space="1rem" />
     <NavComponent
