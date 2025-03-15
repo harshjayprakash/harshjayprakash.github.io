@@ -31,7 +31,14 @@ export default PersonaComponent;
 
 <template>
     <article class="persona">
-        Persona
+        <img class="image" v-bind:src="$props.imageUri" alt="persona photo"  />
+        <div class="indicator" ></div>
+        <div class="information">
+            <span class="name">{{ $props.name }}</span>
+            <span class="status">
+                <slot>Unknown</slot>
+            </span>
+        </div>
     </article>
 </template>
 
