@@ -3,11 +3,10 @@ import { defineComponent } from 'vue';
 
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
-import PersonaComponent from '@/components/PersonaComponent.vue';
 
 const HomeServicesSection = defineComponent({
     name: 'HomeServicesSection',
-    components: { CardGroupComponent, CardComponent, PersonaComponent },
+    components: { CardGroupComponent, CardComponent },
 });
 
 export default HomeServicesSection;
