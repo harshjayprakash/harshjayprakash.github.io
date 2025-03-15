@@ -6,6 +6,7 @@
     --clr-surface-primary: light-dark(var(--clr-100S), var(--clr-900S));
     --clr-surface-secondary: light-dark(var(--clr-050S), var(--clr-950S));
     --clr-surface-secondary-hover: light-dark(var(--clr-300S), var(--clr-700S));
+    --clr-surface-secondary-hover-light: light-dark(var(--clr-200S), var(--clr-800S));
     --clr-surface-tertiary: light-dark(var(--clr-700A), var(--clr-400A));
     --clr-surface-tertiary-hover: light-dark(var(--clr-500A), var(--clr-600A));
     --clr-surface-inverted: light-dark(var(--clr-950S), var(--clr-050S));
@@ -40,7 +41,7 @@
     --clr-button-accent-text-hover: var(--clr-text-inverted);
 
     --clr-card-bk: var(--clr-surface-secondary);
-    --clr-card-bk-hover: var(--clr-surface-secondary-hover);
+    --clr-card-bk-hover: var(--clr-surface-secondary-hover-light);
     --clr-card-shadow: var(--clr-shadow);
 
     --clr-divider: var(--clr-outline-faded);
