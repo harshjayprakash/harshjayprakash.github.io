@@ -106,10 +106,9 @@ export default HomeProjectsSection;
                     v-bind:alt="`${project.name} screenshot`"
                 >
                 <div class="card-header">
-                    <span>
+                    <h3>
                         {{ project.name }}
-                    </span>
-                    <br />
+                    </h3>
                     <small>
                         {{ project.technology }}
                     </small>
