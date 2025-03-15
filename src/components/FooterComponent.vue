@@ -38,15 +38,20 @@ export default FooterComponent;
 
 <template>
     <footer class="footer">
-        <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. </small>
-        <small>Handcrafted with Vue. Under construction.</small>
+        <br />
+        <small>Ver. {{ versionNumber }}, {{ buildDate }}. Under Construction.</small>
+        <br />
+        <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash.</small>
+        <small>Handcrafted with Vue.</small>
         <DividerComponent />
         <div class="links">
             <LinkComponent
-                variant="external"
-                path="https://github.com/harshjayprakash/harshjayprakash.github.io"
+                v-for="(link, idx) in footerLinks"
+                v-bind:key="idx"
+                v-bind:variant="link.variant"
+                v-bind:path="link.path"
             >
-                Source
+                {{ link.name }}
             </LinkComponent>
         </div>
     </footer>
@@ -61,5 +66,6 @@ export default FooterComponent;
 .footer .links {
     display: flex;
     margin-block-start: 0.5rem;
+    gap: 1rem;
 }
 </style>
