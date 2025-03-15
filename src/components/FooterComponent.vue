@@ -4,6 +4,12 @@ import { defineComponent } from 'vue';
 import DividerComponent from '@/components/DividerComponent.vue';
 import LinkComponent from '@/components/LinkComponent.vue';
 
+interface IFooterLinks {
+    variant: 'internal' | 'external';
+    path: String;
+    name: String;
+};
+
 const FooterComponent = defineComponent({
     name: 'FooterComponent',
     components: {
