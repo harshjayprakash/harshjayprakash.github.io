@@ -25,6 +25,8 @@ npm run dev
 * Redesigned Header and Navigation.
 * Updated Card Hover Effects.
 * Improved Accessibility.
+* Updated Colours.
+* Continued migration from Options API to Composition API (_Without Setup Tag_).
 * Updated for Rounded Corners Trend. (_Slightly_).
 
 ## Known Issues and Limitations
