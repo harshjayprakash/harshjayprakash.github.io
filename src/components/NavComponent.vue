@@ -2,7 +2,6 @@
 import { defineComponent } from 'vue';
 import type { PropType } from 'vue';
 import { RouterLink } from 'vue-router';
-import type { RouteRecordRaw } from 'vue-router';
 
 import router from '@/router';
 
@@ -16,23 +15,15 @@ const NavComponent = defineComponent({
         },
     },
     emits: ['onLinkClick'],
-    setup(props, { emit }) {
-        const linkFilter = ['/home'];
-        const links = router.getRoutes()
-            .filter(link => linkFilter.includes(link.path))
+    setup() {
+        const navLinkFilter = ['/home'];
+        const navLinks = router.getRoutes()
+            .filter(link => navLinkFilter.includes(link.path))
             .sort((linkA, linkB) =>
-                linkFilter.indexOf(linkA.path) - linkFilter.indexOf(linkB.path)
+                navLinkFilter.indexOf(linkA.path) - navLinkFilter.indexOf(linkB.path)
             );
 
-        const onLinkClickEvent = () => {
-            emit('onLinkClick');
-        };
-
-        return {
-            navLinks: links as RouteRecordRaw[],
-            mode: props.variant as String,
-            onLinkClick: onLinkClickEvent,
-        };
+        return { navLinks };
     }
 });
 
@@ -41,14 +32,16 @@ export default NavComponent;
 
 <template>
     <nav class="nav" :class="{
-        'nav--desktop': mode === 'desktop',
-        'nav--mobile' : mode === 'mobile'
+        'nav--desktop': $props.variant === 'desktop',
+        'nav--mobile' : $props.variant === 'mobile'
     }">
         <RouterLink
-            class="nav__link" v-for="(link, idx) in navLinks"
-            @click="onLinkClick"
+            v-for="(link, idx) in navLinks"
+            class="nav__link"
             active-class="nav__link--active" exact
-            :key="idx" :to="link.path"
+            v-on:click="$emit('onLinkClick')"
+            v-bind:key="`nav-${idx}-${link.path.substring(1, link.path.length-1)}`"
+            v-bind:to="link.path"
         >
             {{ link.name }}
         </RouterLink>
@@ -59,20 +52,6 @@ export default NavComponent;
 .nav {
     display: flex;
     gap: 1rem;
-}
-
-.nav--mobile {
-    background-color: var(--clr-nav-bk);
-    padding: 1rem;
-    flex-direction: column;
-    box-shadow:
-        0 0.25rem 0.375rem -0.0625rem var(--clr-nav-shadow),
-        0 0.125rem 0.25rem -0.125rem var(--clr-nav-shadow);
-    border-radius: var(--bdr-default);
-    z-index: 10;
-    margin-block-end: 1.5rem;
-    position: sticky;
-    top: 5.2rem;
 }
 
 .nav .nav__link {
@@ -91,6 +70,19 @@ export default NavComponent;
     text-decoration-color: var(--clr-nav-border-active);
 }
 
+.nav--mobile {
+    background-color: var(--clr-nav-bk);
+    padding: 1rem;
+    flex-direction: column;
+    box-shadow:
+        0 0.25rem 0.375rem -0.0625rem var(--clr-nav-shadow),
+        0 0.125rem 0.25rem -0.125rem var(--clr-nav-shadow);
+    border-radius: var(--bdr-default);
+    z-index: 10;
+    margin-block-end: 1.5rem;
+    position: sticky;
+    top: 5.2rem;
+}
 
 .nav--mobile .nav__link {
     text-decoration: none;

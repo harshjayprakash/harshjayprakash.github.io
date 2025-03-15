@@ -34,21 +34,21 @@ export default HeaderComponent;
 <template>
     <header class="header">
         <button
-            class="header__menu-button"
-            @click="toggleNavigationVisibility"
             v-if="isMobile"
+            class="header__menu-button"
+            v-on:click="toggleNavigationVisibility"
         >
             {{ menuButtonText }}
         </button>
         <span class="title">Harsh.</span>
-        <DividerComponent variant="vertical" v-if="!isMobile" />
+        <DividerComponent v-if="!isMobile" variant="vertical" />
         <NavComponent v-if="!isMobile" />
     </header>
     <SpacerComponent space="1rem" />
     <NavComponent
-        variant="mobile"
         v-if="isNavShown"
-        @onLinkClick="toggleNavigationVisibility()"
+        variant="mobile"
+        v-on:onLinkClick="toggleNavigationVisibility"
     />
 </template>
 
