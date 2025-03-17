@@ -25,16 +25,13 @@ const HomeProjectsSection = defineComponent({
             filterByAbbreviation
         } = useProjectFilter();
         filterByAbbreviation(['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs']);
-        return { filteredProjects, typeFilter, updateFilter };
-    },
-    methods: {
-        updateProjectsList(category: ProjectCategory) {
-            this.typeFilter = category;
-        },
-        isActiveOption(category: ProjectCategory) {
-            return (this.typeFilter === category);
+
+        const isActiveOption = (category: ProjectCategory) => {
+            return (typeFilter.value === category);
         }
-    }
+
+        return { filteredProjects, typeFilter, updateFilter, isActiveOption };
+    },
 });
 
 export default HomeProjectsSection;
@@ -51,25 +48,25 @@ export default HomeProjectsSection;
         </p>
         <TagGroupComponent>
             <TagComponent
-                @click="updateProjectsList('All')"
+                @click="updateFilter('All')"
                 v-bind:isActive="isActiveOption('All')"
             >
                 All
             </TagComponent>
             <TagComponent
-                @click="updateProjectsList('CLI Application')"
+                @click="updateFilter('CLI Application')"
                 v-bind:isActive="isActiveOption('CLI Application')"
             >
                 CLI
             </TagComponent>
             <TagComponent
-                @click="updateProjectsList('Desktop Application')"
+                @click="updateFilter('Desktop Application')"
                 v-bind:isActive="isActiveOption('Desktop Application')"
             >
                 Desktop
             </TagComponent>
             <TagComponent
-                @click="updateProjectsList('Web Application')"
+                @click="updateFilter('Web Application')"
                 v-bind:isActive="isActiveOption('Web Application')"
             >
                 Web
