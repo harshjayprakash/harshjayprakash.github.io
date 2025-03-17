@@ -1,17 +1,13 @@
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
-import type { ComputedRef, Ref } from 'vue';
+import { defineComponent } from 'vue';
 
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
 import TagComponent from '@/components/TagComponent.vue';
 import TagGroupComponent from '@/components/TagGroupComponent.vue';
 
-import developerProjects from '@/store/data/developerProjects';
-import type {
-    IDeveloperProject,
-    ProjectCategory
-} from '@/store/interfaces/DeveloperProject';
+import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
+import useProjectFilter from '@/composables/useProjectFilter';
 
 const HomeProjectsSection = defineComponent({
     name: 'HomeProjectsSection',
@@ -19,41 +15,24 @@ const HomeProjectsSection = defineComponent({
         CardGroupComponent,
         CardComponent,
         TagGroupComponent,
-        TagComponent,
+        TagComponent
     },
     setup() {
-        const _devFilter = ['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs'];
-        const _devProjects = developerProjects
-            .filter(project => project.available)
-            .sort((projectA, projectB) =>
-                _devFilter.indexOf(
-                    projectA.abbreviation.toString()) - _devFilter.indexOf(
-                        projectB.abbreviation.toString())
-            );
-
-        const _devProjectsRef = ref(_devProjects);
-        const _devAdditionalFilterRef: Ref<ProjectCategory> = ref('All');
-
-        const _devProjectFiltered = computed(() => {
-            if (_devAdditionalFilterRef.value === 'All') {
-                return _devProjectsRef.value;
-            }
-            return _devProjectsRef.value.filter(project =>
-                project.category === _devAdditionalFilterRef.value
-            );
-        });
-
-        return {
-            devProjects: _devProjectFiltered as ComputedRef<IDeveloperProject[]>,
-            devProjectFilter: _devAdditionalFilterRef as Ref<ProjectCategory>
-        }
+        const {
+            filteredProjects,
+            typeFilter,
+            updateFilter,
+            filterByAbbreviation
+        } = useProjectFilter();
+        filterByAbbreviation(['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs']);
+        return { filteredProjects, typeFilter, updateFilter };
     },
     methods: {
         updateProjectsList(category: ProjectCategory) {
-            this.devProjectFilter = category;
+            this.typeFilter = category;
         },
         isActiveOption(category: ProjectCategory) {
-            return (this.devProjectFilter === category);
+            return (this.typeFilter === category);
         }
     }
 });
@@ -98,7 +77,7 @@ export default HomeProjectsSection;
         </TagGroupComponent>
         <CardGroupComponent :desktopCols="2">
             <CardComponent
-                v-for="(project, idx) in devProjects" v-bind:key="idx"
+                v-for="(project, idx) in filteredProjects" v-bind:key="idx"
                 variant="external-link" v-bind:path="project.gitUri.toString()"
             >
                 <img class="card-preview"
