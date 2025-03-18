@@ -1,43 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { PropType } from 'vue';
 
 const MarkdownComponent = defineComponent({
     name: 'MarkdownComponent',
-    props: {
-        tags: {
-            type: Array<String>,
-            default: [],
-        },
-        title: {
-            type: String as PropType<String>,
-            default: 'Untitled Article',
-        },
-        description: {
-            type: String as PropType<String>,
-            default: 'description'
-        },
-        author: {
-            type: String as PropType<String>,
-            default: 'author',
-        },
-        date: {
-            type: String as PropType<String>,
-            default: '01-01-1600',
-        },
-        estReadingTimeMinutes: {
-            type: Number,
-            default: 0,
-        },
-        image: {
-            type: String as PropType<String>,
-            default: 'none',
-        },
-        header: {
-            type: Boolean as PropType<Boolean>,
-            default: false,
-        }
-    },
 });
 
 export default MarkdownComponent;
@@ -56,17 +21,6 @@ export default MarkdownComponent;
     display: grid;
     max-width: 60ch;
     margin-inline: auto;
-}
-
-@media screen and (min-width: 768px) {
-/*
-    .markdown {
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    .markdown > :slotted(*) {
-        grid-column: 4 / 10
-    } */
 }
 
 .markdown > :slotted(h2),
