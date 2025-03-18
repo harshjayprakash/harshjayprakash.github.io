@@ -1,15 +1,31 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, provide } from 'vue';
 
 const TabGroupComponent = defineComponent({
     name: 'TabGroupComponent',
+    props: {
+        variant: {
+            type: String,
+            default: 'underline',
+        },
+        background: {
+            type: Boolean,
+            default: true
+        }
+    },
+    setup(props) {
+        provide('tabControlStyle', props.variant);
+    }
 });
 
 export default TabGroupComponent;
 </script>
 
 <template>
-    <div class="tag-group">
+    <div class="tag-group" v-bind:class="{
+        'tab-group--underline': $props.variant === 'underline',
+        'tab-group--filled': $props.variant === 'filled',
+    }">
         <slot></slot>
     </div>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, inject } from 'vue';
 import type { ComputedRef } from 'vue';
 
 const TabComponent = defineComponent({
@@ -12,8 +12,10 @@ const TabComponent = defineComponent({
         }
     },
     setup(props) {
+        const tabControlStyle = inject('tabControlStyle');
         return {
             highlighted: computed(() => props.isActive) as ComputedRef<Boolean>,
+            tabControlStyle
         }
     }
 });
@@ -22,28 +24,58 @@ export default TabComponent;
 </script>
 
 <template>
-    <button v-on="$attrs" v-bind="$attrs" class="tag"
-        :class="{ 'tag--active': highlighted }"
+    <button
+        class="tab"
+        v-on="$attrs"
+        v-bind="$attrs"
+        v-bind:class="{
+            'tab--filled': tabControlStyle === 'filled',
+            'tab--filled--active': tabControlStyle === 'filled' && highlighted,
+            'tab--underline': tabControlStyle === 'underline',
+            'tab--underline--active': tabControlStyle === 'underline' && highlighted
+        }"
     >
         <slot></slot>
     </button>
 </template>
 
 <style lang="css" scoped>
-.tag {
+.tab {
     border: 0;
-    padding-inline: 0.5rem;
-    border-radius: var(--bdr-default);
-    background-color: var(--clr-tab-bk);
 }
 
-.tag:hover {
+.tab--filled {
+    border-radius: var(--bdr-default);
+    background-color: var(--clr-tab-bk);
+    padding-inline: 0.5rem;
+}
+
+.tab--filled:hover {
     background-color: var(--clr-tab-bk-hover);
     color: inherit;
 }
 
-.tag--active {
+.tab--filled--active {
     background-color: var(--clr-tab-bk-active);
     color: var(--clr-tab-text-active);
+}
+
+.tab--underline {
+    background-color: inherit;
+    border-block-end: 0.2rem solid var(--clr-tab-bk);
+    margin-inline: 0.25rem;
+}
+
+.tab--underline:hover {
+    border-block-end-color: var(--clr-tab-bk-hover);
+}
+
+.tab--underline--active {
+    border-block-end-color: var(--clr-tab-bk-active);
+}
+
+.tab--filled--active,
+.tab--underline--active {
+    font-weight: 500;
 }
 </style>
