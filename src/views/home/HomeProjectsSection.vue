@@ -3,8 +3,8 @@ import { defineComponent } from 'vue';
 
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
-import TagComponent from '@/components/TagComponent.vue';
-import TagGroupComponent from '@/components/TagGroupComponent.vue';
+import TabComponent from '@/components/TabComponent.vue';
+import TabGroupComponent from '@/components/TabGroupComponent.vue';
 
 import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
 import useProjectFilter from '@/composables/useProjectFilter';
@@ -14,8 +14,8 @@ const HomeProjectsSection = defineComponent({
     components: {
         CardGroupComponent,
         CardComponent,
-        TagGroupComponent,
-        TagComponent
+        TabGroupComponent,
+        TabComponent
     },
     setup() {
         const {
@@ -46,32 +46,33 @@ export default HomeProjectsSection;
             link to their respective GitHub repositories. In future, each project will
             have their own pages.
         </p>
-        <TagGroupComponent>
-            <TagComponent
+        <TabGroupComponent variant="underline">
+            <span>Filter: </span>
+            <TabComponent
                 @click="updateFilter('All')"
                 v-bind:isActive="isActiveOption('All')"
             >
                 All
-            </TagComponent>
-            <TagComponent
+            </TabComponent>
+            <TabComponent
                 @click="updateFilter('CLI Application')"
                 v-bind:isActive="isActiveOption('CLI Application')"
             >
                 CLI
-            </TagComponent>
-            <TagComponent
+            </TabComponent>
+            <TabComponent
                 @click="updateFilter('Desktop Application')"
                 v-bind:isActive="isActiveOption('Desktop Application')"
             >
                 Desktop
-            </TagComponent>
-            <TagComponent
+            </TabComponent>
+            <TabComponent
                 @click="updateFilter('Web Application')"
                 v-bind:isActive="isActiveOption('Web Application')"
             >
                 Web
-            </TagComponent>
-        </TagGroupComponent>
+            </TabComponent>
+        </TabGroupComponent>
         <CardGroupComponent :desktopCols="2">
             <CardComponent
                 v-for="(project, idx) in filteredProjects" v-bind:key="idx"
