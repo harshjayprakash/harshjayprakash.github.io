@@ -19,7 +19,7 @@ npm install
 npm run dev
 ```
 
-## Changelog (25H1.4)
+## Changelog (ver 4.0-25H1D)
 
 * Uses Custom Component System.
 * Implemented Project Filter System.
