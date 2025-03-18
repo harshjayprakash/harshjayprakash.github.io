@@ -7,10 +7,6 @@ const TabGroupComponent = defineComponent({
         variant: {
             type: String,
             default: 'underline',
-        },
-        background: {
-            type: Boolean,
-            default: true
         }
     },
     setup(props) {
