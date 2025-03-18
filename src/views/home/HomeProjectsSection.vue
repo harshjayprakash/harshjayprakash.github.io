@@ -7,6 +7,7 @@ import TabComponent from '@/components/TabComponent.vue';
 import TabGroupComponent from '@/components/TabGroupComponent.vue';
 
 import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
+
 import useProjectFilter from '@/composables/useProjectFilter';
 
 const HomeProjectsSection = defineComponent({
@@ -49,25 +50,25 @@ export default HomeProjectsSection;
         <TabGroupComponent variant="underline">
             <span>Filter: </span>
             <TabComponent
-                @click="updateFilter('All')"
+                v-on:click="updateFilter('All')"
                 v-bind:isActive="isActiveOption('All')"
             >
                 All
             </TabComponent>
             <TabComponent
-                @click="updateFilter('CLI Application')"
+                v-on:click="updateFilter('CLI Application')"
                 v-bind:isActive="isActiveOption('CLI Application')"
             >
                 CLI
             </TabComponent>
             <TabComponent
-                @click="updateFilter('Desktop Application')"
+                v-on:click="updateFilter('Desktop Application')"
                 v-bind:isActive="isActiveOption('Desktop Application')"
             >
                 Desktop
             </TabComponent>
             <TabComponent
-                @click="updateFilter('Web Application')"
+                v-on:click="updateFilter('Web Application')"
                 v-bind:isActive="isActiveOption('Web Application')"
             >
                 Web
