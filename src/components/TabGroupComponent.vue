@@ -1,11 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-const TagGroupComponent = defineComponent({
-    name: 'TagGroupComponent',
+const TabGroupComponent = defineComponent({
+    name: 'TabGroupComponent',
 });
 
-export default TagGroupComponent;
+export default TabGroupComponent;
 </script>
 
 <template>

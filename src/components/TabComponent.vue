@@ -2,8 +2,8 @@
 import { computed, defineComponent } from 'vue';
 import type { ComputedRef } from 'vue';
 
-const TagComponent = defineComponent({
-    name: 'TagComponent',
+const TabComponent = defineComponent({
+    name: 'TabComponent',
     inheritAttrs: false,
     props: {
         isActive: {
@@ -18,7 +18,7 @@ const TagComponent = defineComponent({
     }
 });
 
-export default TagComponent;
+export default TabComponent;
 </script>
 
 <template>
