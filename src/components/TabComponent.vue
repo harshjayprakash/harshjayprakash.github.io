@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent, inject } from 'vue';
+import { defineComponent, inject } from 'vue';
 
 const TabComponent = defineComponent({
     name: 'TabComponent',
@@ -12,8 +12,7 @@ const TabComponent = defineComponent({
     },
     setup(props) {
         const tabControlStyle = inject('tabControlStyle');
-        const highlighted = computed(() => props.isActive);
-        return { props, highlighted, tabControlStyle };
+        return { props, tabControlStyle };
     }
 });
 
@@ -27,9 +26,9 @@ export default TabComponent;
         v-bind="$attrs"
         v-bind:class="{
             'tab--filled': tabControlStyle === 'filled',
-            'tab--filled--active': tabControlStyle === 'filled' && highlighted,
+            'tab--filled--active': tabControlStyle === 'filled' && props.isActive,
             'tab--underline': tabControlStyle === 'underline',
-            'tab--underline--active': tabControlStyle === 'underline' && highlighted
+            'tab--underline--active': tabControlStyle === 'underline' && props.isActive
         }"
     >
         <slot></slot>
