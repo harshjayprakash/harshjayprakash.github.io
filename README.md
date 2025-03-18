@@ -1,5 +1,7 @@
 # Personal Portfolio Website
 
+![Banner (Decorative)](./docs/ppw_banner_raster.PNG)
+
 This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
 showcase my projects in one central place. **This website is still under construction**.
 
