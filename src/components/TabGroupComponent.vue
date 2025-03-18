@@ -21,9 +21,7 @@ export default TabGroupComponent;
     width: fit-content;
     flex-wrap: wrap;
     gap: 1rem;
-    background-color: var(--clr-tab-group-bk);
     border-radius: var(--bdr-default);
-    padding: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
