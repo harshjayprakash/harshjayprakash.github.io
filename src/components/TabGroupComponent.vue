@@ -15,6 +15,7 @@ const TabGroupComponent = defineComponent({
     },
     setup(props) {
         provide('tabControlStyle', props.variant);
+        return { props };
     }
 });
 
@@ -23,8 +24,8 @@ export default TabGroupComponent;
 
 <template>
     <div class="tag-group" v-bind:class="{
-        'tab-group--underline': $props.variant === 'underline',
-        'tab-group--filled': $props.variant === 'filled',
+        'tab-group--underline': props.variant === 'underline',
+        'tab-group--filled': props.variant === 'filled',
     }">
         <slot></slot>
     </div>

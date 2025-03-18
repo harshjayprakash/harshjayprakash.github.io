@@ -12,9 +12,7 @@ const ButtonComponent = defineComponent({
         },
     },
     setup(props) {
-        return {
-            buttonType: props.variant as String,
-        };
+        return { props };
     }
 });
 
@@ -23,10 +21,12 @@ export default ButtonComponent;
 
 <template>
     <button
-        v-bind="$attrs" v-on="$attrs"
-        class="button" :class="{
-            'button--standard' : buttonType === 'standard',
-            'button--accent' : buttonType === 'accent' }"
+        class="button"
+        v-bind="$attrs"
+        v-on="$attrs"
+        v-bind:class="{
+            'button--standard' : props.variant === 'standard',
+            'button--accent' : props.variant === 'accent' }"
     >
         <slot></slot>
     </button>

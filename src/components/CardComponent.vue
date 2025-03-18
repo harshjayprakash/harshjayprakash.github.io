@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { PropType } from 'vue';
 import { RouterLink } from 'vue-router';
 
 const CardComponent = defineComponent({
@@ -8,21 +7,21 @@ const CardComponent = defineComponent({
     components: { RouterLink },
     props: {
         variant: {
-            type: String as PropType<'standard' | 'internal-link' | 'external-link'>,
+            type: String,
             default: 'standard',
+            validator(value: String) {
+                return ['standard', 'internal-link', 'external-link'].includes(
+                    value.toString())
+            },
         },
         path: {
-            type: String as PropType<String>,
+            type: String,
             default: '#',
         }
     },
     setup(props) {
-
-        return {
-            cardType: props.variant as String,
-            link: props.path as String,
-        };
-    },
+        return { props };
+    }
 });
 
 export default CardComponent;
@@ -30,23 +29,25 @@ export default CardComponent;
 
 <template>
     <RouterLink
-        v-if="cardType === 'internal-link'"
-        :to="link.toString()" exact class="card-link-wrapper"
+        v-if="$props.variant === 'internal-link'"
+        v-bind:to="props.path ?? '#'" exact
+        class="card-link-wrapper"
     >
         <article class="card card--linkable">
             <slot></slot>
         </article>
     </RouterLink>
     <a
-        v-if="cardType === 'external-link'"
-        :href="link.toString()" class="card-link-wrapper"
+        v-if="$props.variant === 'external-link'"
+        v-bind:href="props.path ?? '#'"
+        class="card-link-wrapper"
     >
         <article class="card card--linkable">
             <slot></slot>
         </article>
     </a>
     <article
-        v-if="cardType === 'standard'"
+        v-if="props.variant === 'standard'"
         class="card card--standard"
     >
         <slot></slot>

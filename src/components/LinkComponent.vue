@@ -15,10 +15,7 @@ const LinkComponent = defineComponent({
         }
     },
     setup(props) {
-        return {
-            within: props.variant as String,
-            link: props.path as String,
-        };
+        return { props };
     }
 });
 
@@ -26,10 +23,18 @@ export default LinkComponent;
 </script>
 
 <template>
-    <a class="link" v-if="within === 'external'" :href="link.toString()">
+    <a
+        v-if="props.variant === 'external'"
+        v-bind:href="props.path.toString()"
+        class="link"
+    >
         <slot></slot>
     </a>
-    <RouterLink class="link" v-if="within === 'internal'" :to="link.toString()">
+    <RouterLink
+        v-if="props.variant === 'internal'"
+        v-bind:to="props.path.toString()"
+        class="link"
+    >
         <slot></slot>
     </RouterLink>
 </template>

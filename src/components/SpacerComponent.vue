@@ -11,10 +11,7 @@ const SpacerComponent = defineComponent({
         },
     },
     setup(props) {
-
-        return {
-            blockSpace: props.space as String,
-        }
+        return { props }
     }
 });
 
@@ -27,7 +24,7 @@ export default SpacerComponent;
 
 <style lang="css" scoped>
 .spacer {
-    padding-block: 1rem;
-    padding-block: v-bind(blockSpace);
+    --def-space: v-bind(props.space);
+    padding-block: var(--def-space, 1rem);
 }
 </style>

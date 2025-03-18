@@ -12,6 +12,9 @@ const BadgeComponent = defineComponent({
                 return ['filled', 'ghost', 'outline', 'tint'].includes(value.toString());
             }
         }
+    },
+    setup(props) {
+        return { props };
     }
 });
 
@@ -22,10 +25,10 @@ export default BadgeComponent;
     <small
         v-bind="$attrs" v-on="$attrs" class="badge"
         v-bind:class="{
-            'badge--filled': $props.variant === 'filled',
-            'badge--ghost': $props.variant === 'ghost',
-            'badge--outline': $props.variant === 'outline',
-            'badge--tint': $props.variant === 'tint',
+            'badge--filled': props.variant === 'filled',
+            'badge--ghost': props.variant === 'ghost',
+            'badge--outline': props.variant === 'outline',
+            'badge--tint': props.variant === 'tint',
         }"
     >
         <slot></slot>

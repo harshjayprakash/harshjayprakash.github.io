@@ -1,6 +1,5 @@
 <script lang="ts">
 import { computed, defineComponent, inject } from 'vue';
-import type { ComputedRef } from 'vue';
 
 const TabComponent = defineComponent({
     name: 'TabComponent',
@@ -13,10 +12,8 @@ const TabComponent = defineComponent({
     },
     setup(props) {
         const tabControlStyle = inject('tabControlStyle');
-        return {
-            highlighted: computed(() => props.isActive) as ComputedRef<Boolean>,
-            tabControlStyle
-        }
+        const highlighted = computed(() => props.isActive);
+        return { props, highlighted, tabControlStyle };
     }
 });
 

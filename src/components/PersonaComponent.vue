@@ -24,6 +24,9 @@ const PersonaComponent = defineComponent({
             }
         }
     },
+    setup(props) {
+        return { props };
+    }
 });
 
 export default PersonaComponent;
@@ -31,10 +34,10 @@ export default PersonaComponent;
 
 <template>
     <article class="persona">
-        <img class="image" v-bind:src="$props.imageUri" alt="persona photo"  />
+        <img class="image" v-bind:src="props.imageUri" alt="persona photo"  />
         <div class="indicator" ></div>
         <div class="information">
-            <span class="name">{{ $props.name }}</span>
+            <span class="name">{{ props.name }}</span>
             <span class="status">
                 <slot>Unknown</slot>
             </span>

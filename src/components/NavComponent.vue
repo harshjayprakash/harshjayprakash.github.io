@@ -15,15 +15,18 @@ const NavComponent = defineComponent({
         },
     },
     emits: ['onLinkClick'],
-    setup() {
+    setup(props, { emit }) {
         const navLinkFilter = ['/home'];
         const navLinks = router.getRoutes()
             .filter(link => navLinkFilter.includes(link.path))
             .sort((linkA, linkB) =>
                 navLinkFilter.indexOf(linkA.path) - navLinkFilter.indexOf(linkB.path)
             );
+        const onLinkClick = () => {
+            emit('onLinkClick');
+        }
 
-        return { navLinks };
+        return { props, onLinkClick, navLinks };
     }
 });
 
@@ -32,14 +35,14 @@ export default NavComponent;
 
 <template>
     <nav class="nav" :class="{
-        'nav--desktop': $props.variant === 'desktop',
-        'nav--mobile' : $props.variant === 'mobile'
+        'nav--desktop': props.variant === 'desktop',
+        'nav--mobile' : props.variant === 'mobile'
     }">
         <RouterLink
             v-for="(link, idx) in navLinks"
             class="nav__link"
             active-class="nav__link--active" exact
-            v-on:click="$emit('onLinkClick')"
+            v-on:click="onLinkClick"
             v-bind:key="`nav-${idx}-${link.path.substring(1, link.path.length-1)}`"
             v-bind:to="link.path"
         >

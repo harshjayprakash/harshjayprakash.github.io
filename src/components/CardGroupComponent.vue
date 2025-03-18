@@ -10,9 +10,7 @@ const CardGroupComponent = defineComponent({
         },
     },
     setup(props) {
-        return {
-            cols: props.desktopCols as Number
-        };
+        return { props };
     }
 });
 
@@ -33,8 +31,8 @@ export default CardGroupComponent;
 
 @media screen and (min-width: 768px) {
     .card-group {
-        --cols: v-bind(cols);
-        grid-template-columns: repeat(var(--cols), 1fr);
+        --defcols: v-bind(props.desktopCols);
+        grid-template-columns: repeat(var(--defcols), 1fr);
     }
 }
 </style>
