@@ -5,7 +5,6 @@ import DividerComponent from '@/components/DividerComponent.vue';
 import LinkComponent from '@/components/LinkComponent.vue';
 
 import socials from '@/store/data/socials';
-import type { ISocial } from '@/store/interfaces/Social';
 import PersonaComponent from '@/components/PersonaComponent.vue';
 
 const HomeContactSection = defineComponent({
@@ -16,11 +15,7 @@ const HomeContactSection = defineComponent({
         PersonaComponent
     },
     setup() {
-        const _socialList = socials;
-
-        return {
-            socials: _socialList as ISocial[],
-        }
+        return { socials };
     }
 });
 
