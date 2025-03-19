@@ -30,6 +30,7 @@ export default BadgeComponent;
             'badge--outline': props.variant === 'outline',
             'badge--tint': props.variant === 'tint',
         }"
+        role="status"
     >
         <slot></slot>
     </small>

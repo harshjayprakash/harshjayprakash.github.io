@@ -9,8 +9,8 @@ export default HomeHeroSection;
 </script>
 
 <template>
-    <section class="home-hero">
-        <span class="glow" aria-hidden="true"></span>
+    <section class="home-hero" role="region" aria-label="Hero Section">
+        <div class="glow" aria-hidden="true"></div>
         <h1 class="greeting">
             Hi, I'm Harsh
             <br />

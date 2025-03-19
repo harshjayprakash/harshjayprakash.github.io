@@ -23,9 +23,9 @@ export default HomeContactSection;
 </script>
 
 <template>
-    <section class="home-contact">
-        <div>
-            <h2>
+    <section class="home-contact" aria-label="Contact Section">
+        <section aria-label="Call to Action Text">
+            <h2 aria->
                 Looking to collaborate?
                 <br/>
                 or say hello? Get in touch.
@@ -37,13 +37,19 @@ export default HomeContactSection;
                 status="Available for work"
                 imageUri="https://avatars.githubusercontent.com/u/58461297?v=4"
                 indicator="available"
+                aria-label="Harsh's Current Status"
             >
                 Looking for work.
             </PersonaComponent>
             <br/>
-        </div>
-        <div class="social-list">
-            <article class="social-row" v-for="(social, idx) in socials" v-bind:key="idx">
+        </section>
+        <section class="social-list" role="list">
+            <article
+                class="social-row"
+                v-for="(social, idx) in socials" v-bind:key="idx"
+                role="listitem"
+                aria-label="Social Link with Decorative Divider"
+            >
                 <LinkComponent
                     variant="external"
                     v-bind:path="social.uri.toString()">
@@ -51,7 +57,7 @@ export default HomeContactSection;
                 </LinkComponent>
                 <DividerComponent />
             </article>
-            <article>
+            <article role="listitem" aria-label="Link To View CV">
                 <LinkComponent
                     variant="external"
                     path="/assets/harsh_cv_25h1_1.PDF"
@@ -59,7 +65,7 @@ export default HomeContactSection;
                     View CV
                 </LinkComponent>
             </article>
-        </div>
+        </section>
     </section>
 </template>
 

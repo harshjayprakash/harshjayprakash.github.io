@@ -26,7 +26,12 @@ const NavComponent = defineComponent({
             emit('onLinkClick');
         }
 
-        return { props, onLinkClick, navLinks };
+        const isActivePage = (path: String) =>{
+            return (router.currentRoute.value.fullPath === path.toString()) ?
+                'page' : '';
+        }
+
+        return { props, onLinkClick, navLinks, isActivePage };
     }
 });
 
@@ -34,10 +39,14 @@ export default NavComponent;
 </script>
 
 <template>
-    <nav class="nav" :class="{
-        'nav--desktop': props.variant === 'desktop',
-        'nav--mobile' : props.variant === 'mobile'
-    }">
+    <nav
+        class="nav"
+        v-bind:class="{
+            'nav--desktop': props.variant === 'desktop',
+            'nav--mobile' : props.variant === 'mobile'
+        }"
+        aria-label="Site Navigation"
+    >
         <RouterLink
             v-for="(link, idx) in navLinks"
             class="nav__link"
@@ -45,6 +54,7 @@ export default NavComponent;
             v-on:click="onLinkClick"
             v-bind:key="`nav-${idx}-${link.path.substring(1, link.path.length-1)}`"
             v-bind:to="link.path"
+            v-bind:aria-current="isActivePage(link.path)"
         >
             {{ link.name }}
         </RouterLink>

@@ -25,7 +25,16 @@ const DividerComponent = defineComponent({
         }
     },
     setup(props) {
-        return { props };
+        const convertVariantToAria = () => {
+            if (props.variant === 'vertical')
+                return 'vertical';
+            else if (props.variant === 'horizontal')
+                return 'horizontal';
+            else
+                return undefined;
+        }
+
+        return { props, convertVariantToAria };
     }
 });
 
@@ -33,10 +42,14 @@ export default DividerComponent;
 </script>
 
 <template>
-    <hr v-bind:class="{
-        'v-divider' : props.variant === 'vertical',
-        'h-divider' : props.variant === 'horizontal',
-    }" />
+    <hr
+        v-bind:class="{
+            'v-divider' : props.variant === 'vertical',
+            'h-divider' : props.variant === 'horizontal',
+        }"
+        role="separator"
+        v-bind:aria-orientation="convertVariantToAria()"
+    />
 </template>
 
 <style lang="css" scoped>

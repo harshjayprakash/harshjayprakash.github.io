@@ -19,7 +19,7 @@ export default SpacerComponent;
 </script>
 
 <template>
-    <div class="spacer"></div>
+    <div class="spacer" aria-hidden="true"></div>
 </template>
 
 <style lang="css" scoped>

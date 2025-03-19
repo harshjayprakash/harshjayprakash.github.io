@@ -39,7 +39,7 @@ export default HomeProjectsSection;
 </script>
 
 <template>
-    <section class="home-projects">
+    <section class="home-projects" aria-label="Projects Section">
         <h2>Projects.</h2>
         <p>
             Below shows a collection of some of my undertaken projects, ranging from web
@@ -47,56 +47,66 @@ export default HomeProjectsSection;
             link to their respective GitHub repositories. In future, each project will
             have their own pages.
         </p>
-        <TabGroupComponent variant="underline">
-            <span>Filter: </span>
+        <TabGroupComponent
+            variant="underline"
+            aria-label="Tabs To Filter Project By Type"
+        >
+            <span aria-label="Filter Label">Filter: </span>
             <TabComponent
                 v-on:click="updateFilter('All')"
                 v-bind:isActive="isActiveOption('All')"
+                aria-label="Show All Projects"
             >
                 All
             </TabComponent>
             <TabComponent
                 v-on:click="updateFilter('CLI Application')"
                 v-bind:isActive="isActiveOption('CLI Application')"
+                aria-label="Show Only Command Line Projects"
             >
                 CLI
             </TabComponent>
             <TabComponent
                 v-on:click="updateFilter('Desktop Application')"
                 v-bind:isActive="isActiveOption('Desktop Application')"
+                aria-label="Show Only Desktop Projects"
             >
                 Desktop
             </TabComponent>
             <TabComponent
                 v-on:click="updateFilter('Web Application')"
                 v-bind:isActive="isActiveOption('Web Application')"
+                aria-label="Show Only Web Projects"
             >
                 Web
             </TabComponent>
         </TabGroupComponent>
-        <CardGroupComponent :desktopCols="2">
+        <CardGroupComponent
+            v-bind:desktopCols="2"
+            aria-atomic="true"
+            aria-label="List of Projects, Based On Filter"
+        >
             <CardComponent
                 v-for="(project, idx) in filteredProjects" v-bind:key="idx"
                 variant="external-link" v-bind:path="project.gitUri.toString()"
             >
-                <img class="card-preview"
+                <img
+                    aria-label="Visual Image of Project"
+                    class="card-preview"
                     v-bind:src="`/img/${project.abbreviation}-screenshot.PNG`"
                     v-bind:alt="`${project.name} screenshot`"
                 >
-                <div class="card-header">
-                    <h3>
+                <section class="card-header">
+                    <h3 aria-label="Name of Project">
                         {{ project.name }}
                     </h3>
-                    <small>
+                    <small aria-label="Technologies Used to Build Project">
                         {{ project.technology }}
                     </small>
-                </div>
-                <p class="card-description">
+                </section>
+                <p class="card-description" aria-label="Short Project Description">
                     {{ project.description }}
                 </p>
-                <div class="card-footer">
-
-                </div>
             </CardComponent>
         </CardGroupComponent>
     </section>

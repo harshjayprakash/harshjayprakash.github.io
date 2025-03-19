@@ -13,11 +13,11 @@ export default HomeServicesSection;
 </script>
 
 <template>
-    <section class="home-services">
+    <section class="home-services" aria-label="Things I Can Do Section">
         <h2>What I can do.</h2>
         <p></p>
-        <CardGroupComponent v-bind:desktopCols="3">
-            <CardComponent>
+        <CardGroupComponent v-bind:desktopCols="3" aria-label="Categeory Skills List">
+            <CardComponent aria-label="Front-End Web Development">
                 <h3>Front-End Web Development</h3>
                 <p>
                     Crafting responsive websites using modern front-end
@@ -30,7 +30,7 @@ export default HomeServicesSection;
                     <span>CSS</span>
                 </small>
             </CardComponent>
-            <CardComponent>
+            <CardComponent aria-label="Traditional Application Development">
                 <h3>Traditional Application Development</h3>
                 <p>
                     Building robust, scalable applications tailored to the given
@@ -44,7 +44,7 @@ export default HomeServicesSection;
                     <span>Pascal</span>
                 </small>
             </CardComponent>
-            <CardComponent>
+            <CardComponent aria-label="User Interface / User Experience">
                 <h3>UI/UX</h3>
                 <p>
                     Designing interfaces that balance aesthetics with functionality
@@ -59,7 +59,7 @@ export default HomeServicesSection;
         <CardComponent>
             <h3>Tools</h3>
             <p>
-                Some additional tools I use with my workflow of developing application.
+                The tools used within the workflow of creating and maintaining software.
             </p>
             <small class="faded">
                 <span>Windows</span> &SmallCircle;

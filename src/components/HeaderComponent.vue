@@ -4,13 +4,15 @@ import { computed, defineComponent, inject, ref } from 'vue';
 import DividerComponent from '@/components/DividerComponent.vue';
 import NavComponent from '@/components/NavComponent.vue';
 import SpacerComponent from '@/components/SpacerComponent.vue';
+import BadgeComponent from './BadgeComponent.vue';
 
 const HeaderComponent = defineComponent({
     name: 'HeaderComponent',
     components: {
         NavComponent,
         SpacerComponent,
-        DividerComponent
+        DividerComponent,
+        BadgeComponent
     },
     setup() {
         const isMobile = inject('isMobile');
@@ -37,10 +39,14 @@ export default HeaderComponent;
             v-if="isMobile"
             class="header__menu-button"
             v-on:click="toggleNavigationVisibility"
+            aria-label="Mobile Menu Navigation Toggle Button"
         >
             {{ menuButtonText }}
         </button>
-        <span class="title">Harsh.</span>
+        <span aria-label="Name" class="title">Harsh.</span>
+        <BadgeComponent aria-label="Website Status" class="status" variant="outline">
+            Under Construction
+        </BadgeComponent>
         <DividerComponent v-if="!isMobile" variant="vertical" />
         <NavComponent v-if="!isMobile" />
     </header>
@@ -70,6 +76,11 @@ export default HeaderComponent;
 
 .header .title {
     place-self: center;
+}
+
+.header .status {
+    place-self: center;
+    margin-inline-start: 1rem;
 }
 
 .header .header__menu-button {

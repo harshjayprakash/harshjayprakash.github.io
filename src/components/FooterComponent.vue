@@ -44,7 +44,7 @@ export default FooterComponent;
         <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. </small>
         <small>Handcrafted with Vue.</small>
         <DividerComponent />
-        <small class="links">
+        <small role="group" class="links">
             <LinkComponent
                 v-for="(link, idx) in footerLinks"
                 v-bind:key="idx"

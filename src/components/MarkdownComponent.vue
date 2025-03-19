@@ -9,11 +9,11 @@ export default MarkdownComponent;
 </script>
 
 <template>
-    <div class="markdown">
+    <section class="markdown">
         <slot>
             This is some sample text.
         </slot>
-    </div>
+    </section>
 </template>
 
 <style lang="css" scoped>

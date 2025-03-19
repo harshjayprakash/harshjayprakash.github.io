@@ -9,7 +9,12 @@ export default SurfaceComponent;
 </script>
 
 <template>
-    <div class="surface">
+    <div
+        class="surface"
+        role="application"
+        aria-live="polite"
+        aria-label="Harsh's Personal Portfolio Website"
+    >
         <slot name="header">No header provided.</slot>
         <slot>No content provided.</slot>
         <slot name="footer">No footer provided.</slot>

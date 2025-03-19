@@ -34,14 +34,18 @@ export default PersonaComponent;
 
 <template>
     <article class="persona">
-        <img class="image" v-bind:src="props.imageUri" alt="persona photo"  />
-        <div class="indicator" ></div>
-        <div class="information">
-            <span class="name">{{ props.name }}</span>
-            <span class="status">
+        <img
+            aria-label="Profile Picture"
+            class="image"
+            v-bind:src="props.imageUri"
+            alt="persona photo"  />
+        <span aria-label="Status Indicator" class="indicator" ></span>
+        <section class="information">
+            <span aria-label="Person Name" class="name">{{ props.name }}</span>
+            <span aria-label="Status Text" aria-atomic="true" class="status">
                 <slot>Unknown</slot>
             </span>
-        </div>
+        </section>
     </article>
 </template>
 

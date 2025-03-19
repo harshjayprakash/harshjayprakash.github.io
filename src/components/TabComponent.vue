@@ -30,6 +30,8 @@ export default TabComponent;
             'tab--underline': tabControlStyle === 'underline',
             'tab--underline--active': tabControlStyle === 'underline' && props.isActive
         }"
+        role="tab"
+        v-bind:aria-selected="props.isActive"
     >
         <slot></slot>
     </button>

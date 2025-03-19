@@ -18,9 +18,9 @@ export default CardGroupComponent;
 </script>
 
 <template>
-    <div class="card-group">
+    <section class="card-group">
         <slot></slot>
-    </div>
+    </section>
 </template>
 
 <style lang="css" scoped>
