@@ -26,7 +26,7 @@ npm run dev
 * Project Cards Link to GitHub Repositories.
 * Redesigned Header and Navigation.
 * Updated Card Hover Effects.
-* Improved Accessibility.
+* Improved Accessibility: ARIA and Role Attributes.
 * Updated Colours.
 * Continued migration from Options API to Composition API (_Without Setup Tag_).
 * Updated for Rounded Corners Trend. (_Slightly_).
