@@ -12,7 +12,7 @@
     --clr-surface-inverted: light-dark(var(--clr-950S), var(--clr-050S));
     --clr-surface-glow: light-dark(var(--clr-200A), var(--clr-700A));
     --clr-text-primary: light-dark(var(--clr-950S), var(--clr-050S));
-    --clr-text-faded: light-dark(var(--clr-500S), var(--clr-500S));
+    --clr-text-faded: light-dark(var(--clr-500S), var(--clr-400S));
     --clr-text-secondary-hover: light-dark(var(--clr-300S), var(--clr-700S));
     --clr-text-inverted: light-dark(var(--clr-050S), var(--clr-950S));
     --clr-shadow: light-dark(rgb(0 0 0 / 0.1), rgb(255 255 255 / 0.1));
