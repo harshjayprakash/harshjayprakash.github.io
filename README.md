@@ -31,6 +31,14 @@ npm run dev
 * Continued migration from Options API to Composition API (_Without Setup Tag_).
 * Updated for Rounded Corners Trend. (_Slightly_).
 
+## To-Do
+
+* Improve Accessibility: Add Skip Navigation Button.
+* Add Unit Testing.
+* Add E2E Testing.
+* Add Project Specific Pages.
+* Extract Data to Store.
+
 ## Known Issues and Limitations
 
 * The `/alpha` is not for public use (for development testing purposes).
