@@ -28,7 +28,7 @@ export default MainComponent;
 </script>
 
 <template>
-    <SurfaceComponent paddingInline="2rem" maxWidth="60rem">
+    <SurfaceComponent>
         <template v-slot:header>
             <HeaderComponent />
         </template>
