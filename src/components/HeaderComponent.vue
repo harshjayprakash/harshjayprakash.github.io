@@ -48,7 +48,7 @@ export default HeaderComponent;
             Under Construction
         </BadgeComponent>
         <DividerComponent v-if="!isMobile" variant="vertical" />
-        <NavComponent v-if="!isMobile" />
+        <NavComponent class="nav" v-if="!isMobile" />
     </header>
     <SpacerComponent space="1rem" />
     <NavComponent
