@@ -3,9 +3,9 @@ import { defineComponent } from 'vue';
 
 import DividerComponent from '@/components/DividerComponent.vue';
 import LinkComponent from '@/components/LinkComponent.vue';
+import PersonaComponent from '@/components/PersonaComponent.vue';
 
 import socials from '@/store/data/socials';
-import PersonaComponent from '@/components/PersonaComponent.vue';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',

@@ -5,8 +5,8 @@ import BadgeComponent from '@/components/BadgeComponent.vue';
 import ButtonComponent from '@/components/ButtonComponent.vue';
 import DividerComponent from '@/components/DividerComponent.vue';
 import MarkdownComponent from '@/components/MarkdownComponent.vue';
-import SpacerComponent from '@/components/SpacerComponent.vue';
 import PersonaComponent from '@/components/PersonaComponent.vue';
+import SpacerComponent from '@/components/SpacerComponent.vue';
 
 const AlphaView = defineComponent({
     name: 'AlphaView',
