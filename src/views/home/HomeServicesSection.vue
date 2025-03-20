@@ -15,7 +15,11 @@ export default HomeServicesSection;
 <template>
     <section class="home-services" aria-label="Things I Can Do Section">
         <h2>What I can do.</h2>
-        <p></p>
+        <p>
+            I can do some front-end development to traditional application development,
+            and understanding user experience to design simplistic interfaces. The cards
+            below show the technologies I have used within the past to build projects.
+        </p>
         <CardGroupComponent v-bind:desktopCols="3" aria-label="Categeory Skills List">
             <CardComponent aria-label="Front-End Web Development">
                 <h3>Front-End Web Development</h3>
@@ -31,7 +35,8 @@ export default HomeServicesSection;
                     <span role="listitem">Angular</span> &SmallCircle;
                     <span role="listitem">Vue</span> &SmallCircle;
                     <span role="listitem">HTML</span> &SmallCircle;
-                    <span role="listitem">CSS</span>
+                    <span role="listitem">CSS</span> &SmallCircle;
+                    <span role="listitem">TypeScript</span>
                 </small>
             </CardComponent>
             <CardComponent aria-label="Traditional Application Development">
