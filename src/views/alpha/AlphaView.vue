@@ -16,7 +16,7 @@ const AlphaView = defineComponent({
         DividerComponent,
         MarkdownComponent,
         SpacerComponent,
-        PersonaComponent
+        PersonaComponent,
     },
     methods: {
         hi() {
@@ -30,6 +30,10 @@ export default AlphaView;
 
 <template>
     <p>Alpha View: Please note this page is testing components.</p>
+    <SpacerComponent space="10rem" />
+    <BadgeComponent aria-roledescription="greeting" variant="tint">
+        hello
+    </BadgeComponent>
     <SpacerComponent space="10rem" />
     <PersonaComponent
         name="Harsh Jayprakash"
@@ -118,7 +122,7 @@ export default AlphaView;
         </ButtonComponent>
         <br />
         <br />
-        <BadgeComponent>
+        <BadgeComponent variant="outline">
             Under Construction
         </BadgeComponent>
     </div>
