@@ -1,54 +1,29 @@
 :root {
-
-    /* Tailwind CSS Neutral */
-    --clr-050S: #fafafa;
-    --clr-100S: #f5f5f5;
-    --clr-200S: #e5e5e5;
-    --clr-300S: #d4d4d4;
-    --clr-400S: #a3a3a3;
-    --clr-500S: #737373;
-    --clr-600S: #525252;
-    --clr-700S: #404040;
-    --clr-800S: #262626;
-    --clr-900S: #171717;
-    --clr-950S: #0a0a0a;
-
-    --clr-050DV: #f0fafb;
-    --clr-100DV: #ddf4f5;
-    --clr-200DV: #b8e6e9;
-    --clr-300DV: #86d4da;
-    --clr-400DV: #4eb8c2;
-    --clr-500DV: #329ca8;
-    --clr-600DV: #2d7f8d;
-    --clr-700DV: #2a6774;
-    --clr-800DV: #2a5560;
-    --clr-900DV: #274852;
-    --clr-950DV: #152e37;
-
-    --clr-050LV: #eefffd;
-    --clr-100LV: #c5fffc;
-    --clr-200LV: #8bfffa;
-    --clr-300LV: #4afef7;
-    --clr-400LV: #15ecea;
-    --clr-500LV: #00cfd0;
-    --clr-600LV: #00a4a8;
-    --clr-700LV: #00797e;
-    --clr-800LV: #066369;
-    --clr-900LV: #0a5457;
-    --clr-950LV: #003035;
-
     color-scheme: light dark;
 
-    --clr-surface: light-dark(var(--clr-100S), var(--clr-900S));
-    --clr-on-surface: light-dark(var(--clr-900S), var(--clr-100S));
-    --clr-on-surface-faded: light-dark(var(--clr-700S), var(--clr-300S));
+    /* Tailwind Zinc */
+    --clr-050S: oklch(0.985 0 0);
+    --clr-100S: oklch(0.967 0.001 286.375);
+    --clr-200S: oklch(0.92 0.004 286.32);
+    --clr-300S: oklch(0.871 0.006 286.286);
+    --clr-400S: oklch(0.705 0.015 286.067);
+    --clr-500S: oklch(0.552 0.016 285.938);
+    --clr-600S: oklch(0.442 0.017 285.786);
+    --clr-700S: oklch(0.37 0.013 285.805);
+    --clr-800S: oklch(0.274 0.006 286.033);
+    --clr-900S: oklch(0.21 0.006 285.885);
+    --clr-950S: oklch(0.141 0.005 285.823);
 
-    --clr-selection-surface: light-dark(var(--clr-100LV), var(--clr-900DV));
-    --clr-on-selection-surface: light-dark(var(--clr-700LV), var(--clr-400DV));
-
-    --clr-card-container: light-dark(var(--clr-050S), var(--clr-950S));
-    --clr-card-container-hover: light-dark(var(--clr-200S), var(--clr-800S));
-    --clr-on-card-container: var(--clr-on-surface);
-    --clr-outline: light-dark(var(--clr-300S), var(--clr-700S));
+    /* Tailwind Teal */
+    --clr-050A: oklch(0.984 0.014 180.72);
+    --clr-100A: oklch(0.953 0.051 180.801);
+    --clr-200A: oklch(0.91 0.096 180.426);
+    --clr-300A: oklch(0.855 0.138 181.071);
+    --clr-400A: oklch(0.777 0.152 181.912);
+    --clr-500A: oklch(0.704 0.14 182.503);
+    --clr-600A: oklch(0.6 0.118 184.704);
+    --clr-700A: oklch(0.511 0.096 186.391);
+    --clr-800A: oklch(0.437 0.078 188.216);
+    --clr-900A: oklch(0.386 0.063 188.416);
+    --clr-950A: oklch(0.277 0.046 192.524);
 }
-

@@ -1,40 +1,52 @@
-# Personal Portfolio
+# Personal Portfolio Website
 
-![Banner (Decorative)](./doc/ppw-banner.png)
+![Banner (Decorative)](./docs/ppw_banner_raster.PNG)
 
-## Overview
+This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
+showcase my projects in one central place. **This website is still under construction**.
 
-This is a personal portfolio website built with Vue.js with TypeScript (transitioned from
-Angular, React, and Vanilla JavaScript). This allow me to showcase my projects in one
-central place and also learn web development. **This website is still under**
-**construction.**
-
-![Screenshot](./doc/ppw-screenshot.png)
+![Screenshot of Website](./docs/ppw-screenshot.PNG)
 
 ## Running Locally
 
-Running the website locally is as simple as a few commands after cloning the git
-repository. There are no external measures to be setup.
+Running the website locally is simple as a few commands after cloning the git repository.
+There are no external measures to be setup.
 
 ```sh
-# Install dependancies.
+# Install dependencies.
 npm install
 # Run local server.
 npm run dev
 ```
 
+## Changelog (ver 4.0-25H1D)
+
+* Uses Custom Component System.
+* Implemented Project Filter System.
+* Project Cards Link to GitHub Repositories.
+* Redesigned Header and Navigation.
+* Updated Card Hover Effects.
+* Improved Accessibility: ARIA and Role Attributes.
+* Updated Colours.
+* Continued migration from Options API to Composition API (_Without Setup Tag_).
+* Updated for Rounded Corners Trend. (_Slightly_).
+
+## To-Do
+
+* Improve Accessibility: Add Skip Navigation Button.
+* Add Unit Testing.
+* Add E2E Testing.
+* Add Project Specific Pages.
+* Extract Data to Store.
+
 ## Known Issues and Limitations
 
-* Project information is not yet available.
-* Project page dynamic header may fail (shows undefined).
-* Not all projects are shown.
+* The `/alpha` is not for public use (for development testing purposes).
+* The `/about` route is not ready.
 
 ## References
 
-* CSS Reset by Josh W Comeau: <https://www.joshwcomeau.com/css/custom-css-reset/>
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
-* Colours based Alex Cristache's Vintage Monochrome Combos (6th Set):
-<https://x.com/AlexCristache/status/1873283545608700307>
-* TailwindCSS Colours Generator: <https://uicolors.app/create>
-* TailwindCSS Colours (Neutral v3.4.17): <https://tailwindcss.com/docs/customizing-colors>
+* CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
+* Tailwind v4.0 Colours (Zinc and Teal): <https://tailwindcss.com/docs/colors>

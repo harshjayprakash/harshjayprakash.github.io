@@ -1,3 +1,10 @@
+/* CSS Reset by Josh W Comeau.
+   Available at: https://www.joshwcomeau.com/css/custom-css-reset/
+   Accessed: 04.03.2024
+   Modifications:
+       - Add "#app" to section 9.
+*/
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -62,7 +69,8 @@ h6 {
 
 /*
     9. Create a root stacking context
-  */
+*/
+#app,
 #root,
 #__next {
     isolation: isolate;

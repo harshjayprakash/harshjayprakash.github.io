@@ -1,12 +1,21 @@
-import type { Social } from "../interface/Social";
+import type { ISocial } from "@/store/interfaces/Social";
 
-export const socials: Social[] = [
+const socials: ISocial[] = [
     {
         name: 'LinkedIn',
+        tag: 'harshjayprakash7',
         uri: 'https://www.linkedin.com/in/harshjayprakash7/'
     },
     {
         name: 'GitHub',
+        tag: 'harshjayprakash',
         uri: 'https://github.com/harshjayprakash'
+    },
+    {
+        name: 'Email',
+        tag: 'harshjayprakash [at] outlook (dot) com',
+        uri: 'mailto:harshjayprakash@outlook.com'
     }
 ];
+
+export default socials;

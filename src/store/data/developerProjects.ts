@@ -1,10 +1,11 @@
-import type { DeveloperProject } from "../interface/DeveloperProject";
+import type { IDeveloperProject } from '@/store/interfaces/DeveloperProject';
 
-export const developerProjects: DeveloperProject[] = [
+const developerProjects: IDeveloperProject[] = [
     {
         name: 'Adventure Game',
         description: 'A text-based adventure game exploring the environment.',
         reference: 'BPC1950',
+        category: 'CLI Application',
         technology: 'Visual Basic .NET',
         timeframe: 'H2 \'19',
         status: 'Halted',
@@ -17,6 +18,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Algorithmic Art Playground',
         description: 'A simple tool to experiment generating art via programming locally.',
         reference: 'UOW2450',
+        category: 'Desktop Application',
         technology: 'Java',
         timeframe: 'H2 \'24',
         status: 'Halted',
@@ -29,6 +31,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Crane Container Simulation',
         description: 'A simulation to calculate the time taken to arrange crates at different loading bays.',
         reference: 'UOW2300',
+        category: 'CLI Application',
         technology: 'Pascal',
         timeframe: 'H1 \'23',
         status: 'Maintenance Stage',
@@ -41,6 +44,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Dog Walkers Finder',
         description: 'A tool for dog owners to find dog walkers within their local area.',
         reference: 'UOW2400',
+        category: 'Web Application',
         technology: 'Angular w/ AWS',
         timeframe: 'H2 \'24',
         status: 'Maintenance Stage',
@@ -53,6 +57,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Experimental Blok',
         description: 'A square that moves, with arrow keys, around a user generated maze.',
         reference: 'HX2101',
+        category: 'Desktop Application',
         technology: 'C w/ Windows API',
         timeframe: 'H1 \'21',
         status: 'Halted',
@@ -65,6 +70,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Library Loans System',
         description: 'A system to keep track of library inventory and loaned Books and DVDs',
         reference: 'UOW2301',
+        category: 'Desktop Application',
         technology: 'Java w/ MySQL',
         timeframe: 'H1 \'23',
         status: 'Maintenance Stage',
@@ -77,6 +83,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Noughts and Crosses',
         description: 'A text-based game of Tic-Tac-Toe against the computer.',
         reference: 'HX2201',
+        category: 'CLI Application',
         technology: 'Pascal',
         timeframe: 'H1 \'22',
         status: 'Halted',
@@ -86,9 +93,10 @@ export const developerProjects: DeveloperProject[] = [
         gitUri: 'https://github.com/harshjayprakash/noughts-and-crosses',
     },
     {
-        name: 'Personal Portfolio',
+        name: 'Personal Portfolio Website',
         description: 'A digital place to showcase skills and undertaken projects.',
         reference: 'HX2150',
+        category: 'Web Application',
         technology: 'Vue.js w/ TypeScript',
         timeframe: 'H2 \'21',
         status: 'In progress',
@@ -101,6 +109,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Project Navigator',
         description: 'A tool to navigate and list projects available in the command line.',
         reference: 'HX2402',
+        category: 'CLI Application',
         technology: 'PowerShell',
         timeframe: 'H1 \'24',
         status: 'Halted',
@@ -113,6 +122,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Table Software Prototype',
         description: 'An interface that can run on the theoretical interactive table idea.',
         reference: 'UOW2302',
+        category: 'Web Application',
         technology: 'Vanilla JavaScript',
         timeframe: 'H1 \'23',
         status: 'No longer worked on',
@@ -125,6 +135,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Trigonometric Helper',
         description: 'A tool to aid in the learning of Trigonometry at the A-Level standard.',
         reference: 'BPC2100',
+        category: 'Desktop Application',
         technology: 'Visual Basic .NET',
         timeframe: 'H1 \'21',
         status: 'Halted',
@@ -137,6 +148,7 @@ export const developerProjects: DeveloperProject[] = [
         name: 'Wrapping Paper Quotes Calculator',
         description: 'A calculator for a department, who provides gift wrapping services based on present shape.',
         reference: 'UOW2200',
+        category: 'Desktop Application',
         technology: 'Python',
         timeframe: 'H1 \'20',
         status: 'Maintenance',
@@ -145,4 +157,6 @@ export const developerProjects: DeveloperProject[] = [
         slug: 'wrapping-paper-quotes-calculator',
         gitUri: 'https://github.com/harshjayprakash/wrapping-paper-quotes-calculator',
     },
-]
+];
+
+export default developerProjects;
