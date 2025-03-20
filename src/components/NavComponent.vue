@@ -71,18 +71,19 @@ export default NavComponent;
 
 .nav .nav__link {
     color: inherit;
+    text-decoration: none;
 }
 
 .nav--desktop .nav__link {
-    text-decoration: solid underline 0.2rem var(--clr-nav-border);
+    border-block-end: 0.2rem solid var(--clr-nav-border);
 }
 
 .nav--desktop .nav__link:hover {
-    text-decoration-color: var(--clr-nav-border-hover);
+    border-block-end-color: var(--clr-nav-border-hover);
 }
 
 .nav--desktop .nav__link--active {
-    text-decoration-color: var(--clr-nav-border-active);
+    border-block-end-color: var(--clr-nav-border-active);
 }
 
 .nav--mobile {
