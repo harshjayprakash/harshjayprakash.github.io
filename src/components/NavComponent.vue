@@ -48,11 +48,11 @@ export default NavComponent;
         aria-label="Site Navigation"
     >
         <RouterLink
-            v-for="(link, idx) in navLinks"
+            v-for="link in navLinks"
             class="nav__link"
             active-class="nav__link--active" exact
             v-on:click="onLinkClick"
-            v-bind:key="`nav-${idx}-${link.path.substring(1, link.path.length-1)}`"
+            v-bind:key="link.path"
             v-bind:to="link.path"
             v-bind:aria-current="isActivePage(link.path)"
         >
