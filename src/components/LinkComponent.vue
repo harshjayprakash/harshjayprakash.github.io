@@ -28,7 +28,7 @@ export default LinkComponent;
     <a
         v-if="props.variant === 'external'"
         v-bind:href="props.path.toString()"
-        class="link"
+        class="link" target="_blank" rel="noopener noreferrer"
     >
         <slot></slot>
     </a>

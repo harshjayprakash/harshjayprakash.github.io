@@ -40,7 +40,7 @@ export default CardComponent;
     <a
         v-if="props.variant === 'external-link'"
         v-bind:href="props.path ?? '#'"
-        class="card-link-wrapper"
+        class="card-link-wrapper" target="_blank" rel="noopener noreferrer"
     >
         <article class="card card--linkable">
             <slot></slot>
