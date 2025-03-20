@@ -1,16 +1,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+const badgeVariants = ['filled', 'ghost', 'outline', 'tint'];
+
 const BadgeComponent = defineComponent({
     name: 'BadgeComponent',
     inheritAttrs: false,
     props: {
         variant: {
             type: String,
-            default: 'filled',
-            validator(value: String) {
-                return ['filled', 'ghost', 'outline', 'tint'].includes(value.toString());
-            }
+            default: badgeVariants[0],
+            validator: (value: String) => badgeVariants.includes(value.toString())
         }
     },
     setup(props) {

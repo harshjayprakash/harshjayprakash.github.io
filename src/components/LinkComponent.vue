@@ -7,7 +7,7 @@ const LinkComponent = defineComponent({
         variant: {
             type: String,
             default: 'internal',
-            validator(value: String) {
+            validator: (value: String) => {
                 return ['internal', 'external'].includes(value.toString());
             }
         },

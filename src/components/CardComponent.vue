@@ -9,7 +9,7 @@ const CardComponent = defineComponent({
         variant: {
             type: String,
             default: 'standard',
-            validator(value: String) {
+            validator: (value: String) => {
                 return ['standard', 'internal-link', 'external-link'].includes(
                     value.toString())
             },

@@ -7,7 +7,7 @@ const DividerComponent = defineComponent({
         variant: {
             type: String,
             default: 'horizontal',
-            validator(value: String) {
+            validator: (value: String) => {
                 return ['horizontal', 'vertical'].includes(value.toString());
             }
         },

@@ -11,7 +11,7 @@ const NavComponent = defineComponent({
         variant: {
             type: String,
             default: 'desktop',
-            validator(value: String) {
+            validator: (value: String) => {
                 return ['desktop', 'mobile'].includes(value.toString());
             }
         },
