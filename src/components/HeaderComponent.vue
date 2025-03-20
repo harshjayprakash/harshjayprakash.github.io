@@ -65,7 +65,7 @@ export default HeaderComponent;
     top: 1rem;
     display: flex;
     width: fit-content;
-    padding-block: 0.75rem;
+    padding-block: 0.8rem;
     padding-inline: 1rem;
     box-shadow:
         0 0.25rem 0.375rem -0.0625rem var(--clr-header-shadow),
