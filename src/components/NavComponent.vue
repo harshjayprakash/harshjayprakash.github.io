@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { PropType } from 'vue';
 import { RouterLink } from 'vue-router';
 
 import router from '@/router';
@@ -10,8 +9,11 @@ const NavComponent = defineComponent({
     components: { RouterLink },
     props: {
         variant: {
-            type: String as PropType<'desktop' | 'mobile'>,
+            type: String,
             default: 'desktop',
+            validator(value: String) {
+                return ['desktop', 'mobile'].includes(value.toString());
+            }
         },
     },
     emits: ['onLinkClick'],

@@ -1,12 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { PropType } from 'vue';
 
 const SpacerComponent = defineComponent({
     name: 'SpacerComponent',
     props: {
         space: {
-            type: String as PropType<String>,
+            type: String,
             default: '1rem',
         },
     },

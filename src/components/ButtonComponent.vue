@@ -1,14 +1,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { PropType } from 'vue';
 
 const ButtonComponent = defineComponent({
     name: 'ButtonComponent',
     inheritAttrs: false,
     props: {
         variant: {
-            type: String as PropType<'standard' | 'accent'>,
+            type: String,
             default: 'standard',
+            validator(value: String) {
+                return ['standard', 'accent'].includes(value.toString());
+            }
         },
     },
     setup(props) {

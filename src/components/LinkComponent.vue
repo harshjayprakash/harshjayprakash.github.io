@@ -1,16 +1,18 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { PropType } from 'vue';
 
 const LinkComponent = defineComponent({
     name: 'LinkComponent',
     props: {
         variant: {
-            type: String as PropType<'internal' | 'external'>,
+            type: String,
             default: 'internal',
+            validator(value: String) {
+                return ['internal', 'external'].includes(value.toString());
+            }
         },
         path: {
-            type: String as PropType<String>,
+            type: String,
             default: '#',
         }
     },

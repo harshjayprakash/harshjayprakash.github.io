@@ -19,7 +19,7 @@ const PersonaComponent = defineComponent({
         indicator: {
             type: String,
             required: true,
-            validator: (value: String) => {
+            validator(value: String) {
                 return ['available', 'away', 'busy'].indexOf(value.toString()) !== -1
             }
         }
