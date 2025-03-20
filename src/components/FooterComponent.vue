@@ -19,7 +19,7 @@ const FooterComponent = defineComponent({
     setup() {
         const copyrightYear = 2025;
         const versionNumber = '4.0-25H1D';
-        const buildDate = '15.03.2025';
+        const buildDate = '20.03.2025';
         const footerLinks: IFooterLinks[] = [
             {
                 variant: 'external', name: 'Source',
