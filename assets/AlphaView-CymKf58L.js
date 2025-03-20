@@ -1,0 +1,1 @@
+import{d as o,_ as a,c as t,a as n,o as s}from"./index-RaAZA0eD.js";const p=o({name:"AlphaView"}),r={class:"alpha"};function c(l,e,i,d,_,f){return s(),t("section",r,e[0]||(e[0]=[n("h1",null,"Alpha - A Component Testing Page",-1)]))}const m=a(p,[["render",c]]);export{m as default};
