@@ -37,7 +37,14 @@ export default FooterComponent;
 <template>
     <footer class="footer">
         <br />
-        <small>Ver. {{ versionNumber }}, {{ buildDate }}. Under Construction.</small>
+        <small>
+            Ver. {{ versionNumber }}, {{ buildDate }}.
+        </small>
+        <br />
+        <small>
+            Under Construction. This website is subject to change and may contains errors,
+            failures and/or defects.
+        </small>
         <br />
         <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. </small>
         <small>Handcrafted with Vue.</small>
