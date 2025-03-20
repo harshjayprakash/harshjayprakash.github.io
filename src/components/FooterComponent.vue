@@ -24,9 +24,7 @@ const FooterComponent = defineComponent({
             {
                 variant: 'external', name: 'Source',
                 path: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
-            },
-            { variant: 'internal', path: '/uses', name: 'Uses' },
-            { variant: 'internal', path: '/privacy', name: 'Privacy' },
+            }
         ];
 
         return { copyrightYear, versionNumber, buildDate, footerLinks };
