@@ -87,7 +87,7 @@ export default HomeProjectsSection;
             aria-label="List of Projects, Based On Filter"
         >
             <CardComponent
-                v-for="project in filteredProjects" v-bind:key="project"
+                v-for="project in filteredProjects" v-bind:key="project.abbreviation"
                 variant="external-link" v-bind:path="project.gitUri.toString()"
             >
                 <img
