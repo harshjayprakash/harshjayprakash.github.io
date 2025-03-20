@@ -29,7 +29,7 @@ export default CardComponent;
 
 <template>
     <RouterLink
-        v-if="$props.variant === 'internal-link'"
+        v-if="props.variant === 'internal-link'"
         v-bind:to="props.path ?? '#'" exact
         class="card-link-wrapper"
     >
@@ -38,7 +38,7 @@ export default CardComponent;
         </article>
     </RouterLink>
     <a
-        v-if="$props.variant === 'external-link'"
+        v-if="props.variant === 'external-link'"
         v-bind:href="props.path ?? '#'"
         class="card-link-wrapper"
     >
