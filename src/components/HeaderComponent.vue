@@ -43,7 +43,7 @@ export default HeaderComponent;
         >
             {{ menuButtonText }}
         </button>
-        <span aria-label="Name" class="title">Harsh.</span>
+        <span class="title">Harsh.</span>
         <BadgeComponent aria-label="Website Status" class="status" variant="outline">
             Under Construction
         </BadgeComponent>
