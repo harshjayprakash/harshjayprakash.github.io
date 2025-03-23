@@ -25,7 +25,7 @@ export default HomeContactSection;
 <template>
     <section class="home-contact" aria-label="Contact Section">
         <section aria-label="Call to Action Text">
-            <h2 aria->
+            <h2>
                 Looking to collaborate?
                 <br/>
                 or say hello? Get in touch.
