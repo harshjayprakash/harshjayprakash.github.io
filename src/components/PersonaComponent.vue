@@ -39,10 +39,10 @@ export default PersonaComponent;
             class="image"
             v-bind:src="props.imageUri"
             alt="persona photo"  />
-        <span aria-label="Status Indicator" class="indicator" ></span>
+        <div role="status" aria-label="Status Indicator" class="indicator" ></div>
         <section class="information">
-            <span aria-label="Person Name" class="name">{{ props.name }}</span>
-            <span aria-label="Status Text" aria-atomic="true" class="status">
+            <span class="name">{{ props.name }}</span>
+            <span class="status">
                 <slot>Unknown</slot>
             </span>
         </section>
