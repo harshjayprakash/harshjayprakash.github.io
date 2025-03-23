@@ -19,7 +19,7 @@ export default TabGroupComponent;
 </script>
 
 <template>
-    <section
+    <div
         class="tag-group"
         v-bind:class="{
             'tab-group--underline': props.variant === 'underline',
@@ -28,7 +28,7 @@ export default TabGroupComponent;
         role="tablist"
     >
         <slot></slot>
-    </section>
+    </div>
 </template>
 
 <style lang="css" scoped>
