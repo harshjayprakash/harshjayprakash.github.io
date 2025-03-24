@@ -3,7 +3,6 @@ import { defineComponent, inject } from 'vue';
 
 const TabComponent = defineComponent({
     name: 'TabComponent',
-    inheritAttrs: false,
     props: {
         isActive: {
             type: Boolean,
@@ -22,8 +21,6 @@ export default TabComponent;
 <template>
     <button
         class="tab"
-        v-on="$attrs"
-        v-bind="$attrs"
         v-bind:class="{
             'tab--filled': tabControlStyle === 'filled',
             'tab--filled--active': tabControlStyle === 'filled' && props.isActive,
