@@ -5,7 +5,6 @@ const badgeVariants = ['filled', 'ghost', 'outline', 'tint'];
 
 const BadgeComponent = defineComponent({
     name: 'BadgeComponent',
-    inheritAttrs: false,
     props: {
         variant: {
             type: String,
@@ -22,8 +21,8 @@ export default BadgeComponent;
 </script>
 
 <template>
-    <small
-        v-bind="$attrs" v-on="$attrs" class="badge"
+    <div
+        class="badge"
         v-bind:class="{
             'badge--filled': props.variant === 'filled',
             'badge--ghost': props.variant === 'ghost',
@@ -33,7 +32,7 @@ export default BadgeComponent;
         role="status"
     >
         <slot></slot>
-    </small>
+    </div>
 </template>
 
 <style lang="css" scoped>
@@ -42,6 +41,7 @@ export default BadgeComponent;
     border-radius: var(--bdr-default);
     border: 1px solid var(--clr-badge-outline);
     padding-inline: 0.3rem;
+    font-size: small;
 }
 
 .badge--filled {
