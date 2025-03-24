@@ -44,7 +44,11 @@ export default HeaderComponent;
             {{ menuButtonText }}
         </button>
         <span class="title">Harsh.</span>
-        <BadgeComponent aria-label="Website Status" class="status" variant="outline">
+        <BadgeComponent
+            aria-label="Website is Under Construction."
+            class="status"
+            variant="outline"
+        >
             Under Construction
         </BadgeComponent>
         <DividerComponent v-if="!isMobile" variant="vertical" />
