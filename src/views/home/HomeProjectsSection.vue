@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
@@ -9,6 +9,7 @@ import TabGroupComponent from '@/components/TabGroupComponent.vue';
 import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
 
 import useProjectFilter from '@/composables/useProjectFilter';
+import BadgeComponent from '@/components/BadgeComponent.vue';
 
 const HomeProjectsSection = defineComponent({
     name: 'HomeProjectsSection',
@@ -16,7 +17,8 @@ const HomeProjectsSection = defineComponent({
         CardGroupComponent,
         CardComponent,
         TabGroupComponent,
-        TabComponent
+        TabComponent,
+        BadgeComponent
     },
     setup() {
         const {
@@ -27,11 +29,21 @@ const HomeProjectsSection = defineComponent({
         } = useProjectFilter();
         filterByAbbreviation(['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs']);
 
+        const allProjectCount = filteredProjects.value.length;
+        const projectCount = computed(() => filteredProjects.value.length);
+
+        const colouredBadge = () => {
+            return (allProjectCount === projectCount.value) ? 'outline' : 'tint';
+        }
+
         const isActiveOption = (category: ProjectCategory) => {
             return (typeFilter.value === category);
         }
 
-        return { filteredProjects, typeFilter, updateFilter, isActiveOption };
+        return {
+            filteredProjects, typeFilter, updateFilter, isActiveOption,
+            allProjectCount, projectCount, colouredBadge
+        };
     },
 });
 
@@ -47,6 +59,19 @@ export default HomeProjectsSection;
             link to their respective GitHub repositories. In future, each project will
             have their own pages.
         </p>
+        <SpacerComponent spacing="1rem"/>
+        <BadgeComponent
+            class="badge--ctx-project-count"
+            v-bind:variant="colouredBadge()"
+            aria-atomic="true"
+            v-bind:aria-label="`${projectCount} out ${allProjectCount} Shown in Project List`">
+            <template v-if="projectCount === allProjectCount">
+                Showing All Projects.
+            </template>
+            <template v-else>
+                Showing {{ projectCount }} of {{ allProjectCount }} Projects.
+            </template>
+        </BadgeComponent>
         <TabGroupComponent
             variant="underline"
             aria-label="Tabs To Filter Project By Type"
@@ -116,5 +141,13 @@ export default HomeProjectsSection;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.badge--ctx-project-count {
+    width: fit-content;
+}
+
+.project-count {
+    padding-block-start: 0.15rem;
 }
 </style>
