@@ -87,6 +87,12 @@ export default HomeServicesSection;
     gap: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+    .svc-tools {
+        grid-column: 1 / 4;
+    }
+}
+
 .faded {
     color: var(--clr-text-faded);
 }
