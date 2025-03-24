@@ -1,4 +1,4 @@
-import type { ILink } from '../interfaces/Link';
+import type { ILink } from '@/store//interfaces/Link';
 
 const footerLinks: ILink[] = [
     {
