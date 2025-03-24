@@ -28,17 +28,26 @@ npm install
 npm run dev
 ```
 
-## Changelog (ver 4.0-25H1D)
+## Changelog
 
-* Uses Custom Component System.
-* Implemented Project Filter System.
-* Project Cards Link to GitHub Repositories.
-* Redesigned Header and Navigation.
-* Updated Card Hover Effects.
-* Improved Accessibility: ARIA and Role Attributes.
-* Updated Colours.
-* Continued migration from Options API to Composition API (_Without Setup Tag_).
-* Updated for Rounded Corners Trend. (_Slightly_).
+* Version 4.1 --25H1E "30/03/2025"
+  * Improved Accessibility: Fixed issues highlighted issues by ARC Toolkit.
+    * Line breaks are still used for visual purposes.
+    * Header "banner", Footer "contentinfo", Main "main" are containerised.
+  * Update Store Data Retrieval from Constant Arrays to Functions.
+  * Add Meta Tags for Better SEO.
+  * Added Projects Shown Count Badge.
+  * Add Robots Text File.
+* Version 4.0 --25H1D "20/03/2025"
+  * Uses Custom Component System.
+  * Implemented Project Filter System.
+  * Project Cards Link to GitHub Repositories.
+  * Redesigned Header and Navigation.
+  * Updated Card Hover Effects.
+  * Improved Accessibility: ARIA and Role Attributes.
+  * Updated Colours.
+  * Continued migration from Options API to Composition API (_Without Setup Tag_).
+  * Updated for Rounded Corners Trend. (_Slightly_).
 
 ## To-Do
 
