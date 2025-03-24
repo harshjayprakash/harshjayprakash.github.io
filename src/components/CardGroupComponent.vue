@@ -18,15 +18,16 @@ export default CardGroupComponent;
 </script>
 
 <template>
-    <section class="card-group">
+    <ul class="card-group">
         <slot></slot>
-    </section>
+    </ul>
 </template>
 
 <style lang="css" scoped>
 .card-group {
     display: grid;
     gap: 1rem;
+    padding: 0;
 }
 
 @media screen and (min-width: 768px) {
