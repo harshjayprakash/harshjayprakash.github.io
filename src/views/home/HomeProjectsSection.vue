@@ -51,7 +51,7 @@ export default HomeProjectsSection;
             variant="underline"
             aria-label="Tabs To Filter Project By Type"
         >
-            <span aria-label="Filter Label">Filter: </span>
+            <span>Filter: </span>
             <TabComponent
                 v-on:click="updateFilter('All')"
                 v-bind:isActive="isActiveOption('All')"
@@ -91,20 +91,19 @@ export default HomeProjectsSection;
                 variant="external-link" v-bind:path="project.gitUri.toString()"
             >
                 <img
-                    aria-label="Visual Image of Project"
                     class="card-preview"
                     v-bind:src="`/img/${project.abbreviation}-screenshot.PNG`"
-                    v-bind:alt="`${project.name} screenshot`"
+                    v-bind:alt="`${project.name}`"
                 >
                 <section class="card-header">
-                    <h3 aria-label="Name of Project">
+                    <h3>
                         {{ project.name }}
                     </h3>
-                    <small aria-label="Technologies Used to Build Project">
+                    <small>
                         {{ project.technology }}
                     </small>
                 </section>
-                <p class="card-description" aria-label="Short Project Description">
+                <p class="card-description">
                     {{ project.description }}
                 </p>
             </CardComponent>
