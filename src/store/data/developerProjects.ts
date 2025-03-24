@@ -163,4 +163,4 @@ const getDevelopmentProjectsData = () => {
     return { developerProjects };
 }
 
-export default developerProjects;
+export default getDevelopmentProjectsData;

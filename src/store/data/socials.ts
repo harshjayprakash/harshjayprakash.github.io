@@ -22,4 +22,4 @@ const getSocialsData = () => {
     return { socials };
 }
 
-export default socials;
+export default getSocialsData;
