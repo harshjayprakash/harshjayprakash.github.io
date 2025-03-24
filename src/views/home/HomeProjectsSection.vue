@@ -9,6 +9,7 @@ import TabComponent from '@/components/TabComponent.vue';
 import TabGroupComponent from '@/components/TabGroupComponent.vue';
 
 import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
+import getImageData from '@/store/data/imageText';
 
 import useProjectFilter from '@/composables/useProjectFilter';
 
@@ -31,6 +32,8 @@ const HomeProjectsSection = defineComponent({
         } = useProjectFilter();
         filterByAbbreviation(['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs']);
 
+        const { getImageAlt } = getImageData();
+
         const allProjectCount = filteredProjects.value.length;
         const projectCount = computed(() => filteredProjects.value.length);
 
@@ -44,7 +47,7 @@ const HomeProjectsSection = defineComponent({
 
         return {
             filteredProjects, typeFilter, updateFilter, isActiveOption,
-            allProjectCount, projectCount, colouredBadge
+            allProjectCount, projectCount, colouredBadge, getImageAlt
         };
     },
 });
@@ -120,7 +123,7 @@ export default HomeProjectsSection;
                 <img
                     class="card-preview"
                     v-bind:src="`/img/${project.abbreviation}-screenshot.PNG`"
-                    v-bind:alt="`${project.name}`"
+                    v-bind:alt="getImageAlt(`${project.abbreviation}-screenshot.PNG`).toString() ?? ''"
                 >
                 <section class="card-header">
                     <h3>
