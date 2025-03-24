@@ -34,7 +34,7 @@ export default HeaderComponent;
 </script>
 
 <template>
-    <header class="header">
+    <header class="header" aria-label="Site Header, Contains Navigation">
         <button
             v-if="isMobile"
             class="header__menu-button"
