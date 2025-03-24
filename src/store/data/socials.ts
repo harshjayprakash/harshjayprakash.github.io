@@ -18,4 +18,8 @@ const socials: ISocial[] = [
     }
 ];
 
+const getSocialsData = () => {
+    return { socials };
+}
+
 export default socials;
