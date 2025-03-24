@@ -33,7 +33,9 @@ export default MainComponent;
             <HeaderComponent />
         </template>
         <template v-slot:default>
-            <RouterView />
+            <main>
+                <RouterView />
+            </main>
         </template>
         <template v-slot:footer>
             <FooterComponent />

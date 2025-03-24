@@ -39,10 +39,10 @@ export default PersonaComponent;
             class="image"
             v-bind:src="props.imageUri"
             alt="persona photo"  />
-        <span aria-label="Status Indicator" class="indicator" ></span>
+        <div role="status" aria-label="Status Indicator" class="indicator" ></div>
         <section class="information">
-            <span aria-label="Person Name" class="name">{{ props.name }}</span>
-            <span aria-label="Status Text" aria-atomic="true" class="status">
+            <span class="name">{{ props.name }}</span>
+            <span class="status">
                 <slot>Unknown</slot>
             </span>
         </section>
@@ -65,7 +65,7 @@ export default PersonaComponent;
     position: relative;
     height: 0.75rem;
     width: 0.75rem;
-    background-color: lime;
+    background-color: oklch(0.765 0.177 163.223);
     border-radius: 50%;
     border: 0.1rem solid var(--clr-surface-primary);
     top: 0.9rem;
@@ -79,5 +79,6 @@ export default PersonaComponent;
 
 .persona .status {
     opacity: 0.7;
+    font-size: small;
 }
 </style>

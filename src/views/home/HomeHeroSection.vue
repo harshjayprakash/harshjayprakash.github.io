@@ -9,13 +9,11 @@ export default HomeHeroSection;
 </script>
 
 <template>
-    <section class="home-hero" role="region" aria-label="Hero Section">
+    <section class="home-hero" aria-label="Hero Section">
         <div class="glow" aria-hidden="true"></div>
         <h1 class="greeting">
-            Hi, I'm Harsh
-            <br />
-            &mdash; a programmer and artist
-            <br />
+            Hi, I'm Harsh<br/>
+            &mdash; a programmer and artist<br/>
             based in Southampton, UK.
         </h1>
         <span>&downarrow; scroll to explore</span>

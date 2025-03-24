@@ -5,7 +5,7 @@ import DividerComponent from '@/components/DividerComponent.vue';
 import LinkComponent from '@/components/LinkComponent.vue';
 import PersonaComponent from '@/components/PersonaComponent.vue';
 
-import socials from '@/store/data/socials';
+import getSocialData from '@/store/data/socials';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',
@@ -15,6 +15,7 @@ const HomeContactSection = defineComponent({
         PersonaComponent
     },
     setup() {
+        const { socials } = getSocialData();
         return { socials };
     }
 });
@@ -24,14 +25,11 @@ export default HomeContactSection;
 
 <template>
     <section class="home-contact" aria-label="Contact Section">
-        <section aria-label="Call to Action Text">
-            <h2 aria->
-                Looking to collaborate?
-                <br/>
+        <section class="title-status" aria-label="Call to Action Text">
+            <h2>
+                Looking to collaborate?<br />
                 or say hello? Get in touch.
             </h2>
-            <br/>
-            <br/>
             <PersonaComponent
                 name="Harsh Jayprakash"
                 status="Available for work"
@@ -41,14 +39,11 @@ export default HomeContactSection;
             >
                 Looking for work.
             </PersonaComponent>
-            <br/>
         </section>
-        <section class="social-list" role="list">
+        <div class="social-list">
             <article
                 class="social-row"
                 v-for="(social, idx) in socials" v-bind:key="idx"
-                role="listitem"
-                aria-label="Social Link with Decorative Divider"
             >
                 <LinkComponent
                     variant="external"
@@ -57,15 +52,15 @@ export default HomeContactSection;
                 </LinkComponent>
                 <DividerComponent />
             </article>
-            <article role="listitem" aria-label="Link To View CV">
+            <article>
                 <LinkComponent
                     variant="external"
-                    path="/assets/harsh_cv_25h1_1.PDF"
+                    path="/assets/harsh_cv.PDF"
                 >
-                    View CV
+                    View CV (PDF)
                 </LinkComponent>
             </article>
-        </section>
+        </div>
     </section>
 </template>
 
@@ -74,6 +69,12 @@ export default HomeContactSection;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.home-contact .title-status {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 @media (min-width: 768px) {

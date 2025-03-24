@@ -34,7 +34,7 @@ export default HeaderComponent;
 </script>
 
 <template>
-    <header class="header">
+    <header class="header" aria-label="Site Header, Contains Navigation">
         <button
             v-if="isMobile"
             class="header__menu-button"
@@ -43,8 +43,12 @@ export default HeaderComponent;
         >
             {{ menuButtonText }}
         </button>
-        <span aria-label="Name" class="title">Harsh.</span>
-        <BadgeComponent aria-label="Website Status" class="status" variant="outline">
+        <span class="title">Harsh.</span>
+        <BadgeComponent
+            aria-label="Website is Under Construction."
+            class="status"
+            variant="outline"
+        >
             Under Construction
         </BadgeComponent>
         <DividerComponent v-if="!isMobile" variant="vertical" />

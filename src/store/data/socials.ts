@@ -1,4 +1,4 @@
-import type { ISocial } from "@/store/interfaces/Social";
+import type { ISocial } from '@/store/interfaces/Social';
 
 const socials: ISocial[] = [
     {
@@ -18,4 +18,8 @@ const socials: ISocial[] = [
     }
 ];
 
-export default socials;
+const getSocialsData = () => {
+    return { socials };
+}
+
+export default getSocialsData;

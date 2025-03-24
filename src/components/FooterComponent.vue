@@ -4,11 +4,8 @@ import { defineComponent } from 'vue';
 import DividerComponent from '@/components/DividerComponent.vue';
 import LinkComponent from '@/components/LinkComponent.vue';
 
-interface IFooterLinks {
-    variant: 'internal' | 'external';
-    path: String;
-    name: String;
-};
+import getMetaData from '@/store/data/metaData';
+import getFooterLinks from '@/store/data/footerLinks';
 
 const FooterComponent = defineComponent({
     name: 'FooterComponent',
@@ -17,17 +14,9 @@ const FooterComponent = defineComponent({
         LinkComponent,
     },
     setup() {
-        const copyrightYear = 2025;
-        const versionNumber = '4.0-25H1D';
-        const buildDate = '20.03.2025';
-        const footerLinks: IFooterLinks[] = [
-            {
-                variant: 'external', name: 'Source',
-                path: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
-            }
-        ];
-
-        return { copyrightYear, versionNumber, buildDate, footerLinks };
+        const { copyrightYear, versionSemver, versionCalver, buildDate } = getMetaData();
+        const { footerLinks } = getFooterLinks();
+        return { copyrightYear, versionSemver, versionCalver, buildDate, footerLinks };
     }
 });
 
@@ -36,29 +25,30 @@ export default FooterComponent;
 
 <template>
     <footer class="footer">
-        <br />
-        <small>
-            Ver. {{ versionNumber }}, {{ buildDate }}.
-        </small>
-        <br />
-        <small>
-            Under Construction. This website is subject to change and may contains errors,
-            failures and/or defects.
-        </small>
-        <br />
-        <small>Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. </small>
-        <small>Handcrafted with Vue.</small>
+        <section class="version-copyright" aria-label="Version and Copyright">
+            <small>
+                Version {{ versionSemver }} --{{ versionCalver }}, {{ buildDate }}. Under
+                Construction. This website is subject to change and may contains errors,
+                failures and/or defects.
+            </small>
+            <small>
+                Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. Handcrafted with
+                Vue.
+            </small>
+        </section>
         <DividerComponent />
-        <small role="group" class="links">
-            <LinkComponent
-                v-for="(link, idx) in footerLinks"
-                v-bind:key="idx"
-                v-bind:variant="link.variant"
-                v-bind:path="link.path"
-            >
-                {{ link.name }}
-            </LinkComponent>
-        </small>
+        <ul class="links" aria-label="Additional Links">
+            <li class="link-item-wrapper">
+                <LinkComponent
+                    v-for="(link, idx) in footerLinks"
+                    v-bind:key="idx"
+                    v-bind:variant="link.variant"
+                    v-bind:path="link.path"
+                >
+                    {{ link.name }}
+                </LinkComponent>
+            </li>
+        </ul>
     </footer>
 </template>
 
@@ -71,5 +61,16 @@ export default FooterComponent;
     display: flex;
     margin-block-start: 0.5rem;
     gap: 1rem;
+    padding: 0;
+    font-size: small;
+}
+
+.footer .link-item-wrapper {
+    list-style: none;
+}
+
+.footer .version-copyright {
+    display: flex;
+    flex-direction: column;
 }
 </style>
