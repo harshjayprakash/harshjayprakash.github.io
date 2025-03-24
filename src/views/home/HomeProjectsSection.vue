@@ -4,6 +4,7 @@ import { computed, defineComponent } from 'vue';
 import BadgeComponent from '@/components/BadgeComponent.vue';
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
+import SpacerComponent from '@/components/SpacerComponent.vue';
 import TabComponent from '@/components/TabComponent.vue';
 import TabGroupComponent from '@/components/TabGroupComponent.vue';
 
@@ -18,7 +19,8 @@ const HomeProjectsSection = defineComponent({
         CardComponent,
         TabGroupComponent,
         TabComponent,
-        BadgeComponent
+        BadgeComponent,
+        SpacerComponent
     },
     setup() {
         const {
