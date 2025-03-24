@@ -68,6 +68,8 @@ npm run dev
 * The `/alpha` is not for public use (for development testing purposes).
 * The `/about` route is not ready.
 * Navigation Landmark is hidden until menu button is clicked.
+* Cannot use arrow key navigation project filter tabs.
+* Contrast ratio on dark mode badge component could be better.
 
 ## References
 
