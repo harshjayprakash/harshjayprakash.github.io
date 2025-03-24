@@ -47,7 +47,6 @@ export default DividerComponent;
             'v-divider' : props.variant === 'vertical',
             'h-divider' : props.variant === 'horizontal',
         }"
-        role="separator"
         v-bind:aria-orientation="convertVariantToAria()"
     />
 </template>
