@@ -57,7 +57,7 @@ export default HomeContactSection;
                     variant="external"
                     path="/assets/harsh_cv.PDF"
                 >
-                    View CV
+                    View CV (PDF)
                 </LinkComponent>
             </article>
         </div>
