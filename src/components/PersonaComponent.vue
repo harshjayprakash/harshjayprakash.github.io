@@ -79,5 +79,6 @@ export default PersonaComponent;
 
 .persona .status {
     opacity: 0.7;
+    font-size: small;
 }
 </style>
