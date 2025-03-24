@@ -33,12 +33,8 @@ const imageText: IImageData[] = [
 
 const getImageData = () => {
     const getImageAlt = (objectName: String) => {
-        imageText.forEach(text => {
-            if (text.objectName === objectName) {
-                return text.altText
-            }
-        });
-        return '';
+        const alt = imageText.find(text => text.objectName === objectName)
+        return alt ? alt.altText : '';
     }
 
     return { imageText, getImageAlt };
