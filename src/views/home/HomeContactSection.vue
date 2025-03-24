@@ -5,7 +5,7 @@ import DividerComponent from '@/components/DividerComponent.vue';
 import LinkComponent from '@/components/LinkComponent.vue';
 import PersonaComponent from '@/components/PersonaComponent.vue';
 
-import socials from '@/store/data/socials';
+import getSocialData from '@/store/data/socials';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',
@@ -15,6 +15,7 @@ const HomeContactSection = defineComponent({
         PersonaComponent
     },
     setup() {
+        const { socials } = getSocialData();
         return { socials };
     }
 });

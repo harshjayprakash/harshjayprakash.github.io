@@ -159,8 +159,8 @@ const developerProjects: IDeveloperProject[] = [
     },
 ];
 
-const getDevelopmentProjectsData = () => {
+const getDeveloperProjectsData = () => {
     return { developerProjects };
 }
 
-export default getDevelopmentProjectsData;
+export default getDeveloperProjectsData;
