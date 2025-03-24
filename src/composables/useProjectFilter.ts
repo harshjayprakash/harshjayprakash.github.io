@@ -1,7 +1,7 @@
-import { computed, ref } from "vue"
+import { computed, ref } from 'vue'
 
 import getDeveloperProjectsData from '@/store/data/developerProjects';
-import type { ProjectCategory } from "@/store/interfaces/DeveloperProject";
+import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
 
 const useProjectFilter = () => {
     const { developerProjects } = getDeveloperProjectsData();
