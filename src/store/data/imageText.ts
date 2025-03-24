@@ -7,7 +7,7 @@ const imageText: IImageData[] = [
     },
     {
         objectName: 'xbk-screenshot.PNG',
-        altText: 'An application showing a blocky drawing of an abstract bridge, with a single pink block in the corner.'
+        altText: 'An application showing a blocky drawing.'
     },
     {
         objectName: 'aap-screenshot.PNG',
@@ -15,7 +15,7 @@ const imageText: IImageData[] = [
     },
     {
         objectName: 'wpq-screenshot.PNG',
-        altText: 'A window showing a listview box of quote orders, a panel showing a preview of a quote, and a sidebar of action buttons.'
+        altText: 'A window showing a page titled \'current quotes for this order\'.'
     },
     {
         objectName: 'lls-screenshot.PNG',
@@ -23,7 +23,7 @@ const imageText: IImageData[] = [
     },
     {
         objectName: 'dwf-screenshot.PNG',
-        altText: 'A web browser window displaying a page titled \'Find Dog Walkers\' with a mile spinbox box search.'
+        altText: 'A web browser window displaying a page titled \'Find Dog Walkers\'.'
     },
     {
         objectName: 'ccs-screenshot.PNG',
