@@ -61,6 +61,7 @@ npm run dev
 
 * The `/alpha` is not for public use (for development testing purposes).
 * The `/about` route is not ready.
+* Navigation Landmark is hidden until menu button is clicked.
 
 ## References
 
