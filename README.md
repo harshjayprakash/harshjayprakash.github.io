@@ -14,6 +14,12 @@ use. More details:
 Roles)
 * User Experience: Intuitive interactions, responsive design.
 
+This project intentionally minimises the reliance on dependencies, allowing for better
+performance and long-term reliability.
+
+The Inter typeface is self-hosted using the fontsource variable package to avoid the using
+Google Fonts for privacy.
+
 ![Screenshot of Website](./docs/ppw-screenshot.PNG)
 
 ## Running Locally
