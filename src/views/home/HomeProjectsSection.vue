@@ -1,6 +1,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 
+import BadgeComponent from '@/components/BadgeComponent.vue';
 import CardComponent from '@/components/CardComponent.vue';
 import CardGroupComponent from '@/components/CardGroupComponent.vue';
 import TabComponent from '@/components/TabComponent.vue';
@@ -9,7 +10,6 @@ import TabGroupComponent from '@/components/TabGroupComponent.vue';
 import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
 
 import useProjectFilter from '@/composables/useProjectFilter';
-import BadgeComponent from '@/components/BadgeComponent.vue';
 
 const HomeProjectsSection = defineComponent({
     name: 'HomeProjectsSection',
