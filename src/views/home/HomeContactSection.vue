@@ -39,12 +39,10 @@ export default HomeContactSection;
                 Looking for work.
             </PersonaComponent>
         </section>
-        <section class="social-list" role="list">
+        <div class="social-list">
             <article
                 class="social-row"
                 v-for="(social, idx) in socials" v-bind:key="idx"
-                role="listitem"
-                aria-label="Social Link with Decorative Divider"
             >
                 <LinkComponent
                     variant="external"
@@ -53,7 +51,7 @@ export default HomeContactSection;
                 </LinkComponent>
                 <DividerComponent />
             </article>
-            <article role="listitem" aria-label="Link To View CV">
+            <article>
                 <LinkComponent
                     variant="external"
                     path="/assets/harsh_cv_25h1_1.PDF"
@@ -61,7 +59,7 @@ export default HomeContactSection;
                     View CV
                 </LinkComponent>
             </article>
-        </section>
+        </div>
     </section>
 </template>
 
@@ -70,6 +68,12 @@ export default HomeContactSection;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.home-contact .title-status {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
