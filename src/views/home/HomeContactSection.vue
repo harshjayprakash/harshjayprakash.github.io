@@ -24,14 +24,11 @@ export default HomeContactSection;
 
 <template>
     <section class="home-contact" aria-label="Contact Section">
-        <section aria-label="Call to Action Text">
+        <section class="title-status" aria-label="Call to Action Text">
             <h2>
-                Looking to collaborate?
-                <br/>
+                Looking to collaborate?<br />
                 or say hello? Get in touch.
             </h2>
-            <br/>
-            <br/>
             <PersonaComponent
                 name="Harsh Jayprakash"
                 status="Available for work"
@@ -41,7 +38,6 @@ export default HomeContactSection;
             >
                 Looking for work.
             </PersonaComponent>
-            <br/>
         </section>
         <section class="social-list" role="list">
             <article
