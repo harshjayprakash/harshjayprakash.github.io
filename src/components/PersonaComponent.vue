@@ -65,7 +65,7 @@ export default PersonaComponent;
     position: relative;
     height: 0.75rem;
     width: 0.75rem;
-    background-color: lime;
+    background-color: oklch(0.765 0.177 163.223);
     border-radius: 50%;
     border: 0.1rem solid var(--clr-surface-primary);
     top: 0.9rem;
