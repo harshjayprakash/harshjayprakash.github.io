@@ -36,14 +36,14 @@ npm run dev
 
 ## Changelog
 
-* Version 4.1 --25H1E "30/03/2025"
-  * Improved Accessibility: Fixed issues highlighted issues by ARC Toolkit.
-    * Line breaks are still used for visual purposes.
-    * Header "banner", Footer "contentinfo", Main "main" are containerised.
-  * Update Store Data Retrieval from Constant Arrays to Functions.
-  * Add Meta Tags for Better SEO.
+* Version 4.1 --25H1E "24/03/2025"
+  * Improved Accessibility: Fixed some issues highlighted issues by ARC Toolkit.
+    * Note: Line breaks are still used for visual purposes.
+    * Note: Header "banner", Footer "contentinfo", Main "main" are containerised.
+  * Updated Store Data Retrieval from Constant Arrays to Functions.
+  * Added Meta Tags for Better SEO.
   * Added Projects Shown Count Badge.
-  * Add Robots Text File.
+  * Added Robots Text File.
 * Version 4.0 --25H1D "20/03/2025"
   * Uses Custom Component System.
   * Implemented Project Filter System.
