@@ -62,6 +62,7 @@ npm run dev
 ## To-Do
 
 * Improve Accessibility: Add Skip Navigation Button.
+* Improve Accessibility: ARIA Labels based on Headings.
 * Add Unit Testing.
 * Add E2E Testing.
 * Add Project Specific Pages.
