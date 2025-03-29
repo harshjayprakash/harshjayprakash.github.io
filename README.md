@@ -36,6 +36,8 @@ npm run dev
 
 ## Changelog
 
+* Version 4.2 --25H1F "08/04/2025"
+  * Added Unit Testing for Verification.
 * Version 4.1 --25H1E "24/03/2025"
   * Improved Accessibility: Fixed some issues highlighted issues by ARC Toolkit.
     * Reduced Link Breaks _Note: Line breaks are still used for visual purposes._
@@ -63,7 +65,6 @@ npm run dev
 
 * Improve Accessibility: Add Skip Navigation Button.
 * Improve Accessibility: ARIA Labels based on Headings.
-* Add Unit Testing.
 * Add E2E Testing.
 * Add Project Specific Pages.
 * Extract Data to Store.
