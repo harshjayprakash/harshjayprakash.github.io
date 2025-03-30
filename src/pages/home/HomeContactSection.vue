@@ -1,11 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import DividerComponent from '@/components/DividerComponent.vue';
-import LinkComponent from '@/components/LinkComponent.vue';
-import PersonaComponent from '@/components/PersonaComponent.vue';
+import DividerComponent from '@/components/data/DividerComponent.vue';
+import LinkComponent from '@/components/navigation/LinkComponent.vue';
+import PersonaComponent from '@/components/data/PersonaComponent.vue';
 
-import getSocialData from '@/store/data/socials';
+import getSocialData from '@/store/socials';
 
 const HomeContactSection = defineComponent({
     name: 'HomeContactSection',

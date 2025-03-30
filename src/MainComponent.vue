@@ -2,9 +2,9 @@
 import { defineComponent, provide } from 'vue';
 import { RouterView } from 'vue-router';
 
-import FooterComponent from '@/components/FooterComponent.vue';
-import HeaderComponent from '@/components/HeaderComponent.vue';
-import SurfaceComponent from '@/components/SurfaceComponent.vue';
+import FooterComponent from '@/layout/FooterComponent.vue';
+import HeaderComponent from '@/layout/HeaderComponent.vue';
+import SurfaceComponent from '@/layout/SurfaceComponent.vue';
 
 import useMobileDetector from '@/composables/useMobileDetector';
 

@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 
 import '@fontsource-variable/inter';
-import '@/assets/style/main.css';
+import '@/assets/styles/main.css';
 
 import MainComponent from '@/MainComponent.vue';
 import router from '@/router';

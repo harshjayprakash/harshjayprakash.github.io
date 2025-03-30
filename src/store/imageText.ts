@@ -1,4 +1,4 @@
-import type { IImageData } from "@/store/interfaces/ImageData";
+import type { IImageData } from "@/interfaces/ImageData";
 
 const imageText: IImageData[] = [
     {

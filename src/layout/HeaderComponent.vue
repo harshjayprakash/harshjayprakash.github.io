@@ -1,10 +1,10 @@
 <script lang="ts">
 import { computed, defineComponent, inject, ref } from 'vue';
 
-import BadgeComponent from '@/components/BadgeComponent.vue';
-import DividerComponent from '@/components/DividerComponent.vue';
-import NavComponent from '@/components/NavComponent.vue';
-import SpacerComponent from '@/components/SpacerComponent.vue';
+import BadgeComponent from '@/components/data/BadgeComponent.vue';
+import DividerComponent from '@/components/data/DividerComponent.vue';
+import NavComponent from '@/layout/NavComponent.vue';
+import SpacerComponent from '@/components/layout/SpacerComponent.vue';
 
 const HeaderComponent = defineComponent({
     name: 'HeaderComponent',

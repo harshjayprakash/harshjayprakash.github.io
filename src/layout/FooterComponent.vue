@@ -1,11 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import DividerComponent from '@/components/DividerComponent.vue';
-import LinkComponent from '@/components/LinkComponent.vue';
+import DividerComponent from '@/components/data/DividerComponent.vue';
+import LinkComponent from '@/components/navigation/LinkComponent.vue';
 
-import getMetaData from '@/store/data/metaData';
-import getFooterLinks from '@/store/data/footerLinks';
+import getMetaData from '@/store/metaData';
+import getFooterLinks from '@/store/footerLinks';
 
 const FooterComponent = defineComponent({
     name: 'FooterComponent',

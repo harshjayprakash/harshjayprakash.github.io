@@ -1,8 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import AboutMeSection from '@/views/about/AboutMeSection.vue';
-import AboutQualificationsSection from '@/views/about/AboutQualificationsSection.vue';
+import AboutMeSection from '@/pages/about/AboutMeSection.vue';
+import AboutQualificationsSection from '@/pages/about/AboutQualificationsSection.vue';
 
 const AboutView = defineComponent({
     name: 'AboutView',

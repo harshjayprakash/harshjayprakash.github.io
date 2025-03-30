@@ -1,15 +1,15 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 
-import BadgeComponent from '@/components/BadgeComponent.vue';
-import CardComponent from '@/components/CardComponent.vue';
-import CardGroupComponent from '@/components/CardGroupComponent.vue';
-import SpacerComponent from '@/components/SpacerComponent.vue';
-import TabComponent from '@/components/TabComponent.vue';
-import TabGroupComponent from '@/components/TabGroupComponent.vue';
+import BadgeComponent from '@/components/data/BadgeComponent.vue';
+import CardComponent from '@/components/surface/CardComponent.vue';
+import CardGroupComponent from '@/components/surface/CardGroupComponent.vue';
+import SpacerComponent from '@/components/layout/SpacerComponent.vue';
+import TabComponent from '@/components/navigation/TabComponent.vue';
+import TabGroupComponent from '@/components/navigation/TabGroupComponent.vue';
 
-import type { ProjectCategory } from '@/store/interfaces/DeveloperProject';
-import getImageData from '@/store/data/imageText';
+import type { ProjectCategory } from '@/interfaces/DeveloperProject';
+import getImageData from '@/store/imageText';
 
 import useProjectFilter from '@/composables/useProjectFilter';
 
