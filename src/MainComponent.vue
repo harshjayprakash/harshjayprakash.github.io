@@ -15,15 +15,15 @@ provide('windowWidth', windowWidth);
 
 <template>
     <SurfaceComponent>
-        <template v-slot:header>
+        <template #header>
             <HeaderComponent />
         </template>
-        <template v-slot:default>
+        <template #default>
             <main>
                 <RouterView />
             </main>
         </template>
-        <template v-slot:footer>
+        <template #footer>
             <FooterComponent />
         </template>
     </SurfaceComponent>
