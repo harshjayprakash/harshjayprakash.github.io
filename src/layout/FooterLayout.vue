@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import DividerWidget from '@/components/utils/DividerWidget.vue';
-import LinkWidget from '@/components/navigation/LinkWidget.vue';
+import DividerWidget from '@/components/DividerWidget.vue';
+import LinkWidget from '@/components/LinkWidget.vue';
 import getFooterLinks from '@/store/footerLinks';
 import getMetaData from '@/store/metaData';
 
