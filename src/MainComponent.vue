@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router';
 
 import FooterComponent from '@/layout/FooterComponent.vue';
 import HeaderComponent from '@/layout/HeaderComponent.vue';
-import SurfaceComponent from '@/layout/SurfaceComponent.vue';
+import SurfaceLayout from '@/layout/SurfaceLayout.vue';
 
 import useMobileDetector from '@/composables/useMobileDetector';
 
@@ -14,7 +14,7 @@ provide('windowWidth', windowWidth);
 </script>
 
 <template>
-    <SurfaceComponent>
+    <SurfaceLayout>
         <template #header>
             <HeaderComponent />
         </template>
@@ -26,7 +26,7 @@ provide('windowWidth', windowWidth);
         <template #footer>
             <FooterComponent />
         </template>
-    </SurfaceComponent>
+    </SurfaceLayout>
 </template>
 
 <style lang="css" scoped>
