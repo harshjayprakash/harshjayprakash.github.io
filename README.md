@@ -39,6 +39,10 @@ npm run dev
 * Version 4.2 --25H1F "08/04/2025"
   * Added Unit Testing for Verification.
   * Mitigated Vite Vulnerability.
+  * Migrated Fully to Composition API with Setup Tag.
+  * Updated Internal Structure.
+  * Updated Styles - Locally Scoped Component Variables.
+  * Updated to Vue Shorthand HTML Attributes.
 * Version 4.1 --25H1E "24/03/2025"
   * Improved Accessibility: Fixed some issues highlighted issues by ARC Toolkit.
     * Reduced Link Breaks _Note: Line breaks are still used for visual purposes._
