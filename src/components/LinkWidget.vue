@@ -32,13 +32,14 @@ const safePath = computed(() => props.path ?? '#');
 
 <style lang="css" scoped>
 .link {
-    --widget-link-underline-hover: var(--clr-outline-primary);
+    --widget-link-underline-hover: var(--colour-underline-primary);
 
     text-decoration: none;
     color: inherit;
 }
 
 .link:hover {
-    text-decoration: solid underline 0.1rem var(--widget-link-underline-hover);
+    text-decoration:
+        solid underline var(--border-thickness) var(--widget-link-underline-hover);
 }
 </style>

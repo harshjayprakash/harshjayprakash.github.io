@@ -37,12 +37,12 @@ const safePath = computed(() => props.path ?? '#');
 
 <style lang="css" scoped>
 .card {
-    --widget-card-bk: var(--clr-surface-secondary);
-    --widget-card-bk-hover: var(--clr-surface-secondary-hover-light);
-    --widget-card-shadow: var(--clr-shadow);
+    --widget-card-bk: var(--colour-surface-secondary);
+    --widget-card-bk-hover: var(--colour-surface-hover);
+    --widget-card-shadow: var(--colour-shadow-primary);
 
     background-color: var(--widget-card-bk);
-    border-radius: var(--bdr-default);
+    border-radius: var(--border-radius-default);
     list-style-type: none;
 }
 

@@ -28,7 +28,7 @@ provide('tabControlStyle', safeVariant.value);
     width: fit-content;
     flex-wrap: wrap;
     gap: 1rem;
-    border-radius: var(--bdr-default);
+    border-radius: var(--border-radius-default);
 }
 
 @media screen and (min-width: 768px) {

@@ -32,7 +32,7 @@ const defineStyles = computed(() => {
 
 <style lang="css" scoped>
 .divider {
-    --widget-divider-border: var(--clr-outline-faded);
+    --widget-divider-border: var(--colour-border-faded);
 
     border: 0;
 }

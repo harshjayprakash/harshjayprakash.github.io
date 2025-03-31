@@ -26,7 +26,9 @@ const props = defineProps<{
 
 <style lang="css" scoped>
 .persona {
-    --widget-persona-bk: var(--clr-surface-primary);
+    --widget-persona-bk: var(--colour-surface-primary);
+    --widget-persona-indicator-bk: oklch(0.765 0.177 163.223);
+    --widget-persona-status-text: var(--colour-text-faded);
 
     display: flex;
     place-items: center;
@@ -42,7 +44,7 @@ const props = defineProps<{
     position: relative;
     height: 0.75rem;
     width: 0.75rem;
-    background-color: oklch(0.765 0.177 163.223);
+    background-color: var(--widget-persona-indicator-bk);
     border-radius: 50%;
     border: 0.1rem solid var(--widget-persona-bk);
     top: 0.9rem;
@@ -55,7 +57,7 @@ const props = defineProps<{
 }
 
 .persona .status {
-    opacity: 0.7;
+    color: var(--widget-persona-status-text);
     font-size: small;
 }
 </style>

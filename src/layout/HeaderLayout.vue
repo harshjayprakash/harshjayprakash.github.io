@@ -51,9 +51,9 @@ const toggleNavigationVisibility = () => {
 
 <style lang="css" scoped>
 .header {
-    --layout-header-bk: var(--clr-surface-secondary);
-    --layout-header-bk-hover: var(--clr-surface-secondary-hover);
-    --layout-header-shadow: var(--clr-shadow);
+    --layout-header-bk: var(--colour-surface-secondary);
+    --layout-header-bk-hover: var(--colour-surface-hover);
+    --layout-header-shadow: var(--colour-shadow-primary);
 
     background-color: var(--layout-header-bk);
     position: sticky;
@@ -65,7 +65,7 @@ const toggleNavigationVisibility = () => {
     box-shadow:
         0 0.25rem 0.375rem -0.0625rem var(--layout-header-shadow),
         0 0.125rem 0.25rem -0.125rem var(--layout-header-shadow);
-    border-radius: var(--bdr-default);
+    border-radius: var(--border-radius-default);
     z-index: 10;
 }
 

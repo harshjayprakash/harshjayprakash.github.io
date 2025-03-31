@@ -1,3 +1,23 @@
 @import './reset.css';
 @import './colours.css';
-@import './fabric.css';
+@import './borders.css';
+
+*, *::before, *::after {
+    transition: all 150ms ease-in-out;
+}
+
+::selection {
+    background-color: var(--colour-surface-inverted);
+    color: var(--colour-text-inverted);
+}
+
+body {
+    font-family: 'Inter Variable', sans-serif;
+    background-color: var(--colour-surface-primary);
+    color: var(--colour-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+

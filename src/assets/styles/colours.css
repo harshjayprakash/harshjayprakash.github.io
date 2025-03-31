@@ -26,4 +26,90 @@
     --clr-800A: oklch(0.437 0.078 188.216);
     --clr-900A: oklch(0.386 0.063 188.416);
     --clr-950A: oklch(0.277 0.046 192.524);
+
+    /*
+        The base colour palette based off the colours from Tailwind CSS v4.0.
+        These colour variables should not be used directly, but used to create
+        semantic colour variables.
+
+        These variables follow the convention:
+            --colour-<VARIANCE><TYPE-PREFIX>: ;
+
+        TYPE-PREFIX:
+            What the colour is used for, e.g.
+            P - primary surface and text.
+            H - highlights
+
+        VARIANCE:
+            Denotes the shade on the scale of
+            000 - Lightest
+            1000 - Darkest
+    */
+
+    /* Tailwind CSS Zinc v4.0 */
+    --colour-050P: oklch(0.985 0 0);
+    --colour-100P: oklch(0.967 0.001 286.375);
+    --colour-200P: oklch(0.92 0.004 286.32);
+    --colour-300P: oklch(0.871 0.006 286.286);
+    --colour-400P: oklch(0.705 0.015 286.067);
+    --colour-500P: oklch(0.552 0.016 285.938);
+    --colour-600P: oklch(0.442 0.017 285.786);
+    --colour-700P: oklch(0.37 0.013 285.805);
+    --colour-800P: oklch(0.274 0.006 286.033);
+    --colour-900P: oklch(0.21 0.006 285.885);
+    --colour-950P: oklch(0.141 0.005 285.823);
+
+    /* Tailwind CSS Teal v4.0 */
+    --colour-050H: oklch(0.984 0.014 180.72);
+    --colour-100H: oklch(0.953 0.051 180.801);
+    --colour-200H: oklch(0.91 0.096 180.426);
+    --colour-300H: oklch(0.855 0.138 181.071);
+    --colour-400H: oklch(0.777 0.152 181.912);
+    --colour-500H: oklch(0.704 0.14 182.503);
+    --colour-600H: oklch(0.6 0.118 184.704);
+    --colour-700H: oklch(0.511 0.096 186.391);
+    --colour-800H: oklch(0.437 0.078 188.216);
+    --colour-900H: oklch(0.386 0.063 188.416);
+    --colour-950H: oklch(0.277 0.046 192.524);
+
+
+    /*
+        Semantic Colours, the light-dark adaptable colours to be used with
+        components indirectly through additional variables.
+
+        These variables follow the convention:
+            --colour-<CONTEXT>-<TYPE-VARIANCE>: ;
+
+        CONTEXT:
+            How this colour will be used (surface, text, ...).
+
+        TYPE-VARIANCE:
+            What variant of the colour is used, e.g.
+            primary - default.
+            secondary - additional variant.
+            ...
+    */
+
+    --colour-surface-primary: light-dark(var(--colour-100P), var(--colour-900P));
+    --colour-surface-secondary: light-dark(var(--colour-050P), var(--colour-950P));
+    --colour-surface-hover: light-dark(var(--colour-200P), var(--colour-800P));
+    --colour-surface-inverted: light-dark(var(--colour-900P), var(--colour-100P));
+    --colour-surface-highlight: light-dark(var(--colour-800H), var(--colour-400H));
+    --colour-surface-highlight-subtle: light-dark(var(--colour-100H), var(--colour-900H));
+
+    --colour-text-primary: light-dark(var(--colour-950P), var(--colour-050P));
+    --colour-text-inverted: light-dark(var(--colour-050P), var(--colour-950P));
+    --colour-text-faded: light-dark(var(--colour-600P), var(--colour-300P));
+
+    --colour-border-primary: light-dark(var(--colour-950P), var(--colour-050P));
+    --colour-border-faded: light-dark(var(--colour-300P), var(--colour-700P));
+    --colour-border-hover: light-dark(var(--colour-200P), var(--colour-800P));
+    --colour-border-hidden-secondary: light-dark(var(--colour-050P), var(--colour-950P));
+    --colour-border-highlight: light-dark(var(--colour-800H), var(--colour-400H));
+
+    --colour-underline-primary: light-dark(var(--colour-950P), var(--colour-050P));
+
+    --colour-outline-primary: light-dark(var(--colour-950P), var(--colour-050P));
+
+    --colour-shadow-primary: light-dark(rgb(0 0 0 / 0.1), rgb(255 255 255 / 0.1));
 }

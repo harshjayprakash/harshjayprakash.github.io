@@ -27,46 +27,53 @@ const tabControlStyle = inject('tabControlStyle');
 
 <style lang="css" scoped>
 .tab {
-    --widget-tab-bk: var(--clr-surface-primary);
-    --widget-tab-bk-hover: var(--clr-surface-secondary-hover);
-    --widget-tab-bk-active: var(--clr-surface-tertiary);
-    --widget-tab-text-active: var(--clr-text-inverted);
-
     border: 0;
+    background-color: var(--widget-tab-bk);
+    color: var(--widget-tab-text);
+}
+
+.tab--underline {
+    --widget-tab-bk: inherit;
+    --widget-tab-text: inherit;
+    --widget-tab-border-default: transparent;
+    --widget-tab-border-hover: var(--colour-border-hover);
+    --widget-tab-border-active: var(--colour-border-highlight);
+    --widget-tab-border: var(--widget-tab-border-default);
+
+    border-block-end: var(--border-thickness-state) solid var(--widget-tab-border);
+}
+
+.tab--underline:hover {
+    --widget-tab-border: var(--widget-tab-border-hover);
+}
+
+.tab--underline--active,
+.tab--filled--active {
+    font-weight: 500;
+}
+
+.tab--underline--active {
+    --widget-tab-border: var(--widget-tab-border-active);
 }
 
 .tab--filled {
-    border-radius: var(--bdr-default);
-    background-color: var(--widget-tab-bk);
+    --widget-tab-bk-default: var(--colour-surface-secondary);
+    --widget-tab-bk-hover: var(--colour-surface-hover);
+    --widget-tab-bk-active: var(--colour-surface-highlight);
+    --widget-tab-bk: var(--widget-tab-bk-default);
+    --widget-tab-text-default: var(--colour-text-primary);
+    --widget-tab-text-active: var(--colour-text-inverted);
+    --widget-tab-text: var(--widget-tab-text-default);
+
     padding-inline: 0.5rem;
 }
 
 .tab--filled:hover {
-    background-color: var(--widget-tab-bk-hover);
-    color: inherit;
+    --widget-tab-bk: var(--widget-tab-bk-hover);
 }
 
 .tab--filled--active {
-    background-color: var(--widget-tab-bk-active);
-    color: var(--widget-tab-text-active);
-}
-
-.tab--underline {
-    background-color: inherit;
-    border-block-end: 0.2rem solid var(--widget-tab-bk);
-    margin-inline: 0.25rem;
-}
-
-.tab--underline:hover {
-    border-block-end-color: var(--widget-tab-bk-hover);
-}
-
-.tab--underline--active {
-    border-block-end-color: var(--widget-tab-bk-active);
-}
-
-.tab--filled--active,
-.tab--underline--active {
-    font-weight: 500;
+    --widget-tab-bk: var(--widget-tab-bk-active);
+    --widget-tab-text: var(--widget-tab-text-active);
 }
 </style>

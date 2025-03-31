@@ -50,12 +50,12 @@ const isActivePage = (path: string) => {
 
 <style lang="css" scoped>
 .nav {
-    --layout-nav-border-hidden: var(--clr-outline-secondary-hidden);
-    --layout-nav-border-hover: var(--clr-outline-hover);
-    --layout-nav-border-active: var(--clr-outline-active);
-    --layout-nav-border: var(--clr-outline-secondary-hidden);
-    --layout-nav-bk: var(--clr-surface-secondary);
-    --layout-nav-shadow: var(--clr-shadow);
+    --layout-nav-border-hidden: var(--colour-border-hidden-secondary);
+    --layout-nav-border-hover: var(--colour-border-hover);
+    --layout-nav-border-active: var(--colour-border-highlight);
+    --layout-nav-border: var(--colour-border-hidden-secondary);
+    --layout-nav-bk: var(--colour-surface-secondary);
+    --layout-nav-shadow: var(--colour-shadow-primary);
 
     display: flex;
     background-color: var(--layout-nav-bk);
@@ -80,7 +80,7 @@ const isActivePage = (path: string) => {
 }
 
 .nav--desktop .nav-link {
-    border-block-end: 0.2rem solid var(--layout-nav-border);
+    border-block-end: var(--border-thickness-state) solid var(--layout-nav-border);
 }
 
 .nav--mobile {
@@ -89,7 +89,7 @@ const isActivePage = (path: string) => {
     box-shadow:
         0 0.25rem 0.375rem -0.0625rem var(--layout-nav-shadow),
         0 0.125rem 0.25rem -0.125rem var(--layout-nav-shadow);
-    border-radius: var(--bdr-default);
+    border-radius: var(--border-radius-default);
     z-index: 10;
     margin-block-end: 1.5rem;
     position: sticky;
@@ -98,7 +98,7 @@ const isActivePage = (path: string) => {
 
 .nav--mobile .nav-link {
     padding-inline: 1rem;
-    border-inline-start: 0.2rem solid var(--layout-nav-border);
+    border-inline-start: var(--border-thickness-state) solid var(--layout-nav-border);
 }
 
 </style>

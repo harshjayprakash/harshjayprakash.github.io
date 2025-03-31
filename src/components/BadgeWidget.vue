@@ -30,22 +30,23 @@ const safeVariant = computed(() => props.variant ?? 'filled');
 
     background-color: var(--widget-badge-bk);
     color: var(--widget-badge-text);
-    border-radius: var(--bdr-default);
-    border: 0.1rem solid var(--widget-badge-border);
+    border-radius: var(--border-radius-default);
+    border: var(--border-thickness) solid var(--widget-badge-border);
     padding-inline: 0.3rem;
     font-size: small;
+    width: fit-content;
 }
 
 .badge--outline {
     --widget-badge-bk: inherit;
     --widget-badge-text: inherit;
-    --widget-badge-border: var(--clr-text-primary);
+    --widget-badge-border: var(--colour-border-primary);
 }
 
 .badge--filled {
-    --widget-badge-bk: var(--clr-surface-tertiary);
-    --widget-badge-text: var(--clr-text-inverted);
-    --widget-badge-border: var(--clr-surface-tertiary);
+    --widget-badge-bk: var(--colour-surface-highlight);
+    --widget-badge-text: var(--colour-text-inverted);
+    --widget-badge-border: var(--colour-border-highlight);
 }
 
 .badge--ghost {
@@ -55,8 +56,8 @@ const safeVariant = computed(() => props.variant ?? 'filled');
 }
 
 .badge--tint {
-    --widget-badge-bk: var(--clr-surface-glow);
+    --widget-badge-bk: var(--colour-surface-highlight-subtle);
     --widget-badge-text: inherit;
-    --widget-badge-border: var(--clr-outline-active);
+    --widget-badge-border: var(--colour-border-highlight);
 }
 </style>
