@@ -1,40 +1,28 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-import CardComponent from '@/components/surface/CardComponent.vue';
-import CardGroupComponent from '@/components/surface/CardGroupComponent.vue';
-
-const AboutQualificationsSection = defineComponent({
-    name: 'AboutQualificationsSection',
-    components: {
-        CardComponent,
-        CardGroupComponent,
-    }
-});
-
-export default AboutQualificationsSection;
+<script setup lang="ts">
+import CardGroupWidget from '@/components/CardGroupWidget.vue';
+import CardWidget from '@/components/CardWidget.vue';
 </script>
 
 <template>
     <section class="about-quals">
         <h2>Qualifications.</h2>
-        <CardGroupComponent v-bind:desktopCols="3">
-            <CardComponent>
+        <CardGroupWidget :desktop-cols="3">
+            <CardWidget>
                 <span>Bachelor's Degree</span>
                 <span>Computer Science</span>
-            </CardComponent>
-            <CardComponent>
+            </CardWidget>
+            <CardWidget>
                 <span>A-Levels</span>
                 <span>Computer Science, Maths and Fine Art</span>
-            </CardComponent>
-            <CardComponent>
+            </CardWidget>
+            <CardWidget>
                 <span>GCSEs</span>
                 <span>
                     English, Maths, Science, Geography, Spanish, Fine Art and Computer
                     Science
                 </span>
-            </CardComponent>
-        </CardGroupComponent>
+            </CardWidget>
+        </CardGroupWidget>
     </section>
 </template>
 
