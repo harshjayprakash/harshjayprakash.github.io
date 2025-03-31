@@ -1,35 +1,10 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-const PersonaComponent = defineComponent({
-    name: 'PersonaComponent',
-    props: {
-        name: {
-            type: String,
-            required: true,
-        },
-        status: {
-            type: String,
-            required: true,
-        },
-        imageUri: {
-            type: String,
-            required: true,
-        },
-        indicator: {
-            type: String,
-            required: true,
-            validator: (value: String) => {
-                return ['available', 'away', 'busy'].indexOf(value.toString()) !== -1
-            }
-        }
-    },
-    setup(props) {
-        return { props };
-    }
-});
-
-export default PersonaComponent;
+<script setup lang="ts">
+const props = defineProps<{
+    name: string,
+    status: string,
+    imageUri: string,
+    indicator: 'available' | 'not-available'
+}>();
 </script>
 
 <template>
@@ -51,6 +26,8 @@ export default PersonaComponent;
 
 <style lang="css" scoped>
 .persona {
+    --widget-persona-bk: var(--clr-surface-primary);
+
     display: flex;
     place-items: center;
 }
@@ -67,7 +44,7 @@ export default PersonaComponent;
     width: 0.75rem;
     background-color: oklch(0.765 0.177 163.223);
     border-radius: 50%;
-    border: 0.1rem solid var(--clr-surface-primary);
+    border: 0.1rem solid var(--widget-persona-bk);
     top: 0.9rem;
     right: 0.6rem;
 }
