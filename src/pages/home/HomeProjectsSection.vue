@@ -58,7 +58,7 @@ const isActiveOption = (category: ProjectCategory) => {
             </template>
         </BadgeWidget>
         <TabGroupWidget
-            :variant="'underline'"
+            variant="underline"
             aria-label="Tabs To Filter Project By Type"
         >
             <span>Filter: </span>
