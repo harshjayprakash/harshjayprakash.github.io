@@ -1,11 +1,4 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-const AboutMeSection = defineComponent({
-    name: 'AboutMeSection',
-})
-
-export default AboutMeSection;
+<script setup lang="ts">
 </script>
 
 <template>
