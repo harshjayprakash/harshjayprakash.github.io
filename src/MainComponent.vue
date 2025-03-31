@@ -2,9 +2,9 @@
 import { provide } from 'vue';
 import { RouterView } from 'vue-router';
 
-import FooterComponent from '@/layout/FooterComponent.vue';
-import HeaderComponent from '@/layout/HeaderComponent.vue';
+import FooterLayout from '@/layout/FooterLayout.vue';
 import SurfaceLayout from '@/layout/SurfaceLayout.vue';
+import HeaderLayout from '@/layout/HeaderLayout.vue';
 
 import useMobileDetector from '@/composables/useMobileDetector';
 
@@ -16,7 +16,7 @@ provide('windowWidth', windowWidth);
 <template>
     <SurfaceLayout>
         <template #header>
-            <HeaderComponent />
+            <HeaderLayout />
         </template>
         <template #default>
             <main>
@@ -24,7 +24,7 @@ provide('windowWidth', windowWidth);
             </main>
         </template>
         <template #footer>
-            <FooterComponent />
+            <FooterLayout />
         </template>
     </SurfaceLayout>
 </template>
