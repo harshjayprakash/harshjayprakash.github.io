@@ -1,11 +1,4 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-const HomeHeroSection = defineComponent({
-    name: 'HomeHeroSection',
-});
-
-export default HomeHeroSection;
+<script setup lang="ts">
 </script>
 
 <template>

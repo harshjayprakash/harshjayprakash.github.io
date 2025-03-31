@@ -1,15 +1,6 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-import CardComponent from '@/components/surface/CardComponent.vue';
-import CardGroupComponent from '@/components/surface/CardGroupComponent.vue';
-
-const HomeServicesSection = defineComponent({
-    name: 'HomeServicesSection',
-    components: { CardGroupComponent, CardComponent },
-});
-
-export default HomeServicesSection;
+<script setup lang="ts">
+import CardWidget from '@/components/CardWidget.vue';
+import CardGroupWidget from '@/components/CardGroupWidget.vue';
 </script>
 
 <template>
@@ -20,8 +11,8 @@ export default HomeServicesSection;
             and understanding user experience to design simplistic interfaces. The cards
             below show the technologies I have used within the past to build projects.
         </p>
-        <CardGroupComponent v-bind:desktopCols="3" class="services" aria-label="Categeory Skills List">
-            <CardComponent aria-label="Front-End Web Development">
+        <CardGroupWidget class="services" aria-label="Categeory Skills List" :desktop-cols="3">
+            <CardWidget aria-label="Front-End Web Development">
                 <h3>Front-End Web Development</h3>
                 <p>
                     Crafting responsive websites using modern front-end
@@ -36,8 +27,8 @@ export default HomeServicesSection;
                     <span>CSS</span> &SmallCircle;
                     <span>TypeScript</span>
                 </small>
-            </CardComponent>
-            <CardComponent aria-label="Traditional Application Development">
+            </CardWidget>
+            <CardWidget aria-label="Traditional Application Development">
                 <h3>Traditional Application Development</h3>
                 <p>
                     Building robust, scalable applications tailored to the given
@@ -50,8 +41,8 @@ export default HomeServicesSection;
                     <span>Visual Basic .NET</span> &SmallCircle;
                     <span>Pascal</span>
                 </small>
-            </CardComponent>
-            <CardComponent aria-label="User Interface / User Experience">
+            </CardWidget>
+            <CardWidget aria-label="User Interface / User Experience">
                 <h3>UI/UX</h3>
                 <p>
                     Designing interfaces that balance aesthetics with functionality
@@ -61,8 +52,8 @@ export default HomeServicesSection;
                     <span>Pen+Paper</span> &SmallCircle;
                     <span>MS Paint</span>
                 </small>
-            </CardComponent>
-            <CardComponent class="svc-tools">
+            </CardWidget>
+            <CardWidget>
                 <h3>Tools</h3>
                 <p>
                     The tools used within the workflow of creating and maintaining software.
@@ -75,8 +66,8 @@ export default HomeServicesSection;
                     <span>JetBrains IntelliJ</span> &SmallCircle;
                     <span>Git</span>
                 </small>
-            </CardComponent>
-        </CardGroupComponent>
+            </CardWidget>
+        </CardGroupWidget>
     </section>
 </template>
 
@@ -88,7 +79,7 @@ export default HomeServicesSection;
 }
 
 @media screen and (min-width: 768px) {
-    .svc-tools {
+    .services > :nth-child(4) {
         grid-column: 1 / 4;
     }
 }

@@ -1,26 +1,11 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import DividerWidget from '@/components/DividerWidget.vue';
+import LinkWidget from '@/components/LinkWidget.vue';
+import PersonaWidget from '@/components/PersonaWidget.vue';
 
-import DividerComponent from '@/components/data/DividerComponent.vue';
-import LinkComponent from '@/components/navigation/LinkComponent.vue';
-import PersonaComponent from '@/components/data/PersonaComponent.vue';
+import getSocialsData from '@/store/socials';
 
-import getSocialData from '@/store/socials';
-
-const HomeContactSection = defineComponent({
-    name: 'HomeContactSection',
-    components: {
-        DividerComponent,
-        LinkComponent,
-        PersonaComponent
-    },
-    setup() {
-        const { socials } = getSocialData();
-        return { socials };
-    }
-});
-
-export default HomeContactSection;
+const { socials } = getSocialsData();
 </script>
 
 <template>
@@ -30,7 +15,7 @@ export default HomeContactSection;
                 Looking to collaborate?<br />
                 or say hello? Get in touch.
             </h2>
-            <PersonaComponent
+            <PersonaWidget
                 name="Harsh Jayprakash"
                 status="Available for work"
                 imageUri="https://avatars.githubusercontent.com/u/58461297?v=4"
@@ -38,27 +23,27 @@ export default HomeContactSection;
                 aria-label="Harsh's Current Status"
             >
                 Looking for work.
-            </PersonaComponent>
+            </PersonaWidget>
         </section>
         <div class="social-list">
             <article
                 class="social-row"
                 v-for="(social, idx) in socials" v-bind:key="idx"
             >
-                <LinkComponent
+                <LinkWidget
                     variant="external"
                     v-bind:path="social.uri.toString()">
                         {{ social.name }}
-                </LinkComponent>
-                <DividerComponent />
+                </LinkWidget>
+                <DividerWidget />
             </article>
             <article>
-                <LinkComponent
+                <LinkWidget
                     variant="external"
                     path="/assets/harsh_cv.PDF"
                 >
                     View CV (PDF)
-                </LinkComponent>
+                </LinkWidget>
             </article>
         </div>
     </section>
