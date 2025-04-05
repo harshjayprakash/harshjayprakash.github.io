@@ -69,7 +69,7 @@
     --colour-surface-hover: light-dark(var(--colour-200P), var(--colour-800P));
     --colour-surface-inverted: light-dark(var(--colour-900P), var(--colour-100P));
     --colour-surface-highlight: light-dark(var(--colour-800H), var(--colour-400H));
-    --colour-surface-highlight-subtle: light-dark(var(--colour-100H), var(--colour-900H));
+    --colour-surface-highlight-subtle: light-dark(var(--colour-100H), var(--colour-950H));
     --colour-surface-highlight-invisible: light-dark(var(--colour-050H), var(--colour-950H));
 
     --colour-text-primary: light-dark(var(--colour-950P), var(--colour-050P));
