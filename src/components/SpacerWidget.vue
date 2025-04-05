@@ -25,9 +25,11 @@ const style = computed(() => {
 </template>
 
 <style lang="css" scoped>
-.spacer {
-    --widget-spacer-vspace: 1rem;
+.spacer--horizontal {
+    padding-inline: var(--widget-spacer-padding);
+}
 
-    padding-block: var(--widget-spacer-vspace);
+.spacer--vertical {
+    padding-block: var(--widget-spacer-padding);
 }
 </style>
