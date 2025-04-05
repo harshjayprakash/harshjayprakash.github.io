@@ -2,24 +2,34 @@
 import { computed } from 'vue';
 
 const props = defineProps<{
-    variant?: 'horizontal' | 'vertical',
-    vheight?: string,
-    thickness?: string
-    spacing?: string
+    variant: 'horizontal' | 'vertical',
+    vheight?: number,
+    thickness?: number,
+    margin?: number,
 }>();
 
-const safeVariant = computed(() => props.variant ?? 'horizontal');
-const safeVerticalHeight = computed(() => props.vheight ?? 'auto');
-const safeThickness = computed(() => props.thickness ?? '0.1rem');
-const safeSpacing = computed(() => props.spacing ?? '1rem');
-
-const defineStyles = computed(() => {
+const klass = computed(() => {
     return {
-        '--widget-divider-computed-thickness': safeThickness.value,
-        '--widget-divider-computed-vheight': safeVerticalHeight.value,
-        '--widget-divider-computed-spacing': safeSpacing.value
+        'divider--horizontal': props.variant === 'horizontal',
+        'divider--vertical': props.variant === 'vertical'
     }
 });
+
+const safeVHeight = computed(() => props.vheight ?? 'auto');
+const safeThickness = computed(() => props.thickness ?? 0.1);
+const safeMargin = computed(() => props.margin ?? 1);
+
+const style = computed(() => {
+    return {
+        '--widget-divider-computed-vheight':
+            (safeVHeight.value === 'auto') ? 'auto' : `${safeVHeight.value}rem`,
+        '--widget-divider-computed-thickness': `${safeThickness.value}rem`,
+        '--widget-divider-computed-margin-inline':
+            (props.variant === 'vertical') ? `${safeMargin.value}rem` : '0',
+        '--widget-divider-computed-margin-block':
+            (props.variant === 'horizontal') ? `${safeMargin.value}rem` : '0',
+    }
+})
 </script>
 
 <template>
