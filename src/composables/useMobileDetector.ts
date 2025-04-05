@@ -4,16 +4,16 @@ const useMobileDetector = () => {
     const windowWidth = ref(window.innerWidth);
     const isMobile = computed(() => windowWidth.value < 768);
 
-    const _updateDeviceWidth = () => {
+    const updateDeviceWidth = () => {
         windowWidth.value = window.innerWidth;
     };
 
     onMounted(() => {
-        window.addEventListener('resize', _updateDeviceWidth);
+        window.addEventListener('resize', updateDeviceWidth);
     });
 
     onUnmounted(() => {
-        window.removeEventListener('resize', _updateDeviceWidth);
+        window.removeEventListener('resize', updateDeviceWidth);
     });
 
     return { isMobile, windowWidth };

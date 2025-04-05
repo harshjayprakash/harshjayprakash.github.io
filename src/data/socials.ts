@@ -1,6 +1,6 @@
-import type { ISocial } from '@/interfaces/Social';
+import type { Social } from "@/types/Social";
 
-const socials: ISocial[] = [
+const socials: Social[] = [
     {
         name: 'LinkedIn',
         tag: 'harshjayprakash7',
@@ -13,13 +13,13 @@ const socials: ISocial[] = [
     },
     {
         name: 'Email',
-        tag: 'harshjayprakash [at] outlook (dot) com',
+        tag: 'harshjayprakash@outlook.com',
         uri: 'mailto:harshjayprakash@outlook.com'
     }
 ];
 
-const getSocialsData = () => {
+const getSocials = () => {
     return { socials };
 }
 
-export default getSocialsData;
+export default getSocials;

@@ -1,6 +1,6 @@
-import type { IDeveloperProject } from '@/interfaces/DeveloperProject';
+import type { DeveloperProject } from "@/types/DeveloperProject";
 
-const developerProjects: IDeveloperProject[] = [
+const developerProjects: DeveloperProject[] = [
     {
         name: 'Adventure Game',
         description: 'A text-based adventure game exploring the environment.',
@@ -156,11 +156,11 @@ const developerProjects: IDeveloperProject[] = [
         abbreviation: 'wpq',
         slug: 'wrapping-paper-quotes-calculator',
         gitUri: 'https://github.com/harshjayprakash/wrapping-paper-quotes-calculator',
-    },
+    }
 ];
 
-const getDeveloperProjectsData = () => {
+const getDeveloperProjects = () => {
     return { developerProjects };
 }
 
-export default getDeveloperProjectsData;
+export default getDeveloperProjects;

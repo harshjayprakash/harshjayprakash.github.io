@@ -1,6 +1,6 @@
-import type { ILink } from '@/interfaces/Link';
+import type { Link } from "@/types/Link";
 
-const footerLinks: ILink[] = [
+const footerLinks: Link[] = [
     {
         variant: 'external',
         name: 'Source',
