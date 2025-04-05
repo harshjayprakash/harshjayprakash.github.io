@@ -5,8 +5,9 @@ const props = defineProps<{
     isSelected: boolean
 }>();
 
-const safeIsActive = computed(() => props.isActive ?? false);
-const tabControlStyle = inject('tabControlStyle');
+const injectedVariant = inject<'underline' | 'filled'>('tabVariant');
+const injectedOrientation = inject<'horizontal' | 'vertical'>('tabOrientation');
+
 </script>
 
 <template>
