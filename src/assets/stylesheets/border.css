@@ -1,5 +1,5 @@
 :root {
     --border-radius-default: 0.1rem;
-    --border-thickness: 0.1rem;
+    --border-thickness-default: 0.1rem;
     --border-thickness-state: 0.2rem;
 }

@@ -1,0 +1,19 @@
+@import './reset.css';
+@import './theme.css';
+@import './border/css';
+
+body {
+    font-family: 'Inter Variable', sans-serif;
+    font-variation-settings: 'opsz';
+    background-color: var(--colour-surface-primary);
+    color: var(--colour-text-primary);
+}
+
+::selection {
+    background-color: var(--colour-surface-inverted);
+    color: var(--colour-text-inverted);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}

@@ -70,16 +70,19 @@
     --colour-surface-inverted: light-dark(var(--colour-900P), var(--colour-100P));
     --colour-surface-highlight: light-dark(var(--colour-800H), var(--colour-400H));
     --colour-surface-highlight-subtle: light-dark(var(--colour-100H), var(--colour-900H));
+    --colour-surface-highlight-invisible: light-dark(var(--colour-050H), var(--colour-950H));
 
     --colour-text-primary: light-dark(var(--colour-950P), var(--colour-050P));
     --colour-text-inverted: light-dark(var(--colour-050P), var(--colour-950P));
     --colour-text-faded: light-dark(var(--colour-600P), var(--colour-300P));
+    --colour-text-highlight: light-dark(var(--colour-900H), var(--colour-400H));
 
     --colour-border-primary: light-dark(var(--colour-950P), var(--colour-050P));
     --colour-border-faded: light-dark(var(--colour-300P), var(--colour-700P));
     --colour-border-hover: light-dark(var(--colour-200P), var(--colour-800P));
     --colour-border-hidden-secondary: light-dark(var(--colour-050P), var(--colour-950P));
     --colour-border-highlight: light-dark(var(--colour-800H), var(--colour-400H));
+    --colour-border-highlight-subtle: light-dark(var(--colour-500H), var(--colour-500H));
 
     --colour-underline-primary: light-dark(var(--colour-950P), var(--colour-050P));
 
