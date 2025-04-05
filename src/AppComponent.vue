@@ -2,21 +2,19 @@
 import { provide } from 'vue';
 import { RouterView } from 'vue-router';
 
-import FooterLayout from '@/layout/FooterLayout.vue';
-import SurfaceLayout from '@/layout/SurfaceLayout.vue';
-import HeaderLayout from '@/layout/HeaderLayout.vue';
-
+import SurfaceLayout from '@/layouts/SurfaceLayout.vue';
+import HeaderWidget from '@/components/HeaderWidget.vue';
+import FooterWidget from '@/components/FooterWidget.vue';
 import useMobileDetector from '@/composables/useMobileDetector';
 
-const { isMobile, windowWidth } = useMobileDetector();
+const { isMobile } = useMobileDetector();
 provide('isMobile', isMobile);
-provide('windowWidth', windowWidth);
 </script>
 
 <template>
     <SurfaceLayout>
         <template #header>
-            <HeaderLayout />
+            <HeaderWidget />
         </template>
         <template #default>
             <main>
@@ -24,10 +22,7 @@ provide('windowWidth', windowWidth);
             </main>
         </template>
         <template #footer>
-            <FooterLayout />
+            <FooterWidget />
         </template>
     </SurfaceLayout>
 </template>
-
-<style lang="css" scoped>
-</style>
