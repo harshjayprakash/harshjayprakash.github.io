@@ -4,7 +4,6 @@ import '@fontsource-variable/inter';
 import '@/assets/stylesheets/main.css';
 
 import AppComponent from '@/AppComponent.vue';
-
 import router from '@/router';
 
 const app = createApp(AppComponent);
