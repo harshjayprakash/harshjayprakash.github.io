@@ -3,9 +3,9 @@
 
 <template>
     <div class="surface">
-        <slot name="header">No header provided.</slot>
-        <slot>No content provided.</slot>
-        <slot name="footer">No footer provided.</slot>
+        <slot name="header"></slot>
+        <slot></slot>
+        <slot name="footer"></slot>
     </div>
 </template>
 
