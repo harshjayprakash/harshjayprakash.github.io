@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 
 const props = defineProps<{
-    variant?: 'filled' | 'ghost' | 'outline' | 'tint'
+    variant: 'outline' | 'filled' | 'ghost' | 'tint',
 }>();
 
 const safeVariant = computed(() => props.variant ?? 'filled');
