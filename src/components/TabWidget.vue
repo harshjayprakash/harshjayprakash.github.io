@@ -2,7 +2,7 @@
 import { computed, inject } from 'vue';
 
 const props = defineProps<{
-    isActive?: boolean
+    isSelected: boolean
 }>();
 
 const safeIsActive = computed(() => props.isActive ?? false);
