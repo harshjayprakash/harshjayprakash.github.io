@@ -19,7 +19,7 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <div class="badge" :class="klass">
+    <div role="status" class="badge" :class="klass">
         <slot></slot>
     </div>
 </template>
