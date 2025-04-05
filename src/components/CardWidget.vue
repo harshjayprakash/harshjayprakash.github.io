@@ -50,34 +50,50 @@ const klass = computed(() => {
 
 <style lang="css" scoped>
 .card {
-    --widget-card-bk: var(--colour-surface-secondary);
-    --widget-card-bk-hover: var(--colour-surface-hover);
-    --widget-card-shadow: var(--colour-shadow-primary);
+    --widget-card-bk: inherit;
+    --widget-card-text: inherit;
+    --widget-card-border: inherit;
 
-    background-color: var(--widget-card-bk);
-    border-radius: var(--border-radius-default);
-    list-style-type: none;
-}
-
-.card-link {
+    padding: 1rem;
+    display: block;
     text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    height: 100%;
-    padding: 1rem;
+    background-color: var(--widget-card-bk);
+    color: var(--widget-card-text);
+    border: var(--border-thickness) solid var(--widget-card-border);
+    border-radius: var(--border-radius-default);
 }
 
-.card--standard {
-    padding: 1rem;
+.card--subtle {
+    --widget-card-bk: inherit;
+    --widget-card-text: inherit;
+    --widget-card-border: transparent;
 }
 
-.card--linkable:hover {
+.card--outline {
+    --widget-card-bk: inherit;
+    --widget-card-text: inherit;
+    --widget-card-border: var(--colour-border-primary);
+}
+
+.card--filled {
+    --widget-card-bk: var(--colour-surface-secondary);
+    --widget-card-text: inherit;
+    --widget-card-border: transparent;
+}
+
+.card--elevated {
     box-shadow:
-        0 10px 15px -3px var(--widget-card-shadow),
-        0 4px 6px -4px var(--widget-card-shadow);
-    background-color: var(--widget-card-bk-hover);
-    scale: 101%;
+        0 4px 6px -1px var(--colour-shadow-primary),
+        0 2px 4px -2px var(--colour-shadow-primary);
+}
+
+.card--elevated-hover:hover {
+    box-shadow:
+        0 10px 15px -3px var(--colour-shadow-primary),
+        0 4px 6px -4px var(--colour-shadow-primary);
+}
+
+.card--fill-hover:hover {
+    --widget-card-bk: var(--colour-surface-hover);
 }
 </style>
