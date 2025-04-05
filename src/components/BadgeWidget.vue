@@ -38,7 +38,7 @@ const klass = computed(() => {
     color: var(--widget-badge-text);
     border-radius: var(--border-radius-default);
     font-size: small;
-    border: var(--border-thickness) solid var(--widget-badge-border);
+    border: var(--border-thickness-default) solid var(--widget-badge-border);
 }
 
 .badge--outline.badge--highlight {

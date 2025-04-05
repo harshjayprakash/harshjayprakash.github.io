@@ -34,6 +34,6 @@ const props = defineProps<{
 
 .link:hover {
     text-decoration:
-        solid underline var(--border-thickness) var(--widget-link-underline-hover);
+        solid underline var(--border-thickness-default) var(--widget-link-underline-hover);
 }
 </style>

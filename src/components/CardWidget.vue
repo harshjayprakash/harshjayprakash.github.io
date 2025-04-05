@@ -59,7 +59,7 @@ const klass = computed(() => {
     text-decoration: none;
     background-color: var(--widget-card-bk);
     color: var(--widget-card-text);
-    border: var(--border-thickness) solid var(--widget-card-border);
+    border: var(--border-thickness-default) solid var(--widget-card-border);
     border-radius: var(--border-radius-default);
 }
 
