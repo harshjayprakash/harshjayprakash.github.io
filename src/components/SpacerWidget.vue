@@ -15,7 +15,7 @@ const klass = computed(() => {
 
 const style = computed(() => {
     return {
-        '--widget-spacer-padding': props.spacing
+        '--widget-spacer-padding': `${props.spacing}rem`
     }
 });
 </script>
