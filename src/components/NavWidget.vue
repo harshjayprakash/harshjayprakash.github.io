@@ -1,47 +1,45 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-
-import router from '@/router';
+import { RouterLink, useRouter } from 'vue-router';
 
 const props = defineProps<{
-    variant?: 'desktop' | 'mobile'
+    variant: 'desktop' | 'mobile'
 }>();
-
-const safeVariant = computed(() => props.variant ?? 'desktop');
 
 const emits = defineEmits<{
     onLinkClick: []
 }>();
 
+const { currentRoute, getRoutes } = useRouter();
+
 const navLinkFilter = ['/home'];
-const navLinks = router.getRoutes()
-    .filter(link => navLinkFilter.includes(link.path))
+const navLinks = getRoutes().filter(link => navLinkFilter.includes(link.path))
     .sort((linkA, linkB) =>
         navLinkFilter.indexOf(linkA.path) - navLinkFilter.indexOf(linkB.path)
     );
 
-const isActivePage = (path: string) => {
-    return (router.currentRoute.value.fullPath === path.toString()) ?
-        'page' : '';
+const isActiveRouteAria = (path: string) => {
+    return (currentRoute.value.fullPath === path) ? 'page' : '';
 }
+
+const klass = computed(() => {
+    return {
+        'nav--desktop': props.variant === 'desktop',
+        'nav--mobile': props.variant === 'mobile'
+    }
+});
 </script>
 
 <template>
-    <nav
-        class="nav" :class="{
-            'nav--desktop': safeVariant === 'desktop',
-            'nav--mobile' : safeVariant === 'mobile'
-        }"
-        aria-label="Site Navigation"
-    >
+    <nav class="nav" :class="klass" aria-label="Site Navigation">
         <RouterLink
             v-for="link in navLinks"
+            :key="link.path"
             class="nav-link"
             active-class="nav-link--active" exact
             @click="emits('onLinkClick')"
-            :key="link.path"
             :to="link.path"
-            :aria-current="isActivePage(link.path)"
+            :aria-current="isActiveRouteAria(link.path)"
         >
             {{ link.name }}
         </RouterLink>
@@ -100,5 +98,4 @@ const isActivePage = (path: string) => {
     padding-inline: 1rem;
     border-inline-start: var(--border-thickness-state) solid var(--layout-nav-border);
 }
-
 </style>
