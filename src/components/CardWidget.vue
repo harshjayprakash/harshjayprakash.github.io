@@ -25,28 +25,27 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <li class="card" :class="{
-        'card--standard': safeVariant === 'standard',
-        'card--linkable': safeVariant === 'internal-link'
-            || safeVariant === 'external-link'
-    }">
-        <RouterLink
-            v-if="safeVariant === 'internal-link'"
-            :to="safePath" exact
-            class="card-link"
-        >
-            <slot></slot>
-        </RouterLink>
-        <a
-            v-if="safeVariant === 'external-link'"
-            :href="safePath"
-            target="_blank" rel="noopener noreferrer"
-            class="card-link"
-        >
-            <slot></slot>
-        </a>
-        <slot v-if="safeVariant === 'standard'"></slot>
-    </li>
+    <div v-if="props.link === 'none'" role="region" class="card" :class="klass">
+        <slot></slot>
+    </div>
+    <a
+        v-if="props.link === 'external'"
+        class="card"
+        :class="klass"
+        :href="safePath"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <slot></slot>
+    </a>
+    <RouterLink
+        v-if="props.link === 'internal'"
+        class="card"
+        :class="klass"
+        :to="safePath"
+    >
+        <slot></slot>
+    </RouterLink>
 </template>
 
 <style lang="css" scoped>
