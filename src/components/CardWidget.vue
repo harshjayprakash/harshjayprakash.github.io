@@ -11,6 +11,17 @@ const props = defineProps<{
 }>();
 
 const safePath = computed(() => props.path ?? '#');
+
+const klass = computed(() => {
+    return {
+        'card--filled': props.variant === 'filled',
+        'card--outline': props.variant === 'outline',
+        'card--subtle': props.variant === 'subtle',
+        'card--elevated': props.elevated,
+        'card--elevated-hover': props.elevateOnHover,
+        'card--fill-hover': props.fillOnHover
+    }
+});
 </script>
 
 <template>
