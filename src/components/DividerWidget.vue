@@ -45,7 +45,6 @@ const style = computed(() => {
 .divider {
     --widget-divider-border: var(--colour-border-faded);
 
-    display: inline;
     border: 0;
     margin-block: var(--widget-divider-computed-margin-block);
     margin-inline: var(--widget-divider-computed-margin-inline);
