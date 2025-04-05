@@ -2,7 +2,8 @@
 import { computed } from 'vue';
 
 const props = defineProps<{
-    space?: string
+    spacing: number,
+    orientation: 'horizontal' | 'vertical'
 }>();
 
 const safeSpace = computed(() => props.space ?? '1rem');
