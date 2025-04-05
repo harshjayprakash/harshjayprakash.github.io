@@ -1,11 +1,12 @@
 import { createApp } from 'vue';
 
 import '@fontsource-variable/inter';
-import '@/assets/styles/main.css';
+import '@/assets/stylesheets/main.css';
 
-import MainComponent from '@/MainComponent.vue';
+import AppComponent from '@/AppComponent.vue';
+
 import router from '@/router';
 
-const app = createApp(MainComponent);
-app.use(router)
+const app = createApp(AppComponent);
+app.use(router);
 app.mount('#app');
