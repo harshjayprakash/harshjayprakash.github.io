@@ -31,6 +31,7 @@ const klass = computed(() => {
     --widget-badge-border: inherit;
 
     display: inline;
+    width: fit-content;
     padding-inline: 0.5rem;
     padding-block: 0.2rem;
     background-color: var(--widget-badge-bk);
