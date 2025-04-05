@@ -20,17 +20,7 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <button
-        class="tab"
-        :class="{
-            'tab--filled': tabControlStyle === 'filled',
-            'tab--filled--active': tabControlStyle === 'filled' && safeIsActive,
-            'tab--underline': tabControlStyle === 'underline',
-            'tab--underline--active': tabControlStyle === 'underline' && safeIsActive
-        }"
-        role="tab"
-        :aria-selected="safeIsActive"
-    >
+    <button role="tab" class="tab" :class="klass">
         <slot></slot>
     </button>
 </template>
