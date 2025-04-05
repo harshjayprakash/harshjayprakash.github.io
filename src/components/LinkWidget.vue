@@ -1,20 +1,14 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { RouterLink } from 'vue-router';
-
 const props = defineProps<{
-    variant?: 'internal' | 'external',
-    path?: string
+    variant: 'internal' | 'external',
+    path: string
 }>();
-
-const safeVariant = computed(() => props.variant ?? 'internal');
-const safePath = computed(() => props.path ?? '#');
 </script>
 
 <template>
     <a
-        v-if="safeVariant === 'external'"
-        :href="safePath"
+        v-if="props.variant === 'external'"
+        :href="props.path"
         class="link"
         target="_blank"
         rel="noopener noreferrer"
@@ -22,8 +16,8 @@ const safePath = computed(() => props.path ?? '#');
         <slot></slot>
     </a>
     <RouterLink
-        v-if="safeVariant === 'internal'"
-        :to="safePath" exact
+        v-if="props.variant === 'internal'"
+        :to="props.path" exact
         class="link"
     >
         <slot></slot>
