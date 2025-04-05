@@ -1,6 +1,6 @@
 @import './reset.css';
 @import './theme.css';
-@import './border/css';
+@import './border.css';
 
 body {
     font-family: 'Inter Variable', sans-serif;
