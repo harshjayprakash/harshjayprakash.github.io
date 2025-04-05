@@ -2,11 +2,14 @@
 import { computed } from 'vue';
 
 const props = defineProps<{
-    variant?: 'standard' | 'internal-link' | 'external-link',
+    variant: 'filled' | 'outline' | 'subtle',
+    link: 'none' | 'internal' | 'external'
+    elevated: boolean,
+    elevateOnHover: boolean,
+    fillOnHover: boolean,
     path?: string
 }>();
 
-const safeVariant = computed(() => props.variant ?? 'standard');
 const safePath = computed(() => props.path ?? '#');
 </script>
 
