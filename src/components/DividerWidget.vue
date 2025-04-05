@@ -45,19 +45,23 @@ const style = computed(() => {
 .divider {
     --widget-divider-border: var(--colour-border-faded);
 
+    display: inline;
     border: 0;
+    margin-block: var(--widget-divider-computed-margin-block);
+    margin-inline: var(--widget-divider-computed-margin-inline);
 }
 
-.h-divider {
+.divider--horizontal {
     border-block-end:
-        var(--widget-divider-computed-thickness) solid var(--widget-divider-border);
-    margin-block: var(--widget-divider-computed-spacing);
+        var(--widget-divider-computed-thickness)
+        solid var(--widget-divider-border);
 }
 
-.v-divider {
+.divider--vertical {
     block-size: var(--widget-divider-computed-vheight);
-    border-inline:
-        var(--widget-divider-computed-thickness) solid var(--widget-divider-border);
-    margin-inline: var(--widget-divider-computed-spacing);
+    border-inline-end:
+        var(--widget-divider-computed-thickness)
+        solid var(--widget-divider-border);
+    inline-size: auto;
 }
 </style>
