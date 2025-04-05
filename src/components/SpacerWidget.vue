@@ -6,17 +6,22 @@ const props = defineProps<{
     orientation: 'horizontal' | 'vertical'
 }>();
 
-const safeSpace = computed(() => props.space ?? '1rem');
-
-const defineStyles = computed(() => {
+const klass = computed(() => {
     return {
-        '--widget-spacer-vspace': safeSpace.value
+        'spacer--horizontal': props.orientation === 'horizontal',
+        'spacer--vertical': props.orientation === 'vertical'
+    }
+});
+
+const style = computed(() => {
+    return {
+        '--widget-spacer-padding': props.spacing
     }
 });
 </script>
 
 <template>
-    <div class="spacer" aria-hidden="true" :style="defineStyles"></div>
+    <div class="spacer" :class="klass" :style aria-hidden="true"></div>
 </template>
 
 <style lang="css" scoped>
