@@ -1,43 +1,55 @@
 <script setup lang="ts">
+import BadgeWidget from '@/components/BadgeWidget.vue';
 import DividerWidget from '@/components/DividerWidget.vue';
 import LinkWidget from '@/components/LinkWidget.vue';
-import getFooterLinks from '@/store/footerLinks';
-import getMetaData from '@/store/metaData';
+import getMetaData from '@/data/metadata';
+import getFooterLinks from '@/data/footerLinks';
 
-const { copyrightYear, versionSemver, versionCalver, buildDate } = getMetaData();
+const {
+    copyrightYear,
+    semanticVersion,
+    calendarVersion,
+    buildDate
+} = getMetaData();
+
 const { footerLinks } = getFooterLinks();
 </script>
 
 <template>
     <footer class="footer">
         <section class="version-copyright" aria-label="Version and Copyright">
+            <BadgeWidget
+                variant="tint"
+                colour="primary"
+                :aria-label="`Website (Semver: ${semanticVersion}) or (Calver:`
+                + ` ${calendarVersion}), Built on ${buildDate}`"
+            >
+                v{{ semanticVersion }} --{{ calendarVersion }}, {{ buildDate }}
+            </BadgeWidget>
             <small>
-                Version {{ versionSemver }} --{{ versionCalver }}, {{ buildDate }}. Under
-                Construction. This website is subject to change and may contains errors,
-                failures and/or defects.
+                Under Construction. This website is subject to change and may contain
+                errors, failures and/or defects.
             </small>
             <small>
                 Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. Handcrafted with
                 Vue.
             </small>
         </section>
-        <DividerWidget />
+        <DividerWidget variant="horizontal" />
         <ul class="links" aria-label="Additional Links">
             <li
-                class="link-item-wrapper"
                 v-for="link in footerLinks"
-                :key="link.name.toString()"
+                :key="link.name"
+                class="link-item-wrapper"
             >
-                <LinkWidget
-                    :variant="link.variant"
-                    :path="link.path.toString()"
-                >
+                <LinkWidget :variant="link.variant" :path="link.path">
                     {{ link.name }}
                 </LinkWidget>
             </li>
         </ul>
     </footer>
 </template>
+
 
 <style lang="css" scoped>
 .footer {
