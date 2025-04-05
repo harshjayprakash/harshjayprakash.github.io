@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { computed, inject, ref } from 'vue';
 
-import NavLayout from '@/layout/NavLayout.vue';
 import BadgeWidget from '@/components/BadgeWidget.vue';
 import DividerWidget from '@/components/DividerWidget.vue';
-import SpacerWidget from '@/components/SpacerWidget.vue';
+import NavWidget from '@/components/NavWidget.vue';
+import getMetaData from '@/data/metadata';
 
+const { buildStatus } = getMetaData();
 const isMobile = inject('isMobile');
 const isNavVisible = ref(false);
 
@@ -35,19 +36,21 @@ const toggleNavigationVisibility = () => {
             aria-label="Website is Under Construction"
             class="status"
             variant="outline"
+            colour="primary"
         >
-            Under Construction
+            {{ buildStatus }}
         </BadgeWidget>
         <DividerWidget v-if="!isMobile" variant="vertical" />
-        <NavLayout class="nav" v-if="!isMobile" />
+        <NavWidget class="nav" variant="desktop" v-if="!isMobile" />
     </header>
     <SpacerWidget space="1rem" />
-    <NavLayout
+    <NavWidget
         v-if="isNavVisible"
         variant="mobile"
         @on-link-click="toggleNavigationVisibility"
     />
 </template>
+
 
 <style lang="css" scoped>
 .header {
