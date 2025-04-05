@@ -33,10 +33,11 @@ const style = computed(() => {
 </script>
 
 <template>
-    <hr class="divider" :class="{
-            'v-divider' : safeVariant === 'vertical',
-            'h-divider' : safeVariant === 'horizontal',
-        }" :aria-orientation="safeVariant" :style="defineStyles"
+    <hr
+        class="divider"
+        :class="klass" :style
+        aria-hidden="true"
+        :aria-orientation="props.variant"
     />
 </template>
 
