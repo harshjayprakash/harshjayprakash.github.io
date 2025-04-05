@@ -27,53 +27,68 @@ const klass = computed(() => {
 
 <style lang="css" scoped>
 .tab {
+    --widget-tab-padding-inline: ;
+    --widget-tab-padding-block: ;
+    --widget-tab-border: ;
+    --widget-tab-bk: ;
+    --widget-tab-text: ;
+
+    display: inline;
+    width: fit-content;
     border: 0;
-    background-color: var(--widget-tab-bk);
     color: var(--widget-tab-text);
-}
-
-.tab--underline {
-    --widget-tab-bk: inherit;
-    --widget-tab-text: inherit;
-    --widget-tab-border-default: transparent;
-    --widget-tab-border-hover: var(--colour-border-hover);
-    --widget-tab-border-active: var(--colour-border-highlight);
-    --widget-tab-border: var(--widget-tab-border-default);
-
-    border-block-end: var(--border-thickness-state) solid var(--widget-tab-border);
-}
-
-.tab--underline:hover {
-    --widget-tab-border: var(--widget-tab-border-hover);
-}
-
-.tab--underline--active,
-.tab--filled--active {
-    font-weight: 500;
-}
-
-.tab--underline--active {
-    --widget-tab-border: var(--widget-tab-border-active);
+    background-color: var(--widget-tab-bk);
+    padding-inline: var(--widget-tab-padding-inline);
+    padding-block: var(--widget-tab-padding-block);
 }
 
 .tab--filled {
-    --widget-tab-bk-default: var(--colour-surface-secondary);
-    --widget-tab-bk-hover: var(--colour-surface-hover);
-    --widget-tab-bk-active: var(--colour-surface-highlight);
-    --widget-tab-bk: var(--widget-tab-bk-default);
-    --widget-tab-text-default: var(--colour-text-primary);
-    --widget-tab-text-active: var(--colour-text-inverted);
-    --widget-tab-text: var(--widget-tab-text-default);
+    --widget-tab-padding-inline: 0.5rem;
+    --widget-tab-padding-block: 0.25rem;
+}
 
-    padding-inline: 0.5rem;
+.tab--horizontal.tab--underline {
+    --widget-tab-padding-block: 0.25rem;
+}
+
+.tab--vertical.tab--underline {
+    --widget-tab-padding-inline: 1rem;
+}
+
+.tab--underline {
+    --widget-tab-border: transparent;
+    --widget-tab-bk: inherit;
+    --widget-tab-text: inherit;
+}
+
+.tab--underline:hover {
+    --widget-tab-border: var(--colour-surface-hover);
+}
+
+.tab--underline.tab--active {
+    --widget-tab-border: var(--colour-surface-highlight);
+}
+
+.tab--filled {
+    --widget-tab-border: transparent;
+    --widget-tab-bk: inherit;
+    --widget-tab-text: inherit;
 }
 
 .tab--filled:hover {
-    --widget-tab-bk: var(--widget-tab-bk-hover);
+    --widget-tab-bk: var(--colour-surface-hover);
 }
 
-.tab--filled--active {
-    --widget-tab-bk: var(--widget-tab-bk-active);
-    --widget-tab-text: var(--widget-tab-text-active);
+.tab--filled.tab--active {
+    --widget-tab-bk: var(--colour-surface-highlight);
+    --widget-tab-text: var(--colour-text-inverted);
+}
+
+.tab--vertical.tab--underline {
+    border-inline-start: var(--border-thickness-state) solid var(--widget-tab-border);
+}
+
+.tab--horizontal.tab--underline {
+    border-block-end: var(--border-thickness-state) solid var(--widget-tab-border);
 }
 </style>
