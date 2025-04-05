@@ -8,6 +8,15 @@ const props = defineProps<{
 const injectedVariant = inject<'underline' | 'filled'>('tabVariant');
 const injectedOrientation = inject<'horizontal' | 'vertical'>('tabOrientation');
 
+const klass = computed(() => {
+    return {
+        'tab--underline': injectedVariant === 'underline',
+        'tab--filled': injectedVariant === 'filled',
+        'tab--horizontal': injectedOrientation === 'horizontal',
+        'tab--vertical': injectedOrientation === 'vertical',
+        'tab--active': props.isSelected
+    }
+});
 </script>
 
 <template>
