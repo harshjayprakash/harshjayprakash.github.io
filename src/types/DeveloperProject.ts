@@ -1,10 +1,10 @@
-import type { DeveloperProjectCategory } from "./DeveloperProjectCategory";
+import type { ProjectCategory } from "@/types/ProjectCategory";
 
 interface DeveloperProject {
     name: string;
     description: string;
     reference: string;
-    category: DeveloperProjectCategory;
+    category: ProjectCategory;
     technology: string;
     timeframe: string;
     status: string;

@@ -1,12 +1,12 @@
 import { computed, ref } from "vue";
 
 import getDeveloperProjects from "@/data/developerProjects"
-import type { DeveloperProjectCategory } from "@/types/DeveloperProjectCategory";
+import type { ProjectCategory } from "@/types/ProjectCategory";
 
 const useDeveloperProjectFilter = () => {
     const { developerProjects } = getDeveloperProjects();
     const projects = ref(developerProjects);
-    const projectTypeFilter = ref<DeveloperProjectCategory>('All');
+    const projectTypeFilter = ref<ProjectCategory>('All');
 
     const filteredProjects = computed(() => {
         if (projectTypeFilter.value === 'All') {
@@ -16,7 +16,7 @@ const useDeveloperProjectFilter = () => {
             project => project.category === projectTypeFilter.value);
     });
 
-    const updateCategoryFilter = (category: DeveloperProjectCategory) => {
+    const updateCategoryFilter = (category: ProjectCategory) => {
         projectTypeFilter.value = category;
     }
 
@@ -28,7 +28,7 @@ const useDeveloperProjectFilter = () => {
                     projectA.abbreviation) - abbrevs.indexOf(projectB.abbreviation));
     }
 
-    const isActiveCategoryFilter = (category: DeveloperProjectCategory) => {
+    const isActiveCategoryFilter = (category: ProjectCategory) => {
         return projectTypeFilter.value === category;
     }
 
