@@ -18,7 +18,7 @@ const { footerLinks } = getFooterLinks();
     <footer class="footer">
         <section class="version-copyright" aria-label="Version and Copyright">
             <small>
-                v{{ semanticVersion }} --{{ calendarVersion }}, {{ buildDate }}
+                Version {{ semanticVersion }} &mdash; {{ calendarVersion }}, {{ buildDate }}
             </small>
             <small>
                 Under Construction. This website is subject to change and may contain
