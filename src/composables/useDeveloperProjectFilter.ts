@@ -28,7 +28,11 @@ const useDeveloperProjectFilter = () => {
                     projectA.abbreviation) - abbrevs.indexOf(projectB.abbreviation));
     }
 
-    return { filteredProjects, updateAbbreivationsFilter, updateCategoryFilter };
+    const isActiveCategoryFilter = (category: DeveloperProjectCategory) => {
+        return projectTypeFilter.value === category;
+    }
+
+    return { filteredProjects, isActiveCategoryFilter, updateAbbreivationsFilter, updateCategoryFilter };
 }
 
 export default useDeveloperProjectFilter;
