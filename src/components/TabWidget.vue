@@ -30,6 +30,7 @@ const klass = computed(() => {
     --widget-tab-padding-inline: ;
     --widget-tab-padding-block: ;
     --widget-tab-border: ;
+    --widget-tab-border-radius: ;
     --widget-tab-bk: ;
     --widget-tab-text: ;
 
@@ -40,11 +41,13 @@ const klass = computed(() => {
     background-color: var(--widget-tab-bk);
     padding-inline: var(--widget-tab-padding-inline);
     padding-block: var(--widget-tab-padding-block);
+    border-radius: var(--widget-tab-border-radius);
 }
 
 .tab--filled {
     --widget-tab-padding-inline: 0.5rem;
     --widget-tab-padding-block: 0.25rem;
+    --widget-tab-border-radius: var(--border-radius-default);
 }
 
 .tab--horizontal.tab--underline {
@@ -59,6 +62,7 @@ const klass = computed(() => {
     --widget-tab-border: transparent;
     --widget-tab-bk: inherit;
     --widget-tab-text: inherit;
+    --widget-tab-border-radius: 0;
 }
 
 .tab--underline:hover {
