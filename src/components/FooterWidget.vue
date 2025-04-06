@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BadgeWidget from '@/components/BadgeWidget.vue';
 import DividerWidget from '@/components/DividerWidget.vue';
 import LinkWidget from '@/components/LinkWidget.vue';
 import getMetaData from '@/data/metadata';
@@ -18,14 +17,9 @@ const { footerLinks } = getFooterLinks();
 <template>
     <footer class="footer">
         <section class="version-copyright" aria-label="Version and Copyright">
-            <BadgeWidget
-                variant="tint"
-                colour="primary"
-                :aria-label="`Website (Semver: ${semanticVersion}) or (Calver:`
-                + ` ${calendarVersion}), Built on ${buildDate}`"
-            >
+            <small>
                 v{{ semanticVersion }} --{{ calendarVersion }}, {{ buildDate }}
-            </BadgeWidget>
+            </small>
             <small>
                 Under Construction. This website is subject to change and may contain
                 errors, failures and/or defects.
