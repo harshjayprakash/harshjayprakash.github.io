@@ -12,7 +12,7 @@ const emits = defineEmits<{
 
 const { currentRoute, getRoutes } = useRouter();
 
-const navLinkFilter = ['/home'];
+const navLinkFilter = ['/home', '/about', '/alpha'];
 const navLinks = getRoutes().filter(link => navLinkFilter.includes(link.path))
     .sort((linkA, linkB) =>
         navLinkFilter.indexOf(linkA.path) - navLinkFilter.indexOf(linkB.path)
