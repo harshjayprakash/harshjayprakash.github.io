@@ -150,7 +150,7 @@ const developerProjects: DeveloperProject[] = [
         reference: 'UOW2200',
         category: 'Desktop Application',
         technology: 'Python',
-        timeframe: 'H1 \'20',
+        timeframe: 'H1 \'22',
         status: 'Maintenance',
         available: true,
         abbreviation: 'wpq',
