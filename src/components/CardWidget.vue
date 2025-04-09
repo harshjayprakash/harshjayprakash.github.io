@@ -25,7 +25,7 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <div v-if="props.link === 'none'" role="region" class="card" :class="klass">
+    <div v-if="props.link === 'none'" role="group" class="card" :class="klass">
         <slot></slot>
     </div>
     <a
