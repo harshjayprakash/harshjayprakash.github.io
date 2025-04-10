@@ -40,6 +40,7 @@ npm run dev
   * Mitigated Vite Vulnerabilities.
   * Updated Internal Structure.
   * Updated Styles - Locally Scoped Component Variables.
+  * Updated All Components.
   * Updated to Vue Shorthand HTML Attributes.
   * Migrated Fully to Composition API with Setup Attribute.
 * Version 4.1 --25H1E "24/03/2025"
