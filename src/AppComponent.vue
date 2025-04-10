@@ -17,7 +17,7 @@ provide('isMobile', isMobile);
             <HeaderWidget />
         </template>
         <template #default>
-            <main>
+            <main id="main-content">
                 <RouterView />
             </main>
         </template>

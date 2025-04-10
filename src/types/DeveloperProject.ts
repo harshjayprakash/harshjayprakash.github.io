@@ -1,4 +1,4 @@
-import type { ProjectCategory } from "@/types/ProjectCategory";
+import type {ProjectCategory} from "@/types/ProjectCategory";
 
 interface DeveloperProject {
     name: string;

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -25,24 +25,24 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <div v-if="props.link === 'none'" role="group" class="card" :class="klass">
+    <div v-if="props.link === 'none'" :class="klass" class="card" role="group">
         <slot></slot>
     </div>
     <a
         v-if="props.link === 'external'"
-        class="card"
         :class="klass"
         :href="safePath"
-        target="_blank"
+        class="card"
         rel="noopener noreferrer"
+        target="_blank"
     >
         <slot></slot>
     </a>
     <RouterLink
         v-if="props.link === 'internal'"
-        class="card"
         :class="klass"
         :to="safePath"
+        class="card"
     >
         <slot></slot>
     </RouterLink>
@@ -82,14 +82,12 @@ const klass = computed(() => {
 }
 
 .card--elevated {
-    box-shadow:
-        0 4px 6px -1px var(--colour-shadow-primary),
+    box-shadow: 0 4px 6px -1px var(--colour-shadow-primary),
         0 2px 4px -2px var(--colour-shadow-primary);
 }
 
 .card--elevated-hover:hover {
-    box-shadow:
-        0 10px 15px -3px var(--colour-shadow-primary),
+    box-shadow: 0 10px 15px -3px var(--colour-shadow-primary),
         0 4px 6px -4px var(--colour-shadow-primary);
 }
 

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -21,7 +21,7 @@ const style = computed(() => {
 </script>
 
 <template>
-    <div class="spacer" :class="klass" :style aria-hidden="true"></div>
+    <div :class="klass" :style aria-hidden="true" class="spacer"></div>
 </template>
 
 <style lang="css" scoped>

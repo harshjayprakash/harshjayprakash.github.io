@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const props = defineProps<{
     avatar: string,
     name: string,
@@ -8,9 +8,9 @@ const props = defineProps<{
 </script>
 
 <template>
-    <div role="status" class="persona">
-        <img class="avatar" :src="props.avatar" alt="profile picture" />
-        <section class="information" aria-label="Person Information">
+    <div class="persona" role="status">
+        <img :src="props.avatar" alt="profile picture" class="avatar"/>
+        <section aria-label="Person Information" class="information">
             <span class="name">{{ props.name }}</span>
             <span class="title">{{ props.title }}</span>
             <span v-if="status != undefined" class="status">{{ props.status }}</span>
@@ -23,6 +23,7 @@ const props = defineProps<{
     display: flex;
     gap: 1rem;
 }
+
 .avatar {
     width: 2.5rem;
     height: 2.5rem;

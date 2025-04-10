@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import CardWidget from '@/components/CardWidget.vue';
 import DividerWidget from '@/components/DividerWidget.vue';
 import getServices from '@/data/services';
@@ -8,23 +8,23 @@ const { services } = getServices();
 
 <template>
     <DividerWidget variant="horizontal" />
-    <section class="services" aria-label="Offered Services">
+    <section aria-label="Offered Services" class="services">
         <h2>What I can do.</h2>
         <p>
             These are the skills I have as a software engineer, though outside of this
             realm I have some art and design skills. I can design simple interfaces that
             focus on the user experience.
         </p>
-        <div role="group" class="services-list" aria-label="Service Cards List">
+        <div aria-label="Service Cards List" class="services-list" role="group">
             <CardWidget
                 v-for="svc in services"
                 :key="svc.title"
-                variant="filled"
-                link="none"
-                :elevated="false"
-                :elevate-on-hover="false"
-                :fill-on-hover="false"
                 :aria-label="svc.title"
+                :elevate-on-hover="false"
+                :elevated="false"
+                :fill-on-hover="false"
+                link="none"
+                variant="filled"
             >
                 <div class="service-card" role="group">
                     <h3>{{ svc.title }}</h3>
@@ -33,11 +33,10 @@ const { services } = getServices();
                         <li
                             v-for="(tech, idx) in svc.technologies"
                             :key="tech"
-                            class="technology-item"
-                        >
+                            class="technology-item">
                             {{ tech }}
                             <span
-                                v-if="idx !== svc.technologies.length-1"
+                                v-if="idx !== svc.technologies.length - 1"
                                 aria-hidden="true"
                             >
                                 &SmallCircle;

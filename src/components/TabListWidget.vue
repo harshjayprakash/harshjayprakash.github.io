@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, provide } from 'vue';
 
 const props = defineProps<{
@@ -21,10 +21,10 @@ const klass = computed(() => {
 
 <template>
     <div
-        role="tablist"
-        class="tablist"
-        :class="klass"
         :aria-orientation="props.orientation"
+        :class="klass"
+        class="tablist"
+        role="tablist"
     >
         <slot></slot>
     </div>

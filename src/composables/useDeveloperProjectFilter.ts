@@ -4,7 +4,7 @@ import getDeveloperProjects from "@/data/developerProjects"
 import type { ProjectCategory } from "@/types/ProjectCategory";
 
 const useDeveloperProjectFilter = () => {
-    const { developerProjects } = getDeveloperProjects();
+    const {developerProjects} = getDeveloperProjects();
     const projects = ref(developerProjects);
     const projectTypeFilter = ref<ProjectCategory>('All');
 
@@ -13,7 +13,8 @@ const useDeveloperProjectFilter = () => {
             return projects.value;
         }
         return projects.value.filter(
-            project => project.category === projectTypeFilter.value);
+            project => project.category === projectTypeFilter.value
+        );
     });
 
     const updateCategoryFilter = (category: ProjectCategory) => {
@@ -23,16 +24,20 @@ const useDeveloperProjectFilter = () => {
     const updateAbbreivationsFilter = (abbrevs: string[]) => {
         projects.value = developerProjects
             .filter(project => abbrevs.includes(project.abbreviation))
-            .sort((projectA, projectB) =>
-                abbrevs.indexOf(
-                    projectA.abbreviation) - abbrevs.indexOf(projectB.abbreviation));
+            .sort((projectA, projectB) => abbrevs.indexOf(projectA.abbreviation) -
+                abbrevs.indexOf(projectB.abbreviation));
     }
 
     const isActiveCategoryFilter = (category: ProjectCategory) => {
         return projectTypeFilter.value === category;
     }
 
-    return { filteredProjects, isActiveCategoryFilter, updateAbbreivationsFilter, updateCategoryFilter };
+    return {
+        filteredProjects,
+        isActiveCategoryFilter,
+        updateAbbreivationsFilter,
+        updateCategoryFilter
+    };
 }
 
 export default useDeveloperProjectFilter;

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 import { RouterLink, useRouter } from 'vue-router';
 
@@ -10,7 +10,7 @@ const emits = defineEmits<{
     onLinkClick: []
 }>();
 
-const { currentRoute, getRoutes } = useRouter();
+const {currentRoute, getRoutes} = useRouter();
 
 const navLinkFilter = ['/home', '/about', '/alpha'];
 const navLinks = getRoutes().filter(link => navLinkFilter.includes(link.path))
@@ -19,7 +19,7 @@ const navLinks = getRoutes().filter(link => navLinkFilter.includes(link.path))
     );
 
 const isActiveRouteAria = (path: string) => {
-    return (currentRoute.value.fullPath === path) ? 'page' : '';
+    return (currentRoute.value.fullPath === path) ? 'page' : 'false';
 }
 
 const klass = computed(() => {
@@ -31,15 +31,15 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <nav class="nav" :class="klass" aria-label="Site Navigation">
+    <nav :class="klass" aria-label="Site Navigation" class="nav">
         <RouterLink
             v-for="link in navLinks"
             :key="link.path"
-            class="nav-link"
-            active-class="nav-link--active" exact
-            @click="emits('onLinkClick')"
-            :to="link.path"
             :aria-current="isActiveRouteAria(link.path)"
+            :to="link.path" active-class="nav-link--active"
+            class="nav-link"
+            exact
+            @click="emits('onLinkClick')"
         >
             {{ link.name }}
         </RouterLink>
@@ -84,9 +84,8 @@ const klass = computed(() => {
 .nav--mobile {
     padding: 1rem;
     flex-direction: column;
-    box-shadow:
-        0 0.25rem 0.375rem -0.0625rem var(--layout-nav-shadow),
-        0 0.125rem 0.25rem -0.125rem var(--layout-nav-shadow);
+    box-shadow: 0 0.25rem 0.375rem -0.0625rem var(--layout-nav-shadow),
+    0 0.125rem 0.25rem -0.125rem var(--layout-nav-shadow);
     border-radius: var(--border-radius-default);
     z-index: 10;
     margin-block-end: 1.5rem;

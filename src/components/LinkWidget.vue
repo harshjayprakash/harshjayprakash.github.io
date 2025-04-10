@@ -1,23 +1,23 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const props = defineProps<{
-    variant: 'internal' | 'external',
+    variant: 'internal' | 'external' | 'external-same-window',
     path: string
 }>();
 </script>
 
 <template>
     <a
-        v-if="props.variant === 'external'"
+        v-if="props.variant === 'external' || props.variant === 'external-same-window'"
         :href="props.path"
+        :rel="props.variant === 'external' ? 'noopener noreferrer' : ''"
+        :target="props.variant === 'external' ? '_blank' : ''"
         class="link"
-        target="_blank"
-        rel="noopener noreferrer"
     >
         <slot></slot>
     </a>
     <RouterLink
         v-if="props.variant === 'internal'"
-        :to="props.path" exact
+        :exact="false" :to="props.path"
         class="link"
     >
         <slot></slot>
@@ -33,7 +33,6 @@ const props = defineProps<{
 }
 
 .link:hover {
-    text-decoration:
-        solid underline var(--border-thickness-default) var(--widget-link-underline-hover);
+    text-decoration: solid underline var(--border-thickness-default) var(--widget-link-underline-hover);
 }
 </style>

@@ -1,11 +1,10 @@
-<script setup lang="ts">
-import AboutEducationSection from './AboutEducationSection.vue';
-
+<script lang="ts" setup>
+import AboutEducationSection from '@/views/about/AboutEducationSection.vue';
 </script>
 
 <template>
-    <article class="about" aria-label="About">
+    <article aria-label="About" class="about">
         <h1>About</h1>
-        <AboutEducationSection />
+        <AboutEducationSection/>
     </article>
 </template>

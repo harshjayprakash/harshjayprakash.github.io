@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import BadgeWidget from '@/components/BadgeWidget.vue';
 import DividerWidget from '@/components/DividerWidget.vue';
 import LinkWidget from '@/components/LinkWidget.vue';
@@ -8,36 +8,36 @@ const { socials } = getSocials();
 </script>
 
 <template>
-    <DividerWidget variant="horizontal" :margin="0" />
-    <section class="contact" aria-label="Contact">
+    <DividerWidget :margin="0" variant="horizontal" />
+    <section aria-label="Contact" class="contact">
         <div
-            role="group"
-            class="cta-text"
             aria-label="Call to Action, What I'm Looking For"
+            class="cta-text"
+            role="group"
         >
             <h2>
-                Looking to collaborate?<br/>or say hello?
+                Looking to collaborate?<br />or say hello?
                 Get in touch.
             </h2>
             <BadgeWidget
-                variant="tint"
-                colour="primary"
                 aria-label="Available, Currently Looking for Work."
                 class="status"
+                colour="primary"
+                variant="tint"
             >
-                <span class="indicator" aria-hidden="true"></span>
+                <span aria-hidden="true" class="indicator"></span>
                 <span>Currently looking for work</span>
             </BadgeWidget>
         </div>
-        <ul class="links" aria-label="Social Links, and CV PDF">
+        <ul aria-label="Social Links, and CV PDF" class="links">
             <li v-for="social in socials" :key="social.name" class="social-link-wrapper">
-                <LinkWidget variant="external" :path="social.uri">
+                <LinkWidget :path="social.uri" variant="external">
                     {{ social.name }} &mdash; {{ social.tag }}
                 </LinkWidget>
                 <DividerWidget variant="horizontal" />
             </li>
             <li class="social-link-wrapper">
-                <LinkWidget variant="internal" path="/documents/harsh_cv.pdf">
+                <LinkWidget path="/documents/harsh_cv.pdf" variant="external">
                     View CV (PDF)
                 </LinkWidget>
                 <DividerWidget variant="horizontal" />

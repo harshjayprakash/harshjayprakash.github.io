@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -19,7 +19,7 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <div role="status" class="badge" :class="klass">
+    <div :class="klass" class="badge" role="status">
         <slot></slot>
     </div>
 </template>

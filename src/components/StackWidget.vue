@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -15,7 +15,7 @@ const style = computed(() => {
 </script>
 
 <template>
-    <div role="group" class="stack" :style>
+    <div :style class="stack" role="group">
         <slot></slot>
     </div>
 </template>

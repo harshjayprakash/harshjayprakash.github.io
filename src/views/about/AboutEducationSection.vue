@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import CardWidget from '@/components/CardWidget.vue';
 
 const quals: {
@@ -21,19 +21,19 @@ const quals: {
 </script>
 
 <template>
-    <section class="quals" aria-label="Education/Qualifications">
+    <section aria-label="Education/Qualifications" class="quals">
         <h2>Qualifications</h2>
-        <div role="group" aria-label="Qualification List" class="quals-list">
+        <div aria-label="Qualification List" class="quals-list" role="group">
             <CardWidget
                 v-for="qual in quals"
                 :key="qual.level"
-                variant="filled"
-                link="none"
-                :elevated="false"
                 :elevate-on-hover="false"
+                :elevated="false"
                 :fill-on-hover="false"
+                link="none"
+                variant="filled"
             >
-                <div role="region" class="qual-wrapper">
+                <div class="qual-wrapper" role="region">
                     <h3>{{ qual.level }}</h3>
                     <span>{{ qual.quals }}</span>
                     <span>{{ qual.school }}</span>

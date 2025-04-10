@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import PersonaWidget from '@/components/PersonaWidget.vue';
 import getAvatar from '@/data/avatar';
 
@@ -6,12 +6,12 @@ const { avatar } = getAvatar();
 </script>
 
 <template>
-    <section class="hero" aria-label="Hero">
+    <section aria-label="Hero" class="hero">
         <PersonaWidget
             :avatar
+            aria-label="Image of Harsh Jayprakash, a Software Engineer"
             name="Harsh Jayprakash"
             title="Software Engineer"
-            aria-label="Image of Harsh Jayprakash, a Software Engineer"
         />
         <h1 class="greeting">
             Hi. I'm Harsh &mdash; a <i>Software Engineer</i> based in Southampton

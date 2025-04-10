@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import DividerWidget from '@/components/DividerWidget.vue';
 import LinkWidget from '@/components/LinkWidget.vue';
 import getMetaData from '@/data/metadata';
@@ -11,14 +11,16 @@ const {
     buildDate
 } = getMetaData();
 
-const { footerLinks } = getFooterLinks();
+const {footerLinks} = getFooterLinks();
 </script>
 
 <template>
     <footer class="footer">
-        <section class="version-copyright" aria-label="Version and Copyright">
+        <section aria-label="Version and Copyright" class="version-copyright">
             <small>
-                Version {{ semanticVersion }} &mdash; {{ calendarVersion }}, {{ buildDate }}
+                Version {{ semanticVersion }} &mdash; {{ calendarVersion }}, {{
+                    buildDate
+                }}
             </small>
             <small>
                 Under Construction. This website is subject to change and may contain
@@ -29,14 +31,14 @@ const { footerLinks } = getFooterLinks();
                 Vue.
             </small>
         </section>
-        <DividerWidget variant="horizontal" />
-        <ul class="links" aria-label="Additional Links">
+        <DividerWidget variant="horizontal"/>
+        <ul aria-label="Additional Links" class="links">
             <li
                 v-for="link in footerLinks"
                 :key="link.name"
                 class="link-item-wrapper"
             >
-                <LinkWidget :variant="link.variant" :path="link.path">
+                <LinkWidget :path="link.path" :variant="link.variant">
                     {{ link.name }}
                 </LinkWidget>
             </li>

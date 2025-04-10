@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, inject } from 'vue';
 
 const props = defineProps<{
@@ -20,7 +20,7 @@ const klass = computed(() => {
 </script>
 
 <template>
-    <button role="tab" class="tab" :class="klass">
+    <button :aria-selected="props.isSelected" :class="klass" class="tab" role="tab">
         <slot></slot>
     </button>
 </template>

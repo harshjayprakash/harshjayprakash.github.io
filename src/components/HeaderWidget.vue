@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, inject, ref } from 'vue';
 
 import BadgeWidget from '@/components/BadgeWidget.vue';
@@ -20,14 +20,14 @@ const toggleNavigationVisibility = () => {
 </script>
 
 <template>
-    <header class="header" aria-label="Site Header, Contains Navigation">
+    <header aria-label="Site Header, Contains Navigation" class="header">
         <button
             v-if="isMobile"
-            class="menu-button"
-            @click="toggleNavigationVisibility"
-            aria-label="Mobile Menu Navigation Toggle Button"
             :aria-pressed="isNavVisible"
+            aria-label="Mobile Menu Navigation Toggle Button"
+            class="menu-button"
             tabindex="0"
+            @click="toggleNavigationVisibility"
         >
             {{ menuButtonText }}
         </button>
@@ -35,15 +35,15 @@ const toggleNavigationVisibility = () => {
         <BadgeWidget
             aria-label="Website is Under Construction"
             class="status"
-            variant="outline"
             colour="primary"
+            variant="outline"
         >
             {{ buildStatus }}
         </BadgeWidget>
-        <DividerWidget v-if="!isMobile" variant="vertical" />
-        <NavWidget class="nav" variant="desktop" v-if="!isMobile" />
+        <DividerWidget v-if="!isMobile" variant="vertical"/>
+        <NavWidget v-if="!isMobile" class="nav" variant="desktop"/>
     </header>
-    <SpacerWidget space="1rem" />
+    <SpacerWidget space="1rem"/>
     <NavWidget
         v-if="isNavVisible"
         variant="mobile"
@@ -65,9 +65,8 @@ const toggleNavigationVisibility = () => {
     width: fit-content;
     padding-block: 0.8rem;
     padding-inline: 1rem;
-    box-shadow:
-        0 0.25rem 0.375rem -0.0625rem var(--layout-header-shadow),
-        0 0.125rem 0.25rem -0.125rem var(--layout-header-shadow);
+    box-shadow: 0 0.25rem 0.375rem -0.0625rem var(--layout-header-shadow),
+    0 0.125rem 0.25rem -0.125rem var(--layout-header-shadow);
     border-radius: var(--border-radius-default);
     z-index: 10;
 }

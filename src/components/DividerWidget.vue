@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -34,10 +34,11 @@ const style = computed(() => {
 
 <template>
     <hr
-        class="divider"
-        :class="klass" :style
-        aria-hidden="true"
         :aria-orientation="props.variant"
+        :class="klass"
+        :style
+        aria-hidden="true"
+        class="divider"
     />
 </template>
 
@@ -52,15 +53,13 @@ const style = computed(() => {
 
 .divider--horizontal {
     border-block-end:
-        var(--widget-divider-computed-thickness)
-        solid var(--widget-divider-border);
+        var(--widget-divider-computed-thickness) solid var(--widget-divider-border);
 }
 
 .divider--vertical {
     block-size: var(--widget-divider-computed-vheight);
     border-inline-end:
-        var(--widget-divider-computed-thickness)
-        solid var(--widget-divider-border);
+        var(--widget-divider-computed-thickness) solid var(--widget-divider-border);
     inline-size: auto;
 }
 </style>
