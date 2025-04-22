@@ -4,7 +4,5 @@ import { RouterView } from 'vue-router';
 
 <template>
     <div>MainComponent</div>
-    <RouterView>
-        no content available on this route.
-    </RouterView>
+    <RouterView />
 </template>
