@@ -1,4 +1,16 @@
 
+## Running Locally
+
+Running the website locally is simple as a few commands after cloning the git repository.
+There are no external measures to be setup.
+
+```sh
+# Install dependencies.
+npm install
+# Run local server.
+npm run dev
+```
+
 ## Changelog
 
 * Version 5.0 --25H1F "TBD"
