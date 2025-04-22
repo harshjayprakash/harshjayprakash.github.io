@@ -1,3 +1,22 @@
+# Personal Portfolio Website
+
+This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
+showcase my projects in one central place. **This website is still under construction**.
+
+The website prioritises simplicity, accessibility, and user experience above the latest
+trends. The aim was to create also a timeless digital experience that anyone will be able
+use. More details:
+
+* Simplicity: Minimal distractions, simple typography, clean layouts.
+* Accessibility: Following WCAG Guidelines (Constrast Ratios, Alt Text, ARIA Labels +
+Roles)
+* User Experience: Intuitive interactions, responsive design.
+
+This project intentionally minimises the reliance on dependencies, allowing for better
+performance and long-term reliability.
+
+The Inter typeface is self-hosted using the fontsource variable package to avoid the using
+Google Fonts for privacy.
 
 ## Running Locally
 
