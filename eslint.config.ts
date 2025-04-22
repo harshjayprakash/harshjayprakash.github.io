@@ -1,5 +1,9 @@
 import { globalIgnores } from 'eslint/config';
-import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript';
+import {
+    configureVueProject,
+    defineConfigWithVueTs,
+    vueTsConfigs
+} from '@vue/eslint-config-typescript';
 import pluginVue from 'eslint-plugin-vue';
 import pluginOxlint from 'eslint-plugin-oxlint';
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
