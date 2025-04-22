@@ -4,4 +4,6 @@
 body {
     font-family: 'Inter Variable', sans-serif;
     font-variation-settings: 'opsz';
+    background-color: var(--colour-bk-primary);
+    color: var(--colour-text-primary);
 }
