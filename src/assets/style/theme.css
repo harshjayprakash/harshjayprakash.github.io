@@ -1,0 +1,31 @@
+:root {
+    color-scheme: light dark;
+
+    --colour-050P: oklch(0.985 0.002 247.839);
+    --colour-100P: oklch(0.967 0.003 264.542);
+    --colour-200P: oklch(0.928 0.006 264.531);
+    --colour-300P: oklch(0.872 0.01 258.338);
+    --colour-400P: oklch(0.707 0.022 261.325);
+    --colour-500P: oklch(0.551 0.027 264.364);
+    --colour-600P: oklch(0.446 0.03 256.802);
+    --colour-700P: oklch(0.373 0.034 259.733);
+    --colour-800P: oklch(0.278 0.033 256.848);
+    --colour-900P: oklch(0.21 0.034 264.665);
+    --colour-950P: oklch(0.13 0.028 261.692);
+
+    --colour-050H: oklch(0.985 0.002 247.839);
+    --colour-100H: oklch(0.967 0.003 264.542);
+    --colour-200H: oklch(0.928 0.006 264.531);
+    --colour-300H: oklch(0.872 0.01 258.338);
+    --colour-400H: oklch(0.707 0.022 261.325);
+    --colour-500H: oklch(0.551 0.027 264.364);
+    --colour-600H: oklch(0.446 0.03 256.802);
+    --colour-700H: oklch(0.373 0.034 259.733);
+    --colour-800H: oklch(0.278 0.033 256.848);
+    --colour-900H: oklch(0.21 0.034 264.665);
+    --colour-950H: oklch(0.13 0.028 261.692);
+
+
+    --colour-bk-primary: light-dark(var(--colour-050P), var(--colour-950P));
+    --colour-text-primary: light-dark(var(--colour-950P), var(--colour-050P));
+}
