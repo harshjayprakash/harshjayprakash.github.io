@@ -1,4 +1,7 @@
-# Portfolio
+
+## Limitations and Known Issues
+
+* The `light-dark` css function is used (mdn: newly available).
 
 ## References
 
