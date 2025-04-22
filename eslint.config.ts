@@ -2,7 +2,7 @@ import { globalIgnores } from 'eslint/config';
 import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript';
 import pluginVue from 'eslint-plugin-vue';
 import pluginOxlint from 'eslint-plugin-oxlint';
-import { configureVueProject } from '@vue/eslint-config-typescript';
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 
 configureVueProject({ scriptLangs: ['ts'] });
 
@@ -16,5 +16,6 @@ export default defineConfigWithVueTs(
 
     pluginVue.configs['flat/essential'],
     vueTsConfigs.recommended,
+    ...pluginVueA11y.configs['flat/recommended'],
     ...pluginOxlint.configs['flat/recommended'],
 )
