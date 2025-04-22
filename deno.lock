@@ -8,6 +8,7 @@
     "npm:@vue/tsconfig@0.7": "0.7.0_typescript@5.8.3_vue@3.5.13__typescript@5.8.3",
     "npm:eslint-plugin-oxlint@0.16": "0.16.7",
     "npm:eslint-plugin-vue@10.0": "10.0.0_eslint@9.25.1__jiti@2.4.2_vue-eslint-parser@10.1.3__eslint@9.25.1___jiti@2.4.2__jiti@2.4.2_jiti@2.4.2",
+    "npm:eslint-plugin-vuejs-accessibility@^2.4.1": "2.4.1_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2",
     "npm:eslint@^9.22.0": "9.25.1_jiti@2.4.2",
     "npm:gh-pages@^6.3.0": "6.3.0",
     "npm:jiti@^2.4.2": "2.4.2",
@@ -367,7 +368,7 @@
       "dependencies": [
         "ajv",
         "debug",
-        "espree",
+        "espree@10.3.0_acorn@8.14.1",
         "globals@14.0.0",
         "ignore",
         "import-fresh",
@@ -787,7 +788,7 @@
         "fast-glob",
         "typescript",
         "typescript-eslint",
-        "vue-eslint-parser"
+        "vue-eslint-parser@10.1.3_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2"
       ]
     },
     "@vue/language-core@2.2.8_typescript@5.8.3": {
@@ -876,6 +877,9 @@
     },
     "argparse@2.0.1": {
       "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="
+    },
+    "aria-query@5.3.2": {
+      "integrity": "sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw=="
     },
     "array-union@2.1.0": {
       "integrity": "sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw=="
@@ -1017,6 +1021,9 @@
     "email-addresses@5.0.0": {
       "integrity": "sha512-4OIPYlA6JXqtVn8zpHpGiI7vE6EQOAg16aGnDMIAlZVinnoZ8208tW1hAbjWydgN/4PLTT9q+O1K6AH/vALJGw=="
     },
+    "emoji-regex@10.4.0": {
+      "integrity": "sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw=="
+    },
     "entities@4.5.0": {
       "integrity": "sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw=="
     },
@@ -1077,8 +1084,24 @@
         "nth-check",
         "postcss-selector-parser",
         "semver@7.7.1",
-        "vue-eslint-parser",
+        "vue-eslint-parser@10.1.3_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2",
         "xml-name-validator"
+      ]
+    },
+    "eslint-plugin-vuejs-accessibility@2.4.1_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2": {
+      "integrity": "sha512-ZRZhPdslplZXSF71MtSG+zXYRAT5KiHR4JVuo/DERQf9noAkDvi5W418VOE1qllmJd7wTenndxi1q8XeDMxdHw==",
+      "dependencies": [
+        "aria-query",
+        "emoji-regex",
+        "eslint",
+        "vue-eslint-parser@9.4.3_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2"
+      ]
+    },
+    "eslint-scope@7.2.2": {
+      "integrity": "sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==",
+      "dependencies": [
+        "esrecurse",
+        "estraverse"
       ]
     },
     "eslint-scope@8.3.0": {
@@ -1115,9 +1138,9 @@
         "cross-spawn",
         "debug",
         "escape-string-regexp@4.0.0",
-        "eslint-scope",
+        "eslint-scope@8.3.0",
         "eslint-visitor-keys@4.2.0",
-        "espree",
+        "espree@10.3.0_acorn@8.14.1",
         "esquery",
         "esutils",
         "fast-deep-equal",
@@ -1141,6 +1164,14 @@
         "acorn",
         "acorn-jsx",
         "eslint-visitor-keys@4.2.0"
+      ]
+    },
+    "espree@9.6.1_acorn@8.14.1": {
+      "integrity": "sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==",
+      "dependencies": [
+        "acorn",
+        "acorn-jsx",
+        "eslint-visitor-keys@3.4.3"
       ]
     },
     "esquery@1.6.0": {
@@ -1977,9 +2008,22 @@
       "dependencies": [
         "debug",
         "eslint",
-        "eslint-scope",
+        "eslint-scope@8.3.0",
         "eslint-visitor-keys@4.2.0",
-        "espree",
+        "espree@10.3.0_acorn@8.14.1",
+        "esquery",
+        "lodash",
+        "semver@7.7.1"
+      ]
+    },
+    "vue-eslint-parser@9.4.3_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2": {
+      "integrity": "sha512-2rYRLWlIpaiN8xbPiDyXZXRgLGOtWxERV7ND5fFAv5qo1D2N9Fu9MNajBNc6o13lZ+24DAWCkQCvj4klgmcITg==",
+      "dependencies": [
+        "debug",
+        "eslint",
+        "eslint-scope@7.2.2",
+        "eslint-visitor-keys@3.4.3",
+        "espree@9.6.1_acorn@8.14.1",
         "esquery",
         "lodash",
         "semver@7.7.1"
@@ -2049,6 +2093,7 @@
         "npm:@vue/tsconfig@0.7",
         "npm:eslint-plugin-oxlint@0.16",
         "npm:eslint-plugin-vue@10.0",
+        "npm:eslint-plugin-vuejs-accessibility@^2.4.1",
         "npm:eslint@^9.22.0",
         "npm:gh-pages@^6.3.0",
         "npm:jiti@^2.4.2",
