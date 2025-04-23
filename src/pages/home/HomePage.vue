@@ -7,7 +7,6 @@ import HomeWorkSection from './HomeWorkSection.vue';
 
 <template>
     <article aria-label="Home Page" class="home">
-        <h1 id="home">Home Page</h1>
         <HomeIntroSection />
         <HomeBioSection />
         <HomeWorkSection />
