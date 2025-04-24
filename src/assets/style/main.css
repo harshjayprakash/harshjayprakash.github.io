@@ -5,6 +5,10 @@
     transition: all 150ms ease-in-out;
 }
 
+::selection {
+    background-color: var(--colour-bk-select);
+    color: var(--colour-text-select);
+}
 
 body {
     font-family: 'Inter Variable', sans-serif;
