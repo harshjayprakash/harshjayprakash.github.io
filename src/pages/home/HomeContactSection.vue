@@ -3,6 +3,6 @@
 
 <template>
     <section aria-label="Contact" class="contact">
-        HomeContactSection
+        <h2>Contact.</h2>
     </section>
 </template>
