@@ -26,5 +26,11 @@
     --colour-950H: oklch(0.293 0.066 243.157);
 
     --colour-bk-primary: light-dark(var(--colour-050P), var(--colour-950P));
+    --colour-bk-select: light-dark(var(--colour-950H), var(--colour-050H));
+    --colour-bk-hover: light-dark(var(--colour-200P), var(--colour-800P));
+    --colour-bk-secondary: light-dark(var(--colour-100P), var(--colour-900P));
+    --colour-bk-accent-subtle: light-dark(var(--colour-200H), var(--colour-800H));
     --colour-text-primary: light-dark(var(--colour-950P), var(--colour-050P));
+    --colour-text-faded: light-dark(var(--colour-600P), var(--colour-400P));
+    --colour-text-select: light-dark(var(--colour-050H), var(--colour-950H));
 }
