@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 
 import '@fontsource-variable/inter/opsz';
+import '@fontsource-variable/inter/opsz-italic';
 import '@/assets/style/main.css';
 
 import MainComponent from '@/MainComponent.vue';
