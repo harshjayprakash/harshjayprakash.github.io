@@ -1,6 +1,11 @@
 @import './reset.css';
 @import './theme.css';
 
+*, *::before, *::after {
+    transition: all 150ms ease-in-out;
+}
+
+
 body {
     font-family: 'Inter Variable', sans-serif;
     font-variation-settings: 'opsz';
