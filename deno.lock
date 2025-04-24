@@ -330,13 +330,6 @@
     "@esbuild/win32-x64@0.25.2": {
       "integrity": "sha512-kM3HKb16VIXZyIeVrM1ygYmZBKybX8N4p754bw390wGO3Tf2j4L2/WYL+4suWujpgf6GBYs3jv7TyUivdd05JA=="
     },
-    "@eslint-community/eslint-utils@4.6.1_eslint@9.25.1__jiti@2.4.2": {
-      "integrity": "sha512-KTsJMmobmbrFLe3LDh0PC2FXpcSYJt/MLjlkh/9LEnmKYLSYmT/0EW9JWANjeoemiuZrmogti0tW5Ch+qNUYDw==",
-      "dependencies": [
-        "eslint",
-        "eslint-visitor-keys@3.4.3"
-      ]
-    },
     "@eslint-community/eslint-utils@4.6.1_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2": {
       "integrity": "sha512-KTsJMmobmbrFLe3LDh0PC2FXpcSYJt/MLjlkh/9LEnmKYLSYmT/0EW9JWANjeoemiuZrmogti0tW5Ch+qNUYDw==",
       "dependencies": [
@@ -637,7 +630,7 @@
     "@typescript-eslint/utils@8.31.0_eslint@9.25.1__jiti@2.4.2_typescript@5.8.3_jiti@2.4.2": {
       "integrity": "sha512-qi6uPLt9cjTFxAb1zGNgTob4x9ur7xC6mHQJ8GwEzGMGE9tYniublmJaowOJ9V2jUzxrltTPfdG2nKlWsq0+Ww==",
       "dependencies": [
-        "@eslint-community/eslint-utils@4.6.1_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2",
+        "@eslint-community/eslint-utils",
         "@typescript-eslint/scope-manager",
         "@typescript-eslint/types",
         "@typescript-eslint/typescript-estree",
@@ -831,7 +824,7 @@
         "csstype"
       ]
     },
-    "@vue/server-renderer@3.5.13_vue@3.5.13__typescript@5.8.3": {
+    "@vue/server-renderer@3.5.13_vue@3.5.13__typescript@5.8.3_typescript@5.8.3": {
       "integrity": "sha512-wAi4IRJV/2SAW3htkTlB+dHeRmpTiVIK1OGLWV1yeStVSebSQQOwGwIq0D3ZIoBj2C2qpgz5+vX9iEBkTdk5YA==",
       "dependencies": [
         "@vue/compiler-ssr",
@@ -1082,7 +1075,7 @@
     "eslint-plugin-vue@10.0.0_eslint@9.25.1__jiti@2.4.2_vue-eslint-parser@10.1.3__eslint@9.25.1___jiti@2.4.2__jiti@2.4.2_jiti@2.4.2": {
       "integrity": "sha512-XKckedtajqwmaX6u1VnECmZ6xJt+YvlmMzBPZd+/sI3ub2lpYZyFnsyWo7c3nMOQKJQudeyk1lw/JxdgeKT64w==",
       "dependencies": [
-        "@eslint-community/eslint-utils@4.6.1_eslint@9.25.1__jiti@2.4.2_jiti@2.4.2",
+        "@eslint-community/eslint-utils",
         "eslint",
         "natural-compare",
         "nth-check",
@@ -1124,7 +1117,7 @@
     "eslint@9.25.1_jiti@2.4.2": {
       "integrity": "sha512-E6Mtz9oGQWDCpV12319d59n4tx9zOTXSTmc8BLVxBx+G/0RdM5MvEEJLU9c0+aleoePYYgVTOsRblx433qmhWQ==",
       "dependencies": [
-        "@eslint-community/eslint-utils@4.6.1_eslint@9.25.1__jiti@2.4.2",
+        "@eslint-community/eslint-utils",
         "@eslint-community/regexpp",
         "@eslint/config-array",
         "@eslint/config-helpers",
