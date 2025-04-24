@@ -13,3 +13,11 @@ import HomeWorkSection from './HomeWorkSection.vue';
         <HomeContactSection />
     </article>
 </template>
+
+<style lang="css" scoped>
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+</style>
