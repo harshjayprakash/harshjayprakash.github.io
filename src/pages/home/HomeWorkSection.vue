@@ -64,6 +64,7 @@ const filteredProjects = computed(() =>
                 />
                 <div>
                     <h3>{{ project.name }}</h3>
+                    <small>{{ project.timeframe }} &mdash; {{ project.status }}</small>
                     <p>{{ project.description }}</p>
                 </div>
             </a>
