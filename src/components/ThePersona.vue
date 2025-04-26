@@ -6,6 +6,10 @@ const { avatar, name, status } = defineProps<{
     name: string,
     status: string
 }>();
+
+const generateAriaLabel = () => {
+    return `${name}, status: ${status}`;
+}
 </script>
 
 <template>
@@ -14,6 +18,7 @@ const { avatar, name, status } = defineProps<{
         role="status"
         v-bind="$attrs"
         v-on="$attrs"
+        :aria-label="generateAriaLabel()"
     >
         <img :src="avatar" alt="avatar" class="avatar" />
         <div aria-label="Avatar Information" class="text" role="group">
