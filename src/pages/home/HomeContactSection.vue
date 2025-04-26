@@ -3,6 +3,6 @@
 
 <template>
     <section aria-label="Contact" class="contact">
-        <h2>Contact.</h2>
+        <h2>Looking to collaborate<br/> or say hello?</h2>
     </section>
 </template>
