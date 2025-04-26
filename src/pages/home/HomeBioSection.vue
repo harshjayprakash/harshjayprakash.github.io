@@ -36,8 +36,9 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
                 status="Looking for work."
             />
             <p>
-                I am a computer science graduate from the University of Winchester, who is
-                currently looking for role.
+                I am a <span class="emphasis">computer science graduate</span> from the
+                University of Winchester, who is actively
+                <span class="emphasis">searching for a role.</span>
             </p>
             <p>
                 I enjoy the craft of programming, having a focus on crafting digital
