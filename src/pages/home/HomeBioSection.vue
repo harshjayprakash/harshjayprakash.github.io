@@ -40,14 +40,17 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
                 University of Winchester, who is actively
                 <span class="emphasis">searching for a role.</span>
             </p>
-            <p>
-                I enjoy the craft of programming, having a focus on crafting digital
-                experiences that are human-centred, balancing aesthetics and
-                functionality. I want to make an impact, inspire and connect with people
-                in the industry.
+            <p class="faded-paragraph">
+                I enjoy the craft of programming - focusing on making digital
+                experiences that are human-centred, balancing both aesthetics and
+                functionality. The art of programming is a way I connect with the digital
+                world, also drawn to the challenge and creativity. I want to create an
+                impact, inspire and connect with others.
             </p>
-            <p>
-                Outside of the craft.
+            <p class="faded-paragraph">
+                I also have an appreciation for visual clarity and cohesion, espacially
+                when it comes to making diagrams. Whether it's the shapes, colour,
+                typography, I enjoy creating designs with a unified visual language.
             </p>
         </div>
         <div aria-label="Skills List" class="skills" role="group">
