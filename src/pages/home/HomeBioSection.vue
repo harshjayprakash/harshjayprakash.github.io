@@ -55,7 +55,7 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
         </div>
         <div aria-label="Skills List" class="skills" role="group">
             <div v-for="svc in services" :key="svc.service" class="skill-card" role="group">
-                <h3>{{ svc.service }}</h3>
+                <span>{{ svc.service }}</span>
                 <ul class="technologies">
                     <li v-for="(tech, idx) in svc.technologies" :key="tech">
                         <span>
