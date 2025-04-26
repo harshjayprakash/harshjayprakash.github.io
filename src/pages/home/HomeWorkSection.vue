@@ -1,12 +1,19 @@
 <script lang="ts" setup>
+import { computed, ref } from 'vue';
 import getAltText from '@/data/altText';
 import getProjects from '@/data/projects';
 import type { ProjectCategory } from '@/types/ProjectCategory';
-import { computed, ref } from 'vue';
 
 const { findAltTextFromName } = getAltText();
 
+const getProjectImageSource = (abbrev: string) =>
+    `/images/${abbrev}-preview.png`;
+
+const getProjectImageAlt = (abbrev: string) =>
+    findAltTextFromName(`${abbrev}-preview.png`);
+
 const { filterProjectsByAbbreviation } = getProjects();
+
 const projects = filterProjectsByAbbreviation(
     ['xbk', 'ppw', 'aap', 'wpq', 'lls', 'dwf', 'ccs']
 );
@@ -18,14 +25,6 @@ const filteredProjects = computed(() =>
     (projectFilter.value === 'All') ? projectsRef.value
     : projectsRef.value.filter(project => project.category ===  projectFilter.value)
 );
-
-const getProjectImageSource = (abbrev: string) => {
-    return `/images/${abbrev}-preview.png`;
-}
-
-const getProjectImageAlt = (abbrev: string) => {
-    return findAltTextFromName(`${abbrev}-preview.png`);
-}
 </script>
 
 <template>
