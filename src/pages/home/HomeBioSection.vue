@@ -61,9 +61,6 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
                         <span>
                             {{ tech }}
                         </span>
-                        <span v-if="idx != svc.technologies.length-1">
-                            &SmallCircle;
-                        </span>
                     </li>
                 </ul>
             </div>
