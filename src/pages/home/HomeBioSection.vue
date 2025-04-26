@@ -82,10 +82,12 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
     gap: 1rem;
 }
 
-.home .bio .about .image {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+.home .bio .about .faded-paragraph {
+    color: var(--colour-text-faded);
+}
+
+.home .bio .about .emphasis {
+    color: light-dark(var(--colour-800H), var(--colour-200H));
 }
 
 .home .bio .skills {
@@ -106,7 +108,7 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 0.3rem;
+    column-gap: 1rem;
     color: var(--colour-text-faded);
 }
 
