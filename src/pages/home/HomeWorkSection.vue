@@ -1,12 +1,22 @@
 <script lang="ts" setup>
 import getAltText from '@/data/altText';
 import getProjects from '@/data/projects';
+import type { ProjectCategory } from '@/types/ProjectCategory';
+import { computed, ref } from 'vue';
 
 const { findAltTextFromName } = getAltText();
 
 const { filterProjectsByAbbreviation } = getProjects();
 const projects = filterProjectsByAbbreviation(
-    ['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs']
+    ['xbk', 'ppw', 'aap', 'wpq', 'lls', 'dwf', 'ccs']
+);
+
+const projectFilter = ref<ProjectCategory>('All');
+const projectsRef = ref(projects);
+
+const filteredProjects = computed(() =>
+    (projectFilter.value === 'All') ? projectsRef.value
+    : projectsRef.value.filter(project => project.category ===  projectFilter.value)
 );
 
 const getProjectImageSource = (abbrev: string) => {
@@ -42,7 +52,7 @@ const getProjectImageAlt = (abbrev: string) => {
         </div>
         <div role="list" class="projects">
             <a
-                v-for="project in projects"
+                v-for="project in filteredProjects"
                 :key="project.abbreviation"
                 role="listitem"
                 class="project-card"
