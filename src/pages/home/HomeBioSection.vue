@@ -31,7 +31,7 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
         <h2>A brief intro.</h2>
         <div aria-label="Short About Me" class="about" role="group">
             <ThePersona
-                :avatar="avatar"
+                :avatar
                 name="Harsh Jayprakash"
                 status="Looking for work."
             />
