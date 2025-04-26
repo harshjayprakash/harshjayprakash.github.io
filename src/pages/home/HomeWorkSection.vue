@@ -33,7 +33,8 @@ const filteredProjects = computed(() =>
         <p>
             Here are a few my latest projects &mdash; it's not much, but it is about the
             quality. Each use a different technology, even though the date looks old, it
-            does mean that the project has been completed.
+            does mean that the project has been completed. Projects are organised by
+            most recently modified.
         </p>
         <div role="tablist">
             <button role="tab">
