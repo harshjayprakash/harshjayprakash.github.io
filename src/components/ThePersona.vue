@@ -21,6 +21,7 @@ const generateAriaLabel = () => {
         :aria-label="generateAriaLabel()"
     >
         <img :src="avatar" alt="avatar" class="avatar" />
+        <div class="indicator" aria-hidden="true"></div>
         <div aria-label="Avatar Information" class="text" role="group">
             <span class="name">{{ name }}</span>
             <span class="status">{{ status }}</span>
@@ -31,13 +32,24 @@ const generateAriaLabel = () => {
 <style lang="css" scoped>
 .persona {
     display: flex;
-    gap: 1rem;
+    gap: 0.25rem;
 }
 
 .persona .avatar {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+}
+
+.persona .indicator {
+    position: relative;
+    top: 1.8rem;
+    left: -0.9rem;
+    height: 0.8rem;
+    width: 0.8rem;
+    background: var(--colour-500H);
+    border-radius: 50%;
+    border: 0.1rem solid var(--colour-bk-primary);
 }
 
 .persona .text {
