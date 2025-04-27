@@ -1,34 +1,12 @@
 <script lang="ts" setup>
 import TheAccordion from '@/components/TheAccordion.vue';
 import ThePersona from '@/components/ThePersona.vue';
+import getAvatar from '@/data/avatar';
+import getServices from '@/data/services';
 
-interface IService {
-    service: string,
-    description: string,
-    technologies: string[]
-}
+const { avatar } = getAvatar();
+const { services } = getServices();
 
-const services: IService[] = [{
-    service: 'Front-End Web Development',
-    description: 'Building modern responsive website using front-end technologies to create seamless user experiences.',
-    technologies: ['Angular', 'Vue', 'HTML', 'CSS', 'TypeScript']
-}, {
-    service: 'Desktop Application Development',
-    description: 'Building robust, scalable applications tailored to the given requirements.',
-    technologies: ['C', 'Python', 'Java', 'Visual Basic .NET', 'Pascal']
-}, {
-    service: 'UI/UX',
-    description: 'Designing user interfaces and diagrams, focusing on the user experience.',
-    technologies: ['Analogue Pen+Paper']
-}, {
-    service: 'Tools',
-    description: 'The tools used within my workflow.',
-    technologies: [
-        'Windows', 'GNU+Linux', 'VSCode', 'Visual Studio', 'JetBrains IntelliJ', 'Git'
-    ]
-}];
-
-const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
 </script>
 
 <template>
@@ -59,11 +37,11 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
             </p>
         </div>
         <div aria-label="Skills List" class="skills" role="group">
-            <div v-for="svc in services" :key="svc.service" class="skill-card" role="group">
+            <div v-for="svc in services" :key="svc.name" class="skill-card" role="group">
                 <TheAccordion name="skills" open>
                     <template #heading>
                         <span>
-                            {{ svc.service }}
+                            {{ svc.name }}
                         </span>
                     </template>
                     <template #content>
