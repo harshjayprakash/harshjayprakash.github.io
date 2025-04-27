@@ -1,5 +1,11 @@
 # Personal Portfolio Website
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/ppw-banner-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./docs/ppw-banner-light.png">
+  <img alt="banner" src="./docs/ppw-banner.png"
+</picture>
+
 This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
 showcase my projects in one central place. **This website is still under construction**.
 
@@ -18,6 +24,8 @@ performance and long-term reliability.
 
 The Inter typeface is self-hosted using the fontsource variable package to avoid the using
 Google Fonts for privacy.
+
+![Screenshot of Website](./docs/ppw-preview.png)
 
 ## Running Locally
 
