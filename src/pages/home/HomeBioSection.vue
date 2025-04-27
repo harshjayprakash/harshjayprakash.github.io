@@ -17,6 +17,10 @@ const services: IService[] = [{
     description: 'Building robust, scalable applications tailored to the given requirements.',
     technologies: ['C', 'Python', 'Java', 'Visual Basic .NET', 'Pascal']
 }, {
+    service: 'UI/UX',
+    description: 'Designing user interfaces and diagrams, focusing on the user experience.',
+    technologies: ['Analogue Pen+Paper']
+}, {
     service: 'Tools',
     description: 'The tools used within my workflow.',
     technologies: [
