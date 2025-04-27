@@ -76,6 +76,7 @@
     --colour-text-highlight: light-dark(var(--colour-800H), var(--colour-200H));
 
     --colour-outline-hover: light-dark(var(--colour-300P), var(--colour-700P));
+    --colour-outline-faded: light-dark(var(--colour-300P), var(--colour-700P));
     --colour-outline-highlight: light-dark(var(--colour-800H), var(--colour-300H));
     --colour-outline-highlight-lighter: light-dark(var(--colour-600H), var(--colour-500H));
 }
