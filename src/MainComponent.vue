@@ -11,3 +11,9 @@ import TheHeader from '@/components/TheHeader.vue';
     </main>
     <TheFooter />
 </template>
+
+<style lang="css" scoped>
+#main {
+    padding-block: 2.5rem;
+}
+</style>
