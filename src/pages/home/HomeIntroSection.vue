@@ -92,8 +92,7 @@ onMounted(() => {
 }
 
 .home .intro .welcome {
-    max-width: 60ch;
-    color: var(--colour-text-faded);
+    max-width: 60ch;;
 }
 
 .home .intro .explore-arrow {
