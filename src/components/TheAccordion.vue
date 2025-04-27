@@ -26,6 +26,10 @@
     cursor: pointer;
 }
 
+.accordion-content:hover {
+    --widget-accordion-outline: var(--colour-outline-hover);
+}
+
 .accordion-header > * {
     display: inline;
 }
