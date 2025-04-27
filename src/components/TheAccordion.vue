@@ -14,12 +14,15 @@
 
 <style lang="css" scoped>
 .accordion-content {
+    --widget-accordion-outline: transparent;
+    --widget-accordion-list-type: '\002B   ';
+
     padding-inline: 1rem;
-    border-inline-start: 0.2rem solid transparent;
+    border-inline-start: 0.2rem solid var(--widget-accordion-outline);
 }
 
 .accordion-header {
-    list-style-type: '\002B   ';
+    list-style-type: var(--widget-accordion-list-type);
     cursor: pointer;
 }
 
@@ -27,20 +30,15 @@
     display: inline;
 }
 
-.accordion-content[open] > .accordion-header {
-    list-style-type: '\2212   ';
-}
-
-.accordion-header::marker {
-    font-weight: 500;
-    color: var(--colour-600H);
-}
-
 .accordion-content[open] {
-    border-inline-start: 0.2rem solid var(--colour-600H);
+    --widget-accordion-outline: var(--colour-outline-highlight);
+    --widget-accordion-list-type: '\2212   ';
 }
 
 .accordion-content-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     padding-block: 0.5rem;
 }
 </style>
