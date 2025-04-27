@@ -51,7 +51,7 @@ const projectCountBadgeAriaLabel = () => {
             does mean that the project has been completed. Projects are organised by
             most recently modified.
         </p>
-        <TheBadge :aria-label="projectCountBadgeAriaLabel()"  variant="outline">
+        <TheBadge :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
             Showing {{ projectCountCurrent }} of {{ projectCountMax }} Projects.
         </TheBadge>
         <TheTabList>

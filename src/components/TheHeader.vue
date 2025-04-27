@@ -24,7 +24,7 @@ const toggleNav = () => isNavVisibleOnMobile.value = !isNavVisibleOnMobile.value
             {{ navButtonText }}
         </button>
         <span>Harsh.</span>
-        <TheBadge variant="outline" >
+        <TheBadge variant="outline" colour="highlight" aria-label="Website Build Status">
             {{ buildStatus }}
         </TheBadge>
         <TheDivider
