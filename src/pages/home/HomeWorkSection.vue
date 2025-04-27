@@ -5,6 +5,7 @@ import getProjects from '@/data/projects';
 import type { ProjectCategory } from '@/types/ProjectCategory';
 import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
+import TheBadge from '@/components/TheBadge.vue';
 
 const { findAltTextFromName } = getAltText();
 
@@ -32,6 +33,13 @@ const filterOptions: ProjectCategory[] = ['All', 'CLI', 'Desktop', 'Web'];
 
 const updateFilter = (category: ProjectCategory) => projectFilter.value = category;
 const isActiveFilter = (category: ProjectCategory) => (projectFilter.value === category);
+
+const projectCountMax = projects.length;
+const projectCountCurrent = computed(() => filteredProjects.value.length);
+
+const projectCountBadgeAriaLabel = () => {
+    return `${projectCountMax} Total Projects, ${projectCountCurrent.value} Shown`
+}
 </script>
 
 <template>
@@ -43,6 +51,9 @@ const isActiveFilter = (category: ProjectCategory) => (projectFilter.value === c
             does mean that the project has been completed. Projects are organised by
             most recently modified.
         </p>
+        <TheBadge :aria-label="projectCountBadgeAriaLabel()"  variant="outline">
+            Showing {{ projectCountCurrent }} of {{ projectCountMax }} Projects.
+        </TheBadge>
         <TheTabList>
             <TheTab
                 v-for="fo in filterOptions"
