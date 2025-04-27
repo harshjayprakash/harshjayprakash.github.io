@@ -3,6 +3,8 @@ import { computed, ref } from 'vue';
 import getAltText from '@/data/altText';
 import getProjects from '@/data/projects';
 import type { ProjectCategory } from '@/types/ProjectCategory';
+import TheTabList from '@/components/TheTabList.vue';
+import TheTab from '@/components/TheTab.vue';
 
 const { findAltTextFromName } = getAltText();
 
@@ -25,6 +27,11 @@ const filteredProjects = computed(() =>
     (projectFilter.value === 'All') ? projectsRef.value
     : projectsRef.value.filter(project => project.category ===  projectFilter.value)
 );
+
+const filterOptions: ProjectCategory[] = ['All', 'CLI', 'Desktop', 'Web'];
+
+const updateFilter = (category: ProjectCategory) => projectFilter.value = category;
+const isActiveFilter = (category: ProjectCategory) => (projectFilter.value === category);
 </script>
 
 <template>
@@ -36,20 +43,16 @@ const filteredProjects = computed(() =>
             does mean that the project has been completed. Projects are organised by
             most recently modified.
         </p>
-        <div role="tablist">
-            <button role="tab">
-                All
-            </button>
-            <button role="tab">
-                CLI
-            </button>
-            <button role="tab">
-                Desktop
-            </button>
-            <button role="tab">
-                Web
-            </button>
-        </div>
+        <TheTabList>
+            <TheTab
+                v-for="fo in filterOptions"
+                :key="`Filter Option: ${fo}`"
+                :active="isActiveFilter(fo)"
+                @click="updateFilter(fo)"
+            >
+                {{ fo }}
+            </TheTab>
+        </TheTabList>
         <div role="list" class="projects">
             <a
                 v-for="project in filteredProjects"
