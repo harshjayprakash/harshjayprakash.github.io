@@ -10,7 +10,8 @@ use. More details:
 * Simplicity: Minimal distractions, simple typography, clean layouts.
 * Accessibility: Following WCAG Guidelines (Constrast Ratios, Alt Text, ARIA Labels +
 Roles)
-* User Experience: Intuitive interactions, responsive design.
+* User Experience: Intuitive interactions, responsive design, adapts to system colour
+theme (media query: prefers-color-theme).
 
 This project intentionally minimises the reliance on dependencies, allowing for better
 performance and long-term reliability.
