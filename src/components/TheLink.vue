@@ -20,4 +20,19 @@ const target = () => (newWindow) ? '_blank' : '';
 </template>
 
 <style lang="css" scoped>
+.link {
+    --widget-link-underline-width: 0.1rem;
+    --widget-link-underline-colour: var(--colour-outline-highlight-lighter);
+
+    color: inherit;
+    background-color: inherit;
+    text-decoration:
+        underline solid
+        var(--widget-link-underline-colour)
+        var(--widget-link-underline-width);
+}
+
+.link:hover {
+    --widget-link-underline-width: 0.2rem;
+}
 </style>
