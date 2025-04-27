@@ -70,7 +70,6 @@ onMounted(() => {
     background-color: var(--colour-bk-accent-subtle);
     height: 0.25rem;
     width: 0.25rem;
-    border-radius: 50%;
     animation-name: fiCircle;
     animation-duration: 5s;
 }
