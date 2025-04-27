@@ -32,7 +32,7 @@ npm run dev
 
 ## Changelog
 
-* Version 5.0 --25H1F "TBD"
+* Version 5.0 --25H1F "13/05/2025"
   * Migrated to Composition API with Setup Tag.
   * Mitigated Vite Vulnerabilities.
   * Improved Accessibility.
