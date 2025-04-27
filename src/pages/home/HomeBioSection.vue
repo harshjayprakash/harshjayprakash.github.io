@@ -56,7 +56,7 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
         </div>
         <div aria-label="Skills List" class="skills" role="group">
             <div v-for="svc in services" :key="svc.service" class="skill-card" role="group">
-                <TheAccordion name="skills">
+                <TheAccordion name="skills" open>
                     <template #heading>
                         <span>
                             {{ svc.service }}
@@ -65,9 +65,12 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
                     <template #content>
                         <p>{{ svc.description }}</p>
                         <ul class="technologies">
-                            <li v-for="tech in svc.technologies" :key="tech">
+                            <li v-for="(tech, idx) in svc.technologies" :key="tech">
                                 <span>
                                     {{ tech }}
+                                </span>
+                                <span v-if="idx != svc.technologies.length-1">
+                                    &SmallCircle;
                                 </span>
                             </li>
                         </ul>
@@ -119,10 +122,10 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
     padding: 0;
     list-style: none;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    column-gap: 1rem;
+    column-gap: 0.25rem;
     color: var(--colour-text-faded);
+    font-size: smaller;
 }
 
 .service-accordian-header {
