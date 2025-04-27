@@ -35,6 +35,19 @@ npm run dev
 * Version 5.0 --25H1F "TBD"
   * Migrated to Composition API with Setup Tag.
   * Mitigated Vite Vulnerabilities.
+  * Improved Accessibility.
+  * Updated Zinc Colour to Grey.
+  * Updated Hero Section
+    * No Longer Centred Text
+    * Added Static Particles.
+    * Added Highlight to Role.
+  * Added Brief Intro Section.
+    * Merged with Skills Section.
+    * Converted Skills Cards to Accordion.
+    * Added Extra About Information.
+  * Updated Spacing.
+  * Updated Mobile Breakpoint.
+  * Added Start Year to Project Cards.
 * Version 4.1 --25H1E "24/03/2025"
   * Improved Accessibility: Fixed some issues highlighted issues by ARC Toolkit.
     * Reduced Link Breaks _Note: Line breaks are still used for visual purposes._
