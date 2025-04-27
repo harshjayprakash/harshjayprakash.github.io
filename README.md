@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./docs/ppw-banner-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./docs/ppw-banner-light.png">
-  <img alt="banner" src="./docs/ppw-banner.png"
+  <img alt="banner" src="./docs/ppw-banner.png">
 </picture>
 
 This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
