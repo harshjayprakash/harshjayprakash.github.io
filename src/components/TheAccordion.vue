@@ -2,10 +2,12 @@
 </script>
 
 <template>
-    <details class="accordian-content">
-        <summary class="accordian-header">
+    <details class="accordion-content">
+        <summary class="accordion-header">
             <slot name="heading"></slot>
         </summary>
-        <slot name="content"></slot>
+        <div role="group" class="accordion-content-details">
+            <slot name="content"></slot>
+        </div>
     </details>
 </template>
