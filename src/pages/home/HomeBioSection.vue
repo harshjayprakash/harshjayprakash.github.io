@@ -57,7 +57,7 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
             <div v-for="svc in services" :key="svc.service" class="skill-card" role="group">
                 <span>{{ svc.service }}</span>
                 <ul class="technologies">
-                    <li v-for="(tech, idx) in svc.technologies" :key="tech">
+                    <li v-for="tech in svc.technologies" :key="tech">
                         <span>
                             {{ tech }}
                         </span>
