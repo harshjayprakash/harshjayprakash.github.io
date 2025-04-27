@@ -31,7 +31,7 @@
 }
 
 .accordion-content[open] {
-    --widget-accordion-outline: var(--colour-outline-highlight);
+    --widget-accordion-outline: var(--colour-outline-highlight-lighter);
     --widget-accordion-list-type: '\2212   ';
 }
 
