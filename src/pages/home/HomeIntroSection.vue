@@ -1,23 +1,8 @@
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
+import useDotParticles from '@/composables/useDotParticles';
 
-interface IPosition {
-    x: number;
-    y: number;
-}
-
-const dots = ref<IPosition[]>([]);
-
-onMounted(() => {
-    const dotCount = 50;
-
-    for (let idx = 0; idx < dotCount; idx++) {
-        const posx = Math.floor(Math.random()*100);
-        const posy = Math.floor(Math.random()*100);
-
-        dots.value.push({x:posx, y:posy});
-    }
-});
+const _dotCount = 50;
+const { dots } = useDotParticles(_dotCount);
 </script>
 
 <template>
