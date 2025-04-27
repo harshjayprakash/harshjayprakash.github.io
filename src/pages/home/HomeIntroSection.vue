@@ -71,7 +71,7 @@ onMounted(() => {
     height: 0.25rem;
     width: 0.25rem;
     animation-name: fiCircle;
-    animation-duration: 5s;
+    animation-duration: 1s;
 }
 
 .home .intro .image {
