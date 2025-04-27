@@ -1,5 +1,6 @@
 @import './reset.css';
 @import './theme.css';
+@import './effect.css';
 
 *, *::before, *::after {
     transition: all 150ms ease-in-out;
