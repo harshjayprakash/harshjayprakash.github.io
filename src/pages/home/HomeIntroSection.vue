@@ -107,4 +107,10 @@ onMounted(() => {
         opacity: 1;
     }
 }
+
+@media (prefers-reduced-motion) {
+    .dot {
+        animation: none;
+    }
+}
 </style>
