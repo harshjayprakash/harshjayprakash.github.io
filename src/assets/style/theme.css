@@ -1,6 +1,25 @@
 :root {
     color-scheme: light dark;
 
+    /*
+        The base colour palette based off the colours from Tailwind CSS v4.1.
+        These colour variables should not be used directly, but used to create
+        semantic colour variables.
+
+        These variables follow the convention:
+            --colour-<VARIANCE><TYPE-PREFIX>: ;
+
+        TYPE-PREFIX:
+            What the colour is used for, e.g.
+            P - primary surface and text.
+            H - highlights
+
+        VARIANCE:
+            Denotes the shade on the scale of
+            000 - Lightest
+            1000 - Darkest
+    */
+
     --colour-050P: oklch(0.985 0.002 247.839);
     --colour-100P: oklch(0.967 0.003 264.542);
     --colour-200P: oklch(0.928 0.006 264.531);
@@ -24,6 +43,23 @@
     --colour-800H: oklch(0.437 0.078 188.216);
     --colour-900H: oklch(0.386 0.063 188.416);
     --colour-950H: oklch(0.277 0.046 192.524);
+
+    /*
+        Semantic Colours, the light-dark adaptable colours to be used with
+        components indirectly through additional variables.
+
+        These variables follow the convention:
+            --colour-<CONTEXT>-<TYPE-VARIANCE>: ;
+
+        CONTEXT:
+            How this colour will be used (surface, text, ...).
+
+        TYPE-VARIANCE:
+            What variant of the colour is used, e.g.
+            primary - default.
+            secondary - additional variant.
+            ...
+    */
 
     --colour-bk-primary: light-dark(var(--colour-050P), var(--colour-950P));
     --colour-bk-select: light-dark(var(--colour-950H), var(--colour-050H));
