@@ -1,16 +1,41 @@
 <script lang="ts" setup>
 import getMetaData from '@/data/metadata';
 import TheBadge from './TheBadge.vue';
+import TheDivider from './TheDivider.vue';
+import TheNav from './TheNav.vue';
+import useMobileDetector from '@/composables/useMobileDetector';
+import { computed, ref } from 'vue';
+
 const { buildStatus } = getMetaData();
+const { isMobile } = useMobileDetector();
+
+const isNavVisibleOnMobile = ref(true);
+const navButtonText = computed(() =>
+    (isNavVisibleOnMobile.value) ? String.fromCodePoint(10005)
+    : String.fromCodePoint(9776)
+);
+
+const toggleNav = () => isNavVisibleOnMobile.value = !isNavVisibleOnMobile.value;
 </script>
 
 <template>
     <header aria-label="Site Header" class="header">
+        <button v-if="isMobile" @click="toggleNav()" class="menu-button">
+            {{ navButtonText }}
+        </button>
         <span>Harsh.</span>
         <TheBadge variant="outline" >
             {{ buildStatus }}
         </TheBadge>
+        <TheDivider
+            v-if="!isMobile"
+            orientation="vertical"
+            :height="1.5"
+            :thickness="0.15"
+        />
+        <TheNav v-if="!isMobile" variant="desktop" />
     </header>
+    <TheNav v-if="isMobile && isNavVisibleOnMobile" variant="mobile" @on-link-click="toggleNav" />
 </template>
 
 <style lang="css" scoped>
@@ -23,8 +48,17 @@ const { buildStatus } = getMetaData();
     padding: 1rem;
     max-width: min-content;
     border: 1px solid var(--colour-outline-faded);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
     place-items: center;
     z-index: 10;
+}
+
+.menu-button {
+    border: 0;
+    background-color: inherit;
+}
+
+.menu-button:hover {
+    background-color: var(--colour-bk-hover);
 }
 </style>
