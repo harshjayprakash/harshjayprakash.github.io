@@ -18,7 +18,7 @@ const getProjectImageAlt = (abbrev: string) =>
 const { filterProjectsByAbbreviation } = getProjects();
 
 const projects = filterProjectsByAbbreviation(
-    ['xbk', 'ppw', 'aap', 'wpq', 'lls', 'dwf', 'ccs']
+    ['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs']
 );
 
 const projectFilter = ref<ProjectCategory>('All');
