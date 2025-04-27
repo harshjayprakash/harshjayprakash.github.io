@@ -12,5 +12,6 @@
 .footer {
     display: flex;
     flex-direction: column;
+    padding-block: 2rem;
 }
 </style>
