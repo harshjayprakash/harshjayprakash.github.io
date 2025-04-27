@@ -47,15 +47,15 @@ onMounted(() => {
 </template>
 
 <style lang="css" scoped>
-.home .intro {
+.intro {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    height: 100vh;
+    height: 85vh;
     place-content: center;
 }
 
-.home .intro .dots-container {
+.dots-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +65,7 @@ onMounted(() => {
     width: 90%;
 }
 
-.home .intro .dots-container .dot {
+.dot {
     position: relative;
     background-color: var(--colour-bk-highlight-subtle);
     height: 0.25rem;
@@ -74,32 +74,26 @@ onMounted(() => {
     animation-duration: 1s;
 }
 
-.home .intro .image {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-}
-
-.home .intro .greeting-text {
+.greeting-text {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.home .intro .block-highlight {
+.block-highlight {
     background-color: var(--colour-bk-highlight-subtle);
     color: var(--colour-text-highlight);
 }
 
-.home .intro .welcome {
+.welcome {
     max-width: 60ch;;
 }
 
-.home .intro .explore-arrow {
+.explore-arrow {
     color: var(--colour-text-faded);
 }
 
-.home .intro .emphasis {
+.emphasis {
     color: var(--colour-text-primary);
 }
 

@@ -86,34 +86,34 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
 </template>
 
 <style lang="css" scoped>
-.home .bio {
+.bio {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     gap: 2rem;
 }
 
-.home .bio .about {
+.about {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.home .bio .about .faded-paragraph {
+.about .faded-paragraph {
     color: var(--colour-text-faded);
 }
 
-.home .bio .about .emphasis {
+.about .emphasis {
     color: light-dark(var(--colour-800H), var(--colour-200H));
 }
 
-.home .bio .skills {
+.skills {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.home .bio .skills .skill-card  {
+.skill-card  {
     background-color: var(--colour-bk-secondary);
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@ const avatar = 'https://avatars.githubusercontent.com/u/58461297?v=4';
 
 }
 
-.home .bio .skills .skill-card .technologies {
+.technologies {
     padding: 0;
     list-style: none;
     display: flex;
@@ -145,12 +145,12 @@ details[open] > .service-accordian-header {
 }
 
 @media (width > 40rem) {
-    .home .bio {
+    .bio {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
     }
 
-    .home .bio :first-of-type {
+    .bio :first-of-type {
         grid-column: 1 / 1;
     }
 }
