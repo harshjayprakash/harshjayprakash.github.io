@@ -75,10 +75,16 @@ npm run dev
 
 * The `light-dark` css function is used (mdn: newly available).
 
+## Todo
+
+* "Back to Top" button.
+* "Skip to Content" button.
+* Project Filter Tablist Arrow Key Navigation.
+
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
 * CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
-* Tailwind v4.0 Colours (Zinc and Teal): <https://tailwindcss.com/docs/colors>
+* Tailwind v4.0 Colours (Grey and Teal): <https://tailwindcss.com/docs/colors>
 * ARC Toolkit: <https://www.tpgi.com/arc-platform/arc-toolkit/>
