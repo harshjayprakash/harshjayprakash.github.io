@@ -33,10 +33,10 @@ const { active } = defineProps<{
 }
 
 .tab[aria-selected="false"]:hover {
-    --widget-tab-border-colour: var(--colour-400P);
+    --widget-tab-border-colour: var(--colour-outline-hover);
 }
 
 .tab[aria-selected="true"] {
-    --widget-tab-border-colour: var(--colour-600H);
+    --widget-tab-border-colour: var(--colour-outline-highlight-lighter);
 }
 </style>

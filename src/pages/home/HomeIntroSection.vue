@@ -67,7 +67,7 @@ onMounted(() => {
 
 .home .intro .dots-container .dot {
     position: relative;
-    background-color: var(--colour-bk-accent-subtle);
+    background-color: var(--colour-bk-highlight-subtle);
     height: 0.25rem;
     width: 0.25rem;
     animation-name: fiCircle;
@@ -87,8 +87,8 @@ onMounted(() => {
 }
 
 .home .intro .block-highlight {
-    background-color: light-dark(var(--colour-200H), var(--colour-800H));
-    color: light-dark(var(--colour-800H), var(--colour-200H));
+    background-color: var(--colour-bk-highlight-subtle);
+    color: var(--colour-text-highlight);
 }
 
 .home .intro .welcome {
