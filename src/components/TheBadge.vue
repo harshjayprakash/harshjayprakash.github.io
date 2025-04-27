@@ -3,27 +3,20 @@ import { computed } from 'vue';
 
 defineOptions({ inheritAttrs: false });
 
-const { variant } = defineProps<{
-    variant: 'ghost' | 'outline' | 'tint' | 'filled'
+const { variant, colour } = defineProps<{
+    variant: 'ghost' | 'outline' | 'tint' | 'filled',
+    colour: 'primary' | 'highlight'
 }>();
-
-const styleKlass = computed(() => {
-    return {
-        'badge--ghost': variant === 'ghost',
-        'badge--outline': variant === 'outline',
-        'badge--tint': variant === 'tint',
-        'badge--filled': variant === 'filled'
-    }
-});
 </script>
 
 <template>
     <div
         role="status"
         class="badge"
-        :class="styleKlass"
         v-bind="$attrs"
         v-on="$attrs"
+        :data-variant="variant"
+        :data-colour="colour"
     >
         <slot></slot>
     </div>
@@ -45,27 +38,52 @@ const styleKlass = computed(() => {
     padding-block: 0.1rem;
 }
 
-.badge.badge--ghost {
+.badge[data-variant="ghost"][data-colour="highlight"] {
     --widget-badge-text: var(--colour-text-highlight);
     --widget-badge-bk: inherit;
     --widget-badge-outline: transparent;
 }
 
-.badge.badge--outline {
+.badge[data-variant="outline"][data-colour="highlight"] {
     --widget-badge-text: var(--colour-text-highlight);
     --widget-badge-bk: inherit;
     --widget-badge-outline: var(--colour-outline-highlight);
 }
 
-.badge.badge--tint {
+.badge[data-variant="tint"][data-colour="highlight"] {
     --widget-badge-text: var(--colour-text-highlight);
     --widget-badge-bk: var(--colour-bk-highlight-subtle);
     --widget-badge-outline: var(--colour-outline-highlight-subtle);
 }
 
-.badge.badge--filled {
+.badge[data-variant="filled"][data-colour="highlight"] {
     --widget-badge-text: var(--colour-text-inverted);
     --widget-badge-bk: var(--colour-bk-highlight);
     --widget-badge-outline: var(--colour-outline-highlight);
 }
+
+.badge[data-variant="ghost"][data-colour="primary"] {
+    --widget-badge-text: var(--colour-text-primary);
+    --widget-badge-bk: inherit;
+    --widget-badge-outline: transparent;
+}
+
+.badge[data-variant="outline"][data-colour="primary"] {
+    --widget-badge-text: var(--colour-text-primary);
+    --widget-badge-bk: inherit;
+    --widget-badge-outline: var(--colour-outline-primary);
+}
+
+.badge[data-variant="tint"][data-colour="primary"] {
+    --widget-badge-text: var(--colour-text-primary);
+    --widget-badge-bk: var(--colour-bk-secondary);
+    --widget-badge-outline: var(--colour-outline-faded);
+}
+
+.badge[data-variant="filled"][data-colour="primary"] {
+    --widget-badge-text: var(--colour-text-inverted);
+    --widget-badge-bk: var(--colour-bk-inverted);
+    --widget-badge-outline: var(--colour-outline-inverted);
+}
+
 </style>
