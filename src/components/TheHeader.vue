@@ -9,7 +9,7 @@ import { computed, ref } from 'vue';
 const { buildStatus } = getMetaData();
 const { isMobile } = useMobileDetector();
 
-const isNavVisibleOnMobile = ref(true);
+const isNavVisibleOnMobile = ref(false);
 const navButtonText = computed(() =>
     (isNavVisibleOnMobile.value) ? String.fromCodePoint(10005)
     : String.fromCodePoint(9776)
