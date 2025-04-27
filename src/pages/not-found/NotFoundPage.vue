@@ -12,7 +12,7 @@
 .not-found {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 80vh;
     place-content: center;
     place-items: center;
     gap: 5rem;
