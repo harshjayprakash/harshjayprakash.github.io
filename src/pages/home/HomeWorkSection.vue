@@ -44,7 +44,7 @@ const projectCountBadgeAriaLabel = () => {
 
 <template>
     <section aria-label="Work" class="work">
-        <h2>Work.</h2>
+        <h2>Projects.</h2>
         <p>
             Here are a few my latest projects &mdash; it's not much, but it is about the
             quality. Each use a different technology, even though the date looks old, it
