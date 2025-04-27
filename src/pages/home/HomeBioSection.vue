@@ -10,7 +10,7 @@ interface IService {
 
 const services: IService[] = [{
     service: 'Front-End Web Development',
-    description: 'Modern responsive website using front-end technology to seamless user experiences',
+    description: 'Building modern responsive website using front-end technologies to create seamless user experiences.',
     technologies: ['Angular', 'Vue', 'HTML', 'CSS', 'TypeScript']
 }, {
     service: 'Desktop Application Development',
@@ -18,7 +18,7 @@ const services: IService[] = [{
     technologies: ['C', 'Python', 'Java', 'Visual Basic .NET', 'Pascal']
 }, {
     service: 'Tools',
-    description: 'A worflow',
+    description: 'The tools used within my workflow.',
     technologies: [
         'Windows', 'GNU+Linux', 'VSCode', 'Visual Studio', 'JetBrains IntelliJ', 'Git'
     ]
