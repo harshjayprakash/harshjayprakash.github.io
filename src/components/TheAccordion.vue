@@ -15,7 +15,7 @@
 <style lang="css" scoped>
 .accordion-content {
     --widget-accordion-outline: transparent;
-    --widget-accordion-list-type: '\002B   ';
+    --widget-accordion-list-type: '[\002B]   ';
 
     padding-inline: 1rem;
     border-inline-start: 0.2rem solid var(--widget-accordion-outline);
@@ -36,7 +36,7 @@
 
 .accordion-content[open] {
     --widget-accordion-outline: var(--colour-outline-highlight-lighter);
-    --widget-accordion-list-type: '\2212   ';
+    --widget-accordion-list-type: '[\2212]   ';
 }
 
 .accordion-content-details {
