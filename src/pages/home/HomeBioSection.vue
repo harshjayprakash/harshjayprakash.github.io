@@ -20,20 +20,21 @@ const { services } = getServices();
             />
             <p>
                 I am a <span class="emphasis">computer science graduate</span> from the
-                University of Winchester, who is actively
+                University of Winchester, actively
                 <span class="emphasis">searching for a role.</span>
             </p>
             <p class="faded-paragraph">
-                I enjoy the craft of programming - focusing on making digital
-                experiences that are human-centred, balancing both aesthetics and
-                functionality. The art of programming is a way I connect with the digital
-                world, also drawn to the challenge and creativity. I want to create an
-                impact, inspire and connect with others.
+                I enjoy the craft of programming - focusing on making human-centred
+                digital experiences, balancing both aesthetics and functionality. The art
+                of programming is a way I connect with the digital world, drawn to the
+                challenge and creativity. I want to create an impact, inspire and connect
+                with others.
             </p>
             <p class="faded-paragraph">
-                I also have an appreciation for visual clarity and cohesion, espacially
-                when it comes to making diagrams. Whether it's the shapes, colour,
-                typography, I enjoy creating designs with a unified visual language.
+                Additionally, designing diagrams has always been my favourite way to
+                present ideas. From selecting the right shapes and colours to adjusting
+                font sizes and spacing, I love ensuring every detail harmonises,
+                consistently maintaining a cohesive and unified visual language.
             </p>
         </div>
         <div aria-label="Skills List" class="skills" role="group">
