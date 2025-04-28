@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import TheAccordion from '@/components/TheAccordion.vue';
 import ThePersona from '@/components/ThePersona.vue';
+import TheCard from '@/components/TheCard.vue';
 import getAvatar from '@/data/avatar';
 import getServices from '@/data/services';
 
@@ -44,7 +45,7 @@ const { services } = getServices();
             </p>
         </div>
         <div aria-label="Skills List" class="skills" role="group">
-            <div v-for="svc in services" :key="svc.name" class="skill-card" role="group">
+            <TheCard link="no-link" v-for="svc in services" :key="svc.name">
                 <TheAccordion name="skills" open>
                     <template #heading>
                         <span>
@@ -65,7 +66,7 @@ const { services } = getServices();
                         </ul>
                     </template>
                 </TheAccordion>
-            </div>
+            </TheCard>
         </div>
     </section>
 </template>
@@ -89,22 +90,13 @@ const { services } = getServices();
 }
 
 .about .emphasis {
-    color: light-dark(var(--colour-800H), var(--colour-200H));
+    color: var(--colour-text-highlight);
 }
 
 .skills {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.skill-card  {
-    background-color: var(--colour-bk-secondary);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    height: fit-content;
-
 }
 
 .technologies {
@@ -115,18 +107,6 @@ const { services } = getServices();
     column-gap: 0.25rem;
     color: var(--colour-text-faded);
     font-size: smaller;
-}
-
-.service-accordian-header {
-    cursor: pointer;
-}
-
-.service-accordian-header {
-    list-style-type: '-> ';
-}
-
-details[open] > .service-accordian-header {
-    list-style-type: '↓ ';
 }
 
 @media (width > 40rem) {

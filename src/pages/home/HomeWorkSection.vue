@@ -6,6 +6,7 @@ import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
 import TheBadge from '@/components/TheBadge.vue';
 import useProjectCategoryFilter from '@/composables/useProjectCategoryFilter';
+import TheCard from '@/components/TheCard.vue';
 
 const { findAltTextFromName } = getAltText();
 
@@ -54,24 +55,25 @@ const projectCountBadgeAriaLabel = () => {
                 {{ fo }}
             </TheTab>
         </TheTabList>
-        <div role="list" class="projects">
-            <a
+        <div role="group" class="projects">
+            <TheCard
+                link="external"
+                new-window exact
                 v-for="project in filteredProjects"
                 :key="project.abbreviation"
-                role="listitem"
-                class="project-card"
-                :href="project.gitUri"
+                :to="project.gitUri"
             >
                 <img
                     :src="getProjectImageSource(project.abbreviation)"
                     :alt="getProjectImageAlt(project.abbreviation)"
                 />
-                <div>
+                <div class="info">
                     <h3>{{ project.name }}</h3>
                     <small>{{ project.timeframe }} &mdash; {{ project.status }}</small>
+                    <small>{{ project.technology }}</small>
                     <p>{{ project.description }}</p>
                 </div>
-            </a>
+            </TheCard>
         </div>
     </section>
 </template>
@@ -95,19 +97,9 @@ const projectCountBadgeAriaLabel = () => {
     }
 }
 
-.project-card {
-    padding: 1rem;
-    background-color: var(--colour-bk-secondary);
+.info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    text-decoration: none;
-    color: inherit;
-}
-
-.project-card:hover {
-    background-color: var(--colour-bk-hover);
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    scale: 101%;
+    gap: 0.2rem;
 }
 </style>
