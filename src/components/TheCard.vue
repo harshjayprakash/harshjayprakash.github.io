@@ -6,8 +6,8 @@ const { link, to = '#', exact = false, newWindow = false } = defineProps<{
     to?: string
 }>();
 
-const rel = () => (newWindow) ? 'noopener noreferrer' : '';
-const target = () => (newWindow) ? '_blank' : '';
+const rel = () => (newWindow) ? 'noopener noreferrer' : undefined;
+const target = () => (newWindow) ? '_blank' : undefined;
 </script>
 
 <template>
