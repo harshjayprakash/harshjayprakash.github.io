@@ -2,21 +2,22 @@ import type { Service } from "@/types/Service";
 
 const services: Service[] = [{
     name: 'Front-End Web Development',
-    description: 'Building modern responsive website using front-end technologies to create seamless user experiences.',
+    description: 'Building modern responsive websites with front-end technologies to deliver seamless and intuitive user experiences.',
     technologies: ['Angular', 'Vue', 'HTML', 'CSS', 'TypeScript']
 }, {
     name: 'Desktop Application Development',
-    description: 'Building robust, scalable applications tailored to the given requirements.',
+    description: 'Developing robust scalable desktop application tailored to meet requirements, ensuring reliability and user satisfaction.',
     technologies: ['C', 'Python', 'Java', 'Visual Basic .NET', 'Pascal']
 }, {
     name: 'UI/UX',
-    description: 'Designing user interfaces and diagrams, focusing on the user experience.',
+    description: 'Desiging user interfaces that prioritising functionality and aesthetics, wiith focus on user experience.',
     technologies: ['Analogue Pen+Paper']
 }, {
-    name: 'Tools',
-    description: 'The tools used within my workflow.',
+    name: 'Workflow Tools',
+    description: '',
     technologies: [
-        'Windows', 'GNU+Linux', 'VSCode', 'Visual Studio', 'JetBrains IntelliJ', 'Git'
+        'Windows', 'GNU+Linux', 'VSCode', 'Visual Studio', 'JetBrains IntelliJ', 'Git',
+        'Affinity Designer'
     ]
 }];
 
