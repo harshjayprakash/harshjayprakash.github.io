@@ -6,8 +6,8 @@ const { variant, to, exact, newWindow } = defineProps<{
     newWindow: boolean
 }>();
 
-const rel = () => (newWindow) ? 'noopener noreferrer' : '';
-const target = () => (newWindow) ? '_blank' : '';
+const rel = () => (newWindow) ? 'noopener noreferrer' : undefined;
+const target = () => (newWindow) ? '_blank' : undefined;
 </script>
 
 <template>
