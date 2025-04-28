@@ -29,7 +29,7 @@ const filterOptions: ProjectCategory[] = ['All', 'CLI', 'Desktop', 'Web'];
 const { totalCount, currentCount } = useProjectCounter();
 
 const projectCountBadgeAriaLabel = () => {
-    return `${totalCount} Total Projects, ${currentCount.value} Shown`
+    return `${totalCount.value} Total Projects, ${currentCount.value} Shown`
 }
 </script>
 
