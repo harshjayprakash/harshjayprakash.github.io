@@ -10,7 +10,7 @@ const services: Service[] = [{
     technologies: ['C', 'Python', 'Java', 'Visual Basic .NET', 'Pascal']
 }, {
     name: 'UI/UX',
-    description: 'Desiging user interfaces that prioritising functionality and aesthetics, wiith focus on user experience.',
+    description: 'Designing user interfaces that prioritising functionality and aesthetics, with focus on user experience.',
     technologies: ['Analogue Pen+Paper']
 }, {
     name: 'Workflow Tools',

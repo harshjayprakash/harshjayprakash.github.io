@@ -20,7 +20,7 @@ const altText: AltText[] = [{
     text: 'A web browser window displaying a page titled \'Find Dog Walkers\'.'
 }, {
     name: 'ccs-screenshot.png',
-    text: 'A terminal displaying the resuling text.'
+    text: 'A terminal displaying the resulting text.'
 }];
 
 const findAltTextFromName = (name: string) => {

@@ -11,10 +11,10 @@ showcase my projects in one central place. **This website is still under constru
 
 The website prioritises simplicity, accessibility, and user experience above the latest
 trends. The aim was to create also a timeless digital experience that anyone will be able
-use. More details:
+to use. More details:
 
 * Simplicity: Minimal distractions, simple typography, clean layouts.
-* Accessibility: Following WCAG Guidelines (Constrast Ratios, Alt Text, ARIA Labels +
+* Accessibility: Following WCAG Guidelines (Contrast Ratios, Alt Text, ARIA Labels +
 Roles)
 * User Experience: Intuitive interactions, responsive design, adapts to system colour
 theme (media query: prefers-color-theme).
