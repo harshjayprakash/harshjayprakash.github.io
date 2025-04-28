@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
 import getAltText from '@/data/altText';
 import getProjects from '@/data/projects';
 import type { ProjectCategory } from '@/types/ProjectCategory';
 import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
 import TheBadge from '@/components/TheBadge.vue';
+import useProjectCategoryFilter from '@/composables/useProjectCategoryFilter';
 
 const { findAltTextFromName } = getAltText();
 
@@ -17,28 +17,18 @@ const getProjectImageAlt = (abbrev: string) =>
 
 const { filterProjectsByAbbreviation } = getProjects();
 
-const projects = filterProjectsByAbbreviation(
-    ['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs']
-);
-
-const projectFilter = ref<ProjectCategory>('All');
-const projectsRef = ref(projects);
-
-const filteredProjects = computed(() =>
-    (projectFilter.value === 'All') ? projectsRef.value
-    : projectsRef.value.filter(project => project.category ===  projectFilter.value)
+const {
+    filteredProjects, updateFilter, isActiveFilter, useProjectCounter
+} = useProjectCategoryFilter(
+    filterProjectsByAbbreviation(['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs'])
 );
 
 const filterOptions: ProjectCategory[] = ['All', 'CLI', 'Desktop', 'Web'];
 
-const updateFilter = (category: ProjectCategory) => projectFilter.value = category;
-const isActiveFilter = (category: ProjectCategory) => (projectFilter.value === category);
-
-const projectCountMax = projects.length;
-const projectCountCurrent = computed(() => filteredProjects.value.length);
+const { totalCount, currentCount } = useProjectCounter();
 
 const projectCountBadgeAriaLabel = () => {
-    return `${projectCountMax} Total Projects, ${projectCountCurrent.value} Shown`
+    return `${totalCount} Total Projects, ${currentCount.value} Shown`
 }
 </script>
 
@@ -52,7 +42,7 @@ const projectCountBadgeAriaLabel = () => {
             most recently modified.
         </p>
         <TheBadge :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
-            Showing {{ projectCountCurrent }} of {{ projectCountMax }} Projects.
+            Showing {{ currentCount }} of {{ totalCount }} Projects.
         </TheBadge>
         <TheTabList>
             <TheTab
