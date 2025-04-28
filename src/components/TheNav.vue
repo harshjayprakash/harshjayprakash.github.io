@@ -80,9 +80,6 @@ const ariaOrientation = () => (variant === 'desktop') ? 'horizontal' : 'vertical
     border-inline-start: 0.2rem solid var(--colour-outline-highlight-lighter);
 }
 
-
-
-
 .nav[aria-orientation="horizontal"] .nav-link:hover {
     border-block-end: 0.2rem solid var(--colour-outline-faded);
 }
