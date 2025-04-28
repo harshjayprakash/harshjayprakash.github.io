@@ -21,13 +21,10 @@ const routes = getRoutes()
 const ariaCurrent = (path: string) => {
     return (currentRoute.value.fullPath === path) ? 'page' : 'false';
 }
-
-const ariaOrientation = () => (variant === 'desktop') ? 'horizontal' : 'vertical';
-
 </script>
 
 <template>
-    <nav :aria-orientation="ariaOrientation()" class="nav">
+    <nav class="nav" :data-variant="variant">
         <RouterLink
             v-for="route in routes" :key="route.path"
             :to="route.path" exact
@@ -46,7 +43,7 @@ const ariaOrientation = () => (variant === 'desktop') ? 'horizontal' : 'vertical
     gap: 1rem;
 }
 
-.nav[aria-orientation="vertical"] {
+.nav[data-variant="mobile"] {
     background-color: var(--colour-bk-secondary);
     padding: 1rem;
     border: 0.1rem solid var(--colour-outline-faded);
@@ -63,28 +60,28 @@ const ariaOrientation = () => (variant === 'desktop') ? 'horizontal' : 'vertical
 }
 
 
-.nav[aria-orientation="horizontal"] .nav-link {
+.nav[data-variant="desktop"] .nav-link {
     border-block-end: 0.2rem solid transparent;
 }
 
-.nav[aria-orientation="vertical"] .nav-link {
+.nav[data-variant="mobile"] .nav-link {
     padding-inline: 1rem;
     border-inline-start: 0.2rem solid transparent;
 }
 
-.nav[aria-orientation="vertical"] .nav-link:hover {
+.nav[data-variant="mobile"] .nav-link:hover {
     border-inline-start: 0.2rem solid var(--colour-outline-faded);
 }
 
-.nav[aria-orientation="vertical"] .nav-link[aria-current="page"]  {
+.nav[data-variant="mobile"] .nav-link[aria-current="page"]  {
     border-inline-start: 0.2rem solid var(--colour-outline-highlight-lighter);
 }
 
-.nav[aria-orientation="horizontal"] .nav-link:hover {
+.nav[data-variant="desktop"] .nav-link:hover {
     border-block-end: 0.2rem solid var(--colour-outline-faded);
 }
 
-.nav[aria-orientation="horizontal"] .nav-link[aria-current="page"] {
+.nav[data-variant="desktop"] .nav-link[aria-current="page"] {
     border-block-end: 0.2rem solid var(--colour-outline-highlight-lighter);
 }
 
