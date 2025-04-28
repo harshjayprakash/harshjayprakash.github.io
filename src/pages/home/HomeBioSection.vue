@@ -36,6 +36,12 @@ const { services } = getServices();
                 font sizes and spacing, I love ensuring every detail harmonises,
                 consistently maintaining a cohesive and unified visual language.
             </p>
+            <p class="faded-paragraph">
+                I have spent countless hours helping others, whether it is guiding them
+                through programming, troubleshooting the operating system, or a bit of
+                mathematics. Sharing knowledge and working collaboratively has always been
+                a rewarding part of my journey.
+            </p>
         </div>
         <div aria-label="Skills List" class="skills" role="group">
             <div v-for="svc in services" :key="svc.name" class="skill-card" role="group">
