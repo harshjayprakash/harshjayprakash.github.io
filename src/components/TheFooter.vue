@@ -1,10 +1,18 @@
 <script lang="ts" setup>
+import getMetaData from '@/data/metadata';
+
+const { copyrightYear, epochSemanticVersion, calendarVersion, buildDate } = getMetaData();
 </script>
 
 <template>
     <footer class="footer">
-        <small>Version 5.0 &mdash; 25H1F, 24.04.2025. Under Construction</small>
-        <small>Copyright &copy; 2025 Harsh Jayprakash. Handcrafted with Vue.</small>
+        <small>
+            Version {{ epochSemanticVersion }} &mdash; {{ calendarVersion }},
+            {{ buildDate }} Under Construction.
+        </small>
+        <small>
+            Copyright &copy; {{ copyrightYear }} Harsh Jayprakash. Handcrafted with Vue.
+        </small>
     </footer>
 </template>
 
