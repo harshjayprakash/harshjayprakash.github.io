@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 import useDotParticles from '@/composables/useDotParticles';
+import useMobileDetector from '@/composables/useMobileDetector';
 
-const _dotCount = 50;
+const { isMobile } = useMobileDetector();
+
+const _dotCount = isMobile.value ? 15 : 50;
 const { dots } = useDotParticles(_dotCount);
 </script>
 
@@ -52,11 +55,12 @@ const { dots } = useDotParticles(_dotCount);
 
 .dot {
     position: relative;
-    background-color: var(--colour-bk-highlight-subtle);
+    background-color: var(--colour-bk-highlight-lightest);
     height: 0.25rem;
     width: 0.25rem;
     animation-name: fiCircle;
     animation-duration: 1s;
+    filter: blur(1px);
 }
 
 .greeting-text {
