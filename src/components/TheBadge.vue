@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
-
-defineOptions({ inheritAttrs: false });
-
 const { variant, colour } = defineProps<{
     variant: 'ghost' | 'outline' | 'tint' | 'filled',
     colour: 'primary' | 'highlight'
@@ -13,8 +9,6 @@ const { variant, colour } = defineProps<{
     <div
         role="status"
         class="badge"
-        v-bind="$attrs"
-        v-on="$attrs"
         :data-variant="variant"
         :data-colour="colour"
     >
