@@ -73,11 +73,16 @@ const projectCountBadgeText = computed(() =>
                     :src="getProjectImageSource(project.abbreviation)"
                     :alt="getProjectImageAlt(project.abbreviation)"
                 />
-                <div class="info">
-                    <h3>{{ project.name }}</h3>
-                    <small>{{ project.timeframe }} &mdash; {{ project.status }}</small>
-                    <small>{{ project.technology }}</small>
-                    <p>{{ project.description }}</p>
+                <div class="info" role="group">
+                    <span>
+                        {{ project.name }}
+                    </span>
+                    <small class="faded-text">
+                        {{ project.timeframe }} &mdash; {{ project.status }}
+                    </small>
+                    <small class="faded-text">
+                        {{ project.technology }} ~ {{ project.description }}
+                    </small>
                 </div>
             </TheCard>
         </div>
@@ -96,6 +101,11 @@ const projectCountBadgeText = computed(() =>
     grid-template-columns: auto;
     gap: 1rem;
 }
+
+.faded-text {
+    color: var(--colour-text-faded);
+}
+
 
 @media (width > 40rem) {
     .projects {
