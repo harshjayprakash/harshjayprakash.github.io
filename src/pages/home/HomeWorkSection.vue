@@ -43,10 +43,12 @@ const projectCountBadgeText = computed(() =>
     <section aria-label="Work" class="work">
         <h2>Projects.</h2>
         <p>
-            Here are a few my latest projects &mdash; it's not much, but it is about the
-            quality. Each use a different technology, even though the date looks old, it
-            does mean that the project has been completed. Projects are organised by
-            most recently modified.
+            Explore my projects below, arranged by their last modification. Feel free to
+            narrow down by the projects by technology type using the filter.
+            <span class="faded-text">
+                Note that the year reflects when the projects were first started rather than its
+                completion date; project statuses provide insight into their current state.
+            </span>
         </p>
         <TheBadge :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
             {{ projectCountBadgeText }}
