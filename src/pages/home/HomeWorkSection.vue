@@ -21,7 +21,7 @@ const { filterProjectsByAbbreviation } = getProjects();
 const {
     filteredProjects, updateFilter, isActiveFilter, useProjectCounter
 } = useProjectCategoryFilter(
-    filterProjectsByAbbreviation(['ppw', 'xbk', 'aap', 'wpq', 'lls', 'dwf', 'ccs'])
+    filterProjectsByAbbreviation(['ppw', 'xbk', 'aap', 'dwf', 'wpq', 'lls', 'ccs'])
 );
 
 const filterOptions: ProjectCategory[] = ['All', 'CLI', 'Desktop', 'Web'];
