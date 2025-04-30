@@ -7,6 +7,7 @@ import TheTab from '@/components/TheTab.vue';
 import TheBadge from '@/components/TheBadge.vue';
 import useProjectCategoryFilter from '@/composables/useProjectCategoryFilter';
 import TheCard from '@/components/TheCard.vue';
+import { computed } from 'vue';
 
 const { findAltTextFromName } = getAltText();
 
@@ -31,6 +32,11 @@ const { totalCount, currentCount } = useProjectCounter();
 const projectCountBadgeAriaLabel = () => {
     return `${totalCount.value} Total Projects, ${currentCount.value} Shown`
 }
+
+const projectCountBadgeText = computed(() =>
+    (totalCount.value == currentCount.value) ? 'Showing All Projects'
+    : `Showing ${currentCount.value} of ${totalCount.value} Projects`
+);
 </script>
 
 <template>
@@ -43,7 +49,7 @@ const projectCountBadgeAriaLabel = () => {
             most recently modified.
         </p>
         <TheBadge :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
-            Showing {{ currentCount }} of {{ totalCount }} Projects.
+            {{ projectCountBadgeText }}
         </TheBadge>
         <TheTabList>
             <TheTab
