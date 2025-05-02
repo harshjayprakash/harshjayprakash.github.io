@@ -81,10 +81,10 @@ const projectCountBadgeText = computed(() =>
                     <span>
                         {{ project.name }}
                     </span>
-                    <small class="faded-text">
+                    <small class="faded-text-less">
                         {{ project.timeframe }} &mdash; {{ project.status }}
                     </small>
-                    <small class="faded-text">
+                    <small class="faded-text-less">
                         {{ project.technology }} ~ {{ project.description }}
                     </small>
                 </div>
@@ -112,6 +112,10 @@ const projectCountBadgeText = computed(() =>
 
 .faded-text {
     color: var(--colour-text-faded);
+}
+
+.faded-text-less {
+    color: var(--colour-text-faded-less);
 }
 
 
