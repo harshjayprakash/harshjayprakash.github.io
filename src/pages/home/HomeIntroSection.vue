@@ -55,7 +55,7 @@ const { dots } = useDotParticles(_dotCount);
 
 .dot {
     position: relative;
-    background-color: var(--colour-bk-highlight-lightest);
+    background-color: var(--colour-bk-highlight-subtle);
     height: 0.25rem;
     width: 0.25rem;
     animation-name: fiCircle;
