@@ -13,7 +13,7 @@ const onLinkClick = () => emits('onLinkClick');
 
 const { currentRoute, getRoutes } = useRouter();
 
-const _routeFilter = ['/home', '/alpha'];
+const _routeFilter = ['/home'];
 const routes = getRoutes()
     .filter(route => _routeFilter.includes(route.path))
     .sort((a, b) => _routeFilter.indexOf(a.path) - _routeFilter.indexOf(b.path));
