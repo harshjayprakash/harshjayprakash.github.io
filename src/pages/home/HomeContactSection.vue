@@ -1,51 +1,58 @@
 <script lang="ts" setup>
 import TheLink from '@/components/TheLink.vue';
 
-const links: { name: string, tag: string, to: string }[] = [{
-    name: 'Email Me',
-    tag: 'harshjayprakash[at]outlook.com',
+const links: { name: string, description: string, to: string }[] = [{
+    name: 'E-mail (mailto link)',
+    description: 'Get in touch with me',
     to: 'mailto:harshjayprakash@outlook.com'
 }, {
-    name: 'Connect on LinkedIn',
-    tag: 'harshjayprakash7',
+    name: 'LinkedIn',
+    description: 'Connect with me',
     to: 'https://www.linkedin.com/in/harshjayprakash7/'
 }, {
-    name: 'See my code on GitHub',
-    tag: 'harshjayprakash',
+    name: 'GitHub',
+    description: 'See my code',
     to: 'https://github.com/harshjayprakash'
 }, {
     name: 'CV',
-    tag: '(PDF)',
+    description: 'View or download my cv',
     to: '/documents/harsh_cv.pdf'
 }];
 </script>
 
 <template>
     <section aria-label="Contact" class="contact">
-        <h2>Looking to collaborate<br/> or say hello?</h2>
-        <div class="links" role="group">
-            <TheLink
-                v-for="link in links"
-                :key="link.tag"
-                variant="external" exact new-window
-                :to="link.to"
-            >
-                <span class="content-wrapper">
-                    <span>{{ link.name }}</span>
-                    <span class="spacer"></span>
-                    <!-- <span>{{ link.tag }}</span> -->
-                </span>
-            </TheLink>
+        <div>
+            <h2>Looking to Collaborate or Say Hello?</h2>
+            <p>
+                Whether you're interested in collaborating, need help with something
+                tech-related, or just want to connect, feel free to reach out!
+            </p>
+        </div>
+        <div role="group" class="links">
+            <div class="link-wrapper" v-for="link in links" :key="link.name">
+                <TheLink variant="external" :to="link.to" exact new-window>
+                    <div class="content-wrapper" role="group">
+                        <span>{{ link.name }}</span>
+                    </div>
+                </TheLink>
+                <small class="faded-text">{{ link.description }}</small>
+            </div>
         </div>
     </section>
 </template>
 
 <style lang="css" scoped>
+
 .contact {
+    position: relative;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: auto;
-    padding-block: 5rem;
+    padding: 1rem;
+    background-color: var(--colour-bk-secondary);
+    box-shadow: var(--shadow-md);
+    border: 0.15rem solid var(--colour-outline-highlight-lighter);
 }
 
 .links {
@@ -56,15 +63,22 @@ const links: { name: string, tag: string, to: string }[] = [{
 
 .links .content-wrapper {
     display: flex;
+    flex-direction: column;
 }
 
-.spacer {
-    flex-grow: 1;
+.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.faded-text {
+    color: var(--colour-text-faded-less);
 }
 
 @media (width > 40rem) {
     .contact {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 }
 
