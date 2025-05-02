@@ -42,12 +42,14 @@ const projectCountBadgeText = computed(() =>
 <template>
     <section aria-label="Work" class="work">
         <h2>Projects.</h2>
-        <p>
+        <p class="work-overview">
             Explore my projects below, arranged by their last modification. Feel free to
             narrow down by the projects by technology type using the filter.
             <span class="faded-text">
-                Note that the year reflects when the projects were first started rather than its
-                completion date; project statuses provide insight into their current state.
+                Note that the year reflects when the projects were first started rather
+                than its completion date; project statuses provide insight into their
+                current state. Currently, these cards link to their respective GitHub
+                repositories, but in future, each project will have their own page.
             </span>
         </p>
         <TheBadge :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
@@ -96,6 +98,10 @@ const projectCountBadgeText = computed(() =>
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.work-overview {
+    max-width: 52rem;
 }
 
 .projects {
