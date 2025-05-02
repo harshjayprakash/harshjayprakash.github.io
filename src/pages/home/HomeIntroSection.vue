@@ -60,7 +60,6 @@ const { dots } = useDotParticles(_dotCount);
     width: 0.25rem;
     animation-name: fiCircle;
     animation-duration: 1s;
-    filter: blur(1px);
 }
 
 .greeting-text {
