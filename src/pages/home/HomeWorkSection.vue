@@ -48,8 +48,8 @@ const projectCountBadgeText = computed(() =>
             <span class="faded-text">
                 Note that the year reflects when the projects were first started rather
                 than its completion date; project statuses provide insight into their
-                current state. Currently, these cards link to their respective GitHub
-                repositories, but in future, each project will have their own page.
+                current state. These cards link to their respective GitHub
+                repositories.
             </span>
         </p>
         <TheBadge :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
