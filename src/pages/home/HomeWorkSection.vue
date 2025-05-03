@@ -43,8 +43,8 @@ const projectCountBadgeText = computed(() =>
     <section aria-label="Work" class="work">
         <h2>Projects.</h2>
         <p class="work-overview">
-            Explore my projects below, arranged by their last modification. Feel free to
-            narrow down by the projects by technology type using the filter.
+            Explore my projects below, arranged by their last modification. Use the filter
+            to narrow down by the projects by technology type.
             <span class="faded-text">
                 Note that the year reflects when the projects were first started rather
                 than its completion date; project statuses provide insight into their
