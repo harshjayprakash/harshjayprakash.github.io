@@ -36,7 +36,11 @@ const toggleNav = () => isNavVisibleOnMobile.value = !isNavVisibleOnMobile.value
         />
         <TheNav v-if="!isMobile" variant="desktop" />
     </header>
-    <TheNav v-if="isMobile && isNavVisibleOnMobile" variant="mobile" @on-link-click="toggleNav" />
+    <TheNav
+        v-if="isMobile && isNavVisibleOnMobile"
+        variant="mobile"
+        @on-link-click="toggleNav"
+    />
 </template>
 
 <style lang="css" scoped>
