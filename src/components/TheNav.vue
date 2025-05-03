@@ -19,7 +19,7 @@ const routes = getRoutes()
     .sort((a, b) => _routeFilter.indexOf(a.path) - _routeFilter.indexOf(b.path));
 
 const ariaCurrent = (path: string) => {
-    return (currentRoute.value.fullPath === path) ? 'page' : 'false';
+    return (currentRoute.value.path === path) ? 'page' : 'false';
 }
 </script>
 
