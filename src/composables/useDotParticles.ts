@@ -1,5 +1,6 @@
-import type { Position } from "@/types/Position"
-import { onMounted, readonly, ref } from "vue"
+import { onMounted, readonly, ref } from 'vue';
+
+import type { Position } from '@/types/Position';
 
 const useDotParticles = (dotCount: number) => {
     const dots = ref<Position[]>([]);

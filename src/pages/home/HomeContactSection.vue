@@ -43,7 +43,6 @@ const links: { name: string, description: string, to: string }[] = [{
 </template>
 
 <style lang="css" scoped>
-
 .contact {
     position: relative;
     display: grid;
@@ -88,5 +87,4 @@ const links: { name: string, description: string, to: string }[] = [{
         grid-template-columns: 1fr 1fr;
     }
 }
-
 </style>

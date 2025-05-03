@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+import AlphaPage from '@/pages/alpha/AlphaPage.vue';
 import HomePage from '@/pages/home/HomePage.vue';
 import NotFoundPage from '@/pages/not-found/NotFoundPage.vue';
-import AlphaPage from '@/pages/alpha/AlphaPage.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

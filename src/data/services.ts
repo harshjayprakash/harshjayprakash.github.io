@@ -1,4 +1,4 @@
-import type { Service } from "@/types/Service";
+import type { Service } from '@/types/Service';
 
 const services: Service[] = [{
     name: 'Front-End Web Development',

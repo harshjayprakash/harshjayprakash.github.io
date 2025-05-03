@@ -1,13 +1,14 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
+
 import getAltText from '@/data/altText';
 import getProjects from '@/data/projects';
-import type { ProjectCategory } from '@/types/ProjectCategory';
+import TheBadge from '@/components/TheBadge.vue';
+import TheCard from '@/components/TheCard.vue';
 import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
-import TheBadge from '@/components/TheBadge.vue';
 import useProjectCategoryFilter from '@/composables/useProjectCategoryFilter';
-import TheCard from '@/components/TheCard.vue';
-import { computed } from 'vue';
+import type { ProjectCategory } from '@/types/ProjectCategory';
 
 const { findAltTextFromName } = getAltText();
 

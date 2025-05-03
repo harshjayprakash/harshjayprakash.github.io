@@ -1,6 +1,7 @@
-import type { Project } from "@/types/Project";
-import type { ProjectCategory } from "@/types/ProjectCategory";
-import { computed, readonly, ref } from "vue";
+import { computed, readonly, ref } from 'vue';
+
+import type { Project } from '@/types/Project';
+import type { ProjectCategory } from '@/types/ProjectCategory';
 
 const useProjectCategoryFilter = (projects_: Project[]) => {
     const projects = ref(projects_);

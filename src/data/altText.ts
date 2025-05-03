@@ -1,4 +1,4 @@
-import type { AltText } from "@/types/AltText";
+import type { AltText } from '@/types/AltText';
 
 const altText: AltText[] = [{
     name: 'ppw-preview.png',

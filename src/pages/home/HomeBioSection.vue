@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import TheAccordion from '@/components/TheAccordion.vue';
-import ThePersona from '@/components/ThePersona.vue';
 import TheCard from '@/components/TheCard.vue';
+import ThePersona from '@/components/ThePersona.vue';
 import getAvatar from '@/data/avatar';
 import getServices from '@/data/services';
 

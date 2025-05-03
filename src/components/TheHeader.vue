@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-import getMetaData from '@/data/metadata';
-import TheBadge from './TheBadge.vue';
-import TheDivider from './TheDivider.vue';
-import TheNav from './TheNav.vue';
-import useMobileDetector from '@/composables/useMobileDetector';
 import { computed, ref } from 'vue';
+
+import TheBadge from '@/components/TheBadge.vue';
+import TheDivider from '@/components/TheDivider.vue';
+import TheNav from '@/components/TheNav.vue';
+import useMobileDetector from '@/composables/useMobileDetector';
+import getMetaData from '@/data/metadata';
 
 const { buildStatus } = getMetaData();
 const { isMobile } = useMobileDetector();

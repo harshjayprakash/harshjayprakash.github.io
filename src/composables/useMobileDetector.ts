@@ -1,5 +1,6 @@
-import { computed, readonly, ref } from "vue";
-import useWindowSize from "./useWindowSize"
+import { computed, readonly, ref } from 'vue';
+
+import useWindowSize from '@/composables/useWindowSize';
 
 const useMobileDetector = () => {
     const { width } = useWindowSize();
