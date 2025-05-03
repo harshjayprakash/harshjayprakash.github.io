@@ -60,6 +60,7 @@ npm run dev
     * Redesigned Contact Section.
     * Added Faded Text to Less Important Information.
     * Removed Rounded Corners.
+    * Updated All Images to be Consistent.
 
 ![View Previous Changelogs](./CHANGELOG.md)
 
