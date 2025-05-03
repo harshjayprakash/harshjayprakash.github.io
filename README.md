@@ -72,9 +72,10 @@ npm run dev
 
 ## Todo
 
-* "Back to Top" button.
-* "Skip to Content" button.
-* Project Filter Tablist Arrow Key Navigation.
+* Add "Back to Top" button.
+* Add Project Filter Tablist Arrow Key Navigation.
+* Add Project Specific Pages.
+* Add Unit Testing.
 
 ## References
 
