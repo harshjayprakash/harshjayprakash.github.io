@@ -1,7 +1,3 @@
-type ProjectCategory =
-    'All'
-    | 'CLI Application'
-    | 'Web Application'
-    | 'Desktop Application';
+type ProjectCategory = 'All' | 'CLI' | 'Desktop' | 'Web';
 
 export type { ProjectCategory };

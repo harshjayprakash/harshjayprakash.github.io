@@ -1,11 +1,17 @@
 const copyrightYear = 2025;
-const semanticVersion = '5.0';
-const calendarVersion = '21H1F';
+const epochSemanticVersion = '5.0';
+const calendarVersion = '25H1F';
 const buildStatus = 'ALPHA';
-const buildDate = '05.04.2025';
+const buildDate = '03.05.2025';
 
 const getMetaData = () => {
-    return { copyrightYear, semanticVersion, calendarVersion, buildStatus, buildDate };
+    return {
+        copyrightYear,
+        epochSemanticVersion,
+        calendarVersion,
+        buildStatus,
+        buildDate
+    };
 }
 
 export default getMetaData;

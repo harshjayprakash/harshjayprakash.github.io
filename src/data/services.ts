@@ -1,17 +1,24 @@
-import type {OfferedServices} from "@/types/OfferedService";
+import type { Service } from '@/types/Service';
 
-const services: OfferedServices[] = [{
-    title: 'Front-End Web Development',
-    details: 'Crafting digital spaces that are simplistic yet functional.',
-    technologies: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Vue']
+const services: Service[] = [{
+    name: 'Front-End Web Development',
+    description: 'Building modern responsive websites with front-end technologies to deliver seamless and intuitive user experiences.',
+    technologies: ['Angular', 'Vue', 'HTML', 'CSS', 'TypeScript']
 }, {
-    title: 'Traditional Application Development',
-    details: 'Building robust and dependable software based on requirements.',
+    name: 'Desktop Application Development',
+    description: 'Developing robust scalable desktop application tailored to meet requirements, ensuring reliability and user satisfaction.',
     technologies: ['C', 'Python', 'Java', 'Visual Basic .NET', 'Pascal']
 }, {
-    title: 'UI/UX',
-    details: 'Crafting human-first user experiences that make sense.',
-    technologies: ['Figma', 'Pen+Paper']
+    name: 'UI/UX',
+    description: 'Designing user interfaces that prioritising functionality and aesthetics, with focus on user experience.',
+    technologies: ['Analogue Pen+Paper']
+}, {
+    name: 'Workflow Tools',
+    description: '',
+    technologies: [
+        'Windows', 'GNU+Linux', 'VSCode', 'Visual Studio', 'JetBrains IntelliJ', 'Git',
+        'Affinity Designer'
+    ]
 }];
 
 const getServices = () => {

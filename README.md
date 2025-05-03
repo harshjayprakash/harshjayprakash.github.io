@@ -1,18 +1,23 @@
 # Personal Portfolio Website
 
-![Banner (Decorative)](./docs/ppw_banner_raster.PNG)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/ppw-banner-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./docs/ppw-banner-light.png">
+  <img alt="banner" src="./docs/ppw-banner.png">
+</picture>
 
 This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
 showcase my projects in one central place. **This website is still under construction**.
 
 The website prioritises simplicity, accessibility, and user experience above the latest
 trends. The aim was to create also a timeless digital experience that anyone will be able
-use. More details:
+to use. More details:
 
 * Simplicity: Minimal distractions, simple typography, clean layouts.
-* Accessibility: Following WCAG Guidelines (Constrast Ratios, Alt Text, ARIA Labels +
+* Accessibility: Following WCAG Guidelines (Contrast Ratios, Alt Text, ARIA Labels +
 Roles)
-* User Experience: Intuitive interactions, responsive design.
+* User Experience: Intuitive interactions, responsive design, adapts to system colour
+theme (media query: prefers-color-theme).
 
 This project intentionally minimises the reliance on dependencies, allowing for better
 performance and long-term reliability.
@@ -20,7 +25,7 @@ performance and long-term reliability.
 The Inter typeface is self-hosted using the fontsource variable package to avoid the using
 Google Fonts for privacy.
 
-![Screenshot of Website](./docs/ppw-screenshot.PNG)
+![Screenshot of Website](./docs/ppw-preview.png)
 
 ## Running Locally
 
@@ -36,56 +41,51 @@ npm run dev
 
 ## Changelog
 
-* Version 5.0 --25H1F "TBD"
-  * Mitigated Vite Vulnerabilities.
-  * Updated Internal Structure.
-  * Updated Styles - Locally Scoped Component Variables.
-  * Updated All Components.
-  * Updated to Vue Shorthand HTML Attributes.
-  * Migrated Fully to Composition API with Setup Attribute.
-* Version 4.1 --25H1E "24/03/2025"
-  * Improved Accessibility: Fixed some issues highlighted issues by ARC Toolkit.
-    * Reduced Link Breaks _Note: Line breaks are still used for visual purposes._
-    * _Note: Header "banner", Footer "contentinfo", Main "main" are containerised._
-  * Updated Store Data Retrieval from Constant Arrays to Functions.
-  * Added Meta Tags for Better SEO.
-  * Added Projects Shown Count Badge.
-  * Added Robots Text File.
-  * Added Image Alt Text System.
-  * Updated Footer Text Order.
-  * Simplified Some Component Templates and Styles.
-  * Updated Card to Use Full Height in Grid.
-* Version 4.0 --25H1D "20/03/2025"
-  * Uses Custom Component System.
-  * Implemented Project Filter System.
-  * Project Cards Link to GitHub Repositories.
-  * Redesigned Header and Navigation.
-  * Updated Card Hover Effects.
-  * Improved Accessibility: ARIA and Role Attributes.
-  * Updated Colours.
-  * Continued migration from Options API to Composition API (_Without Setup Tag_).
-  * Updated for Rounded Corners Trend. (_Slightly_).
+* Version 5.0 --25H1F "03/05/2025"
+  * Internal
+    * Migrated to Composition API with Setup Tag.
+    * Rewritten.
+    * Mitigated Vite Vulnerabilities.
+    * Updated CSS Colour System.
+    * Simplify CSS Component Styles.
+    * Updated Internal Architecture.
+  * Improved Accessibility.
+    * Add "Skip Navigation" Button.
+    * Improved Colour Contrast.
+  * Visual
+    * Updated Colours (Zinc to Grey).
+    * Redesigned Hero Section
+    * Added New About Me (Merged with Skills Section).
+    * Converted Skill Cards to Accordion
+    * Updated Spacing
+    * Updated Mobile Breakpoint
+    * Added Start Year and Status to Project Cards.
+    * Redesigned Contact Section.
+    * Added Faded Text to Less Important Information.
+    * Removed Rounded Corners.
+    * Updated All Images to be Consistent.
 
-## To-Do
+![View Previous Changelogs](./CHANGELOG.md)
 
-* Improve Accessibility: Add Skip Navigation Button.
-* Improve Accessibility: ARIA Labels based on Headings.
-* Add E2E Testing.
+## Limitations and Known Issues
+
+* The `light-dark` css function is used (mdn: newly available).
+* The `/alpha` route is not for public use (for development testing purposes).
+* The Navigation Landmark is hidden until menu button is clicked on mobile.
+* Cannot use arrow keys on the project filter tablist.
+
+## Todo
+
+* Add "Back to Top" button.
+* Add Project Filter Tablist Arrow Key Navigation.
 * Add Project Specific Pages.
-* Extract Data to Store.
-
-## Known Issues and Limitations
-
-* The `/alpha` is not for public use (for development testing purposes).
-* The `/about` route is not ready.
-* Navigation Landmark is hidden until menu button is clicked.
-* Cannot use arrow key navigation project filter tabs.
-* Contrast ratio on dark mode badge component could be better.
+* Add Unit Testing.
+* Add About Page
 
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
 * CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
-* Tailwind v4.0 Colours (Zinc and Teal): <https://tailwindcss.com/docs/colors>
+* Tailwind v4.0 Colours (Grey and Teal): <https://tailwindcss.com/docs/colors>
 * ARC Toolkit: <https://www.tpgi.com/arc-platform/arc-toolkit/>
