@@ -30,7 +30,6 @@ import TheHeader from '@/components/TheHeader.vue';
 }
 
 .skip-nav:focus {
-    display: block;
     translate: 0 1rem;
     z-index: 15;
 }
