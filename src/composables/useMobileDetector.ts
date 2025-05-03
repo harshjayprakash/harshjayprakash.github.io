@@ -1,22 +1,13 @@
-import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { computed, readonly, ref } from 'vue';
+
+import useWindowSize from '@/composables/useWindowSize';
 
 const useMobileDetector = () => {
-    const windowWidth = ref(window.innerWidth);
-    const isMobile = computed(() => windowWidth.value < 768);
+    const { width } = useWindowSize();
+    const _mobileBreakpoint = ref(40*16);
+    const isMobile = computed(() => width.value < _mobileBreakpoint.value);
 
-    const _updateDeviceWidth = () => {
-        windowWidth.value = window.innerWidth;
-    };
-
-    onMounted(() => {
-        window.addEventListener('resize', _updateDeviceWidth);
-    });
-
-    onUnmounted(() => {
-        window.removeEventListener('resize', _updateDeviceWidth);
-    });
-
-    return { isMobile, windowWidth };
+    return { isMobile: readonly(isMobile) };
 }
 
 export default useMobileDetector;

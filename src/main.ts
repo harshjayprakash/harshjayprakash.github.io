@@ -1,12 +1,12 @@
 import { createApp } from 'vue';
 
-import '@fontsource-variable/inter';
+import '@fontsource-variable/inter/opsz';
+import '@fontsource-variable/inter/opsz-italic';
 import '@/assets/style/main.css';
 
 import MainComponent from '@/MainComponent.vue';
-
 import router from '@/router';
 
 const app = createApp(MainComponent);
-app.use(router)
+app.use(router);
 app.mount('#app');

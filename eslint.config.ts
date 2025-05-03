@@ -1,13 +1,14 @@
-import pluginVue from 'eslint-plugin-vue'
-import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
-import pluginVitest from '@vitest/eslint-plugin'
-import oxlint from 'eslint-plugin-oxlint'
+import { globalIgnores } from 'eslint/config';
+import {
+    configureVueProject,
+    defineConfigWithVueTs,
+    vueTsConfigs
+} from '@vue/eslint-config-typescript';
+import pluginVue from 'eslint-plugin-vue';
+import pluginOxlint from 'eslint-plugin-oxlint';
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 
-// To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
-import { configureVueProject } from '@vue/eslint-config-typescript'
-configureVueProject({ scriptLangs: ['ts', /* 'tsx' */] })
-// More info at https://github.com/vuejs/eslint-config-typescript/#advanced-setup
-import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
+configureVueProject({ scriptLangs: ['ts'] });
 
 export default defineConfigWithVueTs(
     {
@@ -15,18 +16,10 @@ export default defineConfigWithVueTs(
         files: ['**/*.{ts,mts,tsx,vue}'],
     },
 
-    {
-        name: 'app/files-to-ignore',
-        ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
-    },
+    globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
     pluginVue.configs['flat/essential'],
-    ...pluginVueA11y.configs['flat/recommended'],
     vueTsConfigs.recommended,
-
-    {
-        ...pluginVitest.configs.recommended,
-        files: ['src/**/__tests__/*'],
-    },
-    ...oxlint.configs['flat/recommended'],
+    ...pluginVueA11y.configs['flat/recommended'],
+    ...pluginOxlint.configs['flat/recommended'],
 )
