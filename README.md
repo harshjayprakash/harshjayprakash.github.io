@@ -76,6 +76,7 @@ npm run dev
 * Add Project Filter Tablist Arrow Key Navigation.
 * Add Project Specific Pages.
 * Add Unit Testing.
+* Add About Page
 
 ## References
 
