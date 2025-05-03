@@ -1,0 +1,5 @@
+user-agent: *
+disallow: /documents/
+
+user-agent: *
+disallow: /images/
