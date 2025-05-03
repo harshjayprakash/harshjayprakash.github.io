@@ -46,6 +46,9 @@ npm run dev
     * Migrated to Composition API with Setup Tag.
     * Rewritten.
     * Mitigated Vite Vulnerabilities.
+    * Updated CSS Colour System.
+    * Simplify CSS Component Styles.
+    * Updated Internal Architecture.
   * Improved Accessibility.
     * Add "Skip Navigation" Button.
     * Improved Colour Contrast.
