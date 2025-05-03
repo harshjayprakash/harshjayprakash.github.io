@@ -23,10 +23,10 @@ const links: { name: string, description: string, to: string }[] = [{
 <template>
     <section aria-label="Contact" class="contact">
         <div role="group" class="message">
-            <h2>Looking to Collaborate or Say Hello?</h2>
+            <h2>Looking to collaborate<br />or say hello?</h2>
             <p>
-                Whether you're interested in collaborating, need help with something
-                tech-related, or just want to connect, feel free to reach out!
+                Whether you're interested in collaborating, need help with programming or
+                a bit of design, or just want to connect, feel free to reach out!
             </p>
         </div>
         <div role="group" class="links">
