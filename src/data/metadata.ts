@@ -2,7 +2,7 @@ const copyrightYear = 2025;
 const epochSemanticVersion = '5.0';
 const calendarVersion = '25H1F';
 const buildStatus = 'ALPHA';
-const buildDate = '13.05.2025';
+const buildDate = '03.05.2025';
 
 const getMetaData = () => {
     return {
