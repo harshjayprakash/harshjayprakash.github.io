@@ -32,10 +32,10 @@ const { services } = getServices();
                 with others.
             </p>
             <p class="faded-paragraph">
-                Additionally, designing diagrams has always been my favourite way to
-                present ideas. From selecting the right shapes and colours to adjusting
-                font sizes and spacing, I love ensuring every detail harmonises,
-                consistently maintaining a cohesive and unified visual language.
+                Moreover, designing diagrams has always been my favourite way to present
+                ideas. From selecting the right shapes and colours to adjusting font sizes
+                and spacing, I love ensuring every detail harmonises,  maintaining a
+                cohesive and unified visual language.
             </p>
             <p class="faded-paragraph">
                 I have spent countless hours helping others, whether it is guiding them
