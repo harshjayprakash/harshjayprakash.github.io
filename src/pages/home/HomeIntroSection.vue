@@ -78,7 +78,7 @@ const { dots } = useDotParticles(_dotCount);
 }
 
 .explore-arrow {
-    color: var(--colour-text-faded);
+    color: var(--colour-text-faded-less);
 }
 
 .emphasis {

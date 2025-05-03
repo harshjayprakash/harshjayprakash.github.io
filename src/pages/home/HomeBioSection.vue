@@ -105,7 +105,7 @@ const { services } = getServices();
     display: flex;
     flex-wrap: wrap;
     column-gap: 0.25rem;
-    color: var(--colour-text-faded);
+    color: var(--colour-text-faded-less);
     font-size: smaller;
 }
 

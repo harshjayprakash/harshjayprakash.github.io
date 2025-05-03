@@ -23,8 +23,8 @@ const links: { name: string, description: string, to: string }[] = [{
 <template>
     <section aria-label="Contact" class="contact">
         <div role="group" class="message">
-            <h2>Looking to collaborate<br />or say hello?</h2>
-            <p>
+            <h2 class="title">Looking to collaborate<br />or say hello?</h2>
+            <p class="faded-text">
                 Whether you're interested in collaborating, need help with programming or
                 a bit of design, or just want to connect, feel free to reach out!
             </p>
@@ -58,7 +58,6 @@ const links: { name: string, description: string, to: string }[] = [{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    color: var(--colour-text-faded-less);
 }
 
 .links {
