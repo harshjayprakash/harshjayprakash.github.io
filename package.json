@@ -13,8 +13,7 @@
         "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
         "lint:eslint": "eslint . --fix",
         "lint": "run-s lint:*",
-        "deploy:npm": "npm run build && copy dist\\index.html dist\\404.html && gh-pages -d dist",
-        "deploy:deno": "deno run build && copy dist\\index.html dist\\404.html && gh-pages -d dist"
+        "deploy": "npm run build && copy dist\\index.html dist\\404.html && gh-pages -d dist"
     },
     "dependencies": {
         "@fontsource-variable/inter": "^5.2.5",
