@@ -9,9 +9,9 @@ const { variant } = defineProps<{
 
 const iconMap: Record<string, string> =  {
     '/home': 'home',
-    '/projects': 'extension',
+    '/projects': 'workspaces',
     '/cv': 'description',
-    '/about': 'person'
+    '/about': 'account_circle'
 }
 
 const { getRoutes, currentRoute } = useRouter();
