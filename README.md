@@ -25,8 +25,6 @@ performance and long-term reliability.
 The Inter typeface is self-hosted using the fontsource variable package to avoid the using
 Google Fonts for privacy.
 
-![Screenshot of Website](./docs/ppw-preview.png)
-
 ## Running Locally
 
 Running the website locally is simple as a few commands after cloning the git repository.
@@ -41,29 +39,6 @@ npm run dev
 
 ## Changelog
 
-* Version 5.0 --25H1F "03/05/2025"
-  * Internal
-    * Migrated to Composition API with Setup Tag.
-    * Rewritten.
-    * Mitigated Vite Vulnerabilities.
-    * Updated CSS Colour System.
-    * Simplify CSS Component Styles.
-    * Updated Internal Architecture.
-  * Improved Accessibility.
-    * Add "Skip Navigation" Button.
-    * Improved Colour Contrast.
-  * Visual
-    * Updated Colours (Zinc to Grey).
-    * Redesigned Hero Section
-    * Added New About Me (Merged with Skills Section).
-    * Converted Skill Cards to Accordion
-    * Updated Spacing
-    * Updated Mobile Breakpoint
-    * Added Start Year and Status to Project Cards.
-    * Redesigned Contact Section.
-    * Added Faded Text to Less Important Information.
-    * Removed Rounded Corners.
-    * Updated All Images to be Consistent.
 
 ![View Previous Changelogs](./CHANGELOG.md)
 
