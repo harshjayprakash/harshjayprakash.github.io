@@ -1,6 +1,29 @@
-# Personal Portfolio Website Changelog
+# Personal Portfolio Version History
 
-* Version 4.1 --25H1E "24/03/2025"
+* Version 5.0 --25H1F "03/05/2025"
+  * Internal
+    * Migrated to Composition API with Setup Tag.
+    * Rewritten.
+    * Mitigated Vite Vulnerabilities.
+    * Updated CSS Colour System.
+    * Simplify CSS Component Styles.
+    * Updated Internal Architecture.
+  * Improved Accessibility.
+    * Add "Skip Navigation" Button.
+    * Improved Colour Contrast.
+  * Visual
+    * Updated Colours (Zinc to Grey).
+    * Redesigned Hero Section
+    * Added New About Me (Merged with Skills Section).
+    * Converted Skill Cards to Accordion
+    * Updated Spacing
+    * Updated Mobile Breakpoint
+    * Added Start Year and Status to Project Cards.
+    * Redesigned Contact Section.
+    * Added Faded Text to Less Important Information.
+    * Removed Rounded Corners.
+    * Updated All Images to be Consistent.
+* Version 4.1 -- "24/03/2025"
   * Improved Accessibility: Fixed some issues highlighted issues by ARC Toolkit.
     * Reduced Link Breaks _Note: Line breaks are still used for visual purposes._
     * _Note: Header "banner", Footer "contentinfo", Main "main" are containerised._
@@ -12,7 +35,7 @@
   * Updated Footer Text Order.
   * Simplified Some Component Templates and Styles.
   * Updated Card to Use Full Height in Grid.
-* Version 4.0 --25H1D "20/03/2025"
+* Version 4.0 -- "20/03/2025"
   * Uses Custom Component System.
   * Implemented Project Filter System.
   * Project Cards Link to GitHub Repositories.
