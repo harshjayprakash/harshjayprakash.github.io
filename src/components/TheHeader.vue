@@ -33,9 +33,15 @@ const { isMobile } = useMobileDetector(mobileBreakpoint)
     max-width: min-content;
     position: sticky;
     top: 1rem;
+    place-items: center;
+    gap: 0.5rem;
     border-radius: var(--rounded-default);
     box-shadow: var(--shadow-md);
     border: 1px solid var(--colour-outline-faded);
+}
+
+.name {
+    padding-inline-end: 0.25rem;
 }
 
 .nav-mobile-wrapper {
