@@ -3,6 +3,6 @@
 
 <template>
     <article>
-        CV
+        <h1>Curriculum Vitae</h1>
     </article>
 </template>
