@@ -39,6 +39,8 @@ npm run dev
 
 ## Changelog
 
+* Version 6.0
+  * **Updated Navigation Style**: Added Icons. New Mobile Navigation Bar.
 
 ![View Previous Changelogs](./CHANGELOG.md)
 
