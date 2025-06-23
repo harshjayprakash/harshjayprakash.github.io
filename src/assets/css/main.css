@@ -51,7 +51,7 @@ small {
     line-height: calc(1.25/0.875);
 }
 
-#app {
+.content-wrapper {
     max-width: 64rem;
     margin-inline: auto;
     padding-inline: 2rem;
