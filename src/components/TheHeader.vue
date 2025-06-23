@@ -11,7 +11,7 @@ const { isMobile } = useMobileDetector(mobileBreakpoint)
 
 <template>
     <header class="header" aria-label="Site Header">
-        <span>H.</span>
+        <span class="name">Harsh.</span>
         <TheDivider
             v-if="!isMobile"
             orientation="vertical"
