@@ -9,7 +9,7 @@ import {
     vueTsConfigs
 } from '@vue/eslint-config-typescript';
 
-configureVueProject({ scriptLangs: ['ts', 'tsx'] });
+configureVueProject({ scriptLangs: ['ts'] });
 
 export default defineConfigWithVueTs(
     {
