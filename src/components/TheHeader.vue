@@ -18,9 +18,9 @@ const { isMobile } = useMobileDetector(mobileBreakpoint)
             :height="1.5"
             :thickness="0.15"
         />
-        <TheNav variant="desktop" />
+        <TheNav variant="desktop" v-if="!isMobile" />
     </header>
-    <div class="nav-mobile-wrapper" >
+    <div class="nav-mobile-wrapper" v-if="isMobile" >
         <TheNav variant="mobile" />
     </div>
 </template>
