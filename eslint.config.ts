@@ -1,5 +1,6 @@
 import pluginOxlint from 'eslint-plugin-oxlint';
 import pluginVue from 'eslint-plugin-vue';
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 import { globalIgnores } from 'eslint/config';
 
 import {
@@ -20,5 +21,6 @@ export default defineConfigWithVueTs(
 
     pluginVue.configs['flat/essential'],
     vueTsConfigs.recommended,
+    ...pluginVueA11y.configs['flat/recommended'],
     ...pluginOxlint.configs['flat/recommended'],
 );
