@@ -50,6 +50,7 @@ const ariaCurrent = (path: string) => {
     border: 1px solid var(--colour-outline-faded);
     padding: 0.5rem;
     border-radius: 5px;
+    box-shadow: var(--shadow-lg);
 }
 
 .nav[data-variant='mobile'] .nav-item {
