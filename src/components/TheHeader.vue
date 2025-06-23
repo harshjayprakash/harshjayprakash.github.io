@@ -40,7 +40,7 @@ const { isMobile } = useMobileDetector(mobileBreakpoint)
 
 .nav-mobile-wrapper {
     position: fixed;
-    bottom: 0.75rem;
+    bottom: 1.5rem;
     width: 100%;
     display: flex;
     place-content: center;
