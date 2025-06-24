@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 import { useRouter, RouterLink, type RouteRecordRaw } from 'vue-router';
-import TheIcon from './TheIcon.vue'
+import TheIcon from '@/components/TheIcon.vue'
 
 const { variant } = defineProps<{
     variant: 'desktop' | 'mobile'

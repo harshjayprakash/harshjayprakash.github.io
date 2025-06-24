@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router';
-import TheHeader from './components/TheHeader.vue';
-import TheFooter from './components/TheFooter.vue';
+import TheHeader from './chrome/TheHeader.vue';
+import TheFooter from './chrome/TheFooter.vue';
 import { computed } from 'vue';
 import { useTitle } from '@vueuse/core';
 

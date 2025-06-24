@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import useMobileDetector from '@/composables/useMobileDetector';
-import TheDivider from './TheDivider.vue';
+import TheDivider from '@/components/TheDivider.vue';
 import getSizeConstraints from '@/data/sizing';
-import TheNav from './TheNav.vue';
-import TheBadge from './TheBadge.vue';
+import TheNav from '@/chrome/TheNav.vue';
+import TheBadge from '@/components/TheBadge.vue';
 
 const { mobileBreakpoint } = getSizeConstraints();
 const { isMobile } = useMobileDetector(mobileBreakpoint)
