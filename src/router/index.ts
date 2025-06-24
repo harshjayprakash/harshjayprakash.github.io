@@ -5,6 +5,7 @@ import CVPage from '@/pages/cv/CVPage.vue';
 import HomePage from '@/pages/home/HomePage.vue';
 import ProjectsPage from '@/pages/projects/ProjectsPage.vue';
 import NotFoundPage from '@/pages/notfound/NotFoundPage.vue';
+import AlphaPage from '@/pages/alpha/AlphaPage.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +32,11 @@ const router = createRouter({
         name: 'CV',
         component: CVPage,
         meta: { title: 'Curriculum Vitae' }
+    }, {
+        path: '/alpha',
+        name: 'Alpha',
+        component: AlphaPage,
+        meta: { title: 'Test Development' }
     }, {
         path: '/:pathMatch(.*)*',
         name: 'Not Found',
