@@ -25,6 +25,16 @@ performance and long-term reliability.
 The Inter typeface is self-hosted using the fontsource variable package to avoid the using
 Google Fonts for privacy.
 
+## Architecture
+
+* **assets/css**: the main global css styles.
+* **components**: reusable components.
+* **composables**: custom functions with state management.
+* **data**: static non-reactive data.
+* **pages**: views following a url directory structure when named `*Page.vue`.
+* **router**: the main page router.
+* **types**: any types or interfaces.
+
 ## Running Locally
 
 Running the website locally is simple as a few commands after cloning the git repository.
