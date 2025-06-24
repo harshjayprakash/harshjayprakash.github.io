@@ -42,7 +42,7 @@ npm run dev
 * Version 6.0
   * **Updated Navigation Style**: Added Icons. New Mobile Navigation Bar.
 
-![View Previous Changelogs](./CHANGELOG.md)
+![View Previous Changelogs](./VERSION.md)
 
 ## Limitations and Known Issues
 
