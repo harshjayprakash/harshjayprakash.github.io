@@ -16,32 +16,50 @@ const router = createRouter({
         path: '/home',
         name: 'Home',
         component: HomePage,
-        meta: { title: 'Home' }
+        meta: {
+            title: 'Home',
+            icon: 'home'
+        }
     }, {
         path: '/projects',
         name: 'Projects',
         component: ProjectsPage,
-        meta: { title: 'Projects' }
+        meta: {
+            title: 'Projects',
+            icon: 'workspaces'
+        }
     }, {
         path: '/about',
         name: 'About',
         component: AboutPage,
-        meta: { title: 'About Me' }
+        meta: {
+            title: 'About Me',
+            icon: 'account_circle'
+        }
     }, {
         path: '/cv',
         name: 'CV',
         component: CVPage,
-        meta: { title: 'Curriculum Vitae' }
+        meta: {
+            title: 'Curriculum Vitae',
+            icon: 'description'
+        }
     }, {
         path: '/alpha',
         name: 'Alpha',
         component: AlphaPage,
-        meta: { title: 'Test Development' }
+        meta: {
+            title: 'Test Development',
+            icon: undefined
+        }
     }, {
         path: '/:pathMatch(.*)*',
         name: 'Not Found',
         component: NotFoundPage,
-        meta: { title: 'Impossible Page' }
+        meta: {
+            title: 'Impossible Page' ,
+            icon: undefined
+        }
     }]
 });
 

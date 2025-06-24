@@ -1,28 +1,19 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import { useRouter, RouterLink } from 'vue-router';
+import { useRouter, RouterLink, type RouteRecordRaw } from 'vue-router';
 import TheIcon from './TheIcon.vue'
 
 const { variant } = defineProps<{
     variant: 'desktop' | 'mobile'
 }>();
 
-const iconMap: Record<string, string> =  {
-    '/home': 'home',
-    '/projects': 'workspaces',
-    '/cv': 'description',
-    '/about': 'account_circle'
-}
-
 const { getRoutes, currentRoute } = useRouter();
-const _routeFilter = ['/home', '/projects', '/cv', '/about'];
-const routes = getRoutes()
-    .filter(route => _routeFilter.includes(route.path))
-    .sort((a, b) => _routeFilter.indexOf(a.path) - _routeFilter.indexOf(b.path));
+const routes = getRoutes().filter(route => route.meta.icon != undefined);
 
-const ariaCurrent = (path: string) => {
-    return (currentRoute.value.path === path) ? 'page' : 'false';
-}
+const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
+
+const ariaCurrent = (path: string) =>
+    (currentRoute.value.path === path) ? 'page' : 'false';
 
 </script>
 
@@ -35,7 +26,7 @@ const ariaCurrent = (path: string) => {
                     :to="route.path" exact
                     :aria-current="ariaCurrent(route.path)"
                 >
-                    <TheIcon :name="iconMap[route.path]" />
+                    <TheIcon :name="getIcon(route)" />
                     <span v-if="variant == 'desktop'">{{ route.name }}</span>
                 </RouterLink>
 
