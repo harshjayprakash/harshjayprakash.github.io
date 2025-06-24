@@ -1,7 +1,15 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
+import { RouterView, useRoute } from 'vue-router';
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
+import { computed } from 'vue';
+import { useTitle } from '@vueuse/core';
+
+const route = useRoute();
+const title = computed(() => route.meta.title
+    ? `${route.meta.title} : : Harsh's Portfolio` : 'Harsh\'s Portfolio'
+);
+useTitle(title);
 </script>
 
 <template>

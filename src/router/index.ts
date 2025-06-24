@@ -13,19 +13,23 @@ const router = createRouter({
     }, {
         path: '/home',
         name: 'Home',
-        component: HomePage
+        component: HomePage,
+        meta: { title: 'Home' }
     }, {
         path: '/projects',
         name: 'Projects',
-        component: ProjectsPage
+        component: ProjectsPage,
+        meta: { title: 'Projects' }
     }, {
         path: '/about',
         name: 'About',
-        component: AboutPage
+        component: AboutPage,
+        meta: { title: 'About Me' }
     }, {
         path: '/cv',
         name: 'CV',
-        component: CVPage
+        component: CVPage,
+        meta: { title: 'Curriculum Vitae' }
     }]
 });
 
