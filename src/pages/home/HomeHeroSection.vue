@@ -5,6 +5,7 @@ import useDotParticles from '@/composables/useDotParticles';
 import useMobileDetector from '@/composables/useMobileDetector';
 import getAvatar from '@/data/avatar';
 import getSizeConstraints from '@/data/sizing';
+import getSocials from '@/data/socials';
 
 const { avatar } = getAvatar();
 const { mobileBreakpoint } = getSizeConstraints();
@@ -12,6 +13,8 @@ const { isMobile } = useMobileDetector(mobileBreakpoint);
 
 const _dotCount = isMobile.value ? 45 : 60;
 const { dots } = useDotParticles(_dotCount);
+
+const { socials } = getSocials();
 </script>
 
 <template>
@@ -23,18 +26,11 @@ const { dots } = useDotParticles(_dotCount);
             crafting digital experiences that feel intentional.
         </h1>
         <ul class="social-list">
-            <li class="social-item"><TheLink
-                variant="external"
-                to="mailto:harshjayprakash@outlook.com"
-                new-window>Email</TheLink></li> //
-            <li class="social-item"><TheLink
-                variant="external"
-                to="https://www.linkedin.com/in/harshjayprakash7/"
-                new-window>LinkedIn</TheLink></li> //
-            <li class="social-item"><TheLink
-                variant="external"
-                to="https://github.com/harshjayprakash"
-                new-window>GitHub</TheLink></li>
+            <li v-for="social in socials" :key="social.name" class="social-item">
+                <TheLink variant="external" :to="social.to" new-window>
+                    {{ social.name }}
+                </TheLink>
+            </li>
         </ul>
         <div class="dots-container">
             <span class="explore-arrow">&downarrow; scroll to explore</span>
@@ -44,7 +40,7 @@ const { dots } = useDotParticles(_dotCount);
                 aria-hidden="true"
                 class="dot"
                 :style="{'left':`${dot.x}%`, 'top':`${dot.y}%`}"
-                >
+            >
             </div>
         </div>
     </section>
