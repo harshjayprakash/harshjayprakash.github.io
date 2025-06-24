@@ -1,4 +1,4 @@
-const titleSuffix = ' | Harsh Portfolio'
+const titleSuffix = ' : : Harsh Portfolio'
 
 const getTitleConstraints = () => {
     return { titleSuffix };
