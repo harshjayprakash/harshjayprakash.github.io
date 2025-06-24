@@ -33,7 +33,7 @@ const target = () => (newWindow) ? '_blank' : undefined;
 .link {
     color: inherit;
     background-color: inherit;
-    text-decoration: underline solid black 0.05rem;
+    text-decoration: underline solid var(--colour-outline-primary) 0.05rem;
     text-underline-offset: 2px;
 }
 
