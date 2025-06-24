@@ -51,6 +51,8 @@ npm run dev
 
 * Version 6.0
   * **Updated Navigation Style**: Added Icons. New Mobile Navigation Bar.
+  * **Dynamic Page Titles**:
+  * **Rounded Corners**: 
 
 ![View Previous Changelogs](./VERSION.md)
 
