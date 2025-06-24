@@ -3,6 +3,7 @@ import useMobileDetector from '@/composables/useMobileDetector';
 import TheDivider from './TheDivider.vue';
 import getSizeConstraints from '@/data/sizing';
 import TheNav from './TheNav.vue';
+import TheBadge from './TheBadge.vue';
 
 const { mobileBreakpoint } = getSizeConstraints();
 const { isMobile } = useMobileDetector(mobileBreakpoint)
@@ -12,6 +13,9 @@ const { isMobile } = useMobileDetector(mobileBreakpoint)
 <template>
     <header class="header" aria-label="Site Header">
         <span class="name">Harsh.</span>
+        <TheBadge variant="tint" colour="primary">
+            ALPHA
+        </TheBadge>
         <TheDivider
             v-if="!isMobile"
             orientation="vertical"
