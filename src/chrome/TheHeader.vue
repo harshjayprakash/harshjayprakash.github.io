@@ -40,8 +40,9 @@ const { isMobile } = useMobileDetector(mobileBreakpoint)
     place-items: center;
     gap: 0.5rem;
     border-radius: var(--rounded-default);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
     border: 1px solid var(--colour-outline-faded);
+    z-index: 10;
 }
 
 .name {
@@ -56,5 +57,6 @@ const { isMobile } = useMobileDetector(mobileBreakpoint)
     place-items: center;
     left: 0;
     right: 0;
+    z-index: 10;
 }
 </style>
