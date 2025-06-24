@@ -32,7 +32,7 @@ const generateAriaLabel = () => {
 <style lang="css" scoped>
 .persona {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.10rem;
 }
 
 .persona .avatar {
@@ -45,8 +45,8 @@ const generateAriaLabel = () => {
     position: relative;
     top: 1.8rem;
     left: -0.9rem;
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 0.75rem;
+    width: 0.75rem;
     background: var(--colour-500H);
     border-radius: 50%;
     border: 0.1rem solid var(--colour-bk-primary);
