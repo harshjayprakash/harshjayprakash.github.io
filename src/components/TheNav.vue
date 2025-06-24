@@ -100,6 +100,10 @@ const ariaCurrent = (path: string) => {
     margin: 0 auto;
 }
 
+.nav .nav-link:hover::after {
+    background-color: var(--colour-bk-hover-stronger);
+}
+
 .nav .nav-link[aria-current='page']::after {
     background-color: var(--colour-bk-highlight);
 }
