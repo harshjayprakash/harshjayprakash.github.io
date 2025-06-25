@@ -42,7 +42,7 @@ const router = createRouter({
         component: CVPage,
         meta: {
             title: 'Curriculum Vitae',
-            icon: 'description'
+            icon: undefined
         }
     }, {
         path: '/alpha',
