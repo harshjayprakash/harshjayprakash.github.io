@@ -12,7 +12,8 @@ const { mobileBreakpoint } = getSizeConstraints();
 const { isMobile } = useMobileDetector(mobileBreakpoint);
 
 const _dotCount = isMobile.value ? 45 : 60;
-const { dots } = useDotParticles(_dotCount);
+const { dots, isHighlightDot } = useDotParticles(_dotCount);
+
 
 const { socials } = getSocials();
 </script>
@@ -32,13 +33,13 @@ const { socials } = getSocials();
                 </TheLink>
             </li>
         </ul>
-        <div class="dots-container">
+        <div class="dots-container" ref="dots-container">
             <span class="explore-arrow">&downarrow; scroll to explore</span>
             <div
                 v-for="(dot, idx) in dots"
                 :key="`${idx}${dot.x}${dot.y}`"
                 aria-hidden="true"
-                class="dot"
+                class="dot" :data-dot-highlight="isHighlightDot(idx)"
                 :style="{'left':`${dot.x}%`, 'top':`${dot.y}%`}"
             >
             </div>
@@ -75,6 +76,7 @@ const { socials } = getSocials();
 }
 
 .dots-container {
+    position: relative;
     overflow: clip;
     flex-grow: 1;
     background-color: var(--colour-bk-secondary);
@@ -83,12 +85,17 @@ const { socials } = getSocials();
 }
 
 .dot {
-    opacity: 0.5;
+    opacity: 0.75;
     position: relative;
-    background-color: var(--colour-bk-inverted);
+    background-color: var(--colour-bk-medium);
     height: 0.5rem;
     width: 0.5rem;
     z-index: -1;
+}
+
+.dot[data-dot-highlight='true'] {
+    background-color: inherit;
+    border: 0.15rem solid var(--colour-bk-highlight);
 }
 
 .dot:hover {
