@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import { metaData } from '@/data/meta';
 </script>
 
 <template>
     <footer class="footer">
-        <small>Version 6.0, Build 25.06.2025. Under Construction.</small>
-        <small>&copy; 2025 Harsh Jayprakash. Handcrafted with Vue.</small>
+        <small>
+            Version {{ metaData.version }}, {{ metaData.buildDate }}. Under Construction.
+        </small>
+        <small>
+            &copy; {{ metaData.copyrightYear }} Harsh Jayprakash. Handcrafted with Vue.
+        </small>
     </footer>
 </template>
 
