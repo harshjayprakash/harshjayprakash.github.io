@@ -3,9 +3,9 @@ defineOptions({
     inheritAttrs: false
 });
 
-const { variant, appearance, to, exact = false, newWindow = false } = defineProps<{
+const { variant, appearance = 'default', to, exact = false, newWindow = false } = defineProps<{
     variant: 'internal' | 'external',
-    appearance: 'default' | 'primary' | 'outline' | 'subtle' | 'transparent',
+    appearance?: 'default' | 'primary' | 'outline' | 'subtle' | 'transparent',
     to: string,
     exact?: boolean,
     newWindow?: boolean
