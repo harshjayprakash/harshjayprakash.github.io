@@ -26,7 +26,7 @@ const ariaCurrent = (path: string) =>
                     :to="route.path" exact
                     :aria-current="ariaCurrent(route.path)"
                 >
-                    <TheIcon :name="getIcon(route)" />
+                    <TheIcon :name="getIcon(route)" :filled="ariaCurrent(route.path) == 'page'" />
                     <span v-if="variant == 'desktop'">{{ route.name }}</span>
                 </RouterLink>
 
