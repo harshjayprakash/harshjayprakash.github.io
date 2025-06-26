@@ -63,6 +63,7 @@
 
     --colour-bk-primary: light-dark(var(--colour-050P), var(--colour-950P));
     --colour-bk-inverted: light-dark(var(--colour-950P), var(--colour-050P));
+    --colour-bk-medium: light-dark(var(--colour-500P), var(--colour-500P));
     --colour-bk-select: light-dark(var(--colour-950P), var(--colour-050P));
     --colour-bk-hover: light-dark(var(--colour-200P), var(--colour-800P));
     --colour-bk-hover-stronger: light-dark(var(--colour-300P), var(--colour-600P));
