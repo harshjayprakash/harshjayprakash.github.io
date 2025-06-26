@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 
-import getAltText from '@/data/altText';
-import getProjects from '@/data/projects';
 import TheBadge from '@/components/TheBadge.vue';
 import TheCard from '@/components/TheCard.vue';
 import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
-import useProjectCategoryFilter from '@/composables/useProjectCategoryFilter';
-import type { ProjectCategory } from '@/types/Project';
+import useProjectPlatformFilter from '@/composables/useProjectPlatformFilter';
+import getAltText from '@/data/altText';
+import { projectData } from '@/data/projects/projects';
+import type { ProjectPlatformFilter } from '@/types/project/ProjectPlatform';
 
 const { findAltTextFromName } = getAltText();
 
@@ -18,17 +18,15 @@ const getProjectImageSource = (abbrev: string) =>
 const getProjectImageAlt = (abbrev: string) =>
     findAltTextFromName(`${abbrev}-preview.png`);
 
-const { filterProjectsByAbbreviation } = getProjects();
 
 const {
-    filteredProjects, updateFilter, isActiveFilter, useProjectCounter
-} = useProjectCategoryFilter(
-    filterProjectsByAbbreviation(['ppw', 'xbk', 'aap', 'dwf', 'wpq', 'lls', 'ccs'])
+    filtered, updateFilter, isActiveFilter, totalCount, currentCount
+} = useProjectPlatformFilter(
+    projectData.filterByAbbreviation(['ppw', 'xbk', 'aap', 'dwf', 'wpq', 'lls', 'ccs'])
 );
 
-const filterOptions: ProjectCategory[] = ['All', 'CLI', 'Desktop', 'Web'];
 
-const { totalCount, currentCount } = useProjectCounter();
+const filterOptions: ProjectPlatformFilter[] = ['All', 'CLI', 'Desktop', 'Web'];
 
 const projectCountBadgeAriaLabel = () => {
     return `${totalCount.value} Total Projects, ${currentCount.value} Shown`
@@ -70,7 +68,7 @@ const projectCountBadgeText = computed(() =>
             <TheCard
                 link="external"
                 new-window exact
-                v-for="project in filteredProjects"
+                v-for="project in filtered"
                 :key="project.abbreviation"
                 :to="project.git"
             >
@@ -84,7 +82,7 @@ const projectCountBadgeText = computed(() =>
                         {{ project.name }}
                     </span>
                     <small class="faded-text-less">
-                        {{ project.timeframe }} &mdash; {{ project.status }}
+                        {{ project.start }} &mdash; {{ project.status }}
                     </small>
                     <small class="faded-text-less">
                         {{ project.technology }} ~ {{ project.description }}

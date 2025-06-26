@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import TheBadge from '@/components/TheBadge.vue';
+import TheButton from '@/components/TheButton.vue';
 import TheCard from '@/components/TheCard.vue';
 import TheLink from '@/components/TheLink.vue';
 import getAltText from '@/data/altText';
-import getProjects from '@/data/projects';
+import { projectData } from '@/data/projects/projects';
 
 const { findAltTextFromName } = getAltText();
 
@@ -12,13 +14,8 @@ const getProjectImageSource = (abbrev: string) =>
 const getProjectImageAlt = (abbrev: string) =>
     findAltTextFromName(`${abbrev}-preview.png`);
 
-
-const { filterProjectsByAbbreviation } = getProjects();
-const selectProjects = filterProjectsByAbbreviation([
-    'xbk', 'dwf'
-]);
-
-const dissertationProject = filterProjectsByAbbreviation(['aap'])[0];
+const selectProjects = projectData.filterByAbbreviation(['xbk', 'dwf'])
+const dissertationProject = projectData.filterByAbbreviation(['aap'])[0]
 </script>
 
 <template>
@@ -42,7 +39,12 @@ const dissertationProject = filterProjectsByAbbreviation(['aap'])[0];
                     :alt="getProjectImageAlt(project.abbreviation)"
                 />
                 <div class="info" role="group">
-                    <h3>{{ project.name }}</h3>
+                    <h3>
+                        {{ project.name }}
+                    </h3>
+                    <TheBadge variant="outline" colour="primary">
+                        {{ project.platform }}
+                    </TheBadge>
                     <p>{{ project.description }}</p>
                 </div>
             </TheCard>
@@ -58,7 +60,7 @@ const dissertationProject = filterProjectsByAbbreviation(['aap'])[0];
                     <h2>Dissertation Project</h2>
                     <h3>{{ dissertationProject.name }}</h3>
                     <p>{{ dissertationProject.description }}</p>
-                    <TheLink variant="external" :to="dissertationProject.git" new-window>
+                    <TheLink variant="external" :to="dissertationProject.git ?? '#'" new-window>
                         Learn More
                     </TheLink>
                 </div>
@@ -69,6 +71,9 @@ const dissertationProject = filterProjectsByAbbreviation(['aap'])[0];
                 />
             </div>
         </TheCard>
+        <TheButton variant="internal" to="/projects">
+            Explore More Projects
+        </TheButton>
     </section>
 </template>
 
