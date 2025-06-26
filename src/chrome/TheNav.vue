@@ -83,7 +83,7 @@ const ariaCurrent = (path: string) =>
     position: absolute;
     width: 1.4rem;
     height: 0.25rem;
-    background-color: var(--colour-bk-secondary);
+    background-color: transparent;
     border-radius: 5px;
     bottom: -0.25rem;
     left: 0;
