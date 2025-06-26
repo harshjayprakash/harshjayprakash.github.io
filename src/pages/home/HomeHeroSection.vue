@@ -3,19 +3,18 @@ import TheLink from '@/components/TheLink.vue';
 import ThePersona from '@/components/ThePersona.vue';
 import useDotParticles from '@/composables/useDotParticles';
 import useMobileDetector from '@/composables/useMobileDetector';
-import getAvatar from '@/data/avatar';
-import getSizeConstraints from '@/data/sizing';
-import getSocials from '@/data/socials';
+import { avatarData } from '@/data/profile/avatar';
+import { socialData } from '@/data/profile/socials';
+import { particleData } from '@/data/ui/particle';
+import { sizeConstraints } from '@/data/ui/size';
 
-const { avatar } = getAvatar();
-const { mobileBreakpoint } = getSizeConstraints();
-const { isMobile } = useMobileDetector(mobileBreakpoint);
+const avatar = avatarData.uri;
+const socials = socialData.all;
 
-const _dotCount = isMobile.value ? 45 : 60;
-const { dots, isHighlightDot } = useDotParticles(_dotCount);
-
-
-const { socials } = getSocials();
+const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
+const {
+    dots,
+    isHighlightDot } = useDotParticles(particleData.determineCount(isMobile.value));
 </script>
 
 <template>
