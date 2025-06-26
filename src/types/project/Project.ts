@@ -3,11 +3,10 @@ import type { ProjectStatus } from "./ProjectStatus";
 
 interface Project {
     name: string;
-    title: string;
-    internalName: string,
+    title?: string;
+    internalName?: string,
     description: string;
     slug: string;
-
     abbreviation: string;
     platform: ProjectPlatform;
     status: ProjectStatus;
