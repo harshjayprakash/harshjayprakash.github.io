@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 import { useRouter, RouterLink, type RouteRecordRaw } from 'vue-router';
+
 import TheIcon from '@/components/TheIcon.vue'
 
 const { variant } = defineProps<{
@@ -14,7 +15,6 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
 
 const ariaCurrent = (path: string) =>
     (currentRoute.value.path === path) ? 'page' : 'false';
-
 </script>
 
 <template>
