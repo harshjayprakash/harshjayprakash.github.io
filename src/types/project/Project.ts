@@ -12,7 +12,6 @@ interface Project {
     status: ProjectStatus;
     start: string;
     available: boolean;
-
     technology: string;
     git?: string;
     image?: string;
