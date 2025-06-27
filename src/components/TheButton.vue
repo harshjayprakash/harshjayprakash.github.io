@@ -1,33 +1,30 @@
 <script lang="ts" setup>
-defineOptions({
-    inheritAttrs: false
+import { linkData } from '@/data/ui/link';
+import type { ButtonProps } from '@/types/ui/ButtonProps';
+
+const props = withDefaults(defineProps<ButtonProps>(), {
+    linkable: 'internal',
+    appearance: 'default',
+    newWindow: false
 });
 
-const { variant, appearance = 'default', to, exact = false, newWindow = false } = defineProps<{
-    variant: 'internal' | 'external',
-    appearance?: 'default' | 'primary' | 'outline' | 'subtle' | 'transparent',
-    to: string,
-    exact?: boolean,
-    newWindow?: boolean
-}>();
+const isExternal = () => props.linkable === 'external';
 
-const rel = () => (newWindow) ? 'noopener noreferrer' : undefined;
-const target = () => (newWindow) ? '_blank' : undefined;
+const is = () => isExternal() ? 'a' : 'RouterLink';
+const href = () => isExternal() ? props.to : undefined;
+const target = () => isExternal()
+    ? linkData.newWindowOpenData.target(props.newWindow) : undefined;
+const rel = () => isExternal()
+    ? linkData.newWindowOpenData.rel(props.newWindow) : undefined;
+const to = () => isExternal() ? undefined : props.to;
 </script>
 
 <template>
-    <a v-if="variant === 'external'" :href="to" :rel :target
+    <component :is="is()" :href="href()" :target="target()" :rel="rel()" :to="to()"
         class="button" :data-appearance="appearance"
-        v-on="$attrs" v-bind="$attrs"
     >
         <slot></slot>
-    </a>
-    <RouterLink v-if="variant === 'internal'" :to :exact
-        class="button" :data-appearance="appearance"
-        v-on="$attrs" v-bind="$attrs"
-    >
-        <slot></slot>
-    </RouterLink>
+    </component>
 </template>
 
 <style lang="css" scoped>
