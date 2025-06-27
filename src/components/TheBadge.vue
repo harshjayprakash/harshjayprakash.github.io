@@ -1,16 +1,12 @@
 <script lang="ts" setup>
-const { variant, colour } = defineProps<{
-    variant: 'ghost' | 'outline' | 'tint' | 'filled',
-    colour: 'primary' | 'highlight'
-}>();
+import type { BadgeProps } from '@/types/ui/BadgeProps';
+
+const props = defineProps<BadgeProps>();
 </script>
 
 <template>
-    <div
-        role="status"
-        class="badge"
-        :data-variant="variant"
-        :data-colour="colour"
+    <div class="badge" role="status" :data-variant="props.appearance"
+        :data-colour="props.colour"
     >
         <slot></slot>
     </div>
