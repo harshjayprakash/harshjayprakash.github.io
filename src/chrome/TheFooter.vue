@@ -4,6 +4,12 @@ import { metaData } from '@/data/meta';
 
 <template>
     <footer class="footer" aria-label="Site Footer">
+        <small class="version-info">
+            Version {{ metaData.version }}, {{ metaData.buildDate }}. Under Construction.
+        </small>
+        <small class="copyright">
+            &copy; {{ metaData.copyrightYear }} Harsh Jayprakash. Handcrafted with Vue.
+        </small>
     </footer>
 </template>
 
@@ -12,5 +18,10 @@ import { metaData } from '@/data/meta';
     display: flex;
     flex-direction: column;
     padding-block: 1rem;
+}
+
+.footer .version-info,
+.footer .copyright {
+    color: var(--colour-text-faded);
 }
 </style>
