@@ -16,7 +16,7 @@ const { variant, colour } = defineProps<{
     </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .badge {
     --widget-badge-text: ;
     --widget-badge-bk: ;
