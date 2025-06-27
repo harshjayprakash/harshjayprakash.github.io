@@ -1,32 +1,20 @@
 <script lang="ts" setup>
-defineOptions({
-    inheritAttrs: false
+import useLinkable from '@/composables/useLinkable';
+import type { LinkProps } from '@/types/ui/LinkProps';
+
+const props = withDefaults(defineProps<LinkProps>(), {
+    newWindow: false,
 });
 
-const { variant, to, exact = false, newWindow = false } = defineProps<{
-    variant: 'internal' | 'external',
-    to: string,
-    exact?: boolean,
-    newWindow?: boolean
-}>();
-
-const rel = () => (newWindow) ? 'noopener noreferrer' : undefined;
-const target = () => (newWindow) ? '_blank' : undefined;
+const config = useLinkable(props.linkable, props.to, props.newWindow);
 </script>
 
 <template>
-    <a v-if="variant === 'external'" :href="to" :rel :target
-        class="link"
-        v-on="$attrs" v-bind="$attrs"
+    <component :is="config.is" :href="config.href" :target="config.target"
+        :rel="config.rel" :to="config.to" class="link"
     >
         <slot></slot>
-    </a>
-    <RouterLink v-if="variant === 'internal'" :to :exact
-        class="link"
-        v-on="$attrs" v-bind="$attrs"
-    >
-        <slot></slot>
-    </RouterLink>
+    </component>
 </template>
 
 <style lang="css" scoped>

@@ -1,14 +1,13 @@
 <script lang="ts" setup>
-defineOptions({ inheritAttrs: false });
 </script>
 
 <template>
-    <div role="tablist" class="tab-list" v-bind="$attrs" v-on="$attrs">
+    <div role="tablist" class="tab-list">
         <slot></slot>
     </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .tab-list {
     display: flex;
     flex-wrap: wrap;

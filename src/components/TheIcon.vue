@@ -1,16 +1,16 @@
 <script setup lang="ts">
+import type { IconProps } from '@/types/ui/IconProps';
 import { defineProps } from 'vue';
 
-const { name, filled = false } = defineProps<{
-    name: string,
-    filled?: boolean
-}>();
+const props = withDefaults(defineProps<IconProps>(), {
+    filled: true
+});
 
 </script>
 
 <template>
-    <span class="material-icon" :data-filled="filled">
-        {{ name }}
+    <span class="material-icon" aria-hidden="true" :data-filled="props.filled">
+        {{ props.name }}
     </span>
 </template>
 

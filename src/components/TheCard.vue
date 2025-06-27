@@ -1,28 +1,29 @@
 <script lang="ts" setup>
-const { link, to = '#', exact = false, newWindow = false } = defineProps<{
-    link: 'no-link' | 'internal' | 'external',
-    newWindow?: boolean,
-    exact?: boolean,
-    to?: string
-}>();
+import useLinkable from '@/composables/useLinkable';
+import type { CardProps } from '@/types/ui/CardProps';
 
-const rel = () => (newWindow) ? 'noopener noreferrer' : undefined;
-const target = () => (newWindow) ? '_blank' : undefined;
+const props = withDefaults(defineProps<CardProps>(), {
+    appearance: 'filled',
+    elevate: false,
+    to: '#',
+    newWindow: false
+});
+
+const config = useLinkable(props.linkable, props.to, props.newWindow);
+const role = () => props.linkable === 'none' ? 'group' : 'link';
+const dataLink = () => props.linkable === 'external' || props.linkable === 'internal';
 </script>
 
 <template>
-    <div v-if="link === 'no-link'" role="group" class="card" data-link="false">
+    <component :is="config.is" :href="config.href" :to="config.to" :target="config.target"
+        :rel="config.rel" :role="role()" :data-link="dataLink()"
+        :data-appearance="props.appearance" class="card"
+    >
         <slot></slot>
-    </div>
-    <a v-if="link === 'external'" class="card" :href="to" :rel :target data-link="true">
-        <slot></slot>
-    </a>
-    <RouterLink v-if="link === 'internal'" :to :exact data-link="true">
-        <slot></slot>
-    </RouterLink>
+    </component>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .card {
     padding: 1rem;
     background-color: var(--colour-bk-secondary);

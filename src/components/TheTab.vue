@@ -1,24 +1,16 @@
 <script lang="ts" setup>
-defineOptions({ inheritAttrs: false });
+import type { TabProps } from '@/types/ui/TabProps';
 
-const { active } = defineProps<{
-    active: boolean
-}>();
+const props = defineProps<TabProps>();
 </script>
 
 <template>
-    <button
-        role="tab"
-        class="tab"
-        :aria-selected="active"
-        v-bind="$attrs"
-        v-on="$attrs"
-    >
+    <button role="tab" class="tab" :aria-selected="props.active">
         <slot></slot>
     </button>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .tab {
     --widget-tab-border-colour: transparent;
 

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { linkData } from '@/data/ui/link';
+import useLinkable from '@/composables/useLinkable';
 import type { ButtonProps } from '@/types/ui/ButtonProps';
 
 const props = withDefaults(defineProps<ButtonProps>(), {
@@ -8,31 +8,24 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     newWindow: false
 });
 
-const isExternal = () => props.linkable === 'external';
-
-const is = () => isExternal() ? 'a' : 'RouterLink';
-const href = () => isExternal() ? props.to : undefined;
-const target = () => isExternal()
-    ? linkData.newWindowOpenData.target(props.newWindow) : undefined;
-const rel = () => isExternal()
-    ? linkData.newWindowOpenData.rel(props.newWindow) : undefined;
-const to = () => isExternal() ? undefined : props.to;
+const config = useLinkable(props.linkable, props.to, props.newWindow);
 </script>
 
 <template>
-    <component :is="is()" :href="href()" :target="target()" :rel="rel()" :to="to()"
-        class="button" :data-appearance="appearance"
+    <component :is="config.is" :href="config.href" :target="config.target"
+        :rel="config.rel" :to="config.to" class="button" :data-appearance="appearance"
     >
         <slot></slot>
     </component>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .button {
     --widget-button-text: ;
     --widget-button-bk: ;
     --widget-button-outline: ;
 
+    cursor: pointer;
     display: inline;
     width: fit-content;
     font-size: smaller;

@@ -1,27 +1,25 @@
 <script lang="ts" setup>
+import type { DividerProps } from '@/types/ui/DividerProps';
 import { computed } from 'vue';
 
-defineOptions({ inheritAttrs: false });
-
-const { orientation, thickness = 0.1, height = 0 } = defineProps<{
-    orientation: 'horizontal' | 'vertical',
-    thickness?: number,
-    height?: number
-}>();
+const props = withDefaults(defineProps<DividerProps>(), {
+    thickness: 0.1,
+    height: 0
+});
 
 const style = computed(() => {
     return {
-        '--widget-divider-computed-height': `${height}rem`,
-        '--widget-divider-computed-thickness': `${thickness}rem`,
+        '--widget-divider-computed-height': `${props.height}rem`,
+        '--widget-divider-computed-thickness': `${props.thickness}rem`,
     }
 });
 </script>
 
 <template>
-    <hr class="divider" :aria-orientation="orientation" :style />
+    <hr class="divider" :aria-orientation="orientation" aria-hidden="true" :style />
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .divider {
     --widget-divider-outline: var(--colour-outline-faded);
 
