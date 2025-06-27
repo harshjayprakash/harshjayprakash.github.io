@@ -4,30 +4,27 @@ import TheDivider from '@/components/TheDivider.vue';
 import TheBadge from '@/components/TheBadge.vue';
 import useMobileDetector from '@/composables/useMobileDetector';
 import { sizeConstraints } from '@/data/ui/size';
+import { metaData } from '@/data/meta';
 
 const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
 </script>
 
 <template>
     <header class="header" aria-label="Site Header">
-        <span class="name">Harsh.</span>
-        <TheBadge variant="tint" colour="primary">
-            ALPHA
+        <span class="title">Harsh.</span>
+        <TheBadge appearance="tint" colour="primary" aria-label="Website Build Status">
+            {{ metaData.buildStatus }}
         </TheBadge>
-        <TheDivider
-            v-if="!isMobile"
-            orientation="vertical"
-            :height="1.5"
-            :thickness="0.15"
-        />
+        <TheDivider v-if="!isMobile" orientation="vertical" :height="1.5"
+            :thickness="0.1" />
         <TheNav variant="desktop" v-if="!isMobile" />
     </header>
-    <div class="nav-mobile-wrapper" v-if="isMobile" >
+    <div class="nav-mobile-wrapper" v-if="isMobile">
         <TheNav variant="mobile" />
     </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .header {
     display: flex;
     background-color: var(--colour-bk-secondary);
@@ -43,7 +40,7 @@ const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
     z-index: 10;
 }
 
-.name {
+.header .title {
     padding-inline-end: 0.25rem;
 }
 
