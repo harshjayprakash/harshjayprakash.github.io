@@ -5,7 +5,7 @@ import TheButton from '@/components/TheButton.vue';
 <template>
     <article aria-label="Not Found" class="not-found">
         <h1>Seems you've wondered off the map.</h1>
-        <TheButton variant="internal" appearance="primary" to="/home" exact>
+        <TheButton linkable="internal" appearance="primary" to="/home">
             Go to Home
         </TheButton>
     </article>

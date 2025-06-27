@@ -26,9 +26,9 @@ const {
             crafting digital experiences that feel intentional.
         </h1>
         <ul class="social-list">
-            <li v-for="social in socials" :key="social.name" class="social-item">
-                <TheLink variant="external" :to="social.to" new-window>
-                    {{ social.name }}
+            <li v-for="social in socials" :key="social.social" class="social-item">
+                <TheLink linkable="external" :to="social.uri">
+                    {{ social.social }}
                 </TheLink>
             </li>
         </ul>
@@ -36,10 +36,10 @@ const {
             <span class="explore-arrow">&downarrow; scroll to explore</span>
             <div
                 v-for="(dot, idx) in dots"
-                :key="`${idx}${dot.x}${dot.y}`"
+                :key="`${idx}${dot.positionX}${dot.positionY}`"
                 aria-hidden="true"
                 class="dot" :data-dot-highlight="isHighlightDot(idx)"
-                :style="{'left':`${dot.x}%`, 'top':`${dot.y}%`}"
+                :style="{'left':`${dot.positionX}%`, 'top':`${dot.positionY}%`}"
             >
             </div>
         </div>

@@ -6,18 +6,13 @@ import TheCard from '@/components/TheCard.vue';
 import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
 import useProjectPlatformFilter from '@/composables/useProjectPlatformFilter';
-import getAltText from '@/data/altText';
 import { projectData } from '@/data/projects/projects';
 import type { ProjectPlatformFilter } from '@/types/project/ProjectPlatform';
+import { imageData } from '@/data/ui/image';
 
-const { findAltTextFromName } = getAltText();
+const getProjectImageSource = (abbrev: string) => `/images/${abbrev}-preview.png`;
 
-const getProjectImageSource = (abbrev: string) =>
-    `/images/${abbrev}-preview.png`;
-
-const getProjectImageAlt = (abbrev: string) =>
-    findAltTextFromName(`${abbrev}-preview.png`);
-
+const getProjectImageAlt = (abbrev: string) => imageData.getByObjectName(`${abbrev}-preview`)
 
 const {
     filtered, updateFilter, isActiveFilter, totalCount, currentCount
@@ -51,7 +46,7 @@ const projectCountBadgeText = computed(() =>
                 repositories.
             </span>
         </p>
-        <TheBadge :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
+        <TheBadge appearance="tint" :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
             {{ projectCountBadgeText }}
         </TheBadge>
         <TheTabList>
@@ -66,7 +61,8 @@ const projectCountBadgeText = computed(() =>
         </TheTabList>
         <div role="group" class="projects">
             <TheCard
-                link="external"
+                appearance="filled"
+                linkable="external"
                 new-window exact
                 v-for="project in filtered"
                 :key="project.abbreviation"
