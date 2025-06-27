@@ -20,7 +20,7 @@ useTitle(title);
     <TheFooter />
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .content-wrapper {
     padding-block: 3rem 2rem;
 }
