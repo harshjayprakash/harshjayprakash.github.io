@@ -1,41 +1,41 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
 import { useRouter, RouterLink, type RouteRecordRaw } from 'vue-router';
-
 import TheIcon from '@/components/TheIcon.vue'
+import type { NavProps } from '@/types/ui/NavProps';
 
-const { variant } = defineProps<{
-    variant: 'desktop' | 'mobile'
-}>();
+const props = withDefaults(defineProps<NavProps>(), {
+    variant: 'desktop'
+});
+
+const isDesktop = () => props.variant === 'desktop';
 
 const { getRoutes, currentRoute } = useRouter();
 const routes = getRoutes().filter(route => route.meta.icon != undefined);
 
-const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
+const ariaCurrent = (path: string) => {
+    return (currentRoute.value.path === path) ? 'page' : 'false'
+};
+const isCurrentPage = (path: string) => ariaCurrent(path) == 'page';
 
-const ariaCurrent = (path: string) =>
-    (currentRoute.value.path === path) ? 'page' : 'false';
+const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
 </script>
 
 <template>
-    <nav class="nav" :data-variant="variant">
-        <ul class="nav-list">
+    <nav class="nav" :data-variant="props.variant">
+        <ul class="nav-list" aria-label="Navigation Link List">
             <li class="nav-item" v-for="route in routes" :key="route.path">
-                <RouterLink
-                    class="nav-link"
-                    :to="route.path" exact
+                <RouterLink class="nav-link" :to="route.path"
                     :aria-current="ariaCurrent(route.path)"
                 >
-                    <TheIcon :name="getIcon(route)" :filled="ariaCurrent(route.path) == 'page'" />
-                    <span v-if="variant == 'desktop'">{{ route.name }}</span>
+                    <TheIcon :name="getIcon(route)" :filled="isCurrentPage(route.path)" />
+                    <span v-if="isDesktop()">{{ route.name }}</span>
                 </RouterLink>
-
             </li>
         </ul>
     </nav>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .nav[data-variant='mobile'] {
     background-color: var(--colour-bk-secondary);
     border: 1px solid var(--colour-outline-faded);
