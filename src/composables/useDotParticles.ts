@@ -1,16 +1,16 @@
 import { onMounted, readonly, ref } from 'vue';
 
-import type { Position } from '@/types/Position';
+import type { BoxEntity } from '@/types/graphic/BoxEntity';
 
 const useDotParticles = (dotCount: number) => {
-    const dots = ref<Position[]>([]);
+    const dots = ref<BoxEntity[]>([]);
     const highlightDotIndex = ref(0);
 
     onMounted(() => {
         for (let idx = 0; idx < dotCount; idx++) {
             const x = Math.floor(Math.random()*120);
             const y = Math.floor(Math.random()*120);
-            dots.value.push({ x, y });
+            dots.value.push({ positionX: x, positionY: y });
         }
 
         highlightDotIndex.value = Math.floor(Math.random()*dotCount);
