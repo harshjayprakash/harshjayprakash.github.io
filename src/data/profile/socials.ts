@@ -1,4 +1,4 @@
-import type { SocialLink } from "@/types/profile";
+import type { SocialLink } from "@/types/profile/SocialLink";
 
 const socialList: SocialLink[] = [{
     social: 'Email',
