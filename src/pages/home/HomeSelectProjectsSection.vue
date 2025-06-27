@@ -49,29 +49,7 @@ const dissertationProject = projectData.filterByAbbreviation(['aap'])[0]
                 </div>
             </TheCard>
         </div>
-        <TheCard
-                link="external"
-                new-window exact
-                :to="dissertationProject.git"
-
-            >
-            <div class="dissertation-project">
-                <div>
-                    <h2>Dissertation Project</h2>
-                    <h3>{{ dissertationProject.name }}</h3>
-                    <p>{{ dissertationProject.description }}</p>
-                    <TheLink variant="external" :to="dissertationProject.git ?? '#'" new-window>
-                        Learn More
-                    </TheLink>
-                </div>
-                <img
-                    class="project-image"
-                    :src="getProjectImageSource(dissertationProject.abbreviation)"
-                    :alt="getProjectImageAlt(dissertationProject.abbreviation)"
-                />
-            </div>
-        </TheCard>
-        <TheButton variant="internal" to="/projects">
+        <TheButton linkable="internal" to="/projects">
             Explore More Projects
         </TheButton>
     </section>
