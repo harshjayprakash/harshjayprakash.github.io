@@ -17,7 +17,7 @@ const dataLink = () => props.linkable === 'external' || props.linkable === 'inte
 <template>
     <component :is="config.is" :href="config.href" :to="config.to" :target="config.target"
         :rel="config.rel" :role="role()" :data-link="dataLink()"
-        :data-appearance="props.appearance" class="card"
+        :data-appearance="props.appearance" :data-elevate="props.elevate" class="card"
     >
         <slot></slot>
     </component>
@@ -25,19 +25,50 @@ const dataLink = () => props.linkable === 'external' || props.linkable === 'inte
 
 <style lang="css">
 .card {
-    padding: 1rem;
-    background-color: var(--colour-bk-secondary);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    --widget-card-bk: ;
+    --widget-card-text: ;
+    --widget-card-border: ;
+    --widget-card-shadow: ;
+
+    background-color: var(--widget-card-bk);
+    box-shadow: var(--widget-card-shadow);
+    display: block;
     text-decoration: none;
-    color: inherit;
+    padding: 1rem;
+    color: var(--widget-card-text);
+    border: 1px solid var(--widget-card-border);
     border-radius: var(--rounded-default);
 }
 
+.card[data-appearance='outline'] {
+    --widget-card-bk: inherit;
+    --widget-card-text: inherit;
+    --widget-card-border: var(--colour-outline-faded);
+}
+
+.card[data-appearance='outline']:hover {
+    --widget-card-border: var(--colour-outline-primary);
+}
+
+.card[data-appearance='subtle'] {
+    --widget-card-bk: inherit;
+    --widget-card-text: inherit;
+    --widget-card-border: 0;
+}
+
+.card[data-appearance='filled'] {
+    --widget-card-bk: var(--colour-bk-secondary);
+    --widget-card-text: inherit;
+    --widget-card-border: 0;
+}
+
+.card[data-elevate='true'] {
+    --widget-card-shadow: var(--shadow-md);
+}
+
 .card[data-link="true"]:hover {
-    background-color: var(--colour-bk-hover);
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --widget-card-bk: var(--colour-bk-hover);
+    --widget-card-shadow: var(--shadow-lg);
 }
 </style>
 
