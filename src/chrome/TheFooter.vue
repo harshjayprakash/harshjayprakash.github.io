@@ -24,4 +24,10 @@ import { metaData } from '@/data/meta';
 .footer .copyright {
     color: var(--colour-text-faded);
 }
+
+@media (max-width: 767px) {
+    .footer {
+        padding-block-end: 6rem;
+    }
+}
 </style>
