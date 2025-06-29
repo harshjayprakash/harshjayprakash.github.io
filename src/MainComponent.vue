@@ -14,7 +14,7 @@ useTitle(title);
 
 <template>
     <TheHeader />
-    <main class="content-wrapper">
+    <main class="content-wrapper" id="main">
         <RouterView />
     </main>
     <TheFooter />
