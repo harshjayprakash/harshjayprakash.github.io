@@ -46,7 +46,7 @@ const {
     </section>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .home-hero {
     min-height: 80dvh;
     display: flex;
@@ -54,7 +54,7 @@ const {
     gap: 2rem;
 }
 
-.explore-arrow {
+.home-hero .explore-arrow {
     padding-inline-end: 1rem;
     padding-block: 0.75rem;
     border-radius: 0 0 5px 0;
@@ -62,19 +62,19 @@ const {
     color: var(--colour-text-faded);
 }
 
-.highlight {
+.home-hero .highlight {
     background-color: var(--colour-bk-highlight-subtle);
     color: var(--colour-text-highlight);
 }
 
-.social-list {
+.home-hero .social-list {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 1rem;
 }
 
-.dots-container {
+.home-hero .dots-container {
     position: relative;
     overflow: clip;
     flex-grow: 1;
@@ -83,7 +83,7 @@ const {
     z-index: -1;
 }
 
-.dot {
+.home-hero .dot {
     opacity: 0.75;
     position: relative;
     background-color: var(--colour-bk-medium);
@@ -92,12 +92,12 @@ const {
     z-index: -1;
 }
 
-.dot[data-dot-highlight='true'] {
+.home-hero .dot[data-dot-highlight='true'] {
     background-color: inherit;
     border: 0.15rem solid var(--colour-bk-highlight);
 }
 
-.dot:hover {
+.home-hero .dot:hover {
     background-color: blue;
 }
 </style>
