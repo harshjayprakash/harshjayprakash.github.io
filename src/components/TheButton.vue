@@ -14,6 +14,7 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
 <template>
     <component :is="config.is" :href="config.href" :target="config.target"
         :rel="config.rel" :to="config.to" class="button" :data-appearance="appearance"
+        tabindex="0"
     >
         <slot></slot>
     </component>

@@ -12,11 +12,12 @@ const props = withDefaults(defineProps<CardProps>(), {
 const config = useLinkable(props.linkable, props.to, props.newWindow);
 const role = () => props.linkable === 'none' ? 'group' : 'link';
 const dataLink = () => props.linkable === 'external' || props.linkable === 'internal';
+const tabIndex = () => dataLink() ? 0 : -1;
 </script>
 
 <template>
     <component :is="config.is" :href="config.href" :to="config.to" :target="config.target"
-        :rel="config.rel" :role="role()" :data-link="dataLink()"
+        :rel="config.rel" :role="role()" :data-link="dataLink()" :tabindex="tabIndex()"
         :data-appearance="props.appearance" :data-elevate="props.elevate" class="card"
     >
         <slot></slot>

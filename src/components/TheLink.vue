@@ -11,7 +11,7 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
 
 <template>
     <component :is="config.is" :href="config.href" :target="config.target"
-        :rel="config.rel" :to="config.to" class="link"
+        :rel="config.rel" :to="config.to" tabindex="0" class="link"
     >
         <slot></slot>
     </component>
@@ -23,6 +23,7 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
     background-color: inherit;
     text-decoration: underline solid var(--colour-outline-primary) 0.05rem;
     text-underline-offset: 2px;
+    cursor: pointer;
 }
 
 .link:hover {
