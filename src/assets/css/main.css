@@ -3,9 +3,7 @@
 @import './borders.css';
 @import './effect.css';
 
-*, *::before, *::after {
-    transition: all 150ms ease-in-out;
-}
+
 
 ::selection {
     background-color: var(--colour-bk-select);
@@ -60,6 +58,10 @@ small {
 
 
 @media (prefers-reduced-motion: no-preference) {
+    *, *::before, *::after {
+        transition: all 150ms ease-in-out;
+    }
+
     html {
         scroll-behavior: smooth;
     }
