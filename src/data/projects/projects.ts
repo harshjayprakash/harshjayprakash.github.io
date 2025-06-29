@@ -30,6 +30,7 @@ const projects: Project[] = [{
     featured: false,
 }, {
     name: 'Dog Walkers Finder',
+    title: 'Using cloud-based AWS infrastructure.',
     description: 'A tool for dog owners to find dog walkers within their local area.',
     slug: 'dog-walkers-finder',
     abbreviation: 'dwf',
@@ -43,6 +44,7 @@ const projects: Project[] = [{
     featured: true,
 }, {
     name: 'Experimental Blok',
+    title: 'An exploration of the Windows API.',
     description: 'A traditional win32 application simulating a square moving around a user generated maze.',
     slug: 'experimental-blok',
     abbreviation: 'xbk',
