@@ -26,6 +26,7 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
             <li class="nav-item" v-for="route in routes" :key="route.path">
                 <RouterLink class="nav-link" :to="route.path"
                     :aria-current="ariaCurrent(route.path)"
+                    :aria-label="route.meta?.title"
                 >
                     <TheIcon :name="getIcon(route)" :filled="isCurrentPage(route.path)" />
                     <span v-if="isDesktop()">{{ route.name }}</span>
