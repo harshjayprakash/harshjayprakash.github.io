@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TheLink from '@/components/TheLink.vue';
 import { metaData } from '@/data/meta';
 </script>
 
@@ -9,6 +10,11 @@ import { metaData } from '@/data/meta';
         </small>
         <small class="copyright">
             &copy; {{ metaData.copyrightYear }} Harsh Jayprakash. Handcrafted with Vue.
+            <TheLink linkable="external" new-window
+                to="https://github.com/harshjayprakash/harshjayprakash.github.io"
+            >
+                Explore the Source Code.
+            </TheLink>
         </small>
     </footer>
 </template>
