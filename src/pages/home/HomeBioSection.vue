@@ -16,6 +16,9 @@ import TheLink from '@/components/TheLink.vue';
                 I care deeply about cohesive design language, thoughtful architecture, and
                 building things that feel intention from the inside out.
             </p>
+            <small>
+                I enjoy the quiet details &mdash; the ones that make things feel intentional.
+            </small>
         </div>
         <TheLink linkable="internal" to="/about">
             Read more ->
@@ -31,7 +34,7 @@ import TheLink from '@/components/TheLink.vue';
 }
 
 .home-bio .content {
-    max-width: 60ch;
+    max-width: 70ch;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
