@@ -15,7 +15,11 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
     <section class="home-spotlight-section" aria-label="Project Spotlight">
         <div>
             <h2>Select Projects</h2>
-            <p>Two selected projects, showcasing my skills.</p>
+            <p class="overview">
+                Some things I've built that reflect how I like to work &ndash; curious,
+                hands-on, and always looking for clarity in complexity. Each one providing
+                a different kind of challenge.
+            </p>
         </div>
         <ul class="select-projects" aria-label="Selected Projects">
             <li class="project-wrapper" v-for="project in selectProjects"
@@ -32,16 +36,18 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
             </li>
         </ul>
         <section class="dissertation" aria-label="University Dissertation Project">
-            <TheCard appearance="outline" linkable="external"
+            <TheCard appearance="filled" linkable="external"
                 :to="dissertationProject.git" elevate class="project-card--dissertation"
             >
-                <div class="information">
+                <div role="group" class="information">
                     <TheBadge colour="highlight" appearance="outline">
-                        Dissertation Project
+                        Capstone Project
                     </TheBadge>
-                    <h3>{{ dissertationProject.name }}</h3>
+                    <h3>
+                        {{ dissertationProject.name }}: {{ dissertationProject.title }}
+                    </h3>
                     <p>
-                        A focus on the joint cohesion and gap between art and programming.
+                        {{ dissertationProject.description }}
                     </p>
                 </div>
                 <div class="image-wrapper">
@@ -62,6 +68,10 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.home-spotlight-section .overview {
+    max-width: 70ch;
 }
 
 .home-spotlight-section .select-projects {
