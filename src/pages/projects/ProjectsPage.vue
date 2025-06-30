@@ -16,9 +16,9 @@ const getProjectImageAlt = (abbrev: string) => imageData.getByObjectName(`${abbr
 
 const {
     filtered, updateFilter, isActiveFilter, totalCount, currentCount
-} = useProjectPlatformFilter(
-    projectData.filterByAbbreviation(['ppw', 'xbk', 'aap', 'dwf', 'wpq', 'lls', 'ccs'])
-);
+} = useProjectPlatformFilter(projectData.filterByAbbreviation(
+    ['ppw', 'xbk', 'aap', 'dwf', 'wpq', 'lls', 'ccs']
+));
 
 
 const filterOptions: ProjectPlatformFilter[] = ['All', 'CLI', 'Desktop', 'Web'];
