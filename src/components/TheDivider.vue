@@ -24,7 +24,7 @@ const style = computed(() => {
     --widget-divider-outline: var(--colour-outline-faded);
 
     border: 0;
-    border-radius: 5px;
+    border-radius: var(--rounded-default);
 }
 
 .divider[aria-orientation="horizontal"] {

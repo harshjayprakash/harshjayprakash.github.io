@@ -40,7 +40,7 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
     background-color: var(--colour-bk-secondary);
     border: 1px solid var(--colour-outline-faded);
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: var(--rounded-default);
     box-shadow: var(--shadow-lg);
 }
 
@@ -84,7 +84,7 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
     width: 1.4rem;
     height: 0.25rem;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: var(--rounded-default);
     bottom: -0.25rem;
     left: 0;
     right: 0;

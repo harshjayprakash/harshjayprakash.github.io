@@ -35,7 +35,7 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
     border: 0.1rem solid var(--widget-button-outline);
     padding-inline: 0.75rem;
     padding-block: 0.30rem;
-    border-radius: 5px;
+    border-radius: var(--rounded-default);
     text-decoration: none;
 }
 

@@ -26,7 +26,7 @@ const props = defineProps<BadgeProps>();
     border: 0.1rem solid var(--widget-badge-outline);
     padding-inline: 0.25rem;
     padding-block: 0.1rem;
-    border-radius: 5px;
+    border-radius: var(--rounded-default);
 }
 
 .badge[data-variant="ghost"][data-colour="highlight"] {

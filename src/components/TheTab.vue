@@ -27,7 +27,7 @@ const props = defineProps<TabProps>();
     width: 100%;
     height: 0.25rem;
     background-color: var(--widget-tab-border-colour);
-    border-radius: 5px;
+    border-radius: var(--rounded-default);
     bottom: -0.25rem;
     left: 0;
     right: 0;
