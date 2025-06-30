@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { IconProps } from '@/types/ui/IconProps';
-import { defineProps } from 'vue';
 
 const props = withDefaults(defineProps<IconProps>(), {
     filled: true
