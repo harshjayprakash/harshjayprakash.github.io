@@ -99,7 +99,7 @@ const projectCountBadgeText = computed(() =>
 }
 
 .projects .overview {
-    max-width: 52rem;
+    max-width: 70ch;
 }
 
 .projects .faded-text {
