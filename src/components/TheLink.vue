@@ -11,7 +11,7 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
 
 <template>
     <component :is="config.is" :href="config.href" :target="config.target"
-        :rel="config.rel" :to="config.to" tabindex="0" class="link"
+        :rel="config.rel" :to="config.to" role="link" tabindex="0" class="link"
     >
         <slot></slot>
     </component>
