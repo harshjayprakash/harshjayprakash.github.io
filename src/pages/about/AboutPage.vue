@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ThePersona from '@/components/ThePersona.vue';
-import TheCard from '@/components/TheCard.vue';
+import ThePersona from '@/components/common/ThePersona.vue';
+import TheCard from '@/components/common/TheCard.vue';
 import { avatarData } from '@/data/profile/avatar';
 
 const avatar = avatarData.uri;

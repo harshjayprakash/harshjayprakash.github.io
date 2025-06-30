@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter, RouterLink, type RouteRecordRaw } from 'vue-router';
-import TheIcon from '@/components/TheIcon.vue'
+import TheIcon from '@/components/common/TheIcon.vue'
 import type { NavProps } from '@/types/ui/NavProps';
 
 const props = withDefaults(defineProps<NavProps>(), {

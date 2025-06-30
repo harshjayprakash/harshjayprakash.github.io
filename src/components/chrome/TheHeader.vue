@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TheNav from '@/chrome/TheNav.vue';
-import TheDivider from '@/components/TheDivider.vue';
-import TheBadge from '@/components/TheBadge.vue';
+import TheNav from '@/components/chrome/TheNav.vue';
+import TheDivider from '@/components/common/TheDivider.vue';
+import TheBadge from '@/components/common/TheBadge.vue';
 import useMobileDetector from '@/composables/useMobileDetector';
 import { sizeConstraints } from '@/data/ui/size';
 import { metaData } from '@/data/meta';

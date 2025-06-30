@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TheLink from '@/components/TheLink.vue';
-import ThePersona from '@/components/ThePersona.vue';
+import TheLink from '@/components/common/TheLink.vue';
+import ThePersona from '@/components/common/ThePersona.vue';
 import useDotParticles from '@/composables/useDotParticles';
 import useMobileDetector from '@/composables/useMobileDetector';
 import { avatarData } from '@/data/profile/avatar';

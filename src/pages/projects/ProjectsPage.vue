@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 
-import TheBadge from '@/components/TheBadge.vue';
-import TheCard from '@/components/TheCard.vue';
-import TheTabList from '@/components/TheTabList.vue';
-import TheTab from '@/components/TheTab.vue';
+import TheBadge from '@/components/common/TheBadge.vue';
+import TheCard from '@/components/common/TheCard.vue';
+import TheTabList from '@/components/common/TheTabList.vue';
+import TheTab from '@/components/common/TheTab.vue';
 import useProjectPlatformFilter from '@/composables/useProjectPlatformFilter';
 import { projectData } from '@/data/projects/projects';
 import type { ProjectPlatformFilter } from '@/types/project/ProjectPlatform';
