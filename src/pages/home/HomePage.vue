@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HomeBioSection from './HomeBioSection.vue';
+import HomeContactSection from './HomeContactSection.vue';
 import HomeHeroSection from './HomeHeroSection.vue';
 import HomeSpotlightSection from './HomeSpotlightSection.vue';
 </script>
@@ -9,6 +10,7 @@ import HomeSpotlightSection from './HomeSpotlightSection.vue';
         <HomeHeroSection />
         <HomeSpotlightSection />
         <HomeBioSection />
+        <HomeContactSection />
     </article>
 </template>
 
