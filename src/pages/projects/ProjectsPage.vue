@@ -34,9 +34,9 @@ const projectCountBadgeText = computed(() =>
 </script>
 
 <template>
-    <article aria-label="Work" class="work">
+    <article aria-label="Projects Page" class="projects">
         <h1>Projects.</h1>
-        <p class="work-overview">
+        <p class="overview">
             Explore my projects below, arranged by their last modification. Use the filter
             to narrow down by the projects by technology type.
             <span class="faded-text">
@@ -46,88 +46,96 @@ const projectCountBadgeText = computed(() =>
                 repositories.
             </span>
         </p>
-        <TheBadge appearance="tint" :aria-label="projectCountBadgeAriaLabel()" variant="tint" colour="primary">
+        <TheBadge appearance="outline" colour="primary"
+            :aria-label="projectCountBadgeAriaLabel()"
+        >
             {{ projectCountBadgeText }}
         </TheBadge>
         <TheTabList>
-            <TheTab
-                v-for="fo in filterOptions"
-                :key="`Filter Option: ${fo}`"
-                :active="isActiveFilter(fo)"
-                @click="updateFilter(fo)"
+            <TheTab v-for="fo in filterOptions" :key="`Filter Option: ${fo}`"
+                :active="isActiveFilter(fo)" @click="updateFilter(fo)"
             >
                 {{ fo }}
             </TheTab>
         </TheTabList>
-        <div role="group" class="projects">
-            <TheCard
-                appearance="filled"
-                linkable="external"
-                new-window exact
-                v-for="project in filtered"
-                :key="project.abbreviation"
-                :to="project.git"
-            >
-                <img
-                    class="project-image"
-                    :src="getProjectImageSource(project.abbreviation)"
-                    :alt="getProjectImageAlt(project.abbreviation)"
-                />
-                <div class="info" role="group">
-                    <span>
-                        {{ project.name }}
-                    </span>
-                    <small class="faded-text-less">
-                        {{ project.start }} &mdash; {{ project.status }}
-                    </small>
-                    <small class="faded-text-less">
-                        {{ project.technology }} ~ {{ project.description }}
-                    </small>
-                </div>
-            </TheCard>
+        <div class="project-list-container" role="tabpanel"
+            aria-label="Project List Container"
+        >
+            <ul class="projects-list">
+                <li class="project-wrapper" v-for="project in filtered"
+                    :key="project.abbreviation"
+                >
+                    <TheCard appearance="filled" linkable="external" new-window
+                        :to="project.git" class="project-card"
+                    >
+                        <img
+                            class="project-image"
+                            :src="getProjectImageSource(project.abbreviation)"
+                            :alt="getProjectImageAlt(project.abbreviation)"
+                        />
+                        <div class="info" role="group">
+                            <span>
+                                {{ project.name }}
+                            </span>
+                            <small class="faded-text-less">
+                                {{ project.start }} &mdash; {{ project.status }}
+                            </small>
+                            <small class="faded-text-less">
+                                {{ project.technology }} ~ {{ project.description }}
+                            </small>
+                        </div>
+                    </TheCard>
+                </li>
+            </ul>
         </div>
     </article>
 </template>
 
-<style lang="css" scoped>
-.work {
+<style lang="css">
+.projects {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.work-overview {
+.projects .overview {
     max-width: 52rem;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 1rem;
-}
-
-.project-image {
-    border-radius: var(--rounded-default);
-}
-
-.faded-text {
+.projects .faded-text {
     color: var(--colour-text-faded);
 }
 
-.faded-text-less {
-    color: var(--colour-text-faded-less);
+.projects .projects-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
 }
 
-
-@media (width > 40rem) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.info {
+.projects .project-card {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 1rem;
+    height: 100%;
+}
+
+.projects .project-card .project-image {
+    border-radius: var(--rounded-default);
+}
+
+.projects .project-card .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .project-card .info .faded-text-less {
+    color: var(--colour-text-faded-less)
+}
+
+@media (min-width: 768px) {
+    .projects .projects-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 </style>
