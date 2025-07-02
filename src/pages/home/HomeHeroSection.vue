@@ -12,6 +12,7 @@ const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
 const {
     dots,
     isHighlightDot } = useDotParticles(particleData.determineCount(isMobile.value));
+
 </script>
 
 <template>
@@ -31,11 +32,9 @@ const {
         </ul>
         <div class="dots-container" ref="dots-container">
             <span class="explore-arrow">&downarrow; scroll to explore</span>
-            <div
-                v-for="(dot, idx) in dots"
-                :key="`${idx}${dot.positionX}${dot.positionY}`"
-                aria-hidden="true"
-                class="dot" :data-dot-highlight="isHighlightDot(idx)"
+            <div v-for="(dot, idx) in dots"
+                :key="`${idx}${dot.positionX}${dot.positionY}`" aria-hidden="true"
+                :data-dot-highlight="isHighlightDot(idx)" class="dot"
                 :style="{'left':`${dot.positionX}%`, 'top':`${dot.positionY}%`}"
             >
             </div>
