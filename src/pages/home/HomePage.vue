@@ -18,6 +18,6 @@ import HomeSpotlightSection from './HomeSpotlightSection.vue';
 .home {
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 4rem;
 }
 </style>
