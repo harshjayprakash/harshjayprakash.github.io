@@ -48,7 +48,7 @@ const {
 
 <style lang="css">
 .home-hero {
-    min-height: 80dvh;
+    min-height: 85dvh;
     display: flex;
     flex-direction: column;
     gap: 2rem;
