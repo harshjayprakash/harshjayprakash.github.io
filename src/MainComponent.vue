@@ -32,7 +32,6 @@ useTitle(title);
 .skip-nav {
     position: absolute;
     translate: 0 -20rem;
-    /* padding-block: 1rem; */
     z-index: 30;
 }
 
