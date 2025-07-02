@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import AboutPage from '@/pages/about/AboutPage.vue';
-import CVPage from '@/pages/cv/CVPage.vue';
 import HomePage from '@/pages/home/HomePage.vue';
 import ProjectsPage from '@/pages/projects/ProjectsPage.vue';
 import NotFoundPage from '@/pages/notfound/NotFoundPage.vue';
@@ -35,14 +34,6 @@ const router = createRouter({
         meta: {
             title: 'About Me',
             icon: 'account_circle'
-        }
-    }, {
-        path: '/cv',
-        name: 'CV',
-        component: CVPage,
-        meta: {
-            title: 'Curriculum Vitae',
-            icon: undefined
         }
     }, {
         path: '/alpha',
