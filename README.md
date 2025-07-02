@@ -76,5 +76,9 @@ npm run dev
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
 * CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
-* Tailwind v4.0 Colours (Grey and Teal): <https://tailwindcss.com/docs/colors>
+* Tailwind v4.0 Colours (Grey and Teal, Amber 500 for Focus): <https://tailwindcss.com/docs/colors>
 * ARC Toolkit: <https://www.tpgi.com/arc-platform/arc-toolkit/>
+* WallpaperHub Navigation Inspiration: <https://www.wallpaperhub.app/>
+* Fluent UI Inspiration: <https://fluent2.microsoft.design/>
+* Material Symbols Outlined on Fontsource: <https://fontsource.org/fonts/material-symbols-outlined>
+* Vue Use: <https://github.com/vueuse/vueuse>
