@@ -43,6 +43,6 @@ const props = defineProps<TabProps>();
 }
 
 .tab[aria-selected="true"] {
-    --widget-tab-border-colour: var(--colour-outline-highlight-lighter);
+    --widget-tab-border-colour: var(--colour-outline-highlight);
 }
 </style>
