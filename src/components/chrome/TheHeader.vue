@@ -16,7 +16,7 @@ const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
             {{ metaData.buildStatus }}
         </TheBadge>
         <TheDivider v-if="!isMobile" orientation="vertical" :height="1.5"
-            :thickness="0.1" />
+            :thickness="0.15" />
         <TheNav variant="desktop" v-if="!isMobile" />
     </header>
     <div class="nav-mobile-wrapper" v-if="isMobile">
