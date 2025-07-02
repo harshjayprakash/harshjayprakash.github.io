@@ -50,9 +50,10 @@ npm run dev
 ## Changelog
 
 * Version 6.0
-  * **Updated Navigation Style**: Added Icons. New Mobile Navigation Bar.
-  * **Dynamic Page Titles**:
+  * **Updated Navigation Style**: Added Icons. New Mobile Navigation Bar. Inspired by the `wallpaperhub.app` design.
+  * **Dynamic Page Titles**: Uses `useTitle` from vue use 
   * **Rounded Corners**: 
+  * **Improved Scalability**:
 
 ![View Previous Changelogs](./VERSION.md)
 
