@@ -8,7 +8,7 @@ import TheLink from './components/common/TheLink.vue';
 
 const route = useRoute();
 const title = computed(() => route.meta.title
-    ? `${route.meta.title} : : Harsh's Portfolio` : 'Harsh\'s Portfolio'
+    ? `${route.meta.title} - Harsh's Portfolio` : 'Harsh\'s Portfolio'
 );
 useTitle(title);
 </script>
