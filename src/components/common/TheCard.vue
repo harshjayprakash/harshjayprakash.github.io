@@ -47,7 +47,7 @@ const tabIndex = () => dataLink() ? 0 : -1;
     --widget-card-border: var(--colour-outline-faded);
 }
 
-.card[data-appearance='outline']:hover {
+.card[data-appearance='outline'][data-link='true']:hover {
     --widget-card-border: var(--colour-outline-primary);
 }
 
