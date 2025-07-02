@@ -3,13 +3,10 @@ import TheLink from '@/components/common/TheLink.vue';
 import ThePersona from '@/components/common/ThePersona.vue';
 import useDotParticles from '@/composables/useDotParticles';
 import useMobileDetector from '@/composables/useMobileDetector';
-import { avatarData } from '@/data/profile/avatar';
+import { personaData } from '@/data/profile/persona';
 import { socialData } from '@/data/profile/socials';
 import { particleData } from '@/data/ui/particle';
 import { sizeConstraints } from '@/data/ui/size';
-
-const avatar = avatarData.uri;
-const socials = socialData.all;
 
 const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
 const {
@@ -19,14 +16,14 @@ const {
 
 <template>
     <section aria-label="Home Page Hero Section" class="home-hero">
-        <ThePersona :avatar name="Harsh Jayprakash"
-            status="Looking for experience/work." />
+        <ThePersona :avatar="personaData.avatarUri" :name="personaData.name"
+            :status="personaData.status" />
         <h1>
             I'm Harsh &mdash; a <span class="highlight">Software Developer</span>,
             crafting digital experiences that feel intentional.
         </h1>
         <ul class="social-list">
-            <li v-for="social in socials" :key="social.social" class="social-item">
+            <li v-for="social in socialData.all" :key="social.social" class="social-item">
                 <TheLink linkable="external" :to="social.uri">
                     {{ social.social }}
                 </TheLink>
