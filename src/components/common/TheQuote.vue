@@ -20,9 +20,9 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: 0.2rem;
+    width: 0.25rem;
     height: 100%;
-    background-color: var(--colour-outline-faded);
+    background-color: var(--colour-outline-faded-less);
     border-radius: var(--rounded-default);
 }
 </style>
