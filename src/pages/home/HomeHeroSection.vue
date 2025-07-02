@@ -54,7 +54,7 @@ const {
 .home-hero .explore-arrow {
     padding-inline-end: 1rem;
     padding-block: 0.75rem;
-    border-radius: 0 0 5px 0;
+    border-radius: 0 0 var(--rounded-default) 0;
     background-color: var(--colour-bk-primary);
     color: var(--colour-text-faded);
 }
