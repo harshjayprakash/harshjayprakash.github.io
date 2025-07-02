@@ -25,46 +25,38 @@ import { socialData } from '@/data/profile/socials';
                     </TheLink>
                 </li>
             </ul>
-            <TheDivider orientation="vertical" :height="1.5" :thickness="0.1" />
+            <TheDivider orientation="vertical" :height="1.5" :thickness="0.2" />
             <TheLink linkable="external" to="/documents/harsh_cv.pdf" new-window>
                 View CV
         </TheLink>
         </TheCard>
-        <section>
-            <h2>Titled</h2>
-
-        </section>
-
-        <!-- <section>
-            <h2>What I value</h2>
-            <ul>
-                <li>Clarity over Cleverness</li>
-                <li>Accessibility as a baseline, not a bonus</li>
-                <li>Systems that scale</li>
-                <li>Design that feels cohesive, not just consistant</li>
-            </ul>
-        </section> -->
-
-<!--
-        <section>
+        <section class="content">
             <h2>Introduction</h2>
+            <p>
+                I'm Harsh, a developer who enjoys the quiet craft of programming &ndash;
+                understanding how things work, refining systems, and building tools that
+                feel intentional. I care about clarity, accessibility, and the kind of
+                polish that makes a product feel cohesive and considered.
+            </p>
+            <h3>More Details &mdash;</h3>
+            <ul>
+                <li>
+                    A unified and cohesive design language - where structure, interaction,
+                    and visual tone all speak the same language.
+                </li>
+                <li>
+                    Helping others - whether it's through documentation, debugging, or
+                    just making things easier to understand.
+                </li>
+                <li>
+                    Building systems that scale without losing their clarity or purpose.
+                </li>
+            </ul>
+            <h2>Current Focus</h2>
+            <p></p>
+            <h2>Skills</h2>
+            <h2>Outside of programming</h2>
         </section>
-
-        <section>
-            <h2>A little bit about me.</h2>
-        </section>
-        <section>
-            <h2>What I Value</h2>
-        </section>
-        <section>
-            <h2>How I got Here</h2>
-        </section>
-        <section>
-            <h2>What I'm working On</h2>
-        </section>
-        <section>
-            <h2>Outside of Code</h2>
-        </section> -->
     </article>
 </template>
 
@@ -75,12 +67,18 @@ import { socialData } from '@/data/profile/socials';
     gap: 1rem;
 }
 
+.about .content {
+    max-width: 70ch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .about .social-link-card-wrapper {
     max-width: fit-content;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    /* flex-direction: column; */
 }
 
 .about .link-list {
@@ -89,22 +87,5 @@ import { socialData } from '@/data/profile/socials';
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    /* flex-direction: column; */
 }
-
-/* @media (min-width: 768px) {
-    .about .social-link-card-wrapper {
-        max-width: fit-content;
-        display: flex;
-        gap: 1rem;
-        flex-direction: row;
-    }
-
-    .about .link-list {
-        flex-direction: row;
-    }
-
-} */
-
-
 </style>
