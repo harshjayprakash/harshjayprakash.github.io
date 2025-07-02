@@ -24,6 +24,7 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
     text-decoration: underline solid var(--colour-outline-primary) 0.05rem;
     text-underline-offset: 2px;
     cursor: pointer;
+    max-width: max-content;
 }
 
 .link:hover {
