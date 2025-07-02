@@ -58,9 +58,8 @@ npm run dev
 
 ## Limitations and Known Issues
 
-* The `light-dark` css function is used (mdn: newly available).
+* The `light-dark` css function is used (mdn: baseline 2024, newly available).
 * The `/alpha` route is not for public use (for development testing purposes).
-* The Navigation Landmark is hidden until menu button is clicked on mobile.
 * Cannot use arrow keys on the project filter tablist.
 
 ## Todo
