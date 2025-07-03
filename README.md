@@ -25,6 +25,8 @@ performance and long-term reliability.
 The Inter typeface is self-hosted using the fontsource variable package to avoid the using
 Google Fonts for privacy.
 
+![Screenshot](./docs/ppw-responsive-screenshot.png)
+
 ## Architecture
 
 * **assets/css**: the main global css styles.
