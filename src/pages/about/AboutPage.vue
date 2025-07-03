@@ -142,7 +142,7 @@ import { socialData } from '@/data/profile/socials';
     height: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .about .skills-list {
         grid-template-columns: repeat(2, 1fr);
     }

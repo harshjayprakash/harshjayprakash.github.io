@@ -108,7 +108,7 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .home-spotlight-section .select-projects {
         grid-template-columns: repeat(2, 1fr);
     }

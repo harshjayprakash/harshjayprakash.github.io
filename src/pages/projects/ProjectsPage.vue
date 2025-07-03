@@ -133,7 +133,7 @@ const projectCountBadgeText = computed(() =>
     color: var(--colour-text-faded-less)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .projects .projects-list {
         grid-template-columns: repeat(2, 1fr);
     }

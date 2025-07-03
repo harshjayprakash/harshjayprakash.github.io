@@ -31,7 +31,7 @@ import { metaData } from '@/data/meta';
     color: var(--colour-text-faded);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
     .footer {
         padding-block-end: 6rem;
     }
