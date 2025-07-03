@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router';
-import TheHeader from './components/chrome/TheHeader.vue';
-import TheFooter from './components/chrome/TheFooter.vue';
+import TheHeader from './layout/TheHeader.vue';
+import TheFooter from './layout/TheFooter.vue';
 import { computed } from 'vue';
 import { useTitle } from '@vueuse/core';
-import TheLink from './components/common/TheLink.vue';
+import TheLink from './components/TheLink.vue';
 
 const route = useRoute();
 const title = computed(() => route.meta.title

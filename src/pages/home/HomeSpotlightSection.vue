@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TheBadge from '@/components/common/TheBadge.vue';
-import TheButton from '@/components/common/TheButton.vue';
-import TheCard from '@/components/common/TheCard.vue';
+import TheBadge from '@/components/TheBadge.vue';
+import TheButton from '@/components/TheButton.vue';
+import TheCard from '@/components/TheCard.vue';
 import { projectData } from '@/data/projects/projects';
 import { imageData } from '@/data/ui/image';
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TheCard from '@/components/common/TheCard.vue';
-import TheLink from '@/components/common/TheLink.vue';
+import TheCard from '@/components/TheCard.vue';
+import TheLink from '@/components/TheLink.vue';
 import { personaData } from '@/data/profile/persona';
 import { socialData } from '@/data/profile/socials';
 </script>

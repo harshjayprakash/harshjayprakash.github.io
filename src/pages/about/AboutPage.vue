@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheCard from '@/components/common/TheCard.vue';
-import TheDivider from '@/components/common/TheDivider.vue';
-import TheLink from '@/components/common/TheLink.vue';
-import ThePersona from '@/components/common/ThePersona.vue';
-import TheQuote from '@/components/common/TheQuote.vue';
+import TheCard from '@/components/TheCard.vue';
+import TheDivider from '@/components/TheDivider.vue';
+import TheLink from '@/components/TheLink.vue';
+import ThePersona from '@/components/ThePersona.vue';
+import TheQuote from '@/components/TheQuote.vue';
 import { personaData } from '@/data/profile/persona';
 import { socialData } from '@/data/profile/socials';
 
