@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import TheCard from '@/components/TheCard.vue';
 import TheDivider from '@/components/TheDivider.vue';
+import TheIcon from '@/components/TheIcon.vue';
 import TheLink from '@/components/TheLink.vue';
 import ThePersona from '@/components/ThePersona.vue';
 import TheQuote from '@/components/TheQuote.vue';
 import { personaData } from '@/data/profile/persona';
+import { serviceData } from '@/data/profile/services';
 import { socialData } from '@/data/profile/socials';
 
 </script>
@@ -28,17 +30,15 @@ import { socialData } from '@/data/profile/socials';
             <TheDivider orientation="vertical" :height="1.5" :thickness="0.2" />
             <TheLink linkable="external" to="/documents/harsh_cv.pdf" new-window>
                 View CV
-        </TheLink>
+            </TheLink>
         </TheCard>
         <section class="content">
-            <h2>Introduction</h2>
             <p>
                 I'm Harsh, a developer who enjoys the quiet craft of programming &ndash;
                 understanding how things work, refining systems, and building tools that
                 feel intentional. I care about clarity, accessibility, and the kind of
                 polish that makes a product feel cohesive and considered.
             </p>
-            <h3>More Details &mdash;</h3>
             <ul>
                 <li>
                     A unified and cohesive design language - where structure, interaction,
@@ -52,10 +52,34 @@ import { socialData } from '@/data/profile/socials';
                     Building systems that scale without losing their clarity or purpose.
                 </li>
             </ul>
-            <h2>Current Focus</h2>
-            <p></p>
-            <h2>Skills</h2>
-            <h2>Outside of programming</h2>
+        </section>
+        <section class="content">
+            <p>
+                I'm currently refining my design system with accesible focus outlines and
+                semantic styling, exploring polymorphic components, and thinking about how
+                branding can align with usability. I'm also continuing to explore creative
+                coding and the expressive side of programming.
+            </p>
+        </section>
+        <section>
+            <ul class="skills-list">
+                <li v-for="service in serviceData.all" :key="service.name">
+                    <TheCard appearance="outline" linkable="none" class="skill-card">
+                        <div role="region" class="header-group">
+                            <TheIcon :name="service.icon" :filled="false" /><br/>
+                            <span>{{ service.name }}</span>
+                        </div>
+                        <p>{{ service.description }}</p>
+                        <ul class="inner-list">
+                            <li v-for="skill in service.skills" :key="skill">
+                                <small>
+                                    {{ skill }}
+                                </small>
+                            </li>
+                        </ul>
+                    </TheCard>
+                </li>
+            </ul>
         </section>
     </article>
 </template>
@@ -68,7 +92,7 @@ import { socialData } from '@/data/profile/socials';
 }
 
 .about .content {
-    max-width: 70ch;
+    max-width: 75ch;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -87,5 +111,40 @@ import { socialData } from '@/data/profile/socials';
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.about .skills-list {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.about .skills-list .inner-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+    color: var(--colour-text-faded-less);
+}
+.about .skills-list .header-group {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+.about .skill-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .about .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 </style>
