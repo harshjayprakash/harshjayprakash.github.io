@@ -70,3 +70,7 @@ small {
 :focus-visible {
     outline: 3px solid #f59e0b;
 }
+
+[data-read-length='true'] {
+    max-width: 75ch;
+}
