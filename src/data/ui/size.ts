@@ -1,3 +1,3 @@
 export const sizeConstraints = {
-    mobileBreakpoint: 768
+    mobileBreakpoint: 640
 };
