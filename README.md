@@ -80,10 +80,10 @@ npm run dev
 
 ## Todo
 
-* [-] Add "Back to Top" Link.
-* [-] Add arrow key navigation on tab list.
-* [-] Add project specfic pages.
-* [-] Add unit testing
+* [ ] Add "Back to Top" Link.
+* [ ] Add arrow key navigation on tab list.
+* [ ] Add project specfic pages.
+* [ ] Add unit testing
 
 ## References
 
