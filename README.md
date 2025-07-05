@@ -67,6 +67,8 @@ npm run dev
   * **Dynamic Page Titles**: Updated page title for each page.
   * **Rounded Corners**: Following the rounded corners trend.
   * **Focus Styles**: Updated focus ring style.
+  * **Improved Accessibility**
+    * Implemented arrow key tab focus navigation.
   * **Improved Scalability**:
     * Extracted component props to interfaces.
     * Set defaults to optional props.
@@ -81,7 +83,7 @@ npm run dev
 ## Todo
 
 * [ ] Add "Back to Top" Link.
-* [ ] Add arrow key navigation on tab list.
+* [X] Add arrow key navigation on tab list.
 * [ ] Add project specfic pages.
 * [ ] Add unit testing
 
