@@ -13,25 +13,29 @@ const skills: string[] = [
 <template>
     <section class="home-bio" aria-label="Quick About">
         <h2>A Bit About Me.</h2>
-        <div role="region" class="content">
-            <p>
-                I'm a computer science graduate (from last year) who's spent countless
-                hours exploring the craft of programming, helping others and
-                troubleshooting.
+        <div class="content" role="region">
+            <p class="education-job-text">
+                I graduated with
+                <span class="highlight">First Class Honours in Computer Science</span>
+                from the
+                University of Winchester in 2024, and am
+                <span class="highlight">currently seeking a role</span>
+                to gain industry experience.
             </p>
-            <p>
-                I've worked across both web and desktop environments &ndash; but what
-                matters to me is understanding how thing work. The curiosity helps me
-                build better products that are not just functional, but intentional.
+            <p class="muted-text">
+                I have spent countless hours exploring the craft of programming, helping
+                others, and troubleshooting. I've worked in both desktop and web
+                development, but what matters to me is understanding how things work. This
+                curiosity helps me build better products that are not only functional but
+                also intentional
             </p>
-            <h3 class="skill-title">Some Skills &mdash;</h3>
-            <ul class="skill-list">
+            <ul class="skill-list muted-text">
                 <li v-for="skill in skills" :key="skill">
                     {{ skill }}
                 </li>
             </ul>
         </div>
-        <TheLink linkable="internal" to="/about">
+        <TheLink class="muted-text" linkable="internal" to="/about">
             Read more ->
         </TheLink>
     </section>
@@ -44,6 +48,10 @@ const skills: string[] = [
     gap: 1rem;
 }
 
+.home-bio .muted-text {
+    color: var(--colour-text-faded);
+}
+
 .home-bio .highlight {
     color: var(--colour-text-highlight);
 }
@@ -52,7 +60,7 @@ const skills: string[] = [
     max-width: 70ch;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .home-bio .skill-title {
