@@ -59,19 +59,26 @@ npm run dev
 
 ## Changelog
 
-* Version 4006.0.0 -- TBD
-  * **Improved Navigation**:
-    * Added material icons.
-    * Updated underline style
-    * Updated mobile style to app bar style.
-  * **Dynamic Page Titles**: Updated page title for each page.
-  * **Rounded Corners**: Following the rounded corners trend.
-  * **Focus Styles**: Updated focus ring style.
-  * **Improved Accessibility**
-    * Implemented arrow key tab focus navigation.
-  * **Improved Scalability**:
-    * Extracted component props to interfaces.
-    * Set defaults to optional props.
+### Version 4006.0.0 - TBD
+
+* **Improved Navigation**:
+  * Added material icons.
+  * Updated underline style
+  * Updated mobile style to app bar style.
+* **Dynamic Page Titles**: Updated page title for each page.
+* **Rounded Corners**: Following the rounded corners trend.
+* **Focus Styles**: Updated focus ring style.
+* **Improved Accessibility**
+  * Implemented arrow key tab focus navigation.
+* **Improved Scalability**:
+  * Extracted component props to interfaces.
+  * Set defaults to optional props.
+* **New Content**:
+  * Added projects page.
+  * Added about page.
+* **Updated Home Page**:
+  * Updated to show selected projects.
+  * Updated hero section design.
 
 ![View Previous Changelogs](./VERSION.md)
 
