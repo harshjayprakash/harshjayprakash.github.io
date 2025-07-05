@@ -70,10 +70,16 @@ import { socialData } from '@/data/profile/socials';
                             <span>{{ service.name }}</span>
                         </div>
                         <p>{{ service.description }}</p>
+                        <div aria-hidden="true" class="card-spacer"></div>
                         <ul class="inner-list">
-                            <li v-for="skill in service.skills" :key="skill">
+                            <li v-for="(skill, idx) in service.skills" :key="skill"
+                                class="skill-item"
+                            >
                                 <small>
                                     {{ skill }}
+                                </small>
+                                <small v-if="idx != service.skills.length-1">
+                                    &SmallCircle;
                                 </small>
                             </li>
                         </ul>
@@ -126,7 +132,7 @@ import { socialData } from '@/data/profile/socials';
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0 1rem;
+    gap: 0 0.5rem;
     color: var(--colour-text-faded-less);
 }
 .about .skills-list .header-group {
@@ -140,6 +146,16 @@ import { socialData } from '@/data/profile/socials';
     flex-direction: column;
     gap: 0.5rem;
     height: 100%;
+}
+
+.about .skill-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.about .card-spacer {
+    flex-grow: 1;
 }
 
 @media (min-width: 640px) {
