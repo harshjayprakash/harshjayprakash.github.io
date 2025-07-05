@@ -31,7 +31,7 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
                     <img :src="imageSrc(project.image)" :alt="imageAlt(project.image)"
                         class="project-image" />
                     <h3>{{ project.name }}: {{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
+                    <p class="muted-text">{{ project.description }}</p>
                 </TheCard>
             </li>
         </ul>
@@ -46,7 +46,7 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
                     <h3>
                         {{ dissertationProject.name }}: {{ dissertationProject.title }}
                     </h3>
-                    <p>
+                    <p class="muted-text">
                         {{ dissertationProject.description }}
                     </p>
                 </div>
@@ -86,6 +86,10 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.home-spotlight-section .muted-text {
+    color: var(--colour-text-faded-less);
 }
 
 .home-spotlight-section .project-image {
