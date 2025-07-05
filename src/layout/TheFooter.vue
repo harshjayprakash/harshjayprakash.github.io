@@ -6,7 +6,8 @@ import { metaData } from '@/data/meta';
 <template>
     <footer class="footer" aria-label="Site Footer">
         <small class="version-info">
-            Version {{ metaData.version }}, {{ metaData.buildDate }}. Under Construction.
+            Version {{ metaData.version.fullString() }},
+            {{ metaData.buildDate }}. Under Construction.
         </small>
         <small class="copyright">
             &copy; {{ metaData.copyrightYear }} Harsh Jayprakash. Handcrafted with Vue.
