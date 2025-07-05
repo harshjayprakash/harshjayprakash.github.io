@@ -1,11 +1,8 @@
-const mobileCount = 45;
-const desktopCount = 60;
-
 export const particleData = {
-    mobileCount,
-    desktopCount,
+    mobileCount: 45,
+    desktopCount: 60,
 
-    determineCount: (isMobile: boolean): number => {
-        return (isMobile) ? mobileCount : desktopCount
+    determineCount(isMobile: boolean): number {
+        return (isMobile) ? this.mobileCount : this.desktopCount;
     }
 };
