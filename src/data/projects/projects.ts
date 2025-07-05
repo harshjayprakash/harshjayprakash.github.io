@@ -100,7 +100,7 @@ const projects: Project[] = [{
 export const projectData = {
     all: projects,
 
-    filterByAbbreviation: (abbreviations: string[]): Project[] => {
+    filterByAbbreviation(abbreviations: string[]): Project[] {
         return projects.filter(project => abbreviations.includes(project.abbreviation))
             .sort((a, b) => abbreviations.indexOf(a.abbreviation)
                 - abbreviations.indexOf(b.abbreviation));

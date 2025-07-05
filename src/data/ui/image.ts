@@ -26,7 +26,7 @@ const altText: AlternativeText[] = [{
 export const imageData = {
     alterativeText: altText,
 
-    getByObjectName: (name: string): string => {
+    getByObjectName(name: string): string {
         const altObject = altText.find(text => text.objectName = name);
         return altObject === undefined ? '' : altObject.caption
     }
