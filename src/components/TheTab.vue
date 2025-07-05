@@ -1,11 +1,30 @@
 <script lang="ts" setup>
+import { useTabs } from '@/composables/useTabs';
 import type { TabProps } from '@/types/ui/TabProps';
+import { onMounted, ref } from 'vue';
 
 const props = defineProps<TabProps>();
+const element = ref<HTMLElement | null>(null);
+
+const { selectedIndex, focusedIndex, selectTab, registerTab } = useTabs();
+
+const getTabIndex = () => selectedIndex.value === props.index ? 0 : -1;
+const getAriaSelected = () => selectedIndex.value === props.index;
+const onFocus = () => focusedIndex.value = props.index;
+
+onMounted(() => {
+    if (element.value) {
+        registerTab(element.value, props.index);
+    }
+})
 </script>
 
 <template>
-    <button role="tab" class="tab" :aria-selected="props.active">
+    <button role="tab" class="tab" ref="element"
+        :aria-selected="getAriaSelected()" :tabindex="getTabIndex()"
+        @click="selectTab(props.index)"
+        @focus="onFocus()"
+        >
         <slot></slot>
     </button>
 </template>

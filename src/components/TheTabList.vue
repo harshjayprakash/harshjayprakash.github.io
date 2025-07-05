@@ -1,8 +1,12 @@
 <script lang="ts" setup>
+import { useProvideTabs } from '@/composables/useTabs';
+
+const { handleKeydown } = useProvideTabs();
 </script>
 
 <template>
-    <div role="tablist" class="tab-list">
+    <!-- eslint-disable vuejs-accessibility/interactive-supports-focus -->
+    <div role="tablist" class="tab-list" @keydown="handleKeydown">
         <slot></slot>
     </div>
 </template>

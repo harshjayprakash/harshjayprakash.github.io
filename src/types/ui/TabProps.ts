@@ -1,3 +1,3 @@
 export interface TabProps {
-    active: boolean;
+    index: number;
 }
