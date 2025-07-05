@@ -59,7 +59,7 @@ small {
 
 @media (prefers-reduced-motion: no-preference) {
     *, *::before, *::after {
-        transition: all 150ms ease-in-out;
+        transition: all 70ms ease-in-out;
     }
 
     html {
