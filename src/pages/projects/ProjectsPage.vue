@@ -15,7 +15,7 @@ const getProjectImageSource = (abbrev: string) => `/images/${abbrev}-preview.png
 const getProjectImageAlt = (abbrev: string) => imageData.getByObjectName(`${abbrev}-preview`)
 
 const {
-    filtered, updateFilter, isActiveFilter, totalCount, currentCount
+    filtered, updateFilter, totalCount, currentCount
 } = useProjectPlatformFilter(projectData.filterByAbbreviation(
     ['ppw', 'xbk', 'aap', 'dwf', 'wpq', 'lls', 'ccs']
 ));
@@ -52,8 +52,8 @@ const projectCountBadgeText = computed(() =>
             {{ projectCountBadgeText }}
         </TheBadge>
         <TheTabList>
-            <TheTab v-for="fo in filterOptions" :key="`Filter Option: ${fo}`"
-                :active="isActiveFilter(fo)" @click="updateFilter(fo)"
+            <TheTab v-for="(fo, idx) in filterOptions" :key="`Filter Option: ${fo}`"
+                @click="updateFilter(fo)" :index="idx"
             >
                 {{ fo }}
             </TheTab>
