@@ -59,7 +59,7 @@ npm run dev
 
 ## Changelog
 
-* Version 6.0
+* Version 4006.0.0 -- TBD
   * **Improved Navigation**:
     * Added material icons.
     * Updated underline style
