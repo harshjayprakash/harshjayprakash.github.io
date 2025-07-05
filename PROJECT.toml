@@ -1,0 +1,14 @@
+[project]
+name = "Personal Portfolio Website"
+type = "Application"
+platforms = ["web"]
+descripiton = ""
+license = "MIT"
+repository = "https://github.com/harshjayprakash/harshjayprakash.github.io"
+
+[version]
+epoch = 4
+major = 6
+minor = 0
+patch = 0
+full = "4006.0.0"
