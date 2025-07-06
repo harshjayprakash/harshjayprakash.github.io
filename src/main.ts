@@ -1,5 +1,4 @@
 import { createApp } from 'vue';
-
 import '@fontsource-variable/inter/opsz';
 import '@fontsource-variable/material-symbols-rounded/full.css';
 
