@@ -99,4 +99,8 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
 .nav .nav-link[aria-current='page']::after {
     background-color: var(--colour-bk-highlight);
 }
+
+.nav .nav-link[aria-current='page']:hover::after {
+    width: 100%;
+}
 </style>
