@@ -36,30 +36,24 @@ import { socialData } from '@/data/profile/socials';
             <p>
                 I'm Harsh, a developer who enjoys the quiet craft of programming &ndash;
                 understanding how things work, refining systems, and building tools that
-                feel intentional. I care about clarity, accessibility, and the kind of
-                polish that makes a product feel cohesive and considered.
+                feel purposeful. I care about clarity, accessibility, and the attention
+                to detail that feels cohesive (not just visually), but structurally and
+                interactively.
             </p>
+            <p>I'm espacially interested in:</p>
             <ul>
                 <li>
-                    A unified and cohesive design language - where structure, interaction,
-                    and visual tone all speak the same language.
+                    Creating unified systems where structure, interaction, and tone speak
+                    the same language.
                 </li>
                 <li>
-                    Helping others - whether it's through documentation, debugging, or
-                    just making things easier to understand.
+                    Supporting others through clear documentation, thoughtful debugging,
+                    and simpifying complexity.
                 </li>
                 <li>
-                    Building systems that scale without losing their clarity or purpose.
+                    Building scalable systems that retain their purpose.
                 </li>
             </ul>
-        </section>
-        <section class="content">
-            <p>
-                I'm currently refining my design system with accesible focus outlines and
-                semantic styling, exploring polymorphic components, and thinking about how
-                branding can align with usability. I'm also continuing to explore creative
-                coding and the expressive side of programming.
-            </p>
         </section>
         <section>
             <ul class="skills-list">
