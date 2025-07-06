@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Inter Variable', sans-serif;
-    background-color: var(--colour-bk-primary);
+    background-color: var(--colour-bk-secondary);
     color: var(--colour-text-primary);
 }
 
@@ -54,6 +54,7 @@ small {
     max-width: 50rem;
     margin-inline: auto;
     padding-inline: 2rem;
+    background-color: var(--colour-bk-primary);
 }
 
 
