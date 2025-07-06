@@ -7,13 +7,18 @@ const useDotParticles = (dotCount: number) => {
     const highlightDotIndex = ref(0);
 
     onMounted(() => {
+        highlightDotIndex.value = Math.floor(Math.random()*dotCount);
+
         for (let idx = 0; idx < dotCount; idx++) {
             const x = Math.floor(Math.random()*120);
             const y = Math.floor(Math.random()*120);
-            dots.value.push({ positionX: x, positionY: y });
+            dots.value.push({
+                positionX: x,
+                positionY: y,
+                unique: (highlightDotIndex.value === idx)
+            });
         }
 
-        highlightDotIndex.value = Math.floor(Math.random()*dotCount);
     });
 
     const isHighlightDot = (idx: number) => {
