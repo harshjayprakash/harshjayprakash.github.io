@@ -10,9 +10,7 @@ import TheButton from '@/components/TheButton.vue';
                 This page doesn't exist &mdash; or maybe it never did.
             </p>
         </div>
-        <div aria-hidden="true" class="unique-dot">
-
-        </div>
+        <div aria-hidden="true" class="unique-dot"></div>
         <TheButton linkable="internal" appearance="primary" to="/home">
             Go to Home
         </TheButton>
