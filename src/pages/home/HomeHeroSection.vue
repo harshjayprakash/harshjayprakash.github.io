@@ -9,16 +9,14 @@ import { particleData } from '@/data/ui/particle';
 import { sizeConstraints } from '@/data/ui/size';
 
 const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
-const {
-    dots,
-    isHighlightDot } = useDotParticles(particleData.determineCount(isMobile.value));
 
+const { dots } = useDotParticles(particleData.determineCount(isMobile.value));
 </script>
 
 <template>
     <section aria-label="Home Page Hero Section" class="home-hero">
         <ThePersona :avatar="personaData.avatarUri" :name="personaData.name"
-            :status="personaData.status" />
+        :status="personaData.status" />
         <h1>
             I'm Harsh &mdash; a <span class="highlight">Software Developer</span>,
             crafting digital experiences that feel intentional.
@@ -30,11 +28,11 @@ const {
                 </TheLink>
             </li>
         </ul>
-        <div class="dots-container" ref="dots-container">
+        <div class="dots-container">
             <span class="explore-arrow">&downarrow; scroll to explore</span>
             <div v-for="(dot, idx) in dots"
                 :key="`${idx}${dot.positionX}${dot.positionY}`" aria-hidden="true"
-                :data-dot-highlight="isHighlightDot(idx)" class="dot"
+                :data-dot-highlight="dot.unique" class="dot"
                 :style="{'left':`${dot.positionX}%`, 'top':`${dot.positionY}%`}"
             >
             </div>
@@ -56,6 +54,7 @@ const {
     border-radius: 0 0 var(--rounded-default) 0;
     background-color: var(--colour-bk-primary);
     color: var(--colour-text-faded);
+    z-index: 5;
 }
 
 .home-hero .highlight {
@@ -86,14 +85,11 @@ const {
     height: 0.5rem;
     width: 0.5rem;
     z-index: -1;
+    border-radius: 1px;
 }
 
 .home-hero .dot[data-dot-highlight='true'] {
     background-color: inherit;
     border: 0.15rem solid var(--colour-bk-highlight);
-}
-
-.home-hero .dot:hover {
-    background-color: blue;
 }
 </style>
