@@ -63,7 +63,7 @@ import { socialData } from '@/data/profile/socials';
                             <TheIcon :name="service.icon" :filled="false" /><br/>
                             <span>{{ service.name }}</span>
                         </div>
-                        <p>{{ service.description }}</p>
+                        <p class="description">{{ service.description }}</p>
                         <div aria-hidden="true" class="card-spacer"></div>
                         <ul class="inner-list">
                             <li v-for="(skill, idx) in service.skills" :key="skill"
@@ -129,6 +129,11 @@ import { socialData } from '@/data/profile/socials';
     gap: 0 0.5rem;
     color: var(--colour-text-faded-less);
 }
+
+.about .skill-card .description {
+    color: var(--colour-text-faded-less);
+}
+
 .about .skills-list .header-group {
     display: flex;
     flex-direction: row;
