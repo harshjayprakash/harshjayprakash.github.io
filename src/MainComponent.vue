@@ -21,12 +21,19 @@ useTitle(title);
     <main class="content-wrapper" id="main">
         <RouterView />
     </main>
+    <TheLink linkable="external" to="#main" class="back-to-top">
+        <small class="inner-text">Back to top</small>
+    </TheLink>
     <TheFooter />
 </template>
 
 <style lang="css">
 .content-wrapper {
     padding-block: 3rem 2rem;
+}
+
+.back-to-top .inner-text {
+    color: var(--colour-text-faded);
 }
 
 .skip-nav {
