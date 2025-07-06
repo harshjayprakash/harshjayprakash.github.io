@@ -3,7 +3,7 @@ name = "Personal Portfolio Website"
 ref = "HE2150"
 type = "Application"
 platforms = ["web"]
-descripiton = ""
+description = ""
 license = "MIT"
 repository = "https://github.com/harshjayprakash/harshjayprakash.github.io"
 
