@@ -1,5 +1,6 @@
-import { TAB_CONTEXT_KEY, type TabContext } from "@/types/ui/TabContext";
 import { inject, provide, ref } from "vue"
+
+import { TAB_CONTEXT_KEY, type TabContext } from "@/types/ui/TabContext";
 
 export const useProvideTabs = () => {
     const selectedIndex = ref(0);

@@ -7,8 +7,8 @@ import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
 import useProjectPlatformFilter from '@/composables/useProjectPlatformFilter';
 import { projectData } from '@/data/projects/projects';
-import type { ProjectPlatformFilter } from '@/types/project/ProjectPlatform';
 import { imageData } from '@/data/ui/image';
+import type { ProjectPlatformFilter } from '@/types/project/ProjectPlatform';
 
 const getProjectImageSource = (abbrev: string) => `/images/${abbrev}-preview.png`;
 

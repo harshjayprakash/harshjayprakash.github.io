@@ -1,7 +1,8 @@
 <script lang="ts" setup>
+import { onMounted, ref } from 'vue';
+
 import { useTabs } from '@/composables/useTabs';
 import type { TabProps } from '@/types/ui/TabProps';
-import { onMounted, ref } from 'vue';
 
 const props = defineProps<TabProps>();
 const element = ref<HTMLElement | null>(null);

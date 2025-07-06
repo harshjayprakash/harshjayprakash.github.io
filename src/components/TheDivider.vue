@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import type { DividerProps } from '@/types/ui/DividerProps';
 import { computed } from 'vue';
+
+import type { DividerProps } from '@/types/ui/DividerProps';
 
 const props = withDefaults(defineProps<DividerProps>(), {
     thickness: 0.1,

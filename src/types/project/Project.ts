@@ -1,7 +1,7 @@
 import type { ProjectPlatform } from "./ProjectPlatform";
 import type { ProjectStatus } from "./ProjectStatus";
 
-interface Project {
+export interface Project {
     name: string;
     title?: string;
     internalName?: string,
@@ -17,5 +17,3 @@ interface Project {
     image?: string;
     featured?: boolean;
 }
-
-export type { Project };

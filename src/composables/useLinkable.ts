@@ -1,6 +1,7 @@
+import { computed } from "vue";
+
 import { linkData } from "@/data/ui/link";
 import type { LinkableConfig, Linkable } from "@/types/ui/Linkable";
-import { computed } from "vue";
 
 const useLinkable = (vLink: Linkable, to: string, newWindow: boolean) => {
     return computed<LinkableConfig>(() => {
