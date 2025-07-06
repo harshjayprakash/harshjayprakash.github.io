@@ -26,7 +26,7 @@ const skills: string[] = [
                 I have spent countless hours exploring the craft of programming, helping
                 others, and troubleshooting. I've worked in both desktop and web
                 development, but what matters to me is understanding how things work. This
-                curiosity helps me build better products that are not only functional but
+                curiosity helps build better products that are not only functional but
                 also intentional
             </p>
             <ul class="skill-list muted-text">
