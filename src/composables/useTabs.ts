@@ -45,7 +45,9 @@ export const useProvideTabs = () => {
                 break;
         }
 
+        selectTab(focusedIndex.value);
         tabReferences.value[focusedIndex.value]?.focus();
+        tabReferences.value[focusedIndex.value]?.click();
     }
 
     const context: TabContext = { selectedIndex, focusedIndex, selectTab, registerTab };
