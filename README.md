@@ -5,6 +5,11 @@
 
 ## Overview
 
+<p align="center">
+  <img src="./docs/assets/ppw-preview-responsive.png" 
+    alt="Website Running on Desktop and Mobile View">
+</p>
+
 This repository contains my personal portfolio website built with Vue.js (and TypeScript).
 This space allows me to share my work, thoughts and tools.
 
@@ -17,8 +22,6 @@ but also aiming to have a timeless experience that anyone can use.
 
 The live version of the site, <https://harshjayprakash.github.io>, corresponds to the main
 branch.
-
-![Screenshot](./docs/ppw-responsive-screenshot.png)
 
 ## Architecture
 
