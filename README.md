@@ -17,7 +17,8 @@ This website prioritises simplicity, accessibility, and user experience above th
 but also aiming to have a timeless experience that anyone can use.
 
 * **Simplicity**: Minimal distractions and typography.
-* **Accessibility**: Following WCAG Guidelines (Constrast Ratios, Alterative Text, ARIA Labels and Roles)
+* **Accessibility**: Following WCAG Guidelines (Constrast Ratios, Alterative Text,
+ARIA Labels and Roles)
 * **UX**: Intuitive interactions, responsive design and system-adaptive theme.
 
 The live version of the site, <https://harshjayprakash.github.io>, corresponds to the main
