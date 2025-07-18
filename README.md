@@ -1,11 +1,5 @@
 # Personal Portfolio Website
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./docs/ppw-banner-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./docs/ppw-banner-light.png">
-  <img alt="banner" src="./docs/ppw-banner.png">
-</picture>
-
 > [!NOTE]
 > This website is still under construction.
 
