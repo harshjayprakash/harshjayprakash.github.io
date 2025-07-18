@@ -57,7 +57,7 @@ npm run dev
 
 ## Changelog
 
-### Version 4006.0.0 - TBD
+### Version 4006.0.0 - 12 August 2025
 
 * **Improved Navigation**:
   * Added material icons.
