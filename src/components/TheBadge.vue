@@ -1,22 +1,18 @@
 <script lang="ts" setup>
-const { variant, colour } = defineProps<{
-    variant: 'ghost' | 'outline' | 'tint' | 'filled',
-    colour: 'primary' | 'highlight'
-}>();
+import type { BadgeProps } from '@/types/ui/BadgeProps';
+
+const props = defineProps<BadgeProps>();
 </script>
 
 <template>
-    <div
-        role="status"
-        class="badge"
-        :data-variant="variant"
-        :data-colour="colour"
+    <div class="badge" role="status" :data-variant="props.appearance"
+        :data-colour="props.colour"
     >
         <slot></slot>
     </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .badge {
     --widget-badge-text: ;
     --widget-badge-bk: ;
@@ -30,6 +26,7 @@ const { variant, colour } = defineProps<{
     border: 0.1rem solid var(--widget-badge-outline);
     padding-inline: 0.25rem;
     padding-block: 0.1rem;
+    border-radius: var(--rounded-default);
 }
 
 .badge[data-variant="ghost"][data-colour="highlight"] {

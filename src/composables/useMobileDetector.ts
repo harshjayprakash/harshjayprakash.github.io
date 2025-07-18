@@ -1,10 +1,9 @@
-import { computed, readonly, ref } from 'vue';
+import { computed, readonly, ref } from "vue";
+import { useWindowSize } from "@vueuse/core"
 
-import useWindowSize from '@/composables/useWindowSize';
-
-const useMobileDetector = () => {
+const useMobileDetector = (mobileBreakpoint: number) => {
     const { width } = useWindowSize();
-    const _mobileBreakpoint = ref(40*16);
+    const _mobileBreakpoint = ref(mobileBreakpoint);
     const isMobile = computed(() => width.value < _mobileBreakpoint.value);
 
     return { isMobile: readonly(isMobile) };

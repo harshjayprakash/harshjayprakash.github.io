@@ -1,0 +1,77 @@
+@import './reset.css';
+@import './theme.css';
+@import './borders.css';
+@import './effect.css';
+
+
+
+::selection {
+    background-color: var(--colour-bk-select);
+    color: var(--colour-text-select);
+}
+
+body {
+    font-family: 'Inter Variable', sans-serif;
+    background-color: var(--colour-bk-secondary);
+    color: var(--colour-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 1.875rem;
+    line-height: calc(2.25/1.875);
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: calc(2/1.25);
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: calc(1.75/1.25);
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: calc(1.75/1.125);
+}
+
+p {
+    font-size: 1rem;
+    line-height: calc(1.5/1)
+}
+
+small {
+    font-size: 0.875rem;
+    line-height: calc(1.25/0.875);
+}
+
+#app {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    background-color: var(--colour-bk-primary);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    *, *::before, *::after {
+        transition: all 70ms ease-in-out;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+:focus-visible {
+    outline: 3px solid #f59e0b;
+}
+
+[data-read-length='true'] {
+    max-width: 75ch;
+}

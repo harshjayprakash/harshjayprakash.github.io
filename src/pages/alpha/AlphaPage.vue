@@ -1,17 +1,9 @@
-<script lang="ts" setup>
+<script setup lang="ts">
+
 </script>
 
 <template>
-    <article aria-label="Testing Page, Not for Public Use" class="alpha">
-        <h1>&alpha;&beta;&gamma;</h1>
-        <div class="test-container">
-
-        </div>
+    <article aria-label="Test Page" class="alpha">
+        <h1>Test Page</h1>
     </article>
 </template>
-
-<style lang="css" scoped>
-.test-container {
-    padding-block: 5rem;
-}
-</style>

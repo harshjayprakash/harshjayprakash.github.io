@@ -6,86 +6,102 @@
   <img alt="banner" src="./docs/ppw-banner.png">
 </picture>
 
-This is a personal portfolio website built with Vue.js and TypeScript. This allows me to
-showcase my projects in one central place. **This website is still under construction**.
+> [!NOTE]
+> This website is still under construction.
 
-The website prioritises simplicity, accessibility, and user experience above the latest
-trends. The aim was to create also a timeless digital experience that anyone will be able
-to use. More details:
+## Overview
 
-* Simplicity: Minimal distractions, simple typography, clean layouts.
-* Accessibility: Following WCAG Guidelines (Contrast Ratios, Alt Text, ARIA Labels +
-Roles)
-* User Experience: Intuitive interactions, responsive design, adapts to system colour
-theme (media query: prefers-color-theme).
+This repository contains my personal portfolio website built with Vue.js (and TypeScript).
+This space allows me to share my work, thoughts and tools.
 
-This project intentionally minimises the reliance on dependencies, allowing for better
-performance and long-term reliability.
+This website prioritises simplicity, accessibility, and user experience above the latest;
+but also aiming to have a timeless experience that anyone can use.
 
-The Inter typeface is self-hosted using the fontsource variable package to avoid the using
-Google Fonts for privacy.
+* **Simplicity**: Minimal distractions and typography.
+* **Accessibility**: Following WCAG Guidelines (Constrast Ratios, Alterative Text, ARIA Labels and Roles)
+* **UX**: Intuitive interactions, responsive design and system-adaptive theme.
 
-![Screenshot of Website](./docs/ppw-preview.png)
+The live version of the site, <https://harshjayprakash.github.io>, corresponds to the main
+branch.
+
+![Screenshot](./docs/ppw-responsive-screenshot.png)
+
+## Architecture
+
+The website follows a scalable folder structure as follows:
+
+* `src/assets/css`: Global style sheets.
+* `src/components`: Modular UI components.
+* `src/composables`: Reusable logic.
+* `src/data`: Static data.
+* `src/layouts`: Layout components.
+* `src/pages`: Page-specific components.
+* `src/router`: Global router.
+* `src/types`: Type definitions.
 
 ## Running Locally
 
-Running the website locally is simple as a few commands after cloning the git repository.
-There are no external measures to be setup.
+Running the website locally is as simple as a few commands after cloning the git
+repository. There are no external measures to be setup, expect Node.js version 18.3 or
+higher.
 
 ```sh
-# Install dependencies.
+# 1. Clone and Change Directory
+git clone https://github.com/harshjayprakash/harshjayprakash.github.io.git
+cd harshjayprakash.github.io
+
+# 2. Install dependencies.
 npm install
-# Run local server.
+
+# 3. Run local server.
 npm run dev
 ```
 
 ## Changelog
 
-* Version 5.0 --25H1F "03/05/2025"
-  * Internal
-    * Migrated to Composition API with Setup Tag.
-    * Rewritten.
-    * Mitigated Vite Vulnerabilities.
-    * Updated CSS Colour System.
-    * Simplify CSS Component Styles.
-    * Updated Internal Architecture.
-  * Improved Accessibility.
-    * Add "Skip Navigation" Button.
-    * Improved Colour Contrast.
-  * Visual
-    * Updated Colours (Zinc to Grey).
-    * Redesigned Hero Section
-    * Added New About Me (Merged with Skills Section).
-    * Converted Skill Cards to Accordion
-    * Updated Spacing
-    * Updated Mobile Breakpoint
-    * Added Start Year and Status to Project Cards.
-    * Redesigned Contact Section.
-    * Added Faded Text to Less Important Information.
-    * Removed Rounded Corners.
-    * Updated All Images to be Consistent.
+### Version 4006.0.0 - TBD
 
-![View Previous Changelogs](./CHANGELOG.md)
+* **Improved Navigation**:
+  * Added material icons.
+  * Updated underline style
+  * Updated mobile style to app bar style.
+* **Dynamic Page Titles**: Updated page title for each page.
+* **Rounded Corners**: Following the rounded corners trend.
+* **Focus Styles**: Updated focus ring style.
+* **Improved Accessibility**
+  * Implemented arrow key tab focus navigation.
+* **Improved Scalability**:
+  * Extracted component props to interfaces.
+  * Set defaults to optional props.
+* **New Content**:
+  * Added projects page.
+  * Added about page.
+* **Updated Home Page**:
+  * Updated to show selected projects.
+  * Updated hero section design.
+
+![View Previous Changelogs](./VERSION.md)
 
 ## Limitations and Known Issues
 
-* The `light-dark` css function is used (mdn: newly available).
-* The `/alpha` route is not for public use (for development testing purposes).
-* The Navigation Landmark is hidden until menu button is clicked on mobile.
-* Cannot use arrow keys on the project filter tablist.
+* The `light-dark` css function (mdn: baseline 2024, newly available).
+* The `/alpha` route is not for public use.
 
 ## Todo
 
-* Add "Back to Top" button.
-* Add Project Filter Tablist Arrow Key Navigation.
-* Add Project Specific Pages.
-* Add Unit Testing.
-* Add About Page
+* [ ] Add "Back to Top" Link.
+* [X] Add arrow key navigation on tab list.
+* [ ] Add project specfic pages.
+* [ ] Add unit testing
 
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
 * CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
-* Tailwind v4.0 Colours (Grey and Teal): <https://tailwindcss.com/docs/colors>
+* Tailwind v4.0 Colours (Grey and Teal, Amber 500 for Focus): <https://tailwindcss.com/docs/colors>
 * ARC Toolkit: <https://www.tpgi.com/arc-platform/arc-toolkit/>
+* Material Symbols Outlined on Fontsource: <https://fontsource.org/fonts/material-symbols-outlined>
+* Vue Use: <https://github.com/vueuse/vueuse>
+* WallpaperHub Navigation Inspiration: <https://www.wallpaperhub.app/>
+* Fluent UI Component Inspiration: <https://fluent2.microsoft.design/>

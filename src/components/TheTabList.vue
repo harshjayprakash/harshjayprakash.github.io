@@ -1,14 +1,17 @@
 <script lang="ts" setup>
-defineOptions({ inheritAttrs: false });
+import { useProvideTabs } from '@/composables/useTabs';
+
+const { handleKeydown } = useProvideTabs();
 </script>
 
 <template>
-    <div role="tablist" class="tab-list" v-bind="$attrs" v-on="$attrs">
+    <!-- eslint-disable vuejs-accessibility/interactive-supports-focus -->
+    <div role="tablist" class="tab-list" @keydown="handleKeydown">
         <slot></slot>
     </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .tab-list {
     display: flex;
     flex-wrap: wrap;

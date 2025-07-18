@@ -1,25 +1,13 @@
 <script lang="ts" setup>
-defineOptions({ inheritAttrs: false });
+import type { PersonaProps } from '@/types/ui/PersonaProps';
 
-const { avatar, name, status } = defineProps<{
-    avatar: string,
-    name: string,
-    status: string
-}>();
+const props = defineProps<PersonaProps>();
 
-const generateAriaLabel = () => {
-    return `${name}, status: ${status}`;
-}
+const generateAriaLabel = () => `${props.name}, status: ${props.status}`;
 </script>
 
 <template>
-    <div
-        class="persona"
-        role="status"
-        v-bind="$attrs"
-        v-on="$attrs"
-        :aria-label="generateAriaLabel()"
-    >
+    <div class="persona" role="status" :aria-label="generateAriaLabel()">
         <img :src="avatar" alt="avatar" class="avatar" />
         <div class="indicator" aria-hidden="true"></div>
         <div aria-label="Avatar Information" class="text" role="group">
@@ -29,10 +17,10 @@ const generateAriaLabel = () => {
     </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .persona {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.10rem;
 }
 
 .persona .avatar {
@@ -45,8 +33,8 @@ const generateAriaLabel = () => {
     position: relative;
     top: 1.8rem;
     left: -0.9rem;
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 0.75rem;
+    width: 0.75rem;
     background: var(--colour-500H);
     border-radius: 50%;
     border: 0.1rem solid var(--colour-bk-primary);
