@@ -84,13 +84,6 @@ npm run dev
 * The `light-dark` css function (mdn: baseline 2024, newly available).
 * The `/alpha` route is not for public use.
 
-## Todo
-
-* [ ] Add "Back to Top" Link.
-* [X] Add arrow key navigation on tab list.
-* [ ] Add project specfic pages.
-* [ ] Add unit testing
-
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
