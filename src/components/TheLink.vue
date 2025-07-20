@@ -28,6 +28,8 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
 }
 
 .link:hover {
-    text-decoration-thickness: 0.1rem;
+    text-decoration-thickness: 0.2rem;
+    color: var(--colour-text-highlight);
+    text-decoration-color: var(--colour-text-highlight);
 }
 </style>
