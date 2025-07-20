@@ -85,6 +85,12 @@ npm run dev
 * The `light-dark` css function (mdn: baseline 2024, newly available).
 * The `/alpha` route is not for public use.
 
+## Todo
+
+* [ ] Update project screenshots.
+* [ ] Add unit tests.
+* [ ] Add documentation.
+
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
