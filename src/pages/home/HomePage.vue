@@ -1,20 +1,20 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import HomeBioSection from './HomeBioSection.vue';
 import HomeContactSection from './HomeContactSection.vue';
-import HomeIntroSection from './HomeIntroSection.vue';
-import HomeWorkSection from './HomeWorkSection.vue';
+import HomeHeroSection from './HomeHeroSection.vue';
+import HomeSpotlightSection from './HomeSpotlightSection.vue';
 </script>
 
 <template>
-    <article aria-label="Home Page" class="home">
-        <HomeIntroSection />
+    <article class="home" aria-label="Home Page">
+        <HomeHeroSection />
+        <HomeSpotlightSection />
         <HomeBioSection />
-        <HomeWorkSection />
         <HomeContactSection />
     </article>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
 .home {
     display: flex;
     flex-direction: column;

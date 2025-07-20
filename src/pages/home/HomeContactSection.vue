@@ -1,89 +1,85 @@
-<script lang="ts" setup>
+<script setup lang="ts">
+import TheCard from '@/components/TheCard.vue';
 import TheLink from '@/components/TheLink.vue';
-
-const links: { name: string, description: string, to: string }[] = [{
-    name: 'E-mail (mailto link)',
-    description: 'Get in touch with me',
-    to: 'mailto:harshjayprakash@outlook.com'
-}, {
-    name: 'LinkedIn',
-    description: 'Connect with me',
-    to: 'https://www.linkedin.com/in/harshjayprakash7/'
-}, {
-    name: 'GitHub',
-    description: 'See my code',
-    to: 'https://github.com/harshjayprakash'
-}, {
-    name: 'CV',
-    description: 'View or download my cv',
-    to: '/documents/harsh_cv.pdf'
-}];
+import { personaData } from '@/data/profile/persona';
+import { socialData } from '@/data/profile/socials';
 </script>
 
 <template>
-    <section aria-label="Contact" class="contact">
-        <div role="group" class="message">
-            <h2 class="title">Looking to collaborate<br />or say hello?</h2>
-            <p class="faded-text">
-                Whether you're interested in collaborating, need help with programming or
-                a bit of design, or just want to connect, feel free to reach out!
-            </p>
-        </div>
-        <div role="group" class="links">
-            <div class="link-wrapper" v-for="link in links" :key="link.name">
-                <TheLink variant="external" :to="link.to" exact new-window>
-                    <div class="content-wrapper" role="group">
-                        <span>{{ link.name }}</span>
-                    </div>
-                </TheLink>
-                <small class="faded-text">{{ link.description }}</small>
+    <section class="home-contact" aria-label="Home Contact Section">
+        <TheCard linkable="none" appearance="filled" elevate class="contact-card">
+            <div class="contact-title" role="group">
+                <h2>Say hello</h2>
+                <p class="faded-text">
+                    If you're working on something thoughtful &ndash; whether it's code,
+                    design, or something in between &ndash; I'd be happy to connect.
+                </p>
             </div>
-        </div>
+            <ul class="link-list">
+                <li v-for="social in socialData.all" :key="social.social"
+                    class="link-item"
+                >
+                    <div role="group" class="link-wrapper">
+                        <TheLink linkable="external" :to="social.uri">
+                            {{ social.social }}
+                        </TheLink>
+                        <small class="faded-text">
+                            {{ social.description }}
+                        </small>
+                    </div>
+                </li>
+                <li class="link-item">
+                    <div role="group" class="link-wrapper">
+                        <TheLink linkable="external" :to="personaData.cv.uri">
+                            CV
+                        </TheLink>
+                        <small class="faded-text">
+                            {{ personaData.cv.description }}
+                        </small>
+                    </div>
+                </li>
+            </ul>
+        </TheCard>
     </section>
 </template>
 
-<style lang="css" scoped>
-.contact {
-    position: relative;
+<style lang="css">
+.home-contact .contact-card {
+    border: 0.1rem solid var(--colour-bk-highlight);
     display: grid;
-    gap: 2rem;
-    grid-template-columns: auto;
-    padding: 1rem;
-    background-color: var(--colour-bk-secondary);
-    box-shadow: var(--shadow-md);
-    border: 0.15rem solid var(--colour-outline-highlight-lighter);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
 }
 
-.message {
+.home-contact .contact-card .contact-title {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.links {
+.home-contact .link-list {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.links .content-wrapper {
+.home-contact .link-list .link-wrapper {
     display: flex;
     flex-direction: column;
 }
 
-.link-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-}
-
-.faded-text {
+.home-contact .faded-text {
     color: var(--colour-text-faded-less);
 }
 
-@media (width > 40rem) {
-    .contact {
-        grid-template-columns: 1fr 1fr;
+@media (min-width: 640px) {
+    .home-contact .contact-card {
+        border: 0.1rem solid var(--colour-bk-highlight);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
     }
 }
 </style>

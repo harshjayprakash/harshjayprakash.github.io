@@ -1,12 +1,13 @@
+import pluginOxlint from 'eslint-plugin-oxlint';
+import pluginVue from 'eslint-plugin-vue';
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 import { globalIgnores } from 'eslint/config';
+
 import {
     configureVueProject,
     defineConfigWithVueTs,
     vueTsConfigs
 } from '@vue/eslint-config-typescript';
-import pluginVue from 'eslint-plugin-vue';
-import pluginOxlint from 'eslint-plugin-oxlint';
-import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 
 configureVueProject({ scriptLangs: ['ts'] });
 
@@ -22,4 +23,4 @@ export default defineConfigWithVueTs(
     vueTsConfigs.recommended,
     ...pluginVueA11y.configs['flat/recommended'],
     ...pluginOxlint.configs['flat/recommended'],
-)
+);
