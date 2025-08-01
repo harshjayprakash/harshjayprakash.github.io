@@ -30,6 +30,9 @@ export const useProvideTabs = () => {
 
             case 'ArrowLeft':
                 focusedIndex.value = (focusedIndex.value - 1) % total;
+                if (focusedIndex.value == -1) {
+                    focusedIndex.value = 0;
+                }
                 break;
 
             case 'Home':
