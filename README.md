@@ -57,6 +57,17 @@ npm run dev
 
 ## Changelog
 
+### Version 4006.1.0 - 01 August 2025
+
+* **Updated Navigation Styles**: Updated icons to be green on active links.
+* **Updated Link Component**: Updated hover to use a darker green.
+* **Updated Project Cards**: 
+  * Updated to show a title underline.
+  * Updated project page cards style.
+* **Content**: Updated project screenshots.
+* **Alternative Text**: Removed on redundant alternative text.
+* **NPM Package Updates**.
+
 ### Version 4006.0.0 - 20 July 2025
 
 * **Improved Navigation**:
