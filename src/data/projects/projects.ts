@@ -52,7 +52,7 @@ const projects: Project[] = [{
     status: 'Active',
     start: 'H1 2021',
     available: true,
-    technology: 'C w/ WIN32 API',
+    technology: 'C w/ Win32',
     git: 'https://github.com/harshjayprakash/experimental-blok',
     image: 'xbk-preview.png',
     featured: true,
