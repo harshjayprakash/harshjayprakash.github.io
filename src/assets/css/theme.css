@@ -92,6 +92,7 @@
     --colour-text-faded-less: light-dark(var(--colour-700P), var(--colour-300P));
     --colour-text-select: light-dark(var(--colour-050P), var(--colour-950P));
     --colour-text-highlight: light-dark(var(--colour-800H), var(--colour-200H));
+    --colour-text-highlight-stronger: light-dark(var(--colour-900H), var(--colour-100H));
 
     --colour-outline-hover: light-dark(var(--colour-300P), var(--colour-700P));
     --colour-outline-faded-more: light-dark(var(--colour-200P), var(--colour-800P));
