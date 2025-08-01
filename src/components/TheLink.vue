@@ -21,7 +21,7 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
 .link {
     color: inherit;
     background-color: inherit;
-    text-decoration: underline solid var(--colour-outline-primary) 0.05rem;
+    text-decoration: underline solid 0.05rem;
     text-underline-offset: 2px;
     cursor: pointer;
     max-width: max-content;
@@ -29,7 +29,6 @@ const config = useLinkable(props.linkable, props.to, props.newWindow);
 
 .link:hover {
     text-decoration-thickness: 0.2rem;
-    color: var(--colour-text-highlight);
-    text-decoration-color: var(--colour-text-highlight);
+    color: var(--colour-text-highlight-stronger);
 }
 </style>
