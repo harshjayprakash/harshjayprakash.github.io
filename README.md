@@ -95,19 +95,15 @@ npm run dev
 
 * The `light-dark` css function (mdn: baseline 2024, newly available).
 * The `/alpha` route is not for public use.
-
-## Todo
-
-* [ ] Update project screenshots.
-* [ ] Add unit tests.
-* [ ] Add documentation.
+* Navigation to other pages may not reset the page position to the top of the page.
+* Images may take a while to load.
 
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
 * CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
-* Tailwind v4.0 Colours (Grey and Teal, Amber 500 for Focus): <https://tailwindcss.com/docs/colors>
+* Tailwind v4.0 Colours (Grey, Teal, Amber): <https://tailwindcss.com/docs/colors>
 * ARC Toolkit: <https://www.tpgi.com/arc-platform/arc-toolkit/>
 * Material Symbols Outlined on Fontsource: <https://fontsource.org/fonts/material-symbols-outlined>
 * Vue Use: <https://github.com/vueuse/vueuse>
