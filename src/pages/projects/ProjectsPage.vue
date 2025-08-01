@@ -73,12 +73,11 @@ const projectCountBadgeText = computed(() =>
                                 alt=""
                             />
                         </div>
-                        <div class="project-name">
+                        <div class="project-info">
                             <span class="title">{{ project.name }}</span>
-                            <small>{{ project.technology }}</small>
-                        </div>
-                        <div class="project-descr">
-                            <small>{{ project.description }}</small>
+                            <span>{{ project.start }} &ndash; {{ project.status }}</span>
+                            <span>{{ project.technology }}</span>
+                            <span class="descr">{{ project.description }}</span>
                         </div>
                     </TheCard>
                 </li>
@@ -117,56 +116,39 @@ const projectCountBadgeText = computed(() =>
     position: relative;
 }
 
-.projects .project-card:hover .project-name .title {
-    text-decoration: solid underline 2px var(--colour-text-inverted);
-    font-weight: 500;
+.projects .project-card .title {
+    text-decoration: solid underline 0.05rem;
+    padding-block-end: 0.5rem;
+    color: var(--colour-text-primary);
+}
+
+.projects .project-card:hover .title {
+    text-decoration-thickness: 0.2rem;
+    color: var(--colour-text-highlight-stronger)
 }
 
 .projects .project-card .project-image {
     border-radius: var(--rounded-default);
 }
 
-.projects .project-card .project-descr,
-.projects .project-card .project-name {
+.projects .project-card .project-info {
     display: flex;
     flex-direction: column;
+}
+
+.projects .project-card .project-info *:not(.title) {
+    color: var(--colour-text-faded-less);
 }
 
 @media (min-width: 640px) {
     .projects .project-card {
         display: grid;
-        grid-template-columns: 1fr 1fr 0.25fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
 
-    .projects .project-card .project-image-wrapper {
-        grid-column: 4 / 5;
-    }
-
-    .projects .project-card .project-name,
-    .projects .project-card .project-descr {
-        grid-row: 1;
-    }
-
-    .projects .project-card .project-name {
-        grid-column: 1 / 2;
-    }
-
-    .projects .project-card .project-descr {
-        grid-column: 2 / 3;
-    }
-
-    .projects .project-card:hover {
-        background-color: var(--colour-bk-highlight);
-        color: var(--colour-text-inverted);
-    }
-
-    .projects .project-card:hover .project-image-wrapper {
-        z-index: 3;
-    }
-
-    .projects .project-card:hover .project-image-wrapper .project-image {
-        scale: 150%;
+    .projects .project-card :nth-child(4) {
+        padding-block: 1rem;
     }
 }
 </style>

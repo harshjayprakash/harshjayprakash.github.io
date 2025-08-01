@@ -28,7 +28,7 @@ const imageSrc = (name?: string) => `/images/${name}`;
                 >
                     <img :src="imageSrc(project.image)" alt=""
                         class="project-image" />
-                    <h3>{{ project.name }}: {{ project.title }}</h3>
+                    <span class="title">{{ project.name }}: {{ project.title }}</span>
                     <p class="muted-text">{{ project.description }}</p>
                 </TheCard>
             </li>
@@ -38,12 +38,12 @@ const imageSrc = (name?: string) => `/images/${name}`;
                 :to="dissertationProject.git" elevate class="project-card--dissertation"
             >
                 <div role="group" class="information">
-                    <TheBadge colour="highlight" appearance="outline">
+                    <TheBadge colour="primary" appearance="outline">
                         Capstone Project
                     </TheBadge>
-                    <h3>
+                    <span class="title">
                         {{ dissertationProject.name }}: {{ dissertationProject.title }}
-                    </h3>
+                    </span>
                     <p class="muted-text">
                         {{ dissertationProject.description }}
                     </p>
@@ -84,6 +84,18 @@ const imageSrc = (name?: string) => `/images/${name}`;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.home-spotlight-section .project-card:hover .title,
+.home-spotlight-section .project-card--dissertation:hover .title {
+    text-decoration-thickness: 0.2rem;
+    color: var(--colour-text-highlight-stronger);
+}
+
+.home-spotlight-section .project-card .title,
+.home-spotlight-section .project-card--dissertation .title {
+    text-decoration: solid underline 0.05rem;
+    color: var(--colour-text-primary);
 }
 
 .home-spotlight-section .muted-text {
