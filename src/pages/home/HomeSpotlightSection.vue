@@ -3,12 +3,10 @@ import TheBadge from '@/components/TheBadge.vue';
 import TheButton from '@/components/TheButton.vue';
 import TheCard from '@/components/TheCard.vue';
 import { projectData } from '@/data/projects/projects';
-import { imageData } from '@/data/ui/image';
 
 const selectProjects = projectData.filterByAbbreviation(['xbk', 'dwf']);
 const dissertationProject = projectData.filterByAbbreviation(['aap'])[0];
 const imageSrc = (name?: string) => `/images/${name}`;
-const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
 </script>
 
 <template>
@@ -28,7 +26,7 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
                 <TheCard appearance="filled" linkable="external" :to="project.git"
                     class="project-card"
                 >
-                    <img :src="imageSrc(project.image)" :alt="imageAlt(project.image)"
+                    <img :src="imageSrc(project.image)" alt=""
                         class="project-image" />
                     <h3>{{ project.name }}: {{ project.title }}</h3>
                     <p class="muted-text">{{ project.description }}</p>
@@ -52,7 +50,7 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
                 </div>
                 <div class="image-wrapper">
                     <img :src="imageSrc(dissertationProject.image)"
-                        :alt="imageAlt(dissertationProject.image)" class="project-image"
+                        alt="" class="project-image"
                     />
                 </div>
             </TheCard>
