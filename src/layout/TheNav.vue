@@ -98,7 +98,7 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
 }
 
 .nav .nav-link[aria-current='page']::after {
-    background-color: var(--colour-bk-highlight);
+    background-color: var(--colour-outline-highlight);
 }
 
 .nav .nav-link[aria-current='page']:hover::after {
@@ -106,6 +106,6 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
 }
 
 .nav .nav-link[aria-current='page'] .material-icon {
-    color: var(--colour-bk-highlight);
+    color: var(--colour-outline-highlight);
 }
 </style>
