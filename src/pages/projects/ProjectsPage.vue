@@ -8,8 +8,9 @@ import TheTab from '@/components/TheTab.vue';
 import useProjectPlatformFilter from '@/composables/useProjectPlatformFilter';
 import { projectData } from '@/data/projects/projects';
 import type { ProjectPlatformFilter } from '@/types/project/ProjectPlatform';
+import type { Project } from '@/types/project/Project';
 
-const getProjectImageSource = (abbrev: string) => `/images/${abbrev}-preview.png`;
+const getProjectImageSource = (p: Project) => `/images/${p.image}`;
 
 const {
     filtered, updateFilter, totalCount, currentCount
@@ -68,12 +69,12 @@ const projectCountBadgeText = computed(() =>
                         <div class="project-image-wrapper">
                             <img
                                 class="project-image"
-                                :src="getProjectImageSource(project.abbreviation)"
+                                :src="getProjectImageSource(project)"
                                 alt=""
                             />
                         </div>
                         <div class="project-name">
-                            <span>{{ project.name }}</span>
+                            <span class="title">{{ project.name }}</span>
                             <small>{{ project.technology }}</small>
                         </div>
                         <div class="project-descr">
@@ -114,6 +115,11 @@ const projectCountBadgeText = computed(() =>
     gap: 1rem;
     height: 100%;
     position: relative;
+}
+
+.projects .project-card:hover .project-name .title {
+    text-decoration: solid underline 2px var(--colour-text-inverted);
+    font-weight: 500;
 }
 
 .projects .project-card .project-image {
