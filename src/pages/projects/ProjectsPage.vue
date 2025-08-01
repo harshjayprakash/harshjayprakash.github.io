@@ -7,12 +7,10 @@ import TheTabList from '@/components/TheTabList.vue';
 import TheTab from '@/components/TheTab.vue';
 import useProjectPlatformFilter from '@/composables/useProjectPlatformFilter';
 import { projectData } from '@/data/projects/projects';
-import { imageData } from '@/data/ui/image';
 import type { ProjectPlatformFilter } from '@/types/project/ProjectPlatform';
+import type { Project } from '@/types/project/Project';
 
-const getProjectImageSource = (abbrev: string) => `/images/${abbrev}-preview.png`;
-
-const getProjectImageAlt = (abbrev: string) => imageData.getByObjectName(`${abbrev}-preview`)
+const getProjectImageSource = (p: Project) => `/images/${p.image}`;
 
 const {
     filtered, updateFilter, totalCount, currentCount
@@ -68,21 +66,18 @@ const projectCountBadgeText = computed(() =>
                     <TheCard appearance="filled" linkable="external" new-window
                         :to="project.git" class="project-card"
                     >
-                        <img
-                            class="project-image"
-                            :src="getProjectImageSource(project.abbreviation)"
-                            :alt="getProjectImageAlt(project.abbreviation)"
-                        />
-                        <div class="info" role="group">
-                            <span>
-                                {{ project.name }}
-                            </span>
-                            <small class="faded-text-less">
-                                {{ project.start }} &mdash; {{ project.status }}
-                            </small>
-                            <small class="faded-text-less">
-                                {{ project.technology }} ~ {{ project.description }}
-                            </small>
+                        <div class="project-image-wrapper">
+                            <img
+                                class="project-image"
+                                :src="getProjectImageSource(project)"
+                                alt=""
+                            />
+                        </div>
+                        <div class="project-info">
+                            <span class="title">{{ project.name }}</span>
+                            <span>{{ project.start }} &ndash; {{ project.status }}</span>
+                            <span>{{ project.technology }}</span>
+                            <span class="descr">{{ project.description }}</span>
                         </div>
                     </TheCard>
                 </li>
@@ -118,24 +113,42 @@ const projectCountBadgeText = computed(() =>
     flex-direction: column;
     gap: 1rem;
     height: 100%;
+    position: relative;
+}
+
+.projects .project-card .title {
+    text-decoration: solid underline 0.05rem;
+    padding-block-end: 0.5rem;
+    color: var(--colour-text-primary);
+}
+
+.projects .project-card:hover .title {
+    text-decoration-thickness: 0.2rem;
+    color: var(--colour-text-highlight-stronger)
 }
 
 .projects .project-card .project-image {
     border-radius: var(--rounded-default);
 }
 
-.projects .project-card .info {
+.projects .project-card .project-info {
     display: flex;
     flex-direction: column;
 }
 
-.projects .project-card .info .faded-text-less {
-    color: var(--colour-text-faded-less)
+.projects .project-card .project-info *:not(.title) {
+    color: var(--colour-text-faded-less);
 }
 
 @media (min-width: 640px) {
-    .projects .projects-list {
-        grid-template-columns: repeat(2, 1fr);
+    .projects .project-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .projects .project-card :nth-child(4) {
+        padding-block: 1rem;
     }
 }
 </style>

@@ -2,10 +2,11 @@ import { inject, provide, ref } from "vue"
 
 import { TAB_CONTEXT_KEY, type TabContext } from "@/types/ui/TabContext";
 
-export const useProvideTabs = () => {
+export const useProvideTabs = (changeOnFocus: boolean) => {
     const selectedIndex = ref(0);
     const focusedIndex = ref(0);
     const tabReferences = ref<HTMLElement[]>([]);
+    const focusChange = ref(changeOnFocus);
 
     const selectTab = (index: number) => {
         selectedIndex.value = index;
@@ -30,6 +31,9 @@ export const useProvideTabs = () => {
 
             case 'ArrowLeft':
                 focusedIndex.value = (focusedIndex.value - 1) % total;
+                if (focusedIndex.value == -1) {
+                    focusedIndex.value = 0;
+                }
                 break;
 
             case 'Home':
@@ -46,9 +50,12 @@ export const useProvideTabs = () => {
                 break;
         }
 
-        selectTab(focusedIndex.value);
         tabReferences.value[focusedIndex.value]?.focus();
-        tabReferences.value[focusedIndex.value]?.click();
+
+        if (focusChange.value) {
+            selectTab(focusedIndex.value);
+            tabReferences.value[focusedIndex.value]?.click();
+        }
     }
 
     const context: TabContext = { selectedIndex, focusedIndex, selectTab, registerTab };

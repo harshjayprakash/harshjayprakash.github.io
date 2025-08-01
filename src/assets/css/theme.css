@@ -13,6 +13,7 @@
             What the colour is used for, e.g.
             P - primary surface and text.
             H - highlights
+            F - Focus
 
         VARIANCE:
             Denotes the shade on the scale of
@@ -43,6 +44,18 @@
     --colour-800H: oklch(0.437 0.078 188.216);
     --colour-900H: oklch(0.386 0.063 188.416);
     --colour-950H: oklch(0.277 0.046 192.524);
+
+    --colour-050F: oklch(0.987 0.022 95.277);
+    --colour-100F: oklch(0.962 0.059 95.617);
+    --colour-200F: oklch(0.924 0.12 95.746);
+    --colour-300F: oklch(0.879 0.169 91.605);
+    --colour-400F: oklch(0.828 0.189 84.429);
+    --colour-500F: oklch(0.769 0.188 70.08);
+    --colour-600F: oklch(0.666 0.179 58.318);
+    --colour-700F: oklch(0.555 0.163 48.998);
+    --colour-800F: oklch(0.473 0.137 46.201);
+    --colour-900F: oklch(0.414 0.112 45.904);
+    --colour-950F: oklch(0.279 0.077 45.635);
 
     /*
         Semantic Colours, the light-dark adaptable colours to be used with
@@ -79,6 +92,7 @@
     --colour-text-faded-less: light-dark(var(--colour-700P), var(--colour-300P));
     --colour-text-select: light-dark(var(--colour-050P), var(--colour-950P));
     --colour-text-highlight: light-dark(var(--colour-800H), var(--colour-200H));
+    --colour-text-highlight-stronger: light-dark(var(--colour-900H), var(--colour-100H));
 
     --colour-outline-hover: light-dark(var(--colour-300P), var(--colour-700P));
     --colour-outline-faded-more: light-dark(var(--colour-200P), var(--colour-800P));
@@ -90,4 +104,8 @@
     --colour-outline-highlight-lighter: light-dark(var(--colour-600H), var(--colour-500H));
     --colour-outline-highlight-subtle: light-dark(var(--colour-200H), var(--colour-800H));
     --colour-outline-inverted: light-dark(var(--colour-050P), var(--colour-950P));
+
+    --colour-focus-outline: light-dark(var(--colour-400F), var(--colour-400F));
+    --colour-focus-bk: light-dark(var(--colour-400F), var(--colour-400F));
+    --colour-focus-text: light-dark(var(--colour-950P), var(--colour-950P))
 }

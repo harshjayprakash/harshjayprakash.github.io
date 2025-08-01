@@ -3,12 +3,10 @@ import TheBadge from '@/components/TheBadge.vue';
 import TheButton from '@/components/TheButton.vue';
 import TheCard from '@/components/TheCard.vue';
 import { projectData } from '@/data/projects/projects';
-import { imageData } from '@/data/ui/image';
 
 const selectProjects = projectData.filterByAbbreviation(['xbk', 'dwf']);
 const dissertationProject = projectData.filterByAbbreviation(['aap'])[0];
 const imageSrc = (name?: string) => `/images/${name}`;
-const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
 </script>
 
 <template>
@@ -28,9 +26,9 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
                 <TheCard appearance="filled" linkable="external" :to="project.git"
                     class="project-card"
                 >
-                    <img :src="imageSrc(project.image)" :alt="imageAlt(project.image)"
+                    <img :src="imageSrc(project.image)" alt=""
                         class="project-image" />
-                    <h3>{{ project.name }}: {{ project.title }}</h3>
+                    <span class="title">{{ project.name }}: {{ project.title }}</span>
                     <p class="muted-text">{{ project.description }}</p>
                 </TheCard>
             </li>
@@ -40,19 +38,19 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
                 :to="dissertationProject.git" elevate class="project-card--dissertation"
             >
                 <div role="group" class="information">
-                    <TheBadge colour="highlight" appearance="outline">
+                    <TheBadge colour="primary" appearance="outline">
                         Capstone Project
                     </TheBadge>
-                    <h3>
+                    <span class="title">
                         {{ dissertationProject.name }}: {{ dissertationProject.title }}
-                    </h3>
+                    </span>
                     <p class="muted-text">
                         {{ dissertationProject.description }}
                     </p>
                 </div>
                 <div class="image-wrapper">
                     <img :src="imageSrc(dissertationProject.image)"
-                        :alt="imageAlt(dissertationProject.image)" class="project-image"
+                        alt="" class="project-image"
                     />
                 </div>
             </TheCard>
@@ -86,6 +84,18 @@ const imageAlt = (name?: string) => imageData.getByObjectName(name ?? '');
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.home-spotlight-section .project-card:hover .title,
+.home-spotlight-section .project-card--dissertation:hover .title {
+    text-decoration-thickness: 0.2rem;
+    color: var(--colour-text-highlight-stronger);
+}
+
+.home-spotlight-section .project-card .title,
+.home-spotlight-section .project-card--dissertation .title {
+    text-decoration: solid underline 0.05rem;
+    color: var(--colour-text-primary);
 }
 
 .home-spotlight-section .muted-text {

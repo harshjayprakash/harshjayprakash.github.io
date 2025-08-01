@@ -13,7 +13,7 @@ const projects: Project[] = [{
     available: true,
     technology: 'Java',
     git: 'https://github.com/harshjayprakash/algorithmic-art-playground',
-    image: 'aap-preview.png',
+    image: 'aap-preview.jpg',
     featured: false,
 }, {
     name: 'Crane Container Simulation',
@@ -40,7 +40,7 @@ const projects: Project[] = [{
     available: true,
     technology: 'Angular w/ AWS',
     git: 'https://github.com/harshjayprakash/dog-walkers-finder',
-    image: 'dwf-preview.png',
+    image: 'dwf-preview.jpg',
     featured: true,
 }, {
     name: 'Experimental Blok',
@@ -52,7 +52,7 @@ const projects: Project[] = [{
     status: 'Active',
     start: 'H1 2021',
     available: true,
-    technology: 'C w/ WIN32 API',
+    technology: 'C w/ Win32',
     git: 'https://github.com/harshjayprakash/experimental-blok',
     image: 'xbk-preview.png',
     featured: true,
@@ -67,7 +67,7 @@ const projects: Project[] = [{
     available: true,
     technology: 'Java w/ JavaFX + MySQL',
     git: 'https://github.com/harshjayprakash/library-loans-system',
-    image: 'lls-preview.png',
+    image: 'lls-preview.jpg',
     featured: false,
 }, {
     name: 'Personal Portfolio Website',
@@ -80,7 +80,7 @@ const projects: Project[] = [{
     available: true,
     technology: 'Vue w/ TypeScript',
     git: 'https://github.com/harshjayprakash/harshjayprakash.github.io',
-    image: 'ppw-preview.png',
+    image: 'ppw-preview.jpg',
     featured: false,
 }, {
     name: 'Wrapping Paper Quotes Calculator',
@@ -93,7 +93,7 @@ const projects: Project[] = [{
     available: true,
     technology: 'Python w/ Tkinter',
     git: 'https://github.com/harshjayprakash/wrapping-paper-quotes-calculator',
-    image: 'wpq-preview.png',
+    image: 'wpq-preview.jpg',
     featured: false,
 }];
 

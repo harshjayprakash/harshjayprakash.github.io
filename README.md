@@ -6,7 +6,7 @@
 ## Overview
 
 <p align="center">
-  <img src="./docs/assets/ppw-preview-responsive.png" 
+  <img src="./docs/assets/ppw-preview-responsive.jpg" 
     alt="Website Running on Desktop and Mobile View">
 </p>
 
@@ -57,6 +57,17 @@ npm run dev
 
 ## Changelog
 
+### Version 4006.1.0 - 01 August 2025
+
+* **Updated Navigation Styles**: Updated icons to be green on active links.
+* **Updated Link Component**: Updated hover to use a darker green.
+* **Updated Project Cards**: 
+  * Updated to show a title underline.
+  * Updated project page cards style.
+* **Content**: Updated project screenshots.
+* **Alternative Text**: Removed on redundant alternative text.
+* **NPM Package Updates**.
+
 ### Version 4006.0.0 - 20 July 2025
 
 * **Improved Navigation**:
@@ -84,19 +95,15 @@ npm run dev
 
 * The `light-dark` css function (mdn: baseline 2024, newly available).
 * The `/alpha` route is not for public use.
-
-## Todo
-
-* [ ] Update project screenshots.
-* [ ] Add unit tests.
-* [ ] Add documentation.
+* Navigation to other pages may not reset the page position to the top of the page.
+* Images may take a while to load.
 
 ## References
 
 * Inter Font Family: <https://rsms.me/inter/>
 * Inter on Fontsource: <https://fontsource.org/fonts/inter>
 * CSS Reset: <https://www.joshwcomeau.com/css/custom-css-reset/>
-* Tailwind v4.0 Colours (Grey and Teal, Amber 500 for Focus): <https://tailwindcss.com/docs/colors>
+* Tailwind v4.0 Colours (Grey, Teal, Amber): <https://tailwindcss.com/docs/colors>
 * ARC Toolkit: <https://www.tpgi.com/arc-platform/arc-toolkit/>
 * Material Symbols Outlined on Fontsource: <https://fontsource.org/fonts/material-symbols-outlined>
 * Vue Use: <https://github.com/vueuse/vueuse>

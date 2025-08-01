@@ -1,7 +1,12 @@
 <script lang="ts" setup>
 import { useProvideTabs } from '@/composables/useTabs';
+import type { TabListProps } from '@/types/ui/TabListProps';
 
-const { handleKeydown } = useProvideTabs();
+const props = withDefaults(defineProps<TabListProps>(), {
+    clickOnFocus: false
+});
+
+const { handleKeydown } = useProvideTabs(props.clickOnFocus);
 </script>
 
 <template>
