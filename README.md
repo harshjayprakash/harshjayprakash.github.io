@@ -6,7 +6,7 @@
 ## Overview
 
 <p align="center">
-  <img src="./docs/assets/ppw-preview-responsive.png" 
+  <img src="./docs/assets/ppw-preview-responsive.jpg" 
     alt="Website Running on Desktop and Mobile View">
 </p>
 
