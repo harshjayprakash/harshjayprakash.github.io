@@ -70,7 +70,7 @@ small {
 }
 
 :focus-visible {
-    outline: 3px solid #f59e0b;
+    outline: 3px solid var(--colour-focus-bk);
 }
 
 [data-read-length='true'] {
