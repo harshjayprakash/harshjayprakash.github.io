@@ -25,7 +25,7 @@ const router = createRouter({
         component: ProjectsPage,
         meta: {
             title: 'Projects',
-            icon: 'workspaces'
+            icon: 'work'
         }
     }, {
         path: '/about',
