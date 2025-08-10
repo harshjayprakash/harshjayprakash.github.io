@@ -16,4 +16,5 @@ export interface Project {
     git?: string;
     image?: string;
     featured?: boolean;
+    headline?: string;
 }

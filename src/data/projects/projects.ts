@@ -15,6 +15,7 @@ const projects: Project[] = [{
     git: 'https://github.com/harshjayprakash/algorithmic-art-playground',
     image: 'aap-preview.jpg',
     featured: false,
+    headline: 'Simple, Locally Art Generation.',
 }, {
     name: 'Crane Container Simulation',
     description: 'A simulation to calculate the time taken to arrange crates at different loading bays.',
@@ -42,6 +43,7 @@ const projects: Project[] = [{
     git: 'https://github.com/harshjayprakash/dog-walkers-finder',
     image: 'dwf-preview.jpg',
     featured: true,
+    headline: 'An improvement to a startup\'s operation creating a scalable and cloud-based application.',
 }, {
     name: 'Experimental Blok',
     title: 'An exploration of the Windows API.',
@@ -56,6 +58,7 @@ const projects: Project[] = [{
     git: 'https://github.com/harshjayprakash/experimental-blok',
     image: 'xbk-preview.png',
     featured: true,
+    headline: 'Modern, Lightweight, Yet Low Level Maze Simulation.',
 }, {
     name: 'Library Loans System',
     description: 'A system to keep track of library inventory and loaned Books and DVDs.',
