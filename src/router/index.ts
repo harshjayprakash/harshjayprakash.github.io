@@ -51,7 +51,10 @@ const router = createRouter({
             title: 'Impossible Page' ,
             icon: undefined
         }
-    }]
+    }],
+    scrollBehavior(_to, _from, _savedPosition) {
+        return { top: 0 };
+    }
 });
 
 export default router;
