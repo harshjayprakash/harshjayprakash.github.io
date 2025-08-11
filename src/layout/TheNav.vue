@@ -19,8 +19,6 @@ const ariaCurrent = (path: string) => {
 const isCurrentPage = (path: string) => ariaCurrent(path) == 'page';
 
 const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
-
-const isLinkLabelVisible = (path: string) => isDesktop() || isCurrentPage(path);
 </script>
 
 <template>
@@ -32,7 +30,7 @@ const isLinkLabelVisible = (path: string) => isDesktop() || isCurrentPage(path);
                     :aria-label="route.meta?.title"
                 >
                     <TheIcon :name="getIcon(route)" :filled="isCurrentPage(route.path)" />
-                    <span v-if="isLinkLabelVisible(route.path)">{{ route.name }}</span>
+                    <span v-if="isDesktop()">{{ route.name }}</span>
                 </RouterLink>
             </li>
         </ul>
