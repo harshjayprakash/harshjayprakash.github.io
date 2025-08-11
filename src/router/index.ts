@@ -53,6 +53,9 @@ const router = createRouter({
         }
     }],
     scrollBehavior(_to, _from, _savedPosition) {
+        if (_to.fullPath === _from.fullPath) {
+            return { };
+        }
         return { top: 0 };
     }
 });
