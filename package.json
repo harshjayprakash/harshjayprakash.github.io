@@ -1,8 +1,9 @@
 {
     "name": "personal-portfolio",
-    "version": "4006.1.0",
+    "version": "4006.2.0",
     "private": true,
     "type": "module",
+    "license": "MIT",
     "scripts": {
         "dev": "vite",
         "dev:host": "vite --host",
