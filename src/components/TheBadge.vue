@@ -42,9 +42,9 @@ const props = defineProps<BadgeProps>();
 }
 
 .badge[data-variant="tint"][data-colour="highlight"] {
-    --widget-badge-text: var(--colour-text-highlight);
-    --widget-badge-bk: var(--colour-bk-highlight-subtle);
-    --widget-badge-outline: var(--colour-outline-highlight-subtle);
+    --widget-badge-text: var(--colour-text-highlight-stronger);
+    --widget-badge-bk: var(--colour-bk-highlight-lightest);
+    --widget-badge-outline: var(--colour-bk-highlight-lightest);
 }
 
 .badge[data-variant="filled"][data-colour="highlight"] {
