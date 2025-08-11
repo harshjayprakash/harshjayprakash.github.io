@@ -57,6 +57,14 @@ npm run dev
 
 ## Changelog
 
+### Version 4006.2.0 - 14 August 2025
+
+* Updated projects page icon.
+* Updated mobile navigation to show labels on active page.
+* Updated home page links to open in a new window.
+* Updated dots container style.
+
+
 ### Version 4006.1.0 - 01 August 2025
 
 * **Updated Navigation Styles**: Updated icons to be green on active links.
