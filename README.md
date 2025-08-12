@@ -102,8 +102,6 @@ npm run dev
 ## Limitations and Known Issues
 
 * The `light-dark` css function (mdn: baseline 2024, newly available).
-* The `/alpha` route is not for public use.
-* Navigation to other pages may not reset the page position to the top of the page.
 * Images may take a while to load.
 
 ## References
