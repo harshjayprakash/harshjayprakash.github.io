@@ -57,8 +57,8 @@ const imageSrc = (name?: string) => `/images/${name}`;
                 </div>
             </TheCard>
         </section>
-        <TheButton appearance="default" linkable="internal" to="/projects">
-            Explore More Projects
+        <TheButton appearance="outline" linkable="internal" to="/projects">
+            Explore More Projects ->
         </TheButton>
     </section>
 </template>
