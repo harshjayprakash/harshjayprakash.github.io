@@ -48,11 +48,13 @@ const onLinkClick = () => {
                 </RouterLink>
             </li>
         </ul>
-        <div v-if="!isDesktop() && isTooltipVisible" class="tooltip"
-            ref="nav-tooltip"
-        >
-            {{ getCurrentRoute() }}
-        </div>
+        <Transition>
+            <div v-if="!isDesktop() && isTooltipVisible" class="tooltip"
+                ref="nav-tooltip"
+            >
+                {{ getCurrentRoute() }}
+            </div>
+        </Transition>
     </nav>
 </template>
 
