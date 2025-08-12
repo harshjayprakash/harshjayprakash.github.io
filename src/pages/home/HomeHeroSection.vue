@@ -34,8 +34,7 @@ const { dots } = useDotParticles(particleData.determineCount(isMobile.value));
                 :key="`${idx}${dot.positionX}${dot.positionY}`" aria-hidden="true"
                 :data-dot-highlight="dot.unique" class="dot"
                 :style="{'left':`${dot.positionX}%`, 'top':`${dot.positionY}%`}"
-            >
-            </div>
+                ></div>
         </div>
     </section>
 </template>
@@ -67,6 +66,8 @@ const { dots } = useDotParticles(particleData.determineCount(isMobile.value));
 .home-hero .dots-container {
     position: relative;
     overflow: clip;
+    background-color: var(--colour-bk-secondary);
+    border-radius: var(--rounded-default);
     flex-grow: 1;
 }
 
@@ -76,12 +77,11 @@ const { dots } = useDotParticles(particleData.determineCount(isMobile.value));
     background-color: var(--colour-bk-medium);
     height: 0.5rem;
     width: 0.5rem;
-    z-index: -1;
     border-radius: 1px;
 }
 
 .home-hero .dot:hover {
-    background: red;
+    background-color: var(--colour-bk-inverted);
 }
 
 .home-hero .dot[data-dot-highlight='true'] {
