@@ -36,14 +36,6 @@ const router = createRouter({
             icon: 'account_circle'
         }
     }, {
-        path: '/alpha',
-        name: 'Alpha',
-        component: AlphaPage,
-        meta: {
-            title: 'Test Development',
-            icon: undefined
-        }
-    }, {
         path: '/:pathMatch(.*)*',
         name: 'Not Found',
         component: NotFoundPage,
