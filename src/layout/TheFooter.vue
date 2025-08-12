@@ -12,6 +12,7 @@ import { metaData } from '@/data/meta';
             <TheBadge appearance="tint" colour="highlight">
                 {{ metaData.buildStatus }}
             </TheBadge>
+            Codename "{{ metaData.codename }}".
             Epoch Version {{ metaData.version.fullString() }},
             {{ metaData.buildDate }}. Under Construction.
         </small>

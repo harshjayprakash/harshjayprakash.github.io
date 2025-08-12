@@ -2,6 +2,7 @@ export const metaData = {
     copyrightYear: '2025',
     buildDate: '12.08.2025',
     buildStatus: 'ALPHA',
+    codename: 'Vitriol',
 
     version: {
         epoch: 4,
