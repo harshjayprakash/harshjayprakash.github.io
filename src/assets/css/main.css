@@ -67,10 +67,20 @@ small {
     html {
         scroll-behavior: smooth;
     }
+
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity 70ms ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        opacity: 0;
+    }
 }
 
 :focus-visible {
-    outline: 3px solid #f59e0b;
+    outline: 3px solid var(--colour-focus-bk);
 }
 
 [data-read-length='true'] {

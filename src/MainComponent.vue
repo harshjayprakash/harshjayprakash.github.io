@@ -15,6 +15,7 @@ useTitle(title);
 </script>
 
 <template>
+    <span aria-hidden="true" id="top"></span>
     <TheLink class="skip-nav" linkable="external" to="#main">
         skip to main content
     </TheLink>
@@ -22,7 +23,7 @@ useTitle(title);
     <main class="content-wrapper" id="main">
         <RouterView />
     </main>
-    <TheLink linkable="external" to="#main" class="back-to-top">
+    <TheLink linkable="external" to="#top" class="back-to-top">
         <small class="inner-text">Back to top</small>
     </TheLink>
     <TheFooter />

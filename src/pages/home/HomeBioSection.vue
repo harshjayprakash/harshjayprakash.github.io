@@ -1,43 +1,25 @@
 <script setup lang="ts">
-import TheLink from '@/components/TheLink.vue';
+import TheButton from '@/components/TheButton.vue';
+import TheDivider from '@/components/TheDivider.vue';
+import { personaData } from '@/data/profile/persona';
 
-const skills: string[] = [
-    'Windows Workflow',
-    'TypeScript, HTML, CSS',
-    'C, Java, Python',
-    'User Interface and Experience'
-];
-
+const bioPts = personaData.about.bullets;
 </script>
 
 <template>
     <section class="home-bio" aria-label="Quick About">
+        <TheDivider orientation="horizontal" />
         <h2>A Bit About Me.</h2>
         <div class="content" role="region">
-            <p class="education-job-text">
-                I graduated with
-                <span class="highlight">First Class Honours in Computer Science</span>
-                from the
-                University of Winchester in 2024, and am
-                <span class="highlight">currently seeking a role</span>
-                to gain industry experience.
-            </p>
-            <p class="muted-text">
-                I have spent countless hours exploring the craft of programming, helping
-                others, and troubleshooting. I've worked in both desktop and web
-                development, but what matters to me is understanding how things work. This
-                curiosity helps build better products that are not only functional but
-                also intentional
-            </p>
-            <ul class="skill-list muted-text">
-                <li v-for="skill in skills" :key="skill">
-                    {{ skill }}
+            <ul class="bio-list">
+                <li v-for="pt in bioPts" :key="pt">
+                    {{ pt }}
                 </li>
             </ul>
         </div>
-        <TheLink class="muted-text" linkable="internal" to="/about">
+        <TheButton linkable="internal" to="/about" appearance="outline">
             Read more ->
-        </TheLink>
+        </TheButton>
     </section>
 </template>
 
@@ -48,19 +30,11 @@ const skills: string[] = [
     gap: 1rem;
 }
 
-.home-bio .muted-text {
-    color: var(--colour-text-faded);
-}
-
-.home-bio .highlight {
-    color: var(--colour-text-highlight);
-}
-
-.home-bio .content {
-    max-width: 70ch;
+.home-bio .bio-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.25rem;
+    padding-inline: 1.25rem;
 }
 
 .home-bio .skill-title {

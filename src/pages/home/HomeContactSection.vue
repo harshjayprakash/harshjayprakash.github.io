@@ -20,7 +20,7 @@ import { socialData } from '@/data/profile/socials';
                     class="link-item"
                 >
                     <div role="group" class="link-wrapper">
-                        <TheLink linkable="external" :to="social.uri">
+                        <TheLink linkable="external" :to="social.uri" new-window>
                             {{ social.social }}
                         </TheLink>
                         <small class="faded-text">
@@ -30,7 +30,7 @@ import { socialData } from '@/data/profile/socials';
                 </li>
                 <li class="link-item">
                     <div role="group" class="link-wrapper">
-                        <TheLink linkable="external" :to="personaData.cv.uri">
+                        <TheLink linkable="external" :to="personaData.cv.uri" new-window>
                             CV
                         </TheLink>
                         <small class="faded-text">

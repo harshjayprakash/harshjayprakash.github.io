@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import TheNav from '@/layout/TheNav.vue';
 import TheDivider from '@/components/TheDivider.vue';
-import TheBadge from '@/components/TheBadge.vue';
 import useMobileDetector from '@/composables/useMobileDetector';
 import { sizeConstraints } from '@/data/ui/size';
-import { metaData } from '@/data/meta';
 
 const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
 </script>
@@ -12,9 +10,6 @@ const { isMobile } = useMobileDetector(sizeConstraints.mobileBreakpoint);
 <template>
     <header class="header" aria-label="Site Header">
         <span class="title">Harsh.</span>
-        <TheBadge appearance="tint" colour="primary" aria-label="Website Build Status">
-            {{ metaData.buildStatus }}
-        </TheBadge>
         <TheDivider v-if="!isMobile" orientation="vertical" :height="1.5"
             :thickness="0.15" />
         <TheNav variant="desktop" v-if="!isMobile" />

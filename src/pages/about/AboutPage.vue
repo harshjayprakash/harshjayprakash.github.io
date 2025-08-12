@@ -19,43 +19,14 @@ import { socialData } from '@/data/profile/socials';
         <TheQuote>
             I enjoy the quiet details &mdash; the ones that make things feel intentional.
         </TheQuote>
-        <TheCard appearance="filled" linkable="none" class="social-link-card-wrapper">
-            <ul aria-label="Socials List and CV PDF Link" class="link-list">
-                <li v-for="social in socialData.all" :key="social.social">
-                    <TheLink linkable="external" :to="social.uri" new-window>
-                        {{ social.social }}
-                    </TheLink>
-                </li>
-            </ul>
-            <TheDivider orientation="vertical" :height="1.5" :thickness="0.2" />
-            <TheLink linkable="external" to="/documents/harsh_cv.pdf" new-window>
-                View CV
-            </TheLink>
-        </TheCard>
-        <section class="content">
-            <p>
-                I'm Harsh, a developer who enjoys the quiet craft of programming &ndash;
-                understanding how things work, refining systems, and building tools that
-                feel purposeful. I care about clarity, accessibility, and the attention
-                to detail that feels cohesive (not just visually), but structurally and
-                interactively.
-            </p>
-            <p>I'm espacially interested in:</p>
-            <ul>
-                <li>
-                    Creating unified systems where structure, interaction, and tone speak
-                    the same language.
-                </li>
-                <li>
-                    Supporting others through clear documentation, thoughtful debugging,
-                    and simpifying complexity.
-                </li>
-                <li>
-                    Building scalable systems that retain their purpose.
-                </li>
-            </ul>
-        </section>
-        <section>
+        <p>
+            Hi, I'm Harsh, a developer drawn the quiet craft of programming. I enjoy
+            designing tools that make sense - without making noise. I'm currently
+            seeking experience where I can learn, contribute, and refine my craft.
+        </p>
+        <TheDivider orientation="horizontal" />
+        <section class="skills-section" aria-label="Skills">
+            <h2>Skills</h2>
             <ul class="skills-list">
                 <li v-for="service in serviceData.all" :key="service.name">
                     <TheCard appearance="outline" linkable="none" class="skill-card">
@@ -81,28 +52,51 @@ import { socialData } from '@/data/profile/socials';
                 </li>
             </ul>
         </section>
+        <span aria-hidden="true"></span>
+        <section class="philosophy-section" aria-label="Philosophy">
+            <h2>Philosophy</h2>
+            <ul>
+                <li>Software should feel quiet - clear, scalable and unobtrusive</li>
+                <li>Every artifact, from code to documentation, is part of a living system</li>
+                <li>Modularity isn't just technical - it's cognitive. It helps people think clearly.</li>
+            </ul>
+        </section>
+        <TheDivider orientation="horizontal" />
+        <section class="contact-section" aria-label="Contact">
+            <TheQuote>
+                Thanks for reading. I build things that make sense &ndash; and make space.
+            </TheQuote>
+            <TheCard appearance="filled" linkable="none" class="social-link-card-wrapper">
+                <ul aria-label="Socials List and CV PDF Link" class="link-list">
+                    <li v-for="social in socialData.all" :key="social.social">
+                        <TheLink linkable="external" class="social-link" :to="social.uri" new-window>
+                            {{ social.social }}
+                        </TheLink>
+                    </li>
+                    <li>
+                        <TheLink linkable="external" to="/documents/harsh_cv.pdf" new-window>
+                            View CV
+                        </TheLink>
+                    </li>
+                </ul>
+            </TheCard>
+        </section>
     </article>
 </template>
 
 <style lang="css">
-.about {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.about .content {
+.about,
+.about .skills-section,
+.about .philosophy-section,
+.about .contact-section {
     max-width: 75ch;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.15rem;
 }
 
-.about .social-link-card-wrapper {
-    max-width: fit-content;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+.about {
+    gap: 1.5rem;
 }
 
 .about .link-list {
@@ -111,6 +105,10 @@ import { socialData } from '@/data/profile/socials';
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.about .link-list .social-link {
+    display: flex;
 }
 
 .about .skills-list {

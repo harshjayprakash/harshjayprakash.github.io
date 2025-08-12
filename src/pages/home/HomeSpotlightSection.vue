@@ -2,6 +2,7 @@
 import TheBadge from '@/components/TheBadge.vue';
 import TheButton from '@/components/TheButton.vue';
 import TheCard from '@/components/TheCard.vue';
+import TheDivider from '@/components/TheDivider.vue';
 import { projectData } from '@/data/projects/projects';
 
 const selectProjects = projectData.filterByAbbreviation(['xbk', 'dwf']);
@@ -11,6 +12,7 @@ const imageSrc = (name?: string) => `/images/${name}`;
 
 <template>
     <section class="home-spotlight-section" aria-label="Project Spotlight">
+        <TheDivider orientation="horizontal" />
         <div>
             <h2>Select Projects</h2>
             <p class="overview">
@@ -55,8 +57,8 @@ const imageSrc = (name?: string) => `/images/${name}`;
                 </div>
             </TheCard>
         </section>
-        <TheButton appearance="default" linkable="internal" to="/projects">
-            Explore More Projects
+        <TheButton appearance="outline" linkable="internal" to="/projects">
+            Explore More Projects ->
         </TheButton>
     </section>
 </template>

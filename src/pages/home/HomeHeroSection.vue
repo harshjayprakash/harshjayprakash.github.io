@@ -23,19 +23,18 @@ const { dots } = useDotParticles(particleData.determineCount(isMobile.value));
         </h1>
         <ul class="social-list">
             <li v-for="social in socialData.all" :key="social.social" class="social-item">
-                <TheLink linkable="external" :to="social.uri">
+                <TheLink linkable="external" :to="social.uri" new-window>
                     {{ social.social }}
                 </TheLink>
             </li>
         </ul>
-        <div class="dots-container">
-            <span class="explore-arrow">&downarrow; scroll to explore</span>
+        <span class="explore-arrow">&downarrow; scroll to explore</span>
+        <div class="dots-container" aria-hidden="true">
             <div v-for="(dot, idx) in dots"
                 :key="`${idx}${dot.positionX}${dot.positionY}`" aria-hidden="true"
                 :data-dot-highlight="dot.unique" class="dot"
                 :style="{'left':`${dot.positionX}%`, 'top':`${dot.positionY}%`}"
-            >
-            </div>
+                ></div>
         </div>
     </section>
 </template>
@@ -49,12 +48,7 @@ const { dots } = useDotParticles(particleData.determineCount(isMobile.value));
 }
 
 .home-hero .explore-arrow {
-    padding-inline-end: 1rem;
-    padding-block: 0.75rem;
-    border-radius: 0 0 var(--rounded-default) 0;
-    background-color: var(--colour-bk-primary);
     color: var(--colour-text-faded);
-    z-index: 5;
 }
 
 .home-hero .highlight {
@@ -72,20 +66,22 @@ const { dots } = useDotParticles(particleData.determineCount(isMobile.value));
 .home-hero .dots-container {
     position: relative;
     overflow: clip;
-    flex-grow: 1;
     background-color: var(--colour-bk-secondary);
     border-radius: var(--rounded-default);
-    z-index: -1;
+    flex-grow: 1;
 }
 
 .home-hero .dot {
     opacity: 0.75;
-    position: relative;
+    position: absolute;
     background-color: var(--colour-bk-medium);
     height: 0.5rem;
     width: 0.5rem;
-    z-index: -1;
     border-radius: 1px;
+}
+
+.home-hero .dot:hover {
+    background-color: var(--colour-bk-inverted);
 }
 
 .home-hero .dot[data-dot-highlight='true'] {

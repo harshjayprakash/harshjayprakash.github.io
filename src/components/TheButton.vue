@@ -9,15 +9,20 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 });
 
 const config = useLinkable(props.linkable, props.to, props.newWindow);
+const isInternalLink = (): boolean => props.linkable === 'internal';
 </script>
 
 <template>
-    <component :is="config.is" :href="config.href" :target="config.target"
-        :rel="config.rel" :to="config.to" class="button" :data-appearance="appearance"
-        tabindex="0" role="button"
+    <RouterLink v-if="isInternalLink()" class="button" :to="config.to ?? '#'"
+        :data-appearance="appearance"
     >
         <slot></slot>
-    </component>
+    </RouterLink>
+    <a v-else class="button" :href="config.href ?? '#'" :target="config.target"
+        :rel="config.rel"
+    >
+        <slot></slot>
+    </a>
 </template>
 
 <style lang="css">

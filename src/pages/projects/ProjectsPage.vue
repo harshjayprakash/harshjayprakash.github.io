@@ -29,6 +29,10 @@ const projectCountBadgeText = computed(() =>
     (totalCount.value == currentCount.value) ? 'Showing All Projects'
     : `Showing ${currentCount.value} of ${totalCount.value} Projects`
 );
+
+const projectBadgeAppearance = computed(() => {
+    return (totalCount.value == currentCount.value) ? 'tint' : 'outline'
+});
 </script>
 
 <template>
@@ -44,7 +48,7 @@ const projectCountBadgeText = computed(() =>
                 repositories.
             </span>
         </p>
-        <TheBadge appearance="outline" colour="primary"
+        <TheBadge :appearance="projectBadgeAppearance" colour="primary"
             :aria-label="projectCountBadgeAriaLabel()"
         >
             {{ projectCountBadgeText }}

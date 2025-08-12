@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { shallowRef } from 'vue';
 import { useRouter, RouterLink, type RouteRecordRaw } from 'vue-router';
 
 import TheIcon from '@/components/TheIcon.vue'
@@ -19,6 +20,18 @@ const ariaCurrent = (path: string) => {
 const isCurrentPage = (path: string) => ariaCurrent(path) == 'page';
 
 const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
+
+const getCurrentRoute = (): string => `${currentRoute.value.name?.toString()}`;
+const isTooltipVisible = shallowRef(false);
+
+const onLinkClick = () => {
+    const TOOLTIP_COOL_DOWN = 1000;
+    isTooltipVisible.value = true;
+
+    setTimeout(() => {
+        isTooltipVisible.value = false;
+    }, TOOLTIP_COOL_DOWN);
+}
 </script>
 
 <template>
@@ -28,12 +41,20 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
                 <RouterLink class="nav-link" :to="route.path"
                     :aria-current="ariaCurrent(route.path)"
                     :aria-label="route.meta?.title"
+                    @click="onLinkClick"
                 >
                     <TheIcon :name="getIcon(route)" :filled="isCurrentPage(route.path)" />
                     <span v-if="isDesktop()">{{ route.name }}</span>
                 </RouterLink>
             </li>
         </ul>
+        <Transition>
+            <div v-if="!isDesktop() && isTooltipVisible" class="tooltip"
+                ref="nav-tooltip"
+            >
+                {{ getCurrentRoute() }}
+            </div>
+        </Transition>
     </nav>
 </template>
 
@@ -107,5 +128,20 @@ const getIcon = (route: RouteRecordRaw) => `${route.meta?.icon}`;
 
 .nav .nav-link[aria-current='page'] .material-icon {
     color: var(--colour-outline-highlight);
+}
+
+.nav .tooltip {
+    background-color: var(--colour-bk-secondary);
+    color: var(--colour-text-highlight-stronger);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--rounded-default);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--colour-outline-highlight);
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    left: 0;
+    max-width: fit-content;
+    place-self: center;
 }
 </style>
