@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import TheLink from '@/components/TheLink.vue';
-
-const skills: string[] = [
-    'Windows Workflow',
-    'TypeScript, HTML, CSS',
-    'C, Java, Python',
-    'User Interface and Experience'
-];
-
+import { personaData } from '@/data/profile/persona';
 </script>
 
 <template>
     <section class="home-bio" aria-label="Quick About">
+        <TheDivider orientation="horizontal" />
         <h2>A Bit About Me.</h2>
         <div class="content" role="region">
             <p class="education-job-text">
