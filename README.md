@@ -57,47 +57,28 @@ npm run dev
 
 ## Changelog
 
-### Version 4006.2.0 - 14 August 2025
+### Version 4006.2.0 - 12 August 2025
 
-* Updated projects page icon.
-* Updated mobile navigation to show labels on active page.
-* Updated home page links to open in a new window.
-* Updated dots container style.
+* Updated Projects Page Icons.
+* Added Optional Headline to Projects Interface.
+* Updated Focus Style.
+* Rearranged Hero Section.
+* Update Material Icons Imports.
+* Updated Badge Highlight Variant Styling.
+* Updated Footer.
+* Moved Website Status to Footer.
+* Updated Mobile Navigation to Show Active Page Label on Navigate.
+* Fixed External Links to Open in a New Tab.
+* Fixed Non Scroll Page Navigation.
+* Fixed When Back to Top did not scroll to the top.
+* Updated Project Data.
+* Updated Node Dependencies.
+* Added Hover Effects on Boxes in Hero Section.
+* Updated Home About Section.
+* Added Dividers.
+* Added Codename "Vitriol" to Project.
 
-
-### Version 4006.1.0 - 01 August 2025
-
-* **Updated Navigation Styles**: Updated icons to be green on active links.
-* **Updated Link Component**: Updated hover to use a darker green.
-* **Updated Project Cards**: 
-  * Updated to show a title underline.
-  * Updated project page cards style.
-* **Content**: Updated project screenshots.
-* **Alternative Text**: Removed on redundant alternative text.
-* **NPM Package Updates**.
-
-### Version 4006.0.0 - 20 July 2025
-
-* **Improved Navigation**:
-  * Added material icons.
-  * Updated underline style
-  * Updated mobile style to app bar style.
-* **Dynamic Page Titles**: Updated page title for each page.
-* **Rounded Corners**: Following the rounded corners trend.
-* **Focus Styles**: Updated focus ring style.
-* **Improved Accessibility**
-  * Implemented arrow key tab focus navigation.
-* **Improved Scalability**:
-  * Extracted component props to interfaces.
-  * Set defaults to optional props.
-* **New Content**:
-  * Added projects page.
-  * Added about page.
-* **Updated Home Page**:
-  * Updated to show selected projects.
-  * Updated hero section design.
-
-![View Previous Changelogs](./VERSION.md)
+> For previous version, please visit the changelog page within the wiki.
 
 ## Limitations and Known Issues
 
