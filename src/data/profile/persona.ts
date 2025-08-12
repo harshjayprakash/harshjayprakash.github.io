@@ -8,7 +8,7 @@ export const personaData = {
     },
     about: {
         bullets: [
-            'First Class Honours in Computer Science, University of Winchester (2024)',
+            'First Class Honours in Computer Science, University of Winchester (2024).',
             'I enjoy designing thoughful software - from desktop tools to web interfaces.',
             'Currently seeking hands-on experience in development and UX-focused projects',
             'Driven to make a meaningful contribution to the tech industry through curiosity, collaboration, and continuous learning.'
