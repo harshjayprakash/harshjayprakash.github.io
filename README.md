@@ -12,3 +12,4 @@ The live version of the site, <https://harshjayprakash.github.io>, corresponds t
 ## References
 
 - https://tailwindcss.com/docs/colors
+- https://www.joshwcomeau.com/css/custom-css-reset/
