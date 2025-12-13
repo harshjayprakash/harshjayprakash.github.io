@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "./fonts.css";
 
 :root {
     color-scheme: light dark;
@@ -19,7 +20,7 @@
 }
 
 html {
-    font-family: Arial, sans-serif;
+    font-family: InterVariable, Arial, sans-serif;
     background-color: var(--colour-background-base);
     color: var(--colour-foreground-base);
 }
