@@ -11,5 +11,6 @@ The live version of the site, <https://harshjayprakash.github.io>, corresponds t
 
 ## References
 
-- https://tailwindcss.com/docs/colors
-- https://www.joshwcomeau.com/css/custom-css-reset/
+- Colours: https://tailwindcss.com/docs/colors
+- CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/
+- Inter Font Family: https://rsms.me/inter/
