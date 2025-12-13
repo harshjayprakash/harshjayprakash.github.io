@@ -20,4 +20,6 @@
 
 html {
     font-family: Arial, sans-serif;
+    background-color: var(--colour-background-base);
+    color: var(--colour-foreground-base);
 }
