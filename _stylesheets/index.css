@@ -51,4 +51,21 @@ div.footer-wrapper {
 div.flex-spacer {
     flex-grow: 1;
 }
+
+/** Skip Link */
+a.skip-link {
+    position: absolute;
+    color: inherit;
+    background-color: var(--colour-f300);
+    padding: 8px 16px;
+    /* box-shadow: 0 -4px 0 0 var(--colour-f300), 0 4px 0 0 var(--colour-n950); */
+    top: -100px;
+    outline: 0;
+}
+
+a.skip-link:focus {
+    top: 0;
+    left: 0;
+}
+
 }
