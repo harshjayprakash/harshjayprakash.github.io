@@ -68,4 +68,30 @@ a.skip-link:focus {
     left: 0;
 }
 
+/** Header and Navigation */
+.header {
+    color: inherit;
+}
+
+.header .header-wrapper {
+    height: 32px;
+    display: flex;
+    gap: 16px;
+    place-items: center;
+}
+
+.nav .nav-list {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.nav .nav-link {
+    color: inherit;
+}
+
+.nav .nav-link:hover {
+    text-decoration-thickness: 3px;
+    text-decoration-skip-ink: none;
 }
