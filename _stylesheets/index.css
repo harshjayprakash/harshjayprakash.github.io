@@ -24,3 +24,12 @@ html {
     background-color: var(--colour-background-base);
     color: var(--colour-foreground-base);
 }
+
+/** Content Wrappers */
+div.header-wrapper,
+div.content-wrapper,
+div.footer-wrapper {
+    max-width: 48rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
