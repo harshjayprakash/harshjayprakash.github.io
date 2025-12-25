@@ -47,4 +47,8 @@ div.footer-wrapper {
     margin-inline: auto;
     padding-inline: 16px;
 }
+
+div.flex-spacer {
+    flex-grow: 1;
+}
 }
