@@ -35,8 +35,8 @@
 
 html {
     font-family: InterVariable, Arial, sans-serif;
-    background-color: var(--colour-background-base);
-    color: var(--colour-foreground-base);
+    background-color: var(--pw-colour-background-base);
+    color: var(--pw-colour-foreground-base);
 }
 
 /** Content Wrappers */
