@@ -31,6 +31,9 @@
 
     --pw-colour-background-base: light-dark(var(--colour-n050), var(--colour-n950));
     --pw-colour-foreground-base: light-dark(var(--colour-n950), var(--colour-n50));
+    --pw-colour-foreground-faded: light-dark(var(--colour-n600), var(--colour-n300));
+    --pw-colour-foreground-focus: var(--colour-n950);
+    --pw-colour-background-focus: var(--colour-f300);
 }
 
 html {
@@ -39,27 +42,81 @@ html {
     color: var(--pw-colour-foreground-base);
 }
 
-/** Content Wrappers */
-div.header-wrapper,
-div.content-wrapper,
-div.footer-wrapper {
-    max-width: 768px;
-    margin-inline: auto;
+h1, h2, h3, h4, h5, h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* ----- Content Wrappers ----- */
+.header-wrapper,
+.content-wrapper,
+.footer-wrapper {
+    max-width: 700px;
     padding-inline: 16px;
+    margin-inline: auto;
 }
 
-div.flex-spacer {
-    flex-grow: 1;
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-block: 16px;
 }
 
-/** Header and Navigation */
-.header {
+
+/* ----- Landmarks ------ */
+.header-wrapper {
+    display: flex;
+    place-items: center;
+    gap: 16px;
+    height: 32px;
+}
+
+.footer {
+    color: var(--pw-colour-foreground-faded);
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-block: 8px;
+}
+
+.footer-socials {
+    font-size: small;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 4px;
+}
+
+
+/* ----- Logo Styles ----- */
+.logo-sq {
+    fill: var(--pw-colour-foreground-base);
+}
+
+
+/* ----- Components ----- */
+.link {
     color: inherit;
 }
 
-.header .header-wrapper {
-    height: 32px;
-    display: flex;
-    gap: 16px;
-    place-items: center;
+.link:hover {
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 2px;
 }
+
+.link:focus {
+    text-decoration: none;
+    background-color: var(--pw-colour-background-focus);
+    color: var(--pw-colour-foreground-focus);
+    outline: transparent;
+    box-shadow: 
+        0 4px 0 0 var(--pw-colour-foreground-focus), 
+        0 -4px 0 0 var(--pw-colour-background-focus);
+}
+
+
+/* ----- Content Specific ----- */
