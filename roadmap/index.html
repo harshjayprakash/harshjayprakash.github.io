@@ -7,23 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
     <link rel="icon" sizes="any" href="./../_assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./../_stylesheets/base.css">
+    <link rel="stylesheet" href="./../_css/main.css">
 </head>
 
 <body>
-    <main>
-        <details>
-            <summary>Version 1.1</summary>
-            <p></p>
-        </details>
-        <details>
-            <summary>Version 1.0</summary>
-            <p>A reset, containing the base index page with a footer.</p>
-        </details>
+    <header class="header">
+        <div class="header-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="logo" aria-hidden="true">
+                <rect class="logo-sq" x="0" y="0" height="16" width="16"></rect>
+            </svg>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="content-wrapper">
+            <a class="link" href="./../">&lt; Back</a>
+            <section class="roadmap" aria-labelledby="harsh-jayprakash">
+                <hgroup>
+                    <h1>Roadmap</h1>
+                    <p>A changelog of the website</p>
+                </hgroup>
+                <div class="changelogs">
+                    <details class="accordion">
+                        <summary class="accordion__title">v1.0</summary>
+                        <div class="accordion__content">
+                            <p>
+                                A new version of the site with a basic introduction. Patches
+                                included the fixing url paths and ensuring functionality with GitHub Pages.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <small>&copy; 2025 Harsh Jayprakash. Version 1.0. Under Construction.</small>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <ul class="footer-socials">
+                <li><a class="link" target="_blank" rel="noopener noreferrer" href="mailto:harshjayprakash@outlook.com">Email</a> &middot;</li>
+                <li><a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash">Github</a> &middot;</li>
+                <li><a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/harshjayprakash7/">LinkedIn</a></li>
+            </ul>
+            <small>v1.0.5 &middot; &copy; 2026 Harsh Jayprakash</small>
+        </div>
     </footer>
 </body>
 
