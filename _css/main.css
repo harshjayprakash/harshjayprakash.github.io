@@ -37,7 +37,7 @@
 }
 
 html {
-    font-family: InterVariable, Arial, sans-serif;
+    font-family: "Inter Variable", Arial, sans-serif;
     background-color: var(--pw-colour-background-base);
     color: var(--pw-colour-foreground-base);
 }
