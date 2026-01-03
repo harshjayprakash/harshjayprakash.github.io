@@ -34,6 +34,7 @@
     --pw-colour-foreground-faded: light-dark(var(--colour-n600), var(--colour-n300));
     --pw-colour-foreground-focus: var(--colour-n950);
     --pw-colour-background-focus: var(--colour-f300);
+    --pw-colour-border-base: var(--colour-n400);
 }
 
 html {
@@ -101,11 +102,12 @@ h1, h2, h3, h4, h5, h6 {
 /* ----- Components ----- */
 .link {
     color: inherit;
+    max-width: max-content
 }
 
 .link:hover {
     text-decoration-skip-ink: none;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 3px;
 }
 
 .link:focus {
@@ -118,5 +120,42 @@ h1, h2, h3, h4, h5, h6 {
         0 -4px 0 0 var(--pw-colour-background-focus);
 }
 
+.accordion__title {
+    max-width: fit-content;
+    text-decoration: 1px solid underline;
+    cursor: pointer;
+}
+
+.accordion__title:hover {
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 3px;
+}
+
+.accordion__title:focus {
+    text-decoration: none;
+    background-color: var(--pw-colour-background-focus);
+    color: var(--pw-colour-foreground-focus);
+    outline: transparent;
+    box-shadow: 
+        0 4px 0 0 var(--pw-colour-foreground-focus), 
+        0 -4px 0 0 var(--pw-colour-background-focus);
+}
+
+.accordion__content {
+    border-inline-start: 4px solid var(--pw-colour-border-base);
+    padding-inline: 16px;
+    padding-block: 8px;
+}
 
 /* ----- Content Specific ----- */
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.roadmap .changelogs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
