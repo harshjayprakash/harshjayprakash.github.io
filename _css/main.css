@@ -29,12 +29,28 @@
     --colour-a950: oklch(0.277 0.046 192.524);
     --colour-f300: oklch(87.9% 0.169 91.605);
 
-    --pw-colour-background-base: light-dark(var(--colour-n050), var(--colour-n950));
+    --colour-a50: oklch(0.984 0.019 200.873);
+    --colour-a100: oklch(0.956 0.045 203.388);
+    --colour-a200: oklch(0.917 0.08 205.041);
+    --colour-a300: oklch(0.865 0.127 207.078);
+    --colour-a400: oklch(0.789 0.154 211.53);
+    --colour-a500: oklch(0.715 0.143 215.221);
+    --colour-a600: oklch(0.609 0.126 221.723);
+    --colour-a700: oklch(0.52 0.105 223.128);
+    --colour-a800: oklch(0.45 0.085 224.283);
+    --colour-a900: oklch(0.398 0.07 227.392);
+    --colour-a950: oklch(0.302 0.056 229.695);
+
+    --pw-colour-background-base: light-dark(var(--colour-n100), var(--colour-n900));
     --pw-colour-foreground-base: light-dark(var(--colour-n950), var(--colour-n50));
-    --pw-colour-foreground-faded: light-dark(var(--colour-n600), var(--colour-n300));
+    --pw-colour-foreground-faded: light-dark(var(--colour-n600), var(--colour-n400));
+    --pw-colour-background-inverted: light-dark(var(--colour-n950), var(--colour-n50));
+    --pw-colour-foreground-inverted: light-dark(var(--colour-n50), var(--colour-n950));
     --pw-colour-foreground-focus: var(--colour-n950);
     --pw-colour-background-focus: var(--colour-f300);
     --pw-colour-border-base: var(--colour-n400);
+    --pw-colour-border-accent: light-dark(var(--colour-a700), var(--colour-a400));
+    --pw-colour-border-focus: var(--pw-colour-foreground-base);
 }
 
 html {
@@ -44,10 +60,24 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 19px;
+}
 
 /* ----- Content Wrappers ----- */
 .header-wrapper,
@@ -66,96 +96,100 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* ----- Landmarks ------ */
-.header-wrapper {
-    display: flex;
-    place-items: center;
-    gap: 16px;
-    height: 32px;
+:focus {
+    outline: 1px dashed var(--pw-colour-border-focus);
 }
 
-.footer {
+
+/* Utility */
+.flex-spacer {
+    flex-grow: 1;
+}
+
+.subtle-text {
     color: var(--pw-colour-foreground-faded);
 }
 
-.footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-block: 8px;
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    color: inherit;
+    padding: 4px 8px;
+    background-color: var(--pw-colour-background-base);
+    z-index: 10;
 }
 
-.footer-socials {
-    font-size: small;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 4px;
+.skip-link:focus {
+    top: 0;
 }
 
-
-/* ----- Logo Styles ----- */
-.logo-sq {
+/* Motif */
+.motif .motif-sq {
     fill: var(--pw-colour-foreground-base);
 }
 
-
-/* ----- Components ----- */
-.link {
-    color: inherit;
-    max-width: max-content
-}
-
-.link:hover {
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: 3px;
-}
-
-.link:focus {
-    text-decoration: none;
-    background-color: var(--pw-colour-background-focus);
-    color: var(--pw-colour-foreground-focus);
-    outline: transparent;
-    box-shadow: 
-        0 4px 0 0 var(--pw-colour-foreground-focus), 
-        0 -4px 0 0 var(--pw-colour-background-focus);
-}
-
-.accordion__title {
-    max-width: fit-content;
-    text-decoration: 1px solid underline;
-    cursor: pointer;
-}
-
-.accordion__title:hover {
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: 3px;
-}
-
-.accordion__title:focus {
-    text-decoration: none;
-    background-color: var(--pw-colour-background-focus);
-    color: var(--pw-colour-foreground-focus);
-    outline: transparent;
-    box-shadow: 
-        0 4px 0 0 var(--pw-colour-foreground-focus), 
-        0 -4px 0 0 var(--pw-colour-background-focus);
-}
-
-.accordion__content {
-    border-inline-start: 4px solid var(--pw-colour-border-base);
-    padding-inline: 16px;
-    padding-block: 8px;
-}
-
-/* ----- Content Specific ----- */
-.roadmap {
+/* Header and Navigation Bar */
+.header .header-wrapper {
     display: flex;
-    flex-direction: column;
+    place-items: center;
+    gap: 8px;
+    height: 40px;
+}
+
+.nav .nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
     gap: 16px;
 }
 
-.roadmap .changelogs {
+.nav .nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav .nav-link::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+}
+
+.nav .nav-link[aria-current="page"]::after {
+    background-color: var(--pw-colour-border-accent);
+}
+
+
+/* Footer */
+.footer .footer-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    font-size: small;
+    color: var(--pw-colour-foreground-faded);
 }
+
+.footer .footer-socials {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    color: inherit;
+    gap: 4px;
+}
+
+/* Link */
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: 1px solid underline;
+}
+
