@@ -64,19 +64,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 28px;
-}
-
-h2 {
     font-size: 23px;
 }
 
+h2 {
+    font-size: 20px;
+}
+
 h3 {
-    font-size: 21px;
+    font-size: 19px;
 }
 
 h4 {
-    font-size: 19px;
+    font-size: 18px;
 }
 
 /* ----- Content Wrappers ----- */
