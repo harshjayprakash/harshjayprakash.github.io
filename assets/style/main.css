@@ -1,0 +1,168 @@
+:root {
+    color-scheme: light dark;
+
+    --_colour-n50: oklch(0.985 0 0);
+    --_colour-n100: oklch(0.967 0.001 286.375);
+    --_colour-n200: oklch(0.92 0.004 286.32);
+    --_colour-n300: oklch(0.871 0.006 286.286);
+    --_colour-n400: oklch(0.705 0.015 286.067);
+    --_colour-n500: oklch(0.552 0.016 285.938);
+    --_colour-n600: oklch(0.442 0.017 285.786);
+    --_colour-n700: oklch(0.37 0.013 285.805);
+    --_colour-n800: oklch(0.274 0.006 286.033);
+    --_colour-n900: oklch(0.21 0.006 285.885);
+    --_colour-n950: oklch(0.141 0.005 285.823);
+    --_colour-a50: oklch(0.984 0.019 200.873);
+    --_colour-a100: oklch(0.956 0.045 203.388);
+    --_colour-a200: oklch(0.917 0.08 205.041);
+    --_colour-a300: oklch(0.865 0.127 207.078);
+    --_colour-a400: oklch(0.789 0.154 211.53);
+    --_colour-a500: oklch(0.715 0.143 215.221);
+    --_colour-a600: oklch(0.609 0.126 221.723);
+    --_colour-a700: oklch(0.52 0.105 223.128);
+    --_colour-a800: oklch(0.45 0.085 224.283);
+    --_colour-a900: oklch(0.398 0.07 227.392);
+    --_colour-a950: oklch(0.302 0.056 229.695);
+
+    --colour-background-primary: light-dark(var(--_colour-n100), var(--_colour-n900));
+    --colour-foreground-primary: light-dark(var(--_colour-n900), var(--_colour-n100));
+    --colour-background-inverted: light-dark(var(--_colour-n900), var(--_colour-n100));
+    --colour-foreground-inverted: light-dark(var(--_colour-n100), var(--_colour-n900));
+    --colour-border-primary: light-dark(var(--_colour-n900), var(--_colour-n100));
+    --colour-background-accent: light-dark(var(--_colour-a800), var(--_colour-a400));
+    --colour-foreground-faded: light-dark(var(--_colour-n600), var(--_colour-n400));
+}
+
+::selection {
+    background-color: var(--colour-background-inverted);
+    color: var(--colour-foreground-inverted);
+}
+
+:focus {
+    background-color: var(--colour-background-primary);
+    outline: 2px dashed var(--colour-border-primary);
+}
+
+/* Base Styles ------------------------------------------------------------------------ */
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background-color: var(--colour-background-primary);
+    color: var(--colour-foreground-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 23px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+/* Utility ---------------------------------------------------------------------------- */
+
+.flex-spacer {
+    flex-grow: 1;
+}
+
+.subtle-text {
+    color: var(--colour-foreground-faded);
+}
+
+/* Landmark Wrappers ------------------------------------------------------------------ */
+
+.base-wrapper {
+    max-width: 700px;
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+/* Header and Navigation Landmark ----------------------------------------------------- */
+.header {
+    position: sticky;
+    top: 0;   
+}
+
+.header .header-wrapper {
+    display: flex;
+    place-items: center;
+    gap: 8px;
+    height: 40px;
+}
+
+.nav .nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.nav .nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Landmark ---------------------------------------------------------------------- */
+.content .content-wrapper {
+    padding-block: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Footer Landmark -------------------------------------------------------------------- */
+
+.footer .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    color: var(--colour-foreground-faded);
+}
+
+.footer .social-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+/* Motif Square ----------------------------------------------------------------------- */
+
+.motif .motif-sq {
+    fill: var(--colour-background-inverted);
+}
+
+/* Skip Link -------------------------------------------------------------------------- */
+
+.skip-link {
+    position: absolute;
+    padding: 4px 8px;
+    top: -100px;
+    background-color: var(--colour-background-accent);
+    color: var(--colour-foreground-inverted);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Link ------------------------------------------------------------------------------- */
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: 1px solid underline;
+}

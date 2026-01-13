@@ -1,41 +1,114 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <title>Harsh Jayprakash</title>
+    <title>Harsh Jayprakash - Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
-    <link rel="icon" sizes="any" href="./_assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./_css/main.css">
+    <meta name="description" content="A software engineer focused on crafting simple robust applications and systems.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" content="Harsh Jayprakash - Software Engineer">
+    <meta name="og:description" content="A software engineer focused on crafting simple robust applications and systems.">
+    <meta name="og:type" content="website">
+    <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://harshjayprakash.github.io/">
+    <link rel="icon" sizes="any" href="./assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/fonts/inter.css">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/pages/home.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#content">skip to main content</a>
+
     <header class="header">
-        <div class="header-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="logo" aria-hidden="true">
-                <rect class="logo-sq" x="0" y="0" height="16" width="16"></rect>
+        <div class="base-wrapper header-wrapper">
+            <svg class="motif" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+                <rect class="motif-sq" x="0" y="0" height="16" width="16"></rect>
             </svg>
+            <span class="name" aria-hidden="true">Harsh</span>
+            <div class="flex-spacer"></div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="/index.html" aria-current="page">home</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="content">
-        <div class="content-wrapper">
-            <section class="hero" aria-labelledby="harsh-jayprakash">
+    <main class="content" id="content">
+        <div class="base-wrapper content-wrapper">
+            <header class="hero" aria-label="introduction">
                 <h1 id="harsh-jayprakash">Harsh Jayprakash</h1>
-                <p>Software Engineer &middot; I explore how small ideas grow into clear, well-designed system</p>
+                <p class="role">Software Engineer</p>
+                <p class="tagline">I like shaping systems, from the code to the experience.</p>
+            </header>
+            <section class="projects" aria-labelledby="some-projects">
+                <header class="projects-header">
+                    <h2 id="some-projects">Some Projects</h2>
+                    <p>A list of current projects that I'm working on, linking to their GitHub repositories.</p>
+                </header>
+                <ul class="projects-list">
+                    <li class="project-item">
+                        <a class="project-link link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/algorithmic-art">
+                            <article>
+                                <h3 class="project-name" id="algorithmic-art">
+                                    Algorithmic Art
+                                </h3>
+                                <p class="project-description subtle-text">
+                                    A simple application allowing the experimentation of generating art via programming locally on the computer.
+                                </p>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a class="project-link link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/experimental-blok">
+                            <article>
+                                <h3 class="project-name" id="experimental-blok">
+                                    Experimental Blok
+                                </h3>
+                                <p class="project-description subtle-text">
+                                    A win32 simulation of a square navigating a user-defined maze.
+                                </p>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a class="project-link link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/harshjayprakash.github.io">
+                            <article>
+                                <h3 class="project-name" id="personal-site">
+                                    Personal Site (this)
+                                </h3>
+                                <p class="project-description subtle-text">
+                                    A small piece of internet to showcase myself.
+                                </p>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
             </section>
         </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-wrapper">
-            <ul class="footer-socials">
-                <li><a class="link" target="_blank" rel="noopener noreferrer" href="mailto:harshjayprakash@outlook.com">Email</a> &middot;</li>
-                <li><a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash">Github</a> &middot;</li>
-                <li><a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/harshjayprakash7/">LinkedIn</a></li>
+        <div class="base-wrapper footer-wrapper">
+            <ul class="social-list">
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="mailto:harshjayprakash@outlook.com">Email</a> &middot;
+                </li>
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash">GitHub</a> &middot;
+                </li>
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/harshjayprakash7">LinkedIn</a> &middot;
+                </li>
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="/assets/docs/harsh_cv.pdf">CV</a>
+                </li>
             </ul>
-            <small>v1.0.4 &middot; &copy; 2026 Harsh Jayprakash</small>
+            <p>v1.1 &middot; &copy; 2026 Harsh Jayprakash</p>
         </div>
     </footer>
 </body>
