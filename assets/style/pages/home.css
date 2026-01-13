@@ -9,3 +9,7 @@
 .projects .projects-header {
     padding-block-end: 16px;
 }
+
+.projects .project-item:hover {
+    background-color: var(--colour-background-hover);
+}

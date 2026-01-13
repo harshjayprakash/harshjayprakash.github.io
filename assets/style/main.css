@@ -31,6 +31,7 @@
     --colour-border-primary: light-dark(var(--_colour-n900), var(--_colour-n100));
     --colour-background-accent: light-dark(var(--_colour-a800), var(--_colour-a400));
     --colour-foreground-faded: light-dark(var(--_colour-n600), var(--_colour-n400));
+    --colour-background-hover: light-dark(var(--_colour-n200), var(--_colour-n800));
 }
 
 ::selection {
