@@ -17,61 +17,73 @@
     <link rel="stylesheet" href="/assets/fonts/inter.css">
     <link rel="stylesheet" href="/assets/style/reset.css">
     <link rel="stylesheet" href="/assets/style/main.css">
+    <link rel="stylesheet" href="/assets/style/pages/home.css">
 </head>
 
 <body>
     <a class="skip-link" href="#content">skip to main content</a>
 
     <header class="header">
-        <div class="header-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="motif" aria-hidden="true">
+        <div class="base-wrapper header-wrapper">
+            <svg class="motif" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
                 <rect class="motif-sq" x="0" y="0" height="16" width="16"></rect>
             </svg>
-            <span aria-hidden="true">Harsh.</span>
-            <div class="flex-spacer" aria-hidden="true"></div>
+            <span class="name" aria-hidden="true">Harsh</span>
+            <div class="flex-spacer"></div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.html">home</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html" aria-current="page">home</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="content" id="content">
-        <div class="content-wrapper">
-            <section class="hero" aria-label="Introduction">
-                <h1 class="heading" id="harshjayprakash">Harsh Jayprakash</h1>
-                <p class="subtitle">Software Engineer</p>
-                <p>I like shaping systems, from the code to the experience.</p>
-            </section>
-            <section class="projects" aria-labelledby="current-projects">
-                <hgroup>
-                    <h2 id="current-projects">Some Projects</h2>
-                </hgroup>
-                <ul class="project-list">
-                    <li class="project-card">       
-                        <a class="project-card-link-wrapper" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/algorithmic-art">
-                            <span>Algorithmic Art</span>
-                            <span class="subtle-text">A simple application allowing the experimentation of generating art via programming locally on the computer.</span>
+        <div class="base-wrapper content-wrapper">
+            <header class="hero" aria-label="introduction">
+                <h1 id="harsh-jayprakash">Harsh Jayprakash</h1>
+                <p class="role">Software Engineer</p>
+                <p class="tagline">I like shaping systems, from the code to the experience.</p>
+            </header>
+            <section class="projects" aria-labelledby="some-projects">
+                <header class="projects-header">
+                    <h2 id="some-projects">Some Projects</h2>
+                </header>
+                <ul class="projects-list">
+                    <li class="project-item">
+                        <a class="project-link link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/algorithmic-art">
+                            <article>
+                                <h3 class="project-name" id="algorithmic-art">
+                                    algorithmic art
+                                </h3>
+                                <p class="project-description subtle-text">
+                                    A simple application allowing the experimentation of generating art via programming locally on the computer.
+                                </p>
+                            </article>
                         </a>
                     </li>
-                    <li class="project-card">
-                        <a class="project-card-link-wrapper" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/experimental-blok">
-                            <span>Experimental Blok</span>
-                            <span class="subtle-text">A win32 simulation of a square navigating a user-defined maze.</span>
+                    <li class="project-item">
+                        <a class="project-link link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/experimental-blok">
+                            <article>
+                                <h3 class="project-name" id="experimental-blok">
+                                    experimental blok
+                                </h3>
+                                <p class="project-description subtle-text">
+                                    A win32 simulation of a square navigating a user-defined maze.
+                                </p>
+                            </article>
                         </a>
                     </li>
-                    <li class="project-card">
-                        <a class="project-card-link-wrapper" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/harshjayprakash.github.io">
-                            <span>Personal Site (this)</span>
-                            <span class="subtle-text">A minimal piece of the internet.</span>
-                        </a>
-                    </li>
-                    <li class="project-card">
-                        <a class="project-card-link-wrapper" href="#">
-                            <span class="subtle-text">view more (coming soon to a separate page)...</span>
+                    <li class="project-item">
+                        <a class="project-link link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/harshjayprakash.github.io">
+                            <article>
+                                <h3 class="project-name" id="personal-site">
+                                    personal site (this)
+                                </h3>
+                                <p class="project-description subtle-text">
+                                    A small piece of internet to showcase myself.
+                                </p>
+                            </article>
                         </a>
                     </li>
                 </ul>
@@ -80,14 +92,22 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-wrapper">
-            <ul class="footer-socials">
-                <li><a class="link" target="_blank" rel="noopener noreferrer" href="mailto:harshjayprakash@outlook.com">Email</a> &middot;</li>
-                <li><a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash">Github</a> &middot;</li>
-                <li><a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/harshjayprakash7/">LinkedIn</a> &middot;</li>
-                <li><a class="link" target="_blank" rel="noopener noreferrer" href="./_assets/harsh_cv.pdf">CV</a></li>
+        <div class="base-wrapper footer-wrapper">
+            <ul class="social-list">
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="mailto:harshjayprakash@outlook.com">Email</a> &middot;
+                </li>
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash">GitHub</a> &middot;
+                </li>
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/harshjayprakash7">LinkedIn</a> &middot;
+                </li>
+                <li class="social-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="/assets/docs/harsh_cv.pdf">CV</a>
+                </li>
             </ul>
-            <p>v1.0.5 &middot; &copy; 2026 Harsh Jayprakash</p>
+            <p>v1.1 &middot; &copy; 2026 Harsh Jayprakash</p>
         </div>
     </footer>
 </body>
