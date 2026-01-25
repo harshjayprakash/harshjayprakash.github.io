@@ -110,7 +110,7 @@ h6 { font-size: 18px; }
 
 /* Main Landmark ---------------------------------------------------------------------- */
 .content .content-wrapper {
-    padding-block: 16px;
+    padding-block: 32px;
     display: flex;
     flex-direction: column;
     gap: 32px;
