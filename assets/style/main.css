@@ -29,19 +29,15 @@
     --colour-background-inverted: light-dark(var(--_colour-n900), var(--_colour-n100));
     --colour-foreground-inverted: light-dark(var(--_colour-n100), var(--_colour-n900));
     --colour-border-primary: light-dark(var(--_colour-n900), var(--_colour-n100));
+    --colour-border-faded-decor: light-dark(var(--_colour-n200), var(--_colour-n800));
     --colour-background-accent: light-dark(var(--_colour-a800), var(--_colour-a400));
     --colour-foreground-faded: light-dark(var(--_colour-n600), var(--_colour-n400));
     --colour-background-hover: light-dark(var(--_colour-n200), var(--_colour-n800));
-}
+    --colour-foreground-accent: light-dark(var(--_colour-a700), var(--_colour-a500));
+    --colour-foreground-accent-less: light-dark(var(--_colour-a900), var(--_colour-a300));
 
-::selection {
-    background-color: var(--colour-background-inverted);
-    color: var(--colour-foreground-inverted);
-}
-
-:focus {
-    background-color: var(--colour-background-primary);
-    outline: 2px dashed var(--colour-border-primary);
+    --colour-foreground-selection: light-dark(var(--_colour-a100), var(--_colour-a900));
+    --colour-background-selection: light-dark(var(--_colour-a900), var(--_colour-a100));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
@@ -85,7 +81,7 @@ h6 { font-size: 18px; }
 /* Header and Navigation Landmark ----------------------------------------------------- */
 .header {
     position: sticky;
-    top: 0;   
+    top: 0;
 }
 
 .header .header-wrapper {
