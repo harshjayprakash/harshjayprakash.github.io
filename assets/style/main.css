@@ -50,23 +50,19 @@ body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     background-color: var(--colour-background-primary);
     color: var(--colour-foreground-primary);
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 300;
 }
 
-h1 {
-    font-size: 23px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-h3 {
-    font-size: 19px;
-}
+h1 { font-size: 31px; }
+h2 { font-size: 25px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 19px; }
+h6 { font-size: 18px; }
 
 /* Utility ---------------------------------------------------------------------------- */
 
@@ -125,7 +121,7 @@ h3 {
 .footer .footer-wrapper {
     display: flex;
     flex-direction: column;
-    font-size: small;
+    font-size: 14px;
     color: var(--colour-foreground-faded);
 }
 
