@@ -167,3 +167,11 @@ h3 {
 .link:hover {
     text-decoration: 1px solid underline;
 }
+
+.link--coloured {
+    color: var(--colour-foreground-accent);
+}
+
+.link--coloured:hover {
+    color: var(--colour-foreground-accent-less);
+}
