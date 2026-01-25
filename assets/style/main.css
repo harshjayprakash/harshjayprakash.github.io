@@ -149,8 +149,9 @@ h3 {
     position: absolute;
     padding: 4px 8px;
     top: -100px;
-    background-color: var(--colour-background-accent);
-    color: var(--colour-foreground-inverted);
+    color: inherit;
+    background-color: inherit;
+    z-index: 10;
 }
 
 .skip-link:focus {
