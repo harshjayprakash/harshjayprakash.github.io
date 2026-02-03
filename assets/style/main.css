@@ -43,7 +43,7 @@
 /* Base Styles ------------------------------------------------------------------------ */
 
 body {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-family: "Inter Variable", "Inter", Arial, Helvetica, sans-serif;
     background-color: var(--colour-background-primary);
     color: var(--colour-foreground-primary);
     font-size: 16px;
