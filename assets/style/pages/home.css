@@ -9,3 +9,7 @@
 .projects .projects-header {
     padding-block-end: 16px;
 }
+
+.projects .project-title {
+    font-weight: 500;
+}

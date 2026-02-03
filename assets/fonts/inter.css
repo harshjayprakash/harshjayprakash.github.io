@@ -6,3 +6,12 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Inter Variable";
+    src: local("Inter Variable"), local("Inter Variable Text"),
+        url("./InterVariable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}

@@ -29,43 +29,36 @@
     --colour-background-inverted: light-dark(var(--_colour-n900), var(--_colour-n100));
     --colour-foreground-inverted: light-dark(var(--_colour-n100), var(--_colour-n900));
     --colour-border-primary: light-dark(var(--_colour-n900), var(--_colour-n100));
+    --colour-border-faded-decor: light-dark(var(--_colour-n200), var(--_colour-n800));
     --colour-background-accent: light-dark(var(--_colour-a800), var(--_colour-a400));
     --colour-foreground-faded: light-dark(var(--_colour-n600), var(--_colour-n400));
-}
+    --colour-background-hover: light-dark(var(--_colour-n200), var(--_colour-n800));
+    --colour-foreground-accent: light-dark(var(--_colour-a700), var(--_colour-a500));
+    --colour-foreground-accent-less: light-dark(var(--_colour-a900), var(--_colour-a300));
 
-::selection {
-    background-color: var(--colour-background-inverted);
-    color: var(--colour-foreground-inverted);
-}
-
-:focus {
-    background-color: var(--colour-background-primary);
-    outline: 2px dashed var(--colour-border-primary);
+    --colour-foreground-selection: light-dark(var(--_colour-a100), var(--_colour-a900));
+    --colour-background-selection: light-dark(var(--_colour-a900), var(--_colour-a100));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
 
 body {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-family: "Inter Variable", "Inter", Arial, Helvetica, sans-serif;
     background-color: var(--colour-background-primary);
     color: var(--colour-foreground-primary);
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 300;
 }
 
-h1 {
-    font-size: 23px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-h3 {
-    font-size: 19px;
-}
+h1 { font-size: 31px; }
+h2 { font-size: 25px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 19px; }
+h6 { font-size: 18px; }
 
 /* Utility ---------------------------------------------------------------------------- */
 
@@ -88,7 +81,7 @@ h3 {
 /* Header and Navigation Landmark ----------------------------------------------------- */
 .header {
     position: sticky;
-    top: 0;   
+    top: 0;
 }
 
 .header .header-wrapper {
@@ -113,7 +106,7 @@ h3 {
 
 /* Main Landmark ---------------------------------------------------------------------- */
 .content .content-wrapper {
-    padding-block: 16px;
+    padding-block: 32px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -124,7 +117,7 @@ h3 {
 .footer .footer-wrapper {
     display: flex;
     flex-direction: column;
-    font-size: small;
+    font-size: 14px;
     color: var(--colour-foreground-faded);
 }
 
@@ -142,18 +135,30 @@ h3 {
     fill: var(--colour-background-inverted);
 }
 
+.motif .motif-sq:active {
+    fill: var(--colour-background-accent);
+}
+
 /* Skip Link -------------------------------------------------------------------------- */
 
 .skip-link {
     position: absolute;
     padding: 4px 8px;
     top: -100px;
-    background-color: var(--colour-background-accent);
-    color: var(--colour-foreground-inverted);
+    color: inherit;
+    background-color: inherit;
+    z-index: 10;
 }
 
 .skip-link:focus {
     top: 0;
+}
+
+/* Horizontal Divider ----------------------------------------------------------------- */
+
+.h-div {
+    border: 0;
+    border-block-start: 1px solid var(--colour-border-faded-decor);
 }
 
 /* Link ------------------------------------------------------------------------------- */
@@ -165,4 +170,12 @@ h3 {
 
 .link:hover {
     text-decoration: 1px solid underline;
+}
+
+.link--coloured {
+    color: var(--colour-foreground-accent);
+}
+
+.link--coloured:hover {
+    color: var(--colour-foreground-accent-less);
 }
