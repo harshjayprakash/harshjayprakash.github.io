@@ -35,7 +35,7 @@
     --colour-background-hover: light-dark(var(--_colour-n200), var(--_colour-n800));
     --colour-foreground-accent: light-dark(var(--_colour-a700), var(--_colour-a500));
     --colour-foreground-accent-less: light-dark(var(--_colour-a900), var(--_colour-a300));
-
+    --colour-background-focus: #fd0;
     --colour-foreground-selection: light-dark(var(--_colour-a100), var(--_colour-a900));
     --colour-background-selection: light-dark(var(--_colour-a900), var(--_colour-a100));
 }
@@ -59,6 +59,13 @@ h3 { font-size: 22px; }
 h4 { font-size: 20px; }
 h5 { font-size: 19px; }
 h6 { font-size: 18px; }
+
+:focus {
+    outline: 2px dashed var(--colour-border-primary);
+    outline-offset: 1px;
+    background-color: var(--colour-background-focus);
+    color: var(--_colour-n950) !important;
+}
 
 ::selection {
     background-color: var(--colour-background-accent);
@@ -151,7 +158,7 @@ h6 { font-size: 18px; }
     padding: 4px 8px;
     top: -100px;
     color: inherit;
-    background-color: inherit;
+    background-color: var(--colour-background-focus);
     z-index: 10;
 }
 
