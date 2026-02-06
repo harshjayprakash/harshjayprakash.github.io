@@ -5,9 +5,9 @@
 
 ## Quick Start
 
-After cloning the repository, you can open the root `index.html` file in your browser of choice. No runtime, or additional programs are required for this site.
-
 The live version of the site, <https://harshjayprakash.github.io>, corresponds to the main branch.
+
+If prefered, you may clone the repository and serve it over a local HTTP server. Note that opening the main `index.html` will not work correctly as absolute paths are used for styles and assets.
 
 ## References
 
