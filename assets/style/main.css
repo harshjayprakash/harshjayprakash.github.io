@@ -60,6 +60,11 @@ h4 { font-size: 20px; }
 h5 { font-size: 19px; }
 h6 { font-size: 18px; }
 
+::selection {
+    background-color: var(--colour-background-accent);
+    color: var(--colour-foreground-inverted);
+}
+
 /* Utility ---------------------------------------------------------------------------- */
 
 .flex-spacer {
