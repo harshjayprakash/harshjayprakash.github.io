@@ -156,7 +156,7 @@ h6 { font-size: 18px; }
     width: 100%;
 }
 
-.nav .nav-link:active:hover {
+.nav .nav-link:focus {
     background-color: var(--colour-background-focus);
 }
 
