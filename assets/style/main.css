@@ -289,3 +289,11 @@ h6 { font-size: 18px; }
 .link--coloured:hover {
     color: var(--colour-foreground-accent-less);
 }
+
+.link--inactive {
+    color: var(--colour-foreground-faded);
+}
+
+.link--inactive:hover {
+    text-decoration: none;
+}
