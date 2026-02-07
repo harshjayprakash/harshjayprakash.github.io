@@ -38,6 +38,7 @@
     --colour-background-focus: #fd0;
     --colour-foreground-selection: light-dark(var(--_colour-a100), var(--_colour-a900));
     --colour-background-selection: light-dark(var(--_colour-a900), var(--_colour-a100));
+    --colour-border-accent: light-dark(var(--_colour-a800), var(--_colour-a400));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
@@ -128,6 +129,36 @@ h6 { font-size: 18px; }
 .nav .nav-link {
     text-decoration: none;
     color: inherit;
+    text-transform: uppercase;
+    font-size: small;
+    position: relative;
+}
+
+.nav .nav-link::after {
+    content: '';
+    background-color: transparent;
+    display: flex;
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 70%;
+}
+
+.nav .nav-link:hover {
+    background-color: var(--colour-background-hover);
+}
+
+.nav .nav-link:hover::after {
+    background-color: var(--colour-foreground-faded);
+    width: 100%;
+}
+
+.nav .nav-link:active:hover {
+    background-color: var(--colour-background-focus);
+}
+
+.nav .nav-link[aria-current="page"]::after {
+    background-color: var(--colour-border-accent);
 }
 
 /* Main Landmark ---------------------------------------------------------------------- */
