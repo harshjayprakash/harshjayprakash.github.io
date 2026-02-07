@@ -219,7 +219,7 @@ h6 { font-size: 18px; }
 }
 
 .motif:active {
-    scale: 125%;
+    scale: 140%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
