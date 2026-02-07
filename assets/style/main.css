@@ -171,6 +171,10 @@ h6 { font-size: 18px; }
 
 /* Footer Landmark -------------------------------------------------------------------- */
 
+.footer {
+    margin-bottom: 16px;
+}
+
 .footer .footer-wrapper {
     display: flex;
     flex-direction: column;
@@ -184,6 +188,12 @@ h6 { font-size: 18px; }
     display: flex;
     flex-direction: row;
     gap: 4px;
+}
+
+@media (max-width: 460px) {
+    .footer {
+        margin-bottom: 64px;
+    }
 }
 
 /* Motif Square ----------------------------------------------------------------------- */
