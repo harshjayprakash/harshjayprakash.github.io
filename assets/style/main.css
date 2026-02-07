@@ -104,6 +104,7 @@ h6 { font-size: 18px; }
 }
 
 /* Header and Navigation Landmark ----------------------------------------------------- */
+
 .header {
     background-color: light-dark(oklch(0.967 0.001 286.375 / 0.75), oklch(0.21 0.006 285.885 / 0.75));
     backdrop-filter: blur(3px);
@@ -162,6 +163,7 @@ h6 { font-size: 18px; }
 }
 
 /* Main Landmark ---------------------------------------------------------------------- */
+
 .content .content-wrapper {
     padding-block: 32px;
     display: flex;
@@ -217,7 +219,6 @@ h6 { font-size: 18px; }
 .motif:active {
     scale: 125%;
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
     .motif {
