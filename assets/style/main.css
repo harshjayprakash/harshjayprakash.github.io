@@ -147,8 +147,16 @@ h6 { font-size: 18px; }
     fill: var(--colour-background-inverted);
 }
 
-.motif .motif-sq:active {
+.motif .motif-eye {
+    fill: var(--colour-background-inverted);
+}
+
+.motif :active {
     fill: var(--colour-background-accent);
+}
+
+.motif:active:hover .motif-eye {
+    fill: var(--colour-background-primary);
 }
 
 /* Skip Link -------------------------------------------------------------------------- */
