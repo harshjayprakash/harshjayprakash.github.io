@@ -178,8 +178,11 @@ h6 { font-size: 18px; }
 
 @media (prefers-reduced-motion: no-preference) {
     .motif {
-        transition: scale cubic-bezier(.9,.03,.69,.22);
         animation: motif-scale-out;
+    }
+
+    .motif:hover {
+        transition: scale cubic-bezier(.9,.03,.69,.22);
         animation-duration: 250ms;
     }
 
