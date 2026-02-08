@@ -143,6 +143,11 @@ h6 { font-size: 18px; }
     position: absolute;
     bottom: -5px;
     height: 2px;
+    width: 0%;
+}
+
+.nav .nav-link[aria-current="page"]::after {
+    background-color: var(--colour-border-accent);
     width: 70%;
 }
 
@@ -157,10 +162,6 @@ h6 { font-size: 18px; }
 
 .nav .nav-link:focus {
     background-color: var(--colour-background-focus);
-}
-
-.nav .nav-link[aria-current="page"]::after {
-    background-color: var(--colour-border-accent);
 }
 
 /* Main Landmark ---------------------------------------------------------------------- */
