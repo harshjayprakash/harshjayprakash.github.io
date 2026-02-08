@@ -294,6 +294,30 @@ h6 { font-size: 18px; }
     color: var(--colour-foreground-faded);
 }
 
-.link--inactive:hover {
-    text-decoration: none;
+/* Accordion -------------------------------------------------------------------------- */
+
+.accordion .accordion-title {
+    width: fit-content;
+    cursor: pointer;
+    color: var(--colour-foreground-accent);
+    text-decoration: 1px solid underline;
+}
+
+.accordion .accordion-title:hover {
+    color: var(--colour-foreground-accent-less);
+}
+
+.accordion .accordion-content {
+    padding-inline: 32px;
+    padding-block: 8px;
+    position: relative;
+}
+
+.accordion .accordion-content::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: var(--colour-foreground-faded);
+    left: 2px;
 }
