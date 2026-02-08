@@ -297,6 +297,11 @@ h6 { font-size: 18px; }
     top: 0;
 }
 
+.top-link {
+    width: fit-content;
+    margin-block: 16px;
+}
+
 /* Horizontal Divider ----------------------------------------------------------------- */
 
 .h-div {
