@@ -156,12 +156,21 @@ h6 { font-size: 18px; }
 }
 
 .nav .nav-link:hover::after {
-    background-color: var(--colour-foreground-faded);
     width: 100%;
 }
 
 .nav .nav-link:focus {
     background-color: var(--colour-background-focus);
+}
+
+.nav .nav-link:not([aria-current])::after  {
+    background-color: var(--colour-foreground-faded-more);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .nav-link:hover::after {
+        transition: width ease-in 200ms;
+    }
 }
 
 /* Main Landmark ---------------------------------------------------------------------- */
