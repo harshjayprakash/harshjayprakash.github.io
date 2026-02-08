@@ -49,7 +49,6 @@ body {
     font-family: "Inter Variable", "Inter", Arial, Helvetica, sans-serif;
     background-color: var(--colour-background-primary);
     color: var(--colour-foreground-primary);
-    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
