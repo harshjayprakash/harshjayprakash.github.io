@@ -7,6 +7,12 @@
     margin-top: 16px;
 }
 
+.project-meta {
+    font-size: small;
+    text-transform: uppercase;
+    display: block;
+}
+
 .section-more-information {
     display: flex;
     flex-direction: column;
