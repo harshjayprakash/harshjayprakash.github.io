@@ -1,46 +1,70 @@
 :root {
     color-scheme: light dark;
 
-    --_colour-n50: oklch(0.985 0 0);
-    --_colour-n100: oklch(0.967 0.001 286.375);
-    --_colour-n200: oklch(0.92 0.004 286.32);
-    --_colour-n300: oklch(0.871 0.006 286.286);
-    --_colour-n400: oklch(0.705 0.015 286.067);
-    --_colour-n500: oklch(0.552 0.016 285.938);
-    --_colour-n600: oklch(0.442 0.017 285.786);
-    --_colour-n700: oklch(0.37 0.013 285.805);
-    --_colour-n800: oklch(0.274 0.006 286.033);
-    --_colour-n900: oklch(0.21 0.006 285.885);
-    --_colour-n950: oklch(0.141 0.005 285.823);
-    --_colour-a50: oklch(0.984 0.014 180.72);
-    --_colour-a100: oklch(0.953 0.051 180.801);
-    --_colour-a200: oklch(0.91 0.096 180.426);
-    --_colour-a300: oklch(0.855 0.138 181.071);
-    --_colour-a400: oklch(0.777 0.152 181.912);
-    --_colour-a500: oklch(0.704 0.14 182.503);
-    --_colour-a600: oklch(0.6 0.118 184.704);
-    --_colour-a700: oklch(0.511 0.096 186.391);
-    --_colour-a800: oklch(0.437 0.078 188.216);
-    --_colour-a900: oklch(0.386 0.063 188.416);
-    --_colour-a950: oklch(0.277 0.046 192.524);
-    --_colour-f400: oklch(82.8% 0.189 84.429);
-    --_colour-f500: oklch(76.9% 0.188 70.08);
+    /*  Base colour palette variables. This should not be used directly by components.
+        These variables follow the common pattern of --colour-palette-{group}-{variant},
+        and use HSL for better compability.
 
-    --colour-background-primary: light-dark(var(--_colour-n100), var(--_colour-n900));
-    --colour-foreground-primary: light-dark(var(--_colour-n900), var(--_colour-n100));
-    --colour-background-inverted: light-dark(var(--_colour-n900), var(--_colour-n100));
-    --colour-foreground-inverted: light-dark(var(--_colour-n100), var(--_colour-n900));
-    --colour-border-primary: light-dark(var(--_colour-n900), var(--_colour-n100));
-    --colour-border-faded-decor: light-dark(var(--_colour-n200), var(--_colour-n800));
-    --colour-background-accent: light-dark(var(--_colour-a800), var(--_colour-a400));
-    --colour-foreground-faded: light-dark(var(--_colour-n600), var(--_colour-n400));
-    --colour-background-hover: light-dark(var(--_colour-n200), var(--_colour-n800));
-    --colour-foreground-accent: light-dark(var(--_colour-a700), var(--_colour-a500));
-    --colour-foreground-accent-less: light-dark(var(--_colour-a900), var(--_colour-a300));
-    --colour-background-focus: var(--_colour-f500);
-    --colour-foreground-selection: light-dark(var(--_colour-a100), var(--_colour-a900));
-    --colour-background-selection: light-dark(var(--_colour-a900), var(--_colour-a100));
-    --colour-border-accent: light-dark(var(--_colour-a800), var(--_colour-a400));
+        These colours are from the Tailwind version 4 Zinc, Teal and Amber palettes.
+            @ref: https://tailwindcss.com/docs/colors
+    */
+
+    --colour-palette-neutral-50 : hsl(0 0% 98%)  ;
+    --colour-palette-neutral-100: hsl(240 5% 96%);
+    --colour-palette-neutral-200: hsl(240 6% 90%);
+    --colour-palette-neutral-300: hsl(240 5% 84%);
+    --colour-palette-neutral-400: hsl(240 5% 64%);
+    --colour-palette-neutral-500: hsl(240 4% 46%);
+    --colour-palette-neutral-600: hsl(240 6% 34%);
+    --colour-palette-neutral-700: hsl(240 5% 26%);
+    --colour-palette-neutral-800: hsl(240 4% 16%);
+    --colour-palette-neutral-900: hsl(240 6% 10%);
+    --colour-palette-neutral-950: hsl(240 10% 4%);
+
+    --colour-palette-accent-50 : hsl(166 76% 97%) ;
+    --colour-palette-accent-100: hsl(168 86% 89%) ;
+    --colour-palette-accent-200: hsl(168 86% 78%) ;
+    --colour-palette-accent-300: hsl(171 81% 60%) ;
+    --colour-palette-accent-400: hsl(173 100% 42%);
+    --colour-palette-accent-500: hsl(174 100% 37%);
+    --colour-palette-accent-600: hsl(175 100% 29%);
+    --colour-palette-accent-700: hsl(176 100% 24%);
+    --colour-palette-accent-800: hsl(177 100% 19%);
+    --colour-palette-accent-900: hsl(176 76% 18%) ;
+    --colour-palette-accent-950: hsl(179 92% 10%) ;
+
+    --colour-palette-focus-400: hsl(44 100% 50%);
+    --colour-palette-focus-500: hsl(36 100% 50%);
+
+    --colour-palette-neutral-50-glass: hsl(0 0% 98% / 0.5);
+    --colour-palette-neutral-950-glass: hsl(240 10% 4% / 0.5);
+
+    /*  The semantic colours variables. These are use by the components directly providing
+        both a light and dark variant from the base colours.
+        These variables follow the common pattern of --colour-{use}-{context}
+    */
+
+    --colour-background-primary-glass: light-dark(var(--colour-palette-neutral-50-glass), var(--colour-palette-neutral-950-glass));
+    --colour-background-primary: light-dark(var(--colour-palette-neutral-50), var(--colour-palette-neutral-950));
+    --colour-foreground-primary: light-dark(var(--colour-palette-neutral-950), var(--colour-palette-neutral-50));
+    --colour-border-primary: var(--colour-foreground-primary);
+
+    --colour-background-inverted: var(--colour-foreground-primary);
+    --colour-foreground-inverted: var(--colour-background-primary);
+
+    --colour-background-focus: var(--colour-palette-focus-500);
+    --colour-foreground-focus: var(--colour-palette-neutral-950);
+    
+    --colour-background-selection: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
+    --colour-foreground-selection: light-dark(var(--colour-palette-neutral-50), var(--colour-palette-neutral-950));
+
+    --colour-background-muted-more: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
+    --colour-background-muted: light-dark(var(--colour-palette-neutral-300), var(--colour-palette-neutral-700));
+    --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
+    --colour-border-muted: var(--colour-foreground-muted);
+    --colour-border-muted-more: var(--colour-background-muted-more);
+
+    --colour-background-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
@@ -66,12 +90,12 @@ h6 { font-size: 18px; }
     outline: 2px dashed var(--colour-border-primary);
     outline-offset: 1px;
     background-color: var(--colour-background-focus);
-    color: var(--_colour-n950) !important;
+    color: var(--colour-foreground-focus) !important;
 }
 
 ::selection {
-    background-color: var(--colour-background-accent);
-    color: var(--colour-foreground-inverted);
+    background-color: var(--colour-background-selection);
+    color: var(--colour-foreground-selection);
 }
 
 /* Utility ---------------------------------------------------------------------------- */
@@ -81,7 +105,7 @@ h6 { font-size: 18px; }
 }
 
 .subtle-text {
-    color: var(--colour-foreground-faded);
+    color: var(--colour-foreground-muted);
 }
 
 .visually-hidden {
@@ -107,7 +131,8 @@ h6 { font-size: 18px; }
 /* Header and Navigation Landmark ----------------------------------------------------- */
 
 .header {
-    background-color: light-dark(oklch(0.967 0.001 286.375 / 0.75), oklch(0.21 0.006 285.885 / 0.75));
+    background-color: var(--colour-background-primary-glass);
+    border-bottom: 2px solid var(--colour-background-primary);
     backdrop-filter: blur(3px);
     position: sticky;
     top: 0;
@@ -147,12 +172,12 @@ h6 { font-size: 18px; }
 }
 
 .nav .nav-link[aria-current="page"]::after {
-    background-color: var(--colour-border-accent);
+    background-color: var(--colour-background-accent);
     width: 70%;
 }
 
 .nav .nav-link:hover {
-    background-color: var(--colour-background-hover);
+    background-color: var(--colour-background-muted-more);
 }
 
 .nav .nav-link:hover::after {
@@ -164,7 +189,7 @@ h6 { font-size: 18px; }
 }
 
 .nav .nav-link:not([aria-current])::after  {
-    background-color: var(--colour-foreground-faded-more);
+    background-color: var(--colour-foreground-muted);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -192,7 +217,7 @@ h6 { font-size: 18px; }
     display: flex;
     flex-direction: column;
     font-size: 14px;
-    color: var(--colour-foreground-faded);
+    color: var(--colour-foreground-muted);
 }
 
 .footer .social-list {
@@ -217,10 +242,6 @@ h6 { font-size: 18px; }
 
 .motif .motif-eye {
     fill: var(--colour-background-inverted);
-}
-
-.motif:hover {
-    fill: var(--colour-background-accent);
 }
 
 .motif:hover .motif-eye {
@@ -280,7 +301,7 @@ h6 { font-size: 18px; }
 
 .h-div {
     border: 0;
-    border-block-start: 1px solid var(--colour-border-faded-decor);
+    border-block-start: 1px solid var(--colour-border-muted-more);
 }
 
 /* Link ------------------------------------------------------------------------------- */
@@ -288,14 +309,6 @@ h6 { font-size: 18px; }
 .link {
     color: inherit;
     text-decoration: 1px solid underline;
-}
-
-.link--coloured {
-    color: var(--colour-foreground-accent);
-}
-
-.link--coloured:hover {
-    color: var(--colour-foreground-accent-less);
 }
 
 .link--inactive {
@@ -308,12 +321,8 @@ h6 { font-size: 18px; }
 .accordion .accordion-title {
     width: fit-content;
     cursor: pointer;
-    color: var(--colour-foreground-accent);
+    color: var(--colour-foreground-primary);
     text-decoration: 1px solid underline;
-}
-
-.accordion .accordion-title:hover {
-    color: var(--colour-foreground-accent-less);
 }
 
 .accordion .accordion-content {
@@ -327,6 +336,6 @@ h6 { font-size: 18px; }
     position: absolute;
     height: 100%;
     width: 3px;
-    background-color: var(--colour-foreground-faded);
+    background-color: var(--colour-border-muted);
     left: 2px;
 }
