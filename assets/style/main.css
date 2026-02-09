@@ -317,9 +317,14 @@ h6 { font-size: 18px; }
     text-decoration: 1px solid underline;
 }
 
+.link--coloured {
+    color: var(--colour-foreground-accent);
+}
+
 .link--inactive {
     cursor: not-allowed;
-    color: var(--colour-foreground-faded);
+    text-decoration: none;
+    color: var(--colour-foreground-muted);
 }
 
 /* Accordion -------------------------------------------------------------------------- */
@@ -327,7 +332,7 @@ h6 { font-size: 18px; }
 .accordion .accordion-title {
     width: fit-content;
     cursor: pointer;
-    color: var(--colour-foreground-primary);
+    color: var(--colour-foreground-accent);
     text-decoration: 1px solid underline;
 }
 
