@@ -52,7 +52,7 @@
     --colour-background-inverted: var(--colour-foreground-primary);
     --colour-foreground-inverted: var(--colour-background-primary);
 
-    --colour-background-focus: var(--colour-palette-focus-500);
+    --colour-background-focus: var(--colour-palette-focus-400);
     --colour-foreground-focus: var(--colour-palette-neutral-950);
     
     --colour-background-selection: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
