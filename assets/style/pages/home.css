@@ -6,3 +6,15 @@
     gap: 16px;
     margin-top: 16px;
 }
+
+.new-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.section-website {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
