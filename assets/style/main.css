@@ -65,6 +65,7 @@
     --colour-border-muted-more: var(--colour-background-muted-more);
 
     --colour-background-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
+    --colour-foreground-accent: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
