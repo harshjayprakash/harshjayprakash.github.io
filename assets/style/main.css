@@ -146,6 +146,13 @@ h6 { font-size: 18px; }
     height: 50px;
 }
 
+.header .status {
+    font-size: small;
+    text-transform: lowercase;
+    border: 1px solid var(--colour-foreground-muted);
+    padding-inline: 4px;
+}
+
 .nav .nav-list {
     list-style: none;
     padding: 0;
