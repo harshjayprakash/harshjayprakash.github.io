@@ -177,10 +177,6 @@ h6 { font-size: 18px; }
     width: 70%;
 }
 
-.nav .nav-link:hover {
-    background-color: var(--colour-background-muted-more);
-}
-
 .nav .nav-link:hover::after {
     width: 100%;
 }   
