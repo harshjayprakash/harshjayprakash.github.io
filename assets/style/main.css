@@ -36,8 +36,8 @@
     --colour-palette-focus-400: hsl(44 100% 50%);
     --colour-palette-focus-500: hsl(36 100% 50%);
 
-    --colour-palette-neutral-50-glass: hsl(0 0% 98% / 0.5);
-    --colour-palette-neutral-950-glass: hsl(240 10% 4% / 0.5);
+    --colour-palette-neutral-50-glass: hsl(0 0% 98% / 0.7);
+    --colour-palette-neutral-950-glass: hsl(240 10% 4% / 0.7);
 
     /*  The semantic colours variables. These are use by the components directly providing
         both a light and dark variant from the base colours.
