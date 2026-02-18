@@ -314,6 +314,7 @@ h6 { font-size: 18px; }
 .link {
     color: inherit;
     text-decoration: 1px solid underline;
+    width: fit-content; 
 }
 
 .link--coloured {
