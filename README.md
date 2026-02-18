@@ -3,6 +3,10 @@
 > [!WARNING]
 > This site is under construction. This version is a rewrite in static HTML, CSS and minimal JS.
 
+<picture align="center">
+    <img src="preview.png" alt="" width="500">
+</picture>
+
 ## Quick Start
 
 The live version of the site, <https://harshjayprakash.github.io>, corresponds to the main branch.
