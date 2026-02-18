@@ -3,9 +3,9 @@
 > [!WARNING]
 > This site is under construction. This version is a rewrite in static HTML, CSS and minimal JS.
 
-<picture align="center">
-    <img src="preview.png" alt="" width="500">
-</picture>
+<p align="center">
+    <img src="preview.png" alt="">
+</p>
 
 ## Quick Start
 
