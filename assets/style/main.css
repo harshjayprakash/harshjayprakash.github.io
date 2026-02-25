@@ -5,8 +5,10 @@
         These variables follow the common pattern of --colour-palette-{group}-{variant},
         and use HSL for better compability.
 
-        These colours are from the Tailwind version 4 Zinc, Teal and Amber palettes.
+        These colours are from the Tailwind version 4 Zinc, Cyan and Amber palettes.
             @ref: https://tailwindcss.com/docs/colors
+
+        The "Glass" colours are the Tailwind colours modified with a lower opacity.
     */
 
     --colour-palette-neutral-50 : hsl(0 0% 98%)  ;
@@ -21,17 +23,17 @@
     --colour-palette-neutral-900: hsl(240 6% 10%);
     --colour-palette-neutral-950: hsl(240 10% 4%);
 
-    --colour-palette-accent-50 : hsl(166 76% 97%) ;
-    --colour-palette-accent-100: hsl(168 86% 89%) ;
-    --colour-palette-accent-200: hsl(168 86% 78%) ;
-    --colour-palette-accent-300: hsl(171 81% 60%) ;
-    --colour-palette-accent-400: hsl(173 100% 42%);
-    --colour-palette-accent-500: hsl(174 100% 37%);
-    --colour-palette-accent-600: hsl(175 100% 29%);
-    --colour-palette-accent-700: hsl(176 100% 24%);
-    --colour-palette-accent-800: hsl(177 100% 19%);
-    --colour-palette-accent-900: hsl(176 76% 18%) ;
-    --colour-palette-accent-950: hsl(179 92% 10%) ;
+    --colour-palette-accent-50 : hsl(183 100% 96%);
+    --colour-palette-accent-100: hsl(185 96% 90%) ;
+    --colour-palette-accent-200: hsl(186 96% 81%) ;
+    --colour-palette-accent-300: hsl(187 98% 66%) ;
+    --colour-palette-accent-400: hsl(188 100% 47%);
+    --colour-palette-accent-500: hsl(190 100% 43%);
+    --colour-palette-accent-600: hsl(192 100% 36%);
+    --colour-palette-accent-700: hsl(193 100% 29%);
+    --colour-palette-accent-800: hsl(192 100% 24%);
+    --colour-palette-accent-900: hsl(196 72% 23%) ;
+    --colour-palette-accent-950: hsl(197 86% 15%) ;
 
     --colour-palette-focus-400: hsl(44 100% 50%);
     --colour-palette-focus-500: hsl(36 100% 50%);
