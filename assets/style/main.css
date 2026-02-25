@@ -318,6 +318,14 @@ h6 { font-size: 18px; }
     color: var(--colour-foreground-muted);
 }
 
+.button {
+    color: inherit;
+    text-decoration: none;
+    width: fit-content;
+    padding: 2px 16px;
+    border: 2px solid;
+}
+
 /* Accordion -------------------------------------------------------------------------- */
 
 .accordion .accordion-title {
