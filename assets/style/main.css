@@ -67,7 +67,9 @@
     --colour-border-muted-more: var(--colour-background-muted-more);
 
     --colour-background-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
-    --colour-foreground-accent: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
+    --colour-background-accent-hover: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
+    --colour-foreground-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
+    --colour-foreground-accent-hover: light-dark(var(--colour-palette-accent-900), var(--colour-palette-accent-200));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
@@ -307,23 +309,33 @@ h6 { font-size: 18px; }
 /* Link ------------------------------------------------------------------------------- */
 
 .link {
-    color: inherit;
+    color: var(--colour-foreground-accent);
     text-decoration: 1px solid underline;
-    width: fit-content; 
+    width: fit-content;
 }
 
+.link:hover:not(.link--inactive) {
+    color: var(--colour-foreground-accent-hover);
+}
+
+.link--disabled,
 .link--inactive {
-    cursor: not-allowed;
-    text-decoration: none;
+    cursor: default;
     color: var(--colour-foreground-muted);
 }
 
 .button {
-    color: inherit;
+    background-color: var(--colour-background-accent);
+    color: var(--colour-foreground-inverted);
     text-decoration: none;
     width: fit-content;
     padding: 2px 16px;
-    border: 2px solid;
+    border: 2px solid var(--colour-foreground-accent);
+}
+
+.button:hover {
+    background-color: var(--colour-background-accent-hover);
+    border-color: var(--colour-background-accent-hover);
 }
 
 /* Accordion -------------------------------------------------------------------------- */
@@ -331,8 +343,12 @@ h6 { font-size: 18px; }
 .accordion .accordion-title {
     width: fit-content;
     cursor: pointer;
-    color: var(--colour-foreground-primary);
+    color: var(--colour-foreground-accent);
     text-decoration: 1px solid underline;
+}
+
+.accordion .accordion-title:hover {
+    color: var(--colour-foreground-accent-hover);
 }
 
 .accordion .accordion-content {
