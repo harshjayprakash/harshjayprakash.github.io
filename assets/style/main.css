@@ -5,35 +5,35 @@
         These variables follow the common pattern of --colour-palette-{group}-{variant},
         and use HSL for better compability.
 
-        These colours are from the Tailwind version 4 Zinc, Cyan and Amber palettes.
+        These colours are from the Tailwind version 4 palettes.
             @ref: https://tailwindcss.com/docs/colors
 
         The "Glass" colours are the Tailwind colours modified with a lower opacity.
     */
 
-    --colour-palette-neutral-50 : hsl(0 0% 98%)  ;
-    --colour-palette-neutral-100: hsl(240 5% 96%);
-    --colour-palette-neutral-200: hsl(240 6% 90%);
-    --colour-palette-neutral-300: hsl(240 5% 84%);
-    --colour-palette-neutral-400: hsl(240 5% 64%);
-    --colour-palette-neutral-500: hsl(240 4% 46%);
-    --colour-palette-neutral-600: hsl(240 6% 34%);
-    --colour-palette-neutral-700: hsl(240 5% 26%);
-    --colour-palette-neutral-800: hsl(240 4% 16%);
-    --colour-palette-neutral-900: hsl(240 6% 10%);
-    --colour-palette-neutral-950: hsl(240 10% 4%);
+    --colour-palette-neutral-50 : oklch(98.7% 0.002 197.1);
+    --colour-palette-neutral-100: oklch(96.3% 0.002 197.1);
+    --colour-palette-neutral-200: oklch(92.5% 0.005 214.3);
+    --colour-palette-neutral-300: oklch(87.2% 0.007 219.6);
+    --colour-palette-neutral-400: oklch(72.3% 0.014 214.4);
+    --colour-palette-neutral-500: oklch(56% 0.021 213.5);
+    --colour-palette-neutral-600: oklch(45% 0.017 213.2);
+    --colour-palette-neutral-700: oklch(37.8% 0.015 216);
+    --colour-palette-neutral-800: oklch(27.5% 0.011 216.9);
+    --colour-palette-neutral-900: oklch(21.8% 0.008 223.9);
+    --colour-palette-neutral-950: oklch(14.8% 0.004 228.8);
 
-    --colour-palette-accent-50 : hsl(183 100% 96%);
-    --colour-palette-accent-100: hsl(185 96% 90%) ;
-    --colour-palette-accent-200: hsl(186 96% 81%) ;
-    --colour-palette-accent-300: hsl(187 98% 66%) ;
-    --colour-palette-accent-400: hsl(188 100% 47%);
-    --colour-palette-accent-500: hsl(190 100% 43%);
-    --colour-palette-accent-600: hsl(192 100% 36%);
-    --colour-palette-accent-700: hsl(193 100% 29%);
-    --colour-palette-accent-800: hsl(192 100% 24%);
-    --colour-palette-accent-900: hsl(196 72% 23%) ;
-    --colour-palette-accent-950: hsl(197 86% 15%) ;
+    --colour-palette-accent-50 : oklch(97.7% 0.013 236.62);
+    --colour-palette-accent-100: oklch(95.1% 0.026 236.824);
+    --colour-palette-accent-200: oklch(90.1% 0.058 230.902);
+    --colour-palette-accent-300: oklch(82.8% 0.111 230.318);
+    --colour-palette-accent-400: oklch(74.6% 0.16 232.661);
+    --colour-palette-accent-500: oklch(68.5% 0.169 237.323);
+    --colour-palette-accent-600: oklch(58.8% 0.158 241.966);
+    --colour-palette-accent-700: oklch(50% 0.134 242.749);
+    --colour-palette-accent-800: oklch(44.3% 0.11 240.79);
+    --colour-palette-accent-900: oklch(39.1% 0.09 240.876);
+    --colour-palette-accent-950: oklch(29.3% 0.066 243.157);
 
     --colour-palette-focus-400: hsl(44 100% 50%);
     --colour-palette-focus-500: hsl(36 100% 50%);
