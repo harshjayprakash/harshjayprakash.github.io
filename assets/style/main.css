@@ -329,17 +329,16 @@ h6 { font-size: 18px; }
 }
 
 .button {
-    background-color: var(--colour-background-accent);
-    color: var(--colour-foreground-inverted);
+    background-color: var(--colour-background-primary);
+    color: var(--colour-foreground-primary);
     text-decoration: none;
     width: fit-content;
     padding: 2px 16px;
-    border: 2px solid var(--colour-foreground-accent);
+    border: 1px solid var(--colour-border-button-standard);
 }
 
 .button:hover {
-    background-color: var(--colour-background-accent-hover);
-    border-color: var(--colour-background-accent-hover);
+    background-color: var(--colour-background-hover);
 }
 
 /* Accordion -------------------------------------------------------------------------- */
