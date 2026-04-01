@@ -1,7 +1,7 @@
 # Personal Website
 
-> [!WARNING]
-> This site is under construction. This version is a rewrite in static HTML, CSS and minimal JS.
+> [!NOTE]
+> This website is under construction.
 
 <p align="center">
     <figure align="center">
