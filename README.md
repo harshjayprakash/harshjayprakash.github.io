@@ -4,7 +4,11 @@
 > This site is under construction. This version is a rewrite in static HTML, CSS and minimal JS.
 
 <p align="center">
-    <img src="preview.png" alt="">
+    <figure align="center">
+        <img src="preview.png" alt="">
+        <figcaption align="center">Screenshot of personal website running in Firefox.</figcaption>
+    </figure>
+    <br />
 </p>
 
 ## Quick Start
