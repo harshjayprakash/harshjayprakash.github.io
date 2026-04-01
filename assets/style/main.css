@@ -318,7 +318,7 @@ h6 { font-size: 18px; }
     width: fit-content;
 }
 
-.link:hover:not(.link--inactive) {
+.link:hover:not(.link--inactive, .link--muted) {
     color: var(--colour-foreground-accent-hover);
 }
 
@@ -326,6 +326,14 @@ h6 { font-size: 18px; }
 .link--inactive {
     cursor: default;
     color: var(--colour-foreground-muted);
+}
+
+.link--muted {
+    color: var(--colour-foreground-muted);
+}
+
+.link--muted:hover {
+    color: var(--colour-foreground-primary);
 }
 
 .button {
