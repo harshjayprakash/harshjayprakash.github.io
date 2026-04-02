@@ -142,7 +142,7 @@ h6 { font-size: 18px; }
 
 .header {
     background-color: var(--colour-background-primary-glass);
-    border-bottom: 2px solid var(--colour-background-primary);
+    border-bottom: 3px solid var(--colour-background-primary);
     backdrop-filter: blur(4px);
     position: sticky;
     top: 0;
