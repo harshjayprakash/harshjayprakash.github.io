@@ -5,39 +5,41 @@
         These variables follow the common pattern of --colour-palette-{group}-{variant},
         and use HSL for better compability.
 
-        These colours are from the Tailwind version 4 Zinc, Teal and Amber palettes.
+        These colours are from the Tailwind version 4 palettes.
             @ref: https://tailwindcss.com/docs/colors
+
+        The "Glass" colours are the Tailwind colours modified with a lower opacity.
     */
 
-    --colour-palette-neutral-50 : hsl(0 0% 98%)  ;
-    --colour-palette-neutral-100: hsl(240 5% 96%);
-    --colour-palette-neutral-200: hsl(240 6% 90%);
-    --colour-palette-neutral-300: hsl(240 5% 84%);
-    --colour-palette-neutral-400: hsl(240 5% 64%);
-    --colour-palette-neutral-500: hsl(240 4% 46%);
-    --colour-palette-neutral-600: hsl(240 6% 34%);
-    --colour-palette-neutral-700: hsl(240 5% 26%);
-    --colour-palette-neutral-800: hsl(240 4% 16%);
-    --colour-palette-neutral-900: hsl(240 6% 10%);
-    --colour-palette-neutral-950: hsl(240 10% 4%);
+    --colour-palette-neutral-50 : hsl(180 20% 98%);
+    --colour-palette-neutral-100: hsl(180 8% 95%);
+    --colour-palette-neutral-200: hsl(192 10% 90%);
+    --colour-palette-neutral-300: hsl(195 9% 83%);
+    --colour-palette-neutral-400: hsl(192 8% 64%);
+    --colour-palette-neutral-500: hsl(191 9% 45%);
+    --colour-palette-neutral-600: hsl(191 10% 33%);
+    --colour-palette-neutral-700: hsl(193 11% 25%);
+    --colour-palette-neutral-800: hsl(193 12% 15%);
+    --colour-palette-neutral-900: hsl(197 14% 10%);
+    --colour-palette-neutral-950: hsl(200 14% 4%);
 
-    --colour-palette-accent-50 : hsl(166 76% 97%) ;
-    --colour-palette-accent-100: hsl(168 86% 89%) ;
-    --colour-palette-accent-200: hsl(168 86% 78%) ;
-    --colour-palette-accent-300: hsl(171 81% 60%) ;
-    --colour-palette-accent-400: hsl(173 100% 42%);
-    --colour-palette-accent-500: hsl(174 100% 37%);
-    --colour-palette-accent-600: hsl(175 100% 29%);
-    --colour-palette-accent-700: hsl(176 100% 24%);
-    --colour-palette-accent-800: hsl(177 100% 19%);
-    --colour-palette-accent-900: hsl(176 76% 18%) ;
-    --colour-palette-accent-950: hsl(179 92% 10%) ;
+    --colour-palette-accent-50 : hsl(204 100% 97%);
+    --colour-palette-accent-100: hsl(203 94% 94%);
+    --colour-palette-accent-200: hsl(201 97% 86%);
+    --colour-palette-accent-300: hsl(199 100% 73%);
+    --colour-palette-accent-400: hsl(196 100% 50%);
+    --colour-palette-accent-500: hsl(199 100% 48%);
+    --colour-palette-accent-600: hsl(202 100% 41%);
+    --colour-palette-accent-700: hsl(203 100% 33%);
+    --colour-palette-accent-800: hsl(201 100% 27%);
+    --colour-palette-accent-900: hsl(201 96% 22%);
+    --colour-palette-accent-950: hsl(203 87% 15%);
 
     --colour-palette-focus-400: hsl(44 100% 50%);
     --colour-palette-focus-500: hsl(36 100% 50%);
 
-    --colour-palette-neutral-50-glass: hsl(0 0% 98% / 0.7);
-    --colour-palette-neutral-950-glass: hsl(240 10% 4% / 0.7);
+    --colour-palette-neutral-50-glass: hsl(180 8% 95% / 0.7);
+    --colour-palette-neutral-950-glass: hsl(197 14% 10% / 0.7);
 
     /*  The semantic colours variables. These are use by the components directly providing
         both a light and dark variant from the base colours.
@@ -45,9 +47,12 @@
     */
 
     --colour-background-primary-glass: light-dark(var(--colour-palette-neutral-50-glass), var(--colour-palette-neutral-950-glass));
-    --colour-background-primary: light-dark(var(--colour-palette-neutral-50), var(--colour-palette-neutral-950));
+    --colour-background-primary: light-dark(var(--colour-palette-neutral-100), var(--colour-palette-neutral-900));
     --colour-foreground-primary: light-dark(var(--colour-palette-neutral-950), var(--colour-palette-neutral-50));
     --colour-border-primary: var(--colour-foreground-primary);
+    --colour-border-button-standard: var(--colour-palette-neutral-500);
+
+    --colour-background-hover: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
 
     --colour-background-inverted: var(--colour-foreground-primary);
     --colour-foreground-inverted: var(--colour-background-primary);
@@ -61,11 +66,14 @@
     --colour-background-muted-more: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
     --colour-background-muted: light-dark(var(--colour-palette-neutral-300), var(--colour-palette-neutral-700));
     --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
+    --colour-foreground-muted-less: light-dark(var(--colour-palette-neutral-700), var(--colour-palette-neutral-300));
     --colour-border-muted: var(--colour-foreground-muted);
     --colour-border-muted-more: var(--colour-background-muted-more);
 
     --colour-background-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
+    --colour-background-accent-hover: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
     --colour-foreground-accent: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
+    --colour-foreground-accent-hover: light-dark(var(--colour-palette-accent-900), var(--colour-palette-accent-300));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
@@ -74,6 +82,7 @@ body {
     font-family: "Inter Variable", "Inter", Arial, Helvetica, sans-serif;
     background-color: var(--colour-background-primary);
     color: var(--colour-foreground-primary);
+    letter-spacing: -0.01em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -106,7 +115,7 @@ h6 { font-size: 18px; }
 }
 
 .subtle-text {
-    color: var(--colour-foreground-muted);
+    color: var(--colour-foreground-muted-less);
 }
 
 .visually-hidden {
@@ -133,7 +142,7 @@ h6 { font-size: 18px; }
 
 .header {
     background-color: var(--colour-background-primary-glass);
-    border-bottom: 2px solid var(--colour-background-primary);
+    border-bottom: 3px solid var(--colour-background-primary);
     backdrop-filter: blur(4px);
     position: sticky;
     top: 0;
@@ -144,13 +153,6 @@ h6 { font-size: 18px; }
     place-items: center;
     gap: 8px;
     height: 50px;
-}
-
-.header .status {
-    font-size: small;
-    text-transform: lowercase;
-    border: 1px solid var(--colour-foreground-muted);
-    padding-inline: 4px;
 }
 
 .nav .nav-list {
@@ -312,19 +314,44 @@ h6 { font-size: 18px; }
 /* Link ------------------------------------------------------------------------------- */
 
 .link {
-    color: inherit;
-    text-decoration: 1px solid underline;
-    width: fit-content; 
-}
-
-.link--coloured {
     color: var(--colour-foreground-accent);
+    text-decoration: 1px solid underline;
+    width: fit-content;
 }
 
+.link:hover:not(.link--inactive) {
+    text-decoration-thickness: 2px;
+}
+
+.link:hover:not(.link--inactive, .link--muted) {
+    color: var(--colour-foreground-accent-hover);
+}
+
+.link--disabled,
 .link--inactive {
-    cursor: not-allowed;
-    text-decoration: none;
+    cursor: default;
     color: var(--colour-foreground-muted);
+}
+
+.link--muted {
+    color: var(--colour-foreground-muted);
+}
+
+.link--muted:hover {
+    color: var(--colour-foreground-primary);
+}
+
+.button {
+    background-color: var(--colour-background-primary);
+    color: var(--colour-foreground-primary);
+    text-decoration: none;
+    width: fit-content;
+    padding: 2px 16px;
+    border: 1px solid var(--colour-border-button-standard);
+}
+
+.button:hover {
+    background-color: var(--colour-background-hover);
 }
 
 /* Accordion -------------------------------------------------------------------------- */
@@ -334,6 +361,10 @@ h6 { font-size: 18px; }
     cursor: pointer;
     color: var(--colour-foreground-accent);
     text-decoration: 1px solid underline;
+}
+
+.accordion .accordion-title:hover {
+    color: var(--colour-foreground-accent-hover);
 }
 
 .accordion .accordion-content {

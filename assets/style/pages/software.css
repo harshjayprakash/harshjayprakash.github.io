@@ -7,6 +7,15 @@
     margin-top: 16px;
 }
 
+.project-item {
+    border: 1px solid light-dark(
+        var(--colour-palette-neutral-300),
+        var(--colour-palette-neutral-700)
+    );
+    padding: 1rem;
+    /* border-radius: 5px; */
+}
+
 .project-meta {
     font-size: small;
     text-transform: uppercase;
