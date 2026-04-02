@@ -10,7 +10,7 @@ I chose to write this intentionally in static HTML, CSS and minimal JS for maxim
 <p align="center">
     <figure align="center">
         <img src="preview.png" alt="">
-        <figcaption align="center">Screenshot of personal website running in Firefox.</figcaption>
+        <figcaption><p align="center">Screenshot of personal website running in Firefox.</p></figcaption>
     </figure>
     <br />
 </p>
