@@ -72,8 +72,8 @@
 
     --colour-background-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
     --colour-background-accent-hover: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
-    --colour-foreground-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
-    --colour-foreground-accent-hover: light-dark(var(--colour-palette-accent-900), var(--colour-palette-accent-200));
+    --colour-foreground-accent: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
+    --colour-foreground-accent-hover: light-dark(var(--colour-palette-accent-900), var(--colour-palette-accent-300));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
