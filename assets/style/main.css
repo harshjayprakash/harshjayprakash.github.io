@@ -66,6 +66,7 @@
     --colour-background-muted-more: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
     --colour-background-muted: light-dark(var(--colour-palette-neutral-300), var(--colour-palette-neutral-700));
     --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
+    --colour-foreground-muted-less: light-dark(var(--colour-palette-neutral-700), var(--colour-palette-neutral-300));
     --colour-border-muted: var(--colour-foreground-muted);
     --colour-border-muted-more: var(--colour-background-muted-more);
 
@@ -114,7 +115,7 @@ h6 { font-size: 18px; }
 }
 
 .subtle-text {
-    color: var(--colour-foreground-muted);
+    color: var(--colour-foreground-muted-less);
 }
 
 .visually-hidden {
