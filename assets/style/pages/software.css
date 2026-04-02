@@ -7,11 +7,6 @@
     margin-top: 16px;
 }
 
-.project-list--current {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .project-item {
     border: 1px solid light-dark(
         var(--colour-palette-neutral-300),
