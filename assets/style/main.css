@@ -319,6 +319,10 @@ h6 { font-size: 18px; }
     width: fit-content;
 }
 
+.link:hover:not(.link--inactive) {
+    text-decoration-thickness: 2px;
+}
+
 .link:hover:not(.link--inactive, .link--muted) {
     color: var(--colour-foreground-accent-hover);
 }
