@@ -239,15 +239,16 @@ h6 { font-size: 18px; }
 /* Motif Square ----------------------------------------------------------------------- */
 
 .motif .motif-sq {
-    fill: var(--colour-background-inverted);
+    fill: var(--colour-palette-accent-300);
+}
+
+.motif:hover .motif-sq {
+    stroke: var(--colour-foreground-primary);
+    stroke-width: 1px;
 }
 
 .motif .motif-eye {
-    fill: var(--colour-background-inverted);
-}
-
-.motif:hover .motif-eye {
-    fill: var(--colour-background-primary);
+    fill: var(--colour-palette-neutral-950);
 }
 
 .motif:active {
@@ -275,7 +276,7 @@ h6 { font-size: 18px; }
     0% { scale: 100%; }
     40% { scale: 120%; }
     50% { scale: 130% }
-    75% { scale: 142%; }
+    75% { scale: 145%; }
     100% { scale: 140%; }
 }
 
