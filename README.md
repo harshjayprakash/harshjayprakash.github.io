@@ -8,11 +8,8 @@ This is a ux-first personal website providing a simple place to for my projects,
 I chose to write this intentionally in static HTML, CSS and minimal JS for maximum long-term reliability and not rely on a framework that could have security risks for (not) updating.
 
 <p align="center">
-    <figure align="center">
-        <img src="preview.png" alt="">
-        <figcaption><p align="center">Screenshot of personal website running in Firefox.</p></figcaption>
-    </figure>
-    <br />
+    <img src="preview.png" alt="">
+    <p align="center">Screenshot of personal website running in Firefox.</p>
 </p>
 
 ## Quick Start
