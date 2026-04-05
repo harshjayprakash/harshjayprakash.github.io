@@ -79,7 +79,7 @@
 /* Base Styles ------------------------------------------------------------------------ */
 
 body {
-    font-family: "Inter Variable", "Inter", Arial, Helvetica, sans-serif;
+    /* font-family: "Inter Variable", "Inter", Arial, Helvetica, sans-serif; */
     background-color: var(--colour-background-primary);
     color: var(--colour-foreground-primary);
     letter-spacing: -0.01em;
