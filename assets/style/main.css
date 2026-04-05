@@ -159,7 +159,7 @@ h6 { font-size: 18px; }
     background-color: var(--colour-background-muted);
     color: var(--colour-foreground-primary);
     font-size: small;
-    padding-inline: 0.5rem;
+    padding-inline: 0.4rem;
 }
 
 .nav .nav-list {
