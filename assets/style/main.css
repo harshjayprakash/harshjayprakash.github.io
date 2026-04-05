@@ -155,6 +155,13 @@ h6 { font-size: 18px; }
     height: 50px;
 }
 
+.header .status {
+    background-color: var(--colour-background-muted);
+    color: var(--colour-foreground-primary);
+    font-size: small;
+    padding-inline: 0.5rem;
+}
+
 .nav .nav-list {
     list-style: none;
     padding: 0;
