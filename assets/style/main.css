@@ -53,7 +53,7 @@
     --colour-border-button-standard: var(--colour-palette-neutral-500);
 
     --colour-background-hover: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
-
+    
     --colour-background-inverted: var(--colour-foreground-primary);
     --colour-foreground-inverted: var(--colour-background-primary);
 
@@ -62,18 +62,19 @@
     
     --colour-background-selection: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
     --colour-foreground-selection: light-dark(var(--colour-palette-neutral-50), var(--colour-palette-neutral-950));
-
+    
     --colour-background-muted-more: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
     --colour-background-muted: light-dark(var(--colour-palette-neutral-300), var(--colour-palette-neutral-700));
     --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
     --colour-foreground-muted-less: light-dark(var(--colour-palette-neutral-700), var(--colour-palette-neutral-300));
     --colour-border-muted: var(--colour-foreground-muted);
     --colour-border-muted-more: var(--colour-background-muted-more);
-
+    
     --colour-background-accent: light-dark(var(--colour-palette-accent-700), var(--colour-palette-accent-500));
     --colour-background-accent-hover: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
     --colour-foreground-accent: light-dark(var(--colour-palette-accent-800), var(--colour-palette-accent-400));
     --colour-foreground-accent-hover: light-dark(var(--colour-palette-accent-900), var(--colour-palette-accent-300));
+    --colour-background-accent-content: light-dark(var(--colour-palette-accent-100), var(--colour-palette-accent-900));
 }
 
 /* Base Styles ------------------------------------------------------------------------ */
@@ -387,4 +388,26 @@ h6 { font-size: 18px; }
     width: 3px;
     background-color: var(--colour-border-muted);
     left: 2px;
+}
+
+/* Banner ----------------------------------------------------------------------------- */
+.banner {
+    padding: 1rem;
+    background-color: var(--colour-background-accent-content);
+    border: 1px solid var(--colour-background-accent);
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+    /* place-items: center; */
+}
+
+.banner-icon {
+    background-color: var(--colour-background-accent);
+    color: var(--colour-foreground-inverted);
+    font-size: small;
+    font-weight: 500;
+    height: fit-content;
+    padding-inline: 0.5rem;
+    border-radius: 50%;
+    margin-top: 0.2rem;
 }
