@@ -8,12 +8,11 @@
 }
 
 .project-item {
-    border: 1px solid light-dark(
+    border-left: 1px solid light-dark(
         var(--colour-palette-neutral-300),
         var(--colour-palette-neutral-700)
     );
-    padding: 1rem;
-    /* border-radius: 5px; */
+    padding-inline: 1rem;
 }
 
 .project-meta {
