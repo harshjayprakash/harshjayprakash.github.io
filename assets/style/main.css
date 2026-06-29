@@ -133,7 +133,7 @@ h6 { font-size: 18px; }
 /* Landmark Wrappers ------------------------------------------------------------------ */
 
 .base-wrapper {
-    max-width: 700px;
+    max-width: 760px;
     margin-inline: auto;
     padding-inline: 16px;
 }
