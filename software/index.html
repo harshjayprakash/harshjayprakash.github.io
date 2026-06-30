@@ -49,33 +49,43 @@
         <div class="base-wrapper content-wrapper">
             <hgroup>
                 <h1 id="software">software</h1>
-                <p>These projects link to their respective GitHub repositories (in a new tab).</p>
+                <p>These projects link to their respective GitHub Repositories (in a new tab)</p>
             </hgroup>
-            <section class="section-current-projects">
+            <section class="section-main-projects">
                 <div>
-                    <h2 id="current-projects">current projects</h2>
-                    <hr class="h-div" aria-hidden="true" />
+                    <h2 id="main-projects">main projects</h2>
+                    <hr class="h-div" aria-hidden="true">
                 </div>
-                <ul class="project-list project-list--current">
+                <ul class="project-list project-list--main" >
                     <li class="project-item">
-                        <article class="project-card">
+                        <article class="project-card" id="project-card--xbk">
+                            <picture>
+                                <source srcset="/assets/images/xbk-preview.avif" type="image/avif">
+                                <source srcset="/assets/images/xbk-preview.webp" type="image/webp">
+                                <img src="/assets/images/xbk-preview.png" alt="">
+                            </picture>
                             <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/experimental-blok">Experimental Blok</a>
                             <p class="subtle-text">A box that explores its environment.</p>
                             <small class="subtle-text">2021 &middot; C, Windows API, GDI</small>
                         </article>
                     </li>
-                    <li class="project-item">
+                    <li class="project-item" id="project-card--ars">
                         <article class="project-card">
-                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/harshjayprakash.github.io">This Personal Site</a>
-                            <p class="subtle-text">A personal website focused on minimalism, ux and accesibility.</p>
-                            <small class="subtle-text">2021 &middot; HTML, CSS</small>
-                        </article>
-                    </li>
-                    <li class="project-item">
-                        <article class="project-card">
+                            <picture>
+                                <source srcset="/assets/images/ars-preview.avif" type="image/avif">
+                                <source srcset="/assets/images/ars-preview.webp" type="image/webp">
+                                <img src="/assets/images/ars-preview.png" alt="">
+                            </picture>
                             <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/algorithmic-art">Algorithmic Art</a>
                             <p class="subtle-text">Allows experimentation of generating art via programming locally on the computer.</p>
                             <small class="subtle-text">2024 &middot; Java, Swing</small>
+                        </article>
+                    </li>
+                    <li class="project-item" id="project-card--psw">
+                        <article class="project-card project-card--noimage">
+                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/harshjayprakash.github.io">This Personal Site</a>
+                            <p class="subtle-text">A personal website focused on minimalism, ux and accesibility.</p>
+                            <small class="subtle-text">2021 &middot; HTML, CSS</small>
                         </article>
                     </li>
                 </ul>
