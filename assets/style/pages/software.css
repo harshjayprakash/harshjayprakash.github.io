@@ -4,12 +4,6 @@
     display: block;
 }
 
-.section-more-information {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
 .project-list {
     list-style: none;
     padding: 0;
