@@ -298,7 +298,7 @@ h6 { font-size: 18px; }
     position: absolute;
     padding: 4px 8px;
     top: -100px;
-    color: inherit;
+    color: var(--colour-palette-neutral-950);
     background-color: var(--colour-background-focus);
     z-index: 10;
 }
