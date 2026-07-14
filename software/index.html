@@ -49,30 +49,33 @@
         <div class="base-wrapper content-wrapper">
             <hgroup>
                 <h1 id="software">software</h1>
-                <p>These projects link to their respective GitHub repositories (in a new tab).</p>
+                <p>These projects link to their respective GitHub Repositories (in a new tab)</p>
             </hgroup>
-            <section class="section-current-projects">
+            <section class="section-featured-projects">
                 <div>
-                    <h2 id="current-projects">current projects</h2>
-                    <hr class="h-div" aria-hidden="true" />
+                    <h2 id="featured-projects">featured</h2>
+                    <hr class="h-div" aria-hidden="true">
                 </div>
-                <ul class="project-list project-list--current">
+                <ul class="project-list project-list--main" >
                     <li class="project-item">
-                        <article class="project-card">
+                        <article class="project-card" id="project-card--xbk">
+                            <picture aria-hidden="true">
+                                <source srcset="/assets/images/xbk-preview.avif" type="image/avif">
+                                <source srcset="/assets/images/xbk-preview.webp" type="image/webp">
+                                <img src="/assets/images/xbk-preview.png" alt="">
+                            </picture>
                             <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/experimental-blok">Experimental Blok</a>
                             <p class="subtle-text">A box that explores its environment.</p>
                             <small class="subtle-text">2021 &middot; C, Windows API, GDI</small>
                         </article>
                     </li>
-                    <li class="project-item">
+                    <li class="project-item" id="project-card--ars">
                         <article class="project-card">
-                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/harshjayprakash.github.io">This Personal Site</a>
-                            <p class="subtle-text">A personal website focused on minimalism, ux and accesibility.</p>
-                            <small class="subtle-text">2021 &middot; HTML, CSS</small>
-                        </article>
-                    </li>
-                    <li class="project-item">
-                        <article class="project-card">
+                            <picture aria-hidden="true">
+                                <source srcset="/assets/images/ars-preview.avif" type="image/avif">
+                                <source srcset="/assets/images/ars-preview.webp" type="image/webp">
+                                <img src="/assets/images/ars-preview.png" alt="">
+                            </picture>
                             <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/algorithmic-art">Algorithmic Art</a>
                             <p class="subtle-text">Allows experimentation of generating art via programming locally on the computer.</p>
                             <small class="subtle-text">2024 &middot; Java, Swing</small>
@@ -80,22 +83,22 @@
                     </li>
                 </ul>
             </section>
-            <section class="section-previous-projects">
+            <section class="section-more-projects">
                 <div>
-                    <h2 id="previous-project">previous projects</h2>
+                    <h2 id="more-projects">more</h2>
                     <hr class="h-div" aria-hidden="true" />
                 </div>
                 <ul class="project-list">
-                    <li class="project-item">
-                        <article class="project-card">
-                            <a class="link link--inactive">Trigonometric Helper (not available at this time)</a>
-                            <p class="subtle-text">Adaptive trigonometry tool for A-Level learners. Generates random questions, tracks performance, and offers tailored feedback.</p>
-                            <small class="subtle-text">2020 &middot; Visual Basic .NET</small>
+                    <li class="project-item" id="project-card--psw">
+                        <article class="project-card project-card--noimage">
+                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/harshjayprakash.github.io">This Personal Site</a>
+                            <p class="subtle-text">A personal website focused on minimalism, ux and accesibility.</p>
+                            <small class="subtle-text">2021 &middot; HTML, CSS</small>
                         </article>
                     </li>
                     <li class="project-item">
                         <article class="project-card">
-                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/wrapping-paper-quotes-calculator">Wrapping Paper Quotes Calculator</a>
+                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/wrapping-paper-quoter">Wrapping Paper Quoter</a>
                             <p class="subtle-text">A proof of concept calculator application for a department who provide gift wrapping services based on present shapes.</p>
                             <small class="subtle-text">2021 &middot; Python, Tkinter</small>
                         </article>
@@ -109,16 +112,23 @@
                     </li>
                     <li class="project-item">
                         <article class="project-card">
-                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/dog-walkers-finder">Dog Walkers Finder</a>
+                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/dog-walker-locator">Dog Walker Locator</a>
                             <p class="subtle-text">Tool to match dog owners with local dog walkers.</p>
                             <small class="subtle-text">2024 &middot; Angular, AWS Amplify</small>
                         </article>
                     </li>
                     <li class="project-item">
                         <article class="project-card">
-                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/library-loans-system">Library Loans System</a>
+                            <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/harshjayprakash/library-management-system">Library Management System</a>
                             <p class="subtle-text">Inventory tracking system for books and DVDs - models loan flow, user records, and availability.</p>
                             <small class="subtle-text">2023 &middot; Java, MySQL</small>
+                        </article>
+                    </li>
+                    <li class="project-item">
+                        <article class="project-card">
+                            <a class="link link--inactive">Trigonometric Helper (not available at this time)</a>
+                            <p class="subtle-text">Adaptive trigonometry tool for A-Level learners. Generates random questions, tracks performance, and offers tailored feedback.</p>
+                            <small class="subtle-text">2020 &middot; Visual Basic .NET</small>
                         </article>
                     </li>
                 </ul>
@@ -143,7 +153,7 @@
                     <a class="link link--muted" target="_blank" rel="noopener noreferrer" href="/assets/docs/harsh_cv.pdf">CV</a>
                 </li>
             </ul>
-            <p>v1.4.3, 12 May 2026 &middot; &copy; 2026 Harsh Jayprakash</p>
+            <p>v1.5, 14 July 2026 &middot; &copy; 2026 Harsh Jayprakash</p>
         </div>
     </footer>
 </body>
