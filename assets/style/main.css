@@ -178,6 +178,23 @@ h6 { font-size: 18px; }
     position: relative;
 }
 
+.nav .nav-item {
+    position: relative;
+}
+
+.nav .nav-item:has(.nav-link:hover)::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 120%;
+    bottom: -5%;
+    left: -10%;
+    display:block ;
+    overflow: visible;
+    background-color: var(--colour-background-muted-more);
+}
+
 .nav .nav-link::after {
     content: '';
     background-color: transparent;
