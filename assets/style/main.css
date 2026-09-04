@@ -173,8 +173,8 @@ h6 { font-size: 18px; }
 .nav .nav-link {
     text-decoration: none;
     color: inherit;
-    text-transform: uppercase;
-    font-size: small;
+    text-transform: capitalize;
+    font-size: smaller;
     position: relative;
 }
 
@@ -187,12 +187,13 @@ h6 { font-size: 18px; }
     content: '';
     position: absolute;
     height: 110%;
-    width: 120%;
+    width: 130%;
     bottom: -5%;
-    left: -10%;
+    left: -15%;
     display:block ;
     overflow: visible;
     background-color: var(--colour-background-muted-more);
+    border-radius: 5px;
 }
 
 .nav .nav-link::after {
@@ -200,22 +201,22 @@ h6 { font-size: 18px; }
     background-color: transparent;
     display: flex;
     position: absolute;
-    bottom: -5px;
-    height: 2px;
-    width: 0%;
+    bottom: -7px;
+    height: 3px;
+    border-radius: 2px;
+    width: 15px;
+    left: 0;
+    right: 0;
+    place-self: center;
+}
+
+.nav .nav-link:hover::after {
+    background-color: var(--colour-background-muted);
+    /* width: 100%; */
 }
 
 .nav .nav-link[aria-current="page"]::after {
     background-color: var(--colour-background-accent);
-    width: 70%;
-}
-
-.nav .nav-link:hover::after {
-    width: 100%;
-}   
-
-.nav .nav-link:not([aria-current])::after  {
-    background-color: var(--colour-foreground-muted);
 }
 
 @media (prefers-reduced-motion: no-preference) {
