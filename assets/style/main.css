@@ -217,8 +217,7 @@ h6 { font-size: 18px; }
 }
 
 .nav .nav-link:hover::after {
-    background-color: var(--colour-background-muted);
-    /* width: 100%; */
+    background-color: var(--colour-background-muted-less);
 }
 
 .nav .nav-link[aria-current="page"]::after {
