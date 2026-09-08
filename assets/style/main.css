@@ -218,7 +218,7 @@ h6 { font-size: 18px; }
 
 .nav .nav-link:hover::after {
     background-color: var(--colour-background-muted-less);
-}
+}   
 
 .nav .nav-link[aria-current="page"]::after {
     background-color: var(--colour-background-accent);
@@ -355,7 +355,7 @@ h6 { font-size: 18px; }
 }
 
 .link:hover:not(.link--inactive, .link--muted) {
-    color: var(--colour-foreground-accent-hover);
+    color: var(--colour-foreground-accent-hover);       
 }
 
 .link--disabled,
@@ -421,7 +421,6 @@ h6 { font-size: 18px; }
     display: flex;
     gap: 10px;
     border-radius: 5px;
-    /* place-items: center; */
 }
 
 .banner-icon {
