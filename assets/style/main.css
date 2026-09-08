@@ -8,7 +8,9 @@
         These colours are from the Tailwind version 4 palettes.
             @ref: https://tailwindcss.com/docs/colors
 
+        The "Netural" colours the Tailwwind Mist colours.
         The "Glass" colours are the Tailwind colours modified with a lower opacity.
+        The "Accent" colours are a custom ocean depths generated.
     */
 
     --colour-palette-neutral-50 : hsl(180 20% 98%);
@@ -17,23 +19,23 @@
     --colour-palette-neutral-300: hsl(195 9% 83%);
     --colour-palette-neutral-400: hsl(192 8% 64%);
     --colour-palette-neutral-500: hsl(191 9% 45%);
-    --colour-palette-neutral-600: hsl(196, 9%, 33%);
+    --colour-palette-neutral-600: hsl(196 9% 33%);
     --colour-palette-neutral-700: hsl(193 11% 25%);
     --colour-palette-neutral-800: hsl(193 12% 15%);
     --colour-palette-neutral-900: hsl(197 14% 10%);
     --colour-palette-neutral-950: hsl(200 14% 4%);
 
-    --colour-palette-accent-50:  hsl(166, 76%, 97%);
-    --colour-palette-accent-100: hsl(167, 85%, 89%);
-    --colour-palette-accent-200: hsl(168, 84%, 78%);
-    --colour-palette-accent-300: hsl(171, 77%, 64%);
-    --colour-palette-accent-400: hsl(172, 66%, 50%);
-    --colour-palette-accent-500: hsl(173, 80%, 40%);
-    --colour-palette-accent-600: hsl(175, 84%, 32%);
-    --colour-palette-accent-700: hsl(175, 77%, 26%);
-    --colour-palette-accent-800: hsl(176, 69%, 22%);
-    --colour-palette-accent-900: hsl(176, 61%, 19%);
-    --colour-palette-accent-950: hsl(179, 84%, 10%);
+    --colour-palette-accent-50 : hsl(166 76% 97%);
+    --colour-palette-accent-100: hsl(167 85% 89%);
+    --colour-palette-accent-200: hsl(168 84% 78%);
+    --colour-palette-accent-300: hsl(171 77% 64%);
+    --colour-palette-accent-400: hsl(172 66% 50%);
+    --colour-palette-accent-500: hsl(173 80% 40%);
+    --colour-palette-accent-600: hsl(175 84% 32%);
+    --colour-palette-accent-700: hsl(175 77% 26%);
+    --colour-palette-accent-800: hsl(176 69% 22%);
+    --colour-palette-accent-900: hsl(176 61% 19%);
+    --colour-palette-accent-950: hsl(179 84% 10%);
 
     --colour-palette-focus-400: hsl(44 100% 50%);
     --colour-palette-focus-500: hsl(36 100% 50%);
@@ -65,8 +67,9 @@
     
     --colour-background-muted-more: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
     --colour-background-muted: light-dark(var(--colour-palette-neutral-300), var(--colour-palette-neutral-700));
-    --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
+    --colour-background-muted-less: light-dark(var(--colour-palette-neutral-400), var(--colour-palette-neutral-600));
     --colour-foreground-muted-less: light-dark(var(--colour-palette-neutral-700), var(--colour-palette-neutral-300));
+    --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
     --colour-border-muted: var(--colour-foreground-muted);
     --colour-border-muted-more: var(--colour-background-muted-more);
     
@@ -83,10 +86,13 @@ body {
     background-color: var(--colour-background-primary);
     color: var(--colour-foreground-primary);
     letter-spacing: -0.01em;
+    scroll-margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    text-transform: capitalize;
 }
 
 h1 { font-size: 31px; }
@@ -143,7 +149,7 @@ h6 { font-size: 18px; }
 .header {
     background-color: var(--colour-background-primary-glass);
     border-bottom: 3px solid var(--colour-background-primary);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
 }
@@ -160,6 +166,7 @@ h6 { font-size: 18px; }
     color: var(--colour-foreground-primary);
     font-size: small;
     padding-inline: 0.4rem;
+    border-radius: 4px;
 }
 
 .nav .nav-list {
@@ -173,9 +180,27 @@ h6 { font-size: 18px; }
 .nav .nav-link {
     text-decoration: none;
     color: inherit;
-    text-transform: uppercase;
-    font-size: small;
+    text-transform: capitalize;
+    font-size: smaller;
     position: relative;
+}
+
+.nav .nav-item {
+    position: relative;
+}
+
+.nav .nav-item:has(.nav-link:hover)::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 130%;
+    bottom: -5%;
+    left: -15%;
+    display:block ;
+    overflow: visible;
+    background-color: var(--colour-background-muted-more);
+    border-radius: 5px;
 }
 
 .nav .nav-link::after {
@@ -183,22 +208,21 @@ h6 { font-size: 18px; }
     background-color: transparent;
     display: flex;
     position: absolute;
-    bottom: -5px;
-    height: 2px;
-    width: 0%;
-}
-
-.nav .nav-link[aria-current="page"]::after {
-    background-color: var(--colour-background-accent);
-    width: 70%;
+    bottom: -7px;
+    height: 3px;
+    border-radius: 2px;
+    width: 15px;
+    left: 0;
+    right: 0;
+    place-self: center;
 }
 
 .nav .nav-link:hover::after {
-    width: 100%;
+    background-color: var(--colour-background-muted-less);
 }   
 
-.nav .nav-link:not([aria-current])::after  {
-    background-color: var(--colour-foreground-muted);
+.nav .nav-link[aria-current="page"]::after {
+    background-color: var(--colour-background-accent);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -332,7 +356,7 @@ h6 { font-size: 18px; }
 }
 
 .link:hover:not(.link--inactive, .link--muted) {
-    color: var(--colour-foreground-accent-hover);
+    color: var(--colour-foreground-accent-hover);       
 }
 
 .link--disabled,
@@ -398,7 +422,6 @@ h6 { font-size: 18px; }
     display: flex;
     gap: 10px;
     border-radius: 5px;
-    /* place-items: center; */
 }
 
 .banner-icon {

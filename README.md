@@ -20,7 +20,8 @@ If prefered, you may clone the repository and serve it over a local HTTP server.
 
 ## References
 
-- Colours (Mist, Amber, Sky): https://tailwindcss.com/docs/colors
+- Colours (Mist, Amber): https://tailwindcss.com/docs/colors
+- Custom TailwindCSS Accent (Ocean Depths): https://tailwindcolorgenerator.com/?preset=ocean-depths
 - CSS Reset by Josh Comeau: https://www.joshwcomeau.com/css/custom-css-reset/
 - Inter Font Family By RSMS: https://rsms.me/inter/
 - Inter on Fontsource: https://fontsource.org/fonts/inter
