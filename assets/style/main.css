@@ -17,23 +17,23 @@
     --colour-palette-neutral-300: hsl(195 9% 83%);
     --colour-palette-neutral-400: hsl(192 8% 64%);
     --colour-palette-neutral-500: hsl(191 9% 45%);
-    --colour-palette-neutral-600: hsl(196, 9%, 33%);
+    --colour-palette-neutral-600: hsl(196 9% 33%);
     --colour-palette-neutral-700: hsl(193 11% 25%);
     --colour-palette-neutral-800: hsl(193 12% 15%);
     --colour-palette-neutral-900: hsl(197 14% 10%);
     --colour-palette-neutral-950: hsl(200 14% 4%);
 
-    --colour-palette-accent-50:  hsl(166, 76%, 97%);
-    --colour-palette-accent-100: hsl(167, 85%, 89%);
-    --colour-palette-accent-200: hsl(168, 84%, 78%);
-    --colour-palette-accent-300: hsl(171, 77%, 64%);
-    --colour-palette-accent-400: hsl(172, 66%, 50%);
-    --colour-palette-accent-500: hsl(173, 80%, 40%);
-    --colour-palette-accent-600: hsl(175, 84%, 32%);
-    --colour-palette-accent-700: hsl(175, 77%, 26%);
-    --colour-palette-accent-800: hsl(176, 69%, 22%);
-    --colour-palette-accent-900: hsl(176, 61%, 19%);
-    --colour-palette-accent-950: hsl(179, 84%, 10%);
+    --colour-palette-accent-50 : hsl(166 76% 97%);
+    --colour-palette-accent-100: hsl(167 85% 89%);
+    --colour-palette-accent-200: hsl(168 84% 78%);
+    --colour-palette-accent-300: hsl(171 77% 64%);
+    --colour-palette-accent-400: hsl(172 66% 50%);
+    --colour-palette-accent-500: hsl(173 80% 40%);
+    --colour-palette-accent-600: hsl(175 84% 32%);
+    --colour-palette-accent-700: hsl(175 77% 26%);
+    --colour-palette-accent-800: hsl(176 69% 22%);
+    --colour-palette-accent-900: hsl(176 61% 19%);
+    --colour-palette-accent-950: hsl(179 84% 10%);
 
     --colour-palette-focus-400: hsl(44 100% 50%);
     --colour-palette-focus-500: hsl(36 100% 50%);
