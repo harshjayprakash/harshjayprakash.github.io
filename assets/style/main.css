@@ -8,7 +8,9 @@
         These colours are from the Tailwind version 4 palettes.
             @ref: https://tailwindcss.com/docs/colors
 
+        The "Netural" colours the Tailwwind Mist colours.
         The "Glass" colours are the Tailwind colours modified with a lower opacity.
+        The "Accent" colours are a custom ocean depths generated.
     */
 
     --colour-palette-neutral-50 : hsl(180 20% 98%);
@@ -65,8 +67,9 @@
     
     --colour-background-muted-more: light-dark(var(--colour-palette-neutral-200), var(--colour-palette-neutral-800));
     --colour-background-muted: light-dark(var(--colour-palette-neutral-300), var(--colour-palette-neutral-700));
-    --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
+    --colour-background-muted-less: light-dark(var(--colour-palette-neutral-400), var(--colour-palette-neutral-600));
     --colour-foreground-muted-less: light-dark(var(--colour-palette-neutral-700), var(--colour-palette-neutral-300));
+    --colour-foreground-muted: light-dark(var(--colour-palette-neutral-600), var(--colour-palette-neutral-400));
     --colour-border-muted: var(--colour-foreground-muted);
     --colour-border-muted-more: var(--colour-background-muted-more);
     
