@@ -3,3 +3,4 @@ Disallow: /
 
 Allow: /$
 Allow: /index.html
+Allow: /software/
