@@ -2,5 +2,6 @@
 .vite/
 .vscode/
 .svn/
-
-COMMITMSG.txt
+svnlog.txt
+svnignore.txt
+svndiff.diff
